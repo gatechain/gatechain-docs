@@ -27,7 +27,7 @@ GateChain生态，包括GateChain主链、GateChain DEX、GT、钱包等，构�
 5. **多重签名**：		多个相关签名拥有者对同一账户下的数字资产进行定制化管理，满足企业级需求，细节请查阅[多重签名](./gatechain-multisig.md)。
 6. **POS挖矿收益**:	为保障区块链底层健康稳定，鼓励用户参与PoS挖矿获得GT奖励作为稳定的收益回报。
 
-### GateChain主链 ###
+### GateChain公链 ###
 
 GateChain是专注于用户资产安全和去中心化交易的新一代公有链。其独创的线上热保险账户及支撑交易模型的设计，实现了一种安全的清算保障机制，创造性地解决了用户数字资产被盗、私钥损毁丢失等难题，支持去中心化交易和跨链转移等行业核心应用场景。相对于比特币、以太坊等传统公有区块链而言，GateChain专注于链上资金安全，提出并完善了包括[普通账户（Normal Account）](#na)、[保险账户（Vault Account）](#va)、[找回账户（Retrieval Account）](#ra)、[清算高度（Clearing Height）](#ch)、[可撤回时间（Revocable Delay Period）](#rdp)、[地址标识（Address Type）](#addrt)、[交易ID标识（Transaction Type）](#transt)等诸多创新概念。
 
