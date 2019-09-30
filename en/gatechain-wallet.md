@@ -44,7 +44,7 @@ Below are identifiers  different  transaction types start with:
 
 ## 3. Download and installation
 
-- You can go to CateChain website [www.gatechain.io](www.gatechain.io) and click “Wallet Downloads” at the upper corner to  download correct wallet version for your operation system. <br/>![](./images/0.png)</br>
+- You can go to CateChain website [www.gatechain.io](https://www.gatechain.io) and click “Wallet Downloads” at the upper corner to  download correct wallet version for your operation system. <br/>![](./images/0.png)</br>
 	
 - You can also access to [https://www.gatechain.io/wallets](https://www.gatechain.io/wallets)  to download wallet for PC.
   	

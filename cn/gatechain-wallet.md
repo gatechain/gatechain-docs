@@ -44,7 +44,7 @@ GateChain具有多种转账交易类型。为便于用户有效识别不同的�
 
 ## 3. 下载安装
 
-- 进入GateChain的官网[www.gatechain.io](www.gatechain.io) ，点击上方的“钱包下载”，下载系统对应的版本。<br/>![](./images/0.png)</br>
+- 进入GateChain的官网[www.gatechain.io](https://www.gatechain.io) ，点击上方的“钱包下载”，下载系统对应的版本。<br/>![](./images/0.png)</br>
 	
 - 也可以直接访问[https://www.gatechain.io/wallets](https://www.gatechain.io/wallets) ，下载PC版钱包。
   	
