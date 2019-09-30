@@ -18,10 +18,10 @@ GateChain ecosystem comprises CateChain mainnet, GateChain DEX,  GateChain Token
 The main features of GateChain ecosystem can be listed as follow:
 
 1. **Transfer/payment**：Using a wallet or client-side Apps, users can send and receive GateChain Token (GT) , as well as other popular onchain assets.
-2. **Asset issuance**： Users can issue and use their own tokens (e.g., GT) to digitalize and manager their assets. For more details, visit [Asset Management](./gatechain-asset.md)。
+2. **Asset issuance**： Users can issue and use their own tokens (e.g., GT) to digitalize and manager their assets. For more details, visit [Asset Management](./gatechain-asset.md).
 3. **Decentralized cross-chain transaction**：GateChain provides support for high-performance decentralized  trading among different digital currencies.
-4. **Asset safe storage**：    With a uniquely designed vault account and a clearing technology, account can have a comprehensive protection, and support revoking /clearing operations targeting abnormal transaction. For more details, visit [Transaction Protection](./gatechain-security.md)。
-5. **Multi-signature**： Multiple signers can share ownership of one account,  and get customize  management  over their digital assets, which best fit the enterprise demands. For more details, visit [Multi-signature](./gatechain-multisig.md)。
+4. **Asset safe storage**：    With a uniquely designed vault account and a clearing technology, account can have a comprehensive protection, and support revoking /clearing operations targeting abnormal transaction. For more details, visit [Transaction Protection](./gatechain-security.md).
+5. **Multi-signature**： Multiple signers can share ownership of one account,  and get customize  management  over their digital assets, which best fit the enterprise demands. For more details, visit [Multi-signature](./gatechain-multisig.md).
 6. **POS staking reward**:	GT works as a stable incentive for users participating in PoS staking, which safeguard the robustness of underlying blockchain.
 
 ### GateChain Blockchain ###
@@ -65,7 +65,7 @@ GateChain provides various wallet applications for individual, professional and 
 
 * At mainnet phase, GateChain will provide command-line wallet, mobile wallet for Android and iOS, Web wallet, multi-signature wallet, and hardware wallet, to cater to individual, professional and enterprise users.
 
-## GateChain Classic Application ##
+## GateChain Typical Application ##
 
 <!--Considering the demands for efficiency in daily payment and safety in asset storage, GateChain offers two types of accounts, namely  Normal Account and  Vault Account. Similar to the features of a bitcoin address, Normal Account allows instant  payment  and transaction is irreversible. It does not allow private key restoration  if it is lost. While the Vault Account, an major novel creation of GateChain, allows revocable transaction and private key restoration. By combining both types of accounts, GateChain opens broad applications in both personal and professional fields. -->
 
@@ -106,7 +106,6 @@ The major innovation of GateChain is：
 
 * Put forward and implemented an on-chain “Vault Account” . This type of account has safety features allowing revocable transaction and damaged private key restoration, thus providing a novel blockchain safety solution to individuals, enterprises and asset sensitive banks.
 * A transaction model that supports retractable logic which called RTM（Revokable Transaction Model）.
-* A blockchain underlying architecture built on top of Tendermint.
 
 Please refer to [GateChain Academic Research](./gatechain-research.md) for more detail.
 
@@ -187,7 +186,7 @@ Below are identifiers  different  transaction types start with:
 
 ## GateChain Advanced Docs ##
 
-- **Full Node and Local Testnet**：	Any one can build a full node and run his testnet. A full node has all the functions  GateChain has.  Detailed installation visit [Install and Deploy](./gatechain-build.md)。
+- **Full Node and Local Testnet**：	Any one can build a full node and run his testnet. A full node has all the functions  GateChain has.  Detailed installation visit [Install and Deploy](./gatechain-build.md).
    - **Join Testnet**： A full node can connect to public testnet (use the same version of testnet )<!--，Latest code[get](pending developing)here-->）to monitor and broadcast transaction and block update and other tasks in real time in the network.
-- **Command Line Interface**：	Besides wallets, we also provide client programs, which can interact with GateChain using command line. Many operations can be done to onchain account using a command line interface, including account management, transaction management, and asset management. In addition,simple inquiry to onchain data is also allowed using a command line interface, such as inquiry of account balance, and transaction details.  More Details visit [Command Line Interface Reference](./gatechain-cli.md)。
-- **API**：GateChain node provides advanced API interface service, related API information visit [API List](./gatechain-rpc.md)。
+- **Command Line Interface**：	Besides wallets, we also provide client programs, which can interact with GateChain using command line. Many operations can be done to onchain account using a command line interface, including account management, transaction management, and asset management. In addition,simple inquiry to onchain data is also allowed using a command line interface, such as inquiry of account balance, and transaction details.  More Details visit [Command Line Interface Reference](./gatechain-cli.md).
+- **RPC API**：GateChain node provides advanced RPC API interface service, related API information visit [RPC API List](./gatechain-rpc.md).
