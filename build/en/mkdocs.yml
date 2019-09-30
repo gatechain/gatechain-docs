@@ -1,0 +1,14 @@
+site_name: GateChain Docs
+nav:
+    - GateChain Introduction: README.md
+    - GateChain Desktop Wallet: gatechain-wallet.md
+    - Fullnode Build: gatechain-build.md
+    - Command Line Interface: gatechain-cli.md
+    - RPC Reference: gatechain-rpc.md    
+    - GateChain Research: gatechain-research.md
+    - GateChain Functions:
+        - Asset Management: gatechain-asset.md
+        - Account Securities: gatechain-security.md
+        - Multiple Signature: gatechain-multisig.md
+        - Decentralized Exchange: gatechain-dex.md        
+theme: readthedocs
