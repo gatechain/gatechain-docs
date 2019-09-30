@@ -7,7 +7,7 @@ The documents will give you  a summary of  GateChain, its basic concepts, featur
 The documents keep updating as GateChain develops. Follow us and stay tuned. 
 
 
-## GateChain.io Ecosystem ##
+## GateChain Ecosystem ##
 
 <!-- ### GateChain Features ###
 
@@ -24,7 +24,7 @@ The main features of GateChain ecosystem can be listed as follow:
 5. **Multi-signature**： Multiple signers can share ownership of one account,  and get customize  management  over their digital assets, which best fit the enterprise demands. For more details, visit [Multi-signature](./gatechain-multisig.md)。
 6. **POS staking reward**:	GT works as a stable incentive for users participating in PoS staking, which safeguard the robustness of underlying blockchain.
 
-### GateChain Mainnet ###
+### GateChain Blockchain ###
 
 <!--GateChain is a novel public chain of the next generation centered on asset safety and decentralized exchange. With a unique onchain vault account and clearing system, it offers creative solutions to  core problems  in the industry, from asset theft and private key missing, to decentralized trading and cross-chain transfer.  Unlike traditional blockchains, such as Bitcoin and Ethereum, GateChain has many novel features especially designed for asset safety, like  Normal Account, Vault Account, Clearing Height, Revocable Delay Period, Address Type,  and Transaction Type, many of which  are  introduced to the industry for the first time. For these new terms, we will give detailed explanation later.-->
 
