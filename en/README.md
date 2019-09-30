@@ -57,11 +57,11 @@ The issue plan of GT is determined as :
 
 ### GateChain Wallets ###
 
-<!--GateChain provides various wallet applications for individual, professional and enterprise users. At testnet phase, GateChain provides desktop wallets for Windows and Mac OS; professional users can also access and test using RPC. At mainnet phase, GateChain will provide command line wallet, mobile wallet for Android and iOS, Web wallet, multi-signature wallet, and hardware wallet, among other tools to cater to  individual and enterprise users.-->
+<!--GateChain provides various wallet applications for individual, professional and enterprise users. At testnet phase, GateChain provides desktop wallets for Windows and Mac OS; professional users can also access and test using API. At mainnet phase, GateChain will provide command line wallet, mobile wallet for Android and iOS, Web wallet, multi-signature wallet, and hardware wallet, among other tools to cater to  individual and enterprise users.-->
 
 GateChain provides various wallet applications for individual, professional and enterprise users.
 
-* At testnet phase, GateChain provides [desktop wallets](./gatechain-wallet.md) for Windows and Mac OS; professional users can also access and test using RPC.
+* At testnet phase, GateChain provides [desktop wallets](./gatechain-wallet.md) for Windows and Mac OS; professional users can also access and test using API.
 
 * At mainnet phase, GateChain will provide command-line wallet, mobile wallet for Android and iOS, Web wallet, multi-signature wallet, and hardware wallet, to cater to individual, professional and enterprise users.
 
