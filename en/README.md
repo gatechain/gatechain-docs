@@ -54,6 +54,7 @@ The issue plan of GT is determined as :
   * 200 million GTs will go to ecosystem building,  released lineally in a term of 10 years after  a 12 months  lockup; and 
   * 200 million GTs will be produced as staking reward.
 
+GT will continuously enhance its value through the popularization of its use in the GateChain ecology, and its circulation will be reduced to curb inflation by means of ecological member buyback, public destruction and so on.
 
 ### GateChain Wallets ###
 
@@ -189,4 +190,4 @@ Below are identifiers  different  transaction types start with:
 - **Full Node and Local Testnet**：	Any one can build a full node and run his testnet. A full node has all the functions  GateChain has.  Detailed installation visit [Install and Deploy](./gatechain-build.md).
    - **Join Testnet**： A full node can connect to public testnet (use the same version of testnet )<!--，Latest code[get](pending developing)here-->）to monitor and broadcast transaction and block update and other tasks in real time in the network.
 - **Command Line Interface**：	Besides wallets, we also provide client programs, which can interact with GateChain using command line. Many operations can be done to onchain account using a command line interface, including account management, transaction management, and asset management. In addition,simple inquiry to onchain data is also allowed using a command line interface, such as inquiry of account balance, and transaction details.  More Details visit [Command Line Interface Reference](./gatechain-cli.md).
-- **API**：GateChain node provides advanced REST API interface service, related API information visit [REST API List](./gatechain-api.md).
+- **API**：GateChain node provides advanced REST API service, related API information visit [REST API List](./gatechain-api.md).
