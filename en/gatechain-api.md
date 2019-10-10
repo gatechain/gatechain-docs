@@ -280,7 +280,7 @@ parameter:
 
 | parameter name | description |
 | ----| ---- |
-| account | recipient account, can be a normal account or a vault account |
+| account | recipient account, can be a Standard Account or a vault account |
 
 request BODY example ：
 
@@ -455,9 +455,9 @@ return：
 ---
 
 
-###16 Multisig Normal Account /Vault Account transfer transaction
+###16 Multisig Standard Account /Vault Account transfer transaction
 
-* Building a transaction in Multisig Normal Account is the same with a normal account. See interface 9
+* Building a transaction in Multisig Standard Account is the same with a Standard Account. See interface 9
 * Building a transaction in Multisig Vault Account is the same with a Vault Account. See interface 11,13,14, and 15
 * when a transaction is built, multiple sign it offline (see details at related multisig command line operations )
 * and then broadcast the signed transaction. See interface 7
