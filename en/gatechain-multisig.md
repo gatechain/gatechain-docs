@@ -2,7 +2,7 @@
 
 A multi-sig account is distinct from a single signature account. It has two types:
 
-- Multi- signature  Normal Account
+- Multi- signature  Standard Account
 	- prefix：`gt2`
 	- example：`gt210fm6dxdd08sh4ptaxt8t2mapaywp5zq57fxx9p`
 
@@ -12,7 +12,7 @@ A multi-sig account is distinct from a single signature account. It has two type
 
 ## 1. Create a multisig account 
 
-### 1.1 Generate a multisig  normal account
+### 1.1 Generate a multisig  Standard Account
 
 ```bash
 gatecli account create [account] --multisig [account list] --multisig-threshold [minimum effective amount]
@@ -28,7 +28,7 @@ Description：
 
 ### 1.2 Generate a multisig  Vault Account
 
-Use the  multisig  normal account created at 1.1 to create a  multisig  Vault Account.
+Use the  multisig  Standard Account created at 1.1 to create a  multisig  Vault Account.
 
 ```bash
 	gatecli vault-account create [base account ] [Retrieval Account] [delay height] [clearing height] [transfer token amount ]--from [sender account ]--chain-id [chain ID]
@@ -42,12 +42,12 @@ Example：
 Description：
 
 * Must use a newly generated account to send a transaction directly to create a Vault Account. 
-* If a normal transaction is sent to this account first, this account becomes a normal account and it can not be used to send Vault Account creation transaction.
+* If a normal transaction is sent to this account first, this account becomes a Standard Account and it can not be used to send Vault Account creation transaction.
 * Clearing height must be greater than (current height+ delay height)
 
 ## 2. Manage multisig account 
 
-### 2.1 Multisig  Normal Account 
+### 2.1 Multisig  Standard Account 
 
 #### 2.1.1 Send a normal transaction 
 When sending a normal transaction, multisig account uses the same procedures as a single signature account.  As multisig account need multiple signatures to send  a transaction, compound commands are used to finish transaction signing. Use `--generate-only` to generate  transaction information pending signing and  let signers to sign. At last, collect all the signatures  and broadcast.
