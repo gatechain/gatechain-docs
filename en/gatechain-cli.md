@@ -128,7 +128,7 @@ gatecli vault-account create gt11d9t6p5g69kzz0rf39av5s24tqvdprwk6s6a57r gt11cmsf
 Description：
 
 * Must use a newly generated account as base account and  Retrieval Account,to send a Create Vault Account transaction. 
-* If a normal transaction is sent to this account first, this account becomes a normal account and it can not be used to send Vault Account creation transaction.
+* If a normal transaction is sent to this account first, this account becomes a standard account and it can not be used to send Vault Account creation transaction.
 * Clearing height must be greater than (current height+ delay height)
 
 
@@ -229,7 +229,7 @@ gatecli tx send gt11w8c3vj8045la70y6g862jd7tt09u02jhzvp2y2 10gt --from gt110nxr6
 
 Description：
 
-* The recipient can be a normal account or a Vault Account
+* The recipient can be a Standard Account or a Vault Account
 
 ###4.4 Single Signature
 ```bash
