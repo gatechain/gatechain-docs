@@ -26,9 +26,9 @@ The main features of GateChain ecosystem can be listed as follow:
 
 ### GateChain Blockchain ###
 
-<!--GateChain is a novel public chain of the next generation centered on asset safety and decentralized exchange. With a unique onchain vault account and clearing system, it offers creative solutions to  core problems  in the industry, from asset theft and private key missing, to decentralized trading and cross-chain transfer.  Unlike traditional blockchains, such as Bitcoin and Ethereum, GateChain has many novel features especially designed for asset safety, like  Normal Account, Vault Account, Clearing Height, Revocable Delay Period, Address Type,  and Transaction Type, many of which  are  introduced to the industry for the first time. For these new terms, we will give detailed explanation later.-->
+<!--GateChain is a novel public chain of the next generation centered on asset safety and decentralized exchange. With a unique onchain vault account and clearing system, it offers creative solutions to  core problems  in the industry, from asset theft and private key missing, to decentralized trading and cross-chain transfer.  Unlike traditional blockchains, such as Bitcoin and Ethereum, GateChain has many novel features especially designed for asset safety, like  Standard Account, Vault Account, Clearing Height, Revocable Delay Period, Address Type,  and Transaction Type, many of which  are  introduced to the industry for the first time. For these new terms, we will give detailed explanation later.-->
 
-GateChain is a novel next-generation public blockchain, focused on onchain asset safety and decentralized exchange. With unique Vault Account technology and its supporting transaction model design, GateChain has  implemented a guaranteed safe clearing mechanism, creatively solved the challenging problem of asset theft and private key missing. It aslo supports  decentralized trading and cross-chain transfer among other core applications.  Compared with traditional blockchains, such as Bitcoin and Ethereum, GateChain focuses on on-chain asset safety. It creatively proposed a bunch of novel concepts, including [Normal Account](#na)、[Vault Account](#va)、[Retrieval Account](#ra)、[Clearing Height](#ch)、[Revocable Delay Period](#rdp)、[Address Type](#addrt)、[Transaction Type](#transt).definition and explanation visit[GateChain Document]().
+GateChain is a novel next-generation public blockchain, focused on onchain asset safety and decentralized exchange. With unique Vault Account technology and its supporting transaction model design, GateChain has  implemented a guaranteed safe clearing mechanism, creatively solved the challenging problem of asset theft and private key missing. It aslo supports  decentralized trading and cross-chain transfer among other core applications.  Compared with traditional blockchains, such as Bitcoin and Ethereum, GateChain focuses on on-chain asset safety. It creatively proposed a bunch of novel concepts, including [Standard Account](#na)、[Vault Account](#va)、[Retrieval Account](#ra)、[Clearing Height](#ch)、[Revocable Delay Period](#rdp)、[Address Type](#addrt)、[Transaction Type](#transt).definition and explanation visit[GateChain Document]().
 
 ### GateChain DEX ###
 
@@ -68,17 +68,17 @@ GateChain provides various wallet applications for individual, professional and 
 
 ## GateChain Typical Application ##
 
-<!--Considering the demands for efficiency in daily payment and safety in asset storage, GateChain offers two types of accounts, namely  Normal Account and  Vault Account. Similar to the features of a bitcoin address, Normal Account allows instant  payment  and transaction is irreversible. It does not allow private key restoration  if it is lost. While the Vault Account, an major novel creation of GateChain, allows revocable transaction and private key restoration. By combining both types of accounts, GateChain opens broad applications in both personal and professional fields. -->
+<!--Considering the demands for efficiency in daily payment and safety in asset storage, GateChain offers two types of accounts, namely  Standard Account and  Vault Account. Similar to the features of a bitcoin address, Standard Account allows instant  payment  and transaction is irreversible. It does not allow private key restoration  if it is lost. While the Vault Account, an major novel creation of GateChain, allows revocable transaction and private key restoration. By combining both types of accounts, GateChain opens broad applications in both personal and professional fields. -->
 
-GateChain offers two types of accounts, Normal Account and  Vault Account, to meet the efficiency demand in daily payment and safety demand in asset storage. Normal Account allows instant  payment  and transaction is irreversible. It does not allow restoring lost  private key. similar to the features of a bitcoin address.   While the onchain Vault Account, a major novel creation of GateChain, allows revocable transaction and private key restoration. By combining both types of accounts, GateChain provides complete safety features to its users. 
+GateChain offers two types of accounts, Standard Account and  Vault Account, to meet the efficiency demand in daily payment and safety demand in asset storage. Standard Account allows instant  payment  and transaction is irreversible. It does not allow restoring lost  private key. similar to the features of a bitcoin address.   While the onchain Vault Account, a major novel creation of GateChain, allows revocable transaction and private key restoration. By combining both types of accounts, GateChain provides complete safety features to its users. 
 
 ### 1. **Individual assets management**：	
 
-<!--Individual user can own a Normal Account and a Vault Account at the same time. He can leave a tiny fraction of assets in Normal Account for daily use while put the majority in Vault Account for storage, and set a delay time in transfer, 2 days for example.  Spending asset in the Normal Account is like  using bitcoin: transaction is confirmed upon payment and  is irreversible.  In the worst case when the Normal Account’s private key is lost or stolen, his loss is limited to the small portion. Risk is till under control.When the asset in the Normal Account is insufficient, he can transfer  more from the Vault Account  based on his plan. The transfer will be received with a 2 days'  (example) delay. In the worst  case when asset in Vault Account is stolen, he can still recover his asset by making a revoke request  within 2 days (example). The stolen transaction will be revoked and returned to “Retrieval Account” and loss is avoided.-->
+<!--Individual user can own a Standard Account and a Vault Account at the same time. He can leave a tiny fraction of assets in Standard Account for daily use while put the majority in Vault Account for storage, and set a delay time in transfer, 2 days for example.  Spending asset in the Standard Account is like  using bitcoin: transaction is confirmed upon payment and  is irreversible.  In the worst case when the Standard Account’s private key is lost or stolen, his loss is limited to the small portion. Risk is till under control.When the asset in the Standard Account is insufficient, he can transfer  more from the Vault Account  based on his plan. The transfer will be received with a 2 days'  (example) delay. In the worst  case when asset in Vault Account is stolen, he can still recover his asset by making a revoke request  within 2 days (example). The stolen transaction will be revoked and returned to “Retrieval Account” and loss is avoided.-->
 
-GateChain provides individual user two types of accounts, a Normal Account and a Vault Account. Normal Account is used to store a tiny fraction of assets for daily use while   Vault Account is used to store the majority not in immediate need. The vault account can set a transfer delay period, 2 days for example.
+GateChain provides individual user two types of accounts, a Standard Account and a Vault Account. Standard Account is used to store a tiny fraction of assets for daily use while   Vault Account is used to store the majority not in immediate need. The vault account can set a transfer delay period, 2 days for example.
 
-For  every day transaction, user can use assets in the Normal Account just like he is using bitcoin: transaction is confirmed upon payment and is reversible. In the worst case when the Normal Account’s private key is lost or stolen, his loss is limited to the small portion. Risk is till under control.When the asset in the Normal Account is insufficient, he can transfer  more from the Vault Account  based on his plan. The transfer will be received with a 2 days (example)  delay. If theft is found during the delay period, he can simply  initiate a "Revoke" request. The stolen transaction will be revoked and moved to “Retrieval Account”.Loss is avoided.
+For  every day transaction, user can use assets in the Standard Account just like he is using bitcoin: transaction is confirmed upon payment and is reversible. In the worst case when the Standard Account’s private key is lost or stolen, his loss is limited to the small portion. Risk is till under control.When the asset in the Standard Account is insufficient, he can transfer  more from the Vault Account  based on his plan. The transfer will be received with a 2 days (example)  delay. If theft is found during the delay period, he can simply  initiate a "Revoke" request. The stolen transaction will be revoked and moved to “Retrieval Account”.Loss is avoided.
 
 ### 2. **Legacy or Grant auto-release**:
 
@@ -115,14 +115,14 @@ Please refer to [GateChain Academic Research](./gatechain-research.md) for more 
 
 <!--GateChain is  a novel public chain based on academic research, which has a complete self- consistent safety  system. As it introduces many  new concepts to blockchain industry that have  never been proposed before, we give explanation about  these concepts and terms for better understanding.
 
-Normal Account：Account similar to a Bitcion address that can store asset and is suitable for daily use. Asset in this type of account can be sent instantly and is irreversible once confirmed in blockchain. Lost privatekey can not be restored.
+Standard Account：Account similar to a Bitcion address that can store asset and is suitable for daily use. Asset in this type of account can be sent instantly and is irreversible once confirmed in blockchain. Lost privatekey can not be restored.
 Vault Account：GateChain’s novel creation. This is a new type of account that allows for  revocable transaction in the case of theft and private key restoration in the case of lost or damaged private key. Transfer asset in this type of account have to wait for  a preset  period of  time. It is suitable for storing and protecting  large amount of asset that is  not for immediate use. 
 Revocable Delay Period：The time duration within which transaction transfer from vault account is revocable. During this time of period (calculated by blocks), recovery of transaction is possible by initiating  a "revoke" operation to return the transaction to “Retrieval Account’.
 Retrieval Account：the preset  account  bound  to  a Vault Account. When a transaction in vault account is revoked, the transaction asset will be moved to this account. 
 Clearing Height：it is a future time. At the time when this block height is hit, the asset in the account will allow clearing. 
 Revoke. (verb）: When the transaction initiated from Vault Account is still in the revocable delay period, “revoke” operation can be initiated to return the asset to “Retrieval Account’.
 Revocable Transaction： transaction initiated from Vault Account is revocable transaction, which allows for  revoking to move the asset to “Retrieval Account” during the revocable delay period. After that revocable period, transaction can not be revoked.
-Irrevocable Transaction：Transactions initiated from Normal Account. It is irreversible once it is confirmed by blockchain.-->
+Irrevocable Transaction：Transactions initiated from Standard Account. It is irreversible once it is confirmed by blockchain.-->
 
 As an innovative public chain focusing on on-chain asset security, GateChain introduces a number of new concepts. GateChain hopes to help users understand GateChain sercurity logic more comprehensively by providing the description of the concepts. Also, for the consideration of transaction security, GateChain innovatively put forward the identification of address type and transaction type to facilitate the user to effectively identify different account type and transfer type, to avoid user misoperation.
 
@@ -130,20 +130,20 @@ As an innovative public chain focusing on on-chain asset security, GateChain int
 
 GateChain is a novel public chain. Its principle research has introduced many novel concepts which form the principle fundamental for building complete self-consistence in assets safety.
 
-* <span id="na">Normal Account：Account similar to a Bitcion address that can store asset and is suitable for daily use.Asset in this type of account can be sent instantly and is irreversible once confirmed in blockchain. Lost privatekey can not be restored.</span>
+* <span id="na">Standard Account：Account similar to a Bitcion address that can store asset and is suitable for daily use.Asset in this type of account can be sent instantly and is irreversible once confirmed in blockchain. Lost privatekey can not be restored.</span>
 * <span id="va">Vault Account：GateChain’s novel creation. This is a new type of account that allows revocable transaction in the case of theft and private key restoration in the case of lost or damaged private key. Transfer asset in this type of account have to wait for  a preset  period of  time. It is suitable for storing and protecting large amount of asset that is  not for immediate use.</span>
 * <span id="rdp">Revocable Delay Period ：The time duration within which transaction transfer from vault account is revocable. During this time of period (calculated by blocks), recovery of transaction is possible by initiating  a "revoke" operation to return the transaction to “Retrieval Account’.</span>
 * <span id="ra">Retrieval Account：the preset  account  bound  to  a Vault Account. When a transaction in vault account is revoked, the transaction asset will be moved to this account. </span>
 * <span id="ch">Clearing Height：it is a future time. At the time when this future block height is hit, the asset in the account will allow  clearing. </span>
 * <span id="revoke">Revoke: When the transaction initiated from Vault Account is still in the revocable delay period, “revoke” operation can be initiated to return the asset to “Retrieval Account’.</span>
 * <span id="rt">Revocable Transaction：any transaction initiated from Vault Account is revocable transaction, which allows for  revoking to move the asset to “Retrieval Account” during the revocable delay period. After the revocable period, transaction can not be revoked.</span>
-* <span id="irt">Irrevocable Transaction：Transactions initiated from Normal Account. It is irreversible once it is confirmed by blockchain.</span>
+* <span id="irt">Irrevocable Transaction：Transactions initiated from Standard Account. It is irreversible once it is confirmed by blockchain.</span>
 
 <!--### GateChain Address Types ###
 
-GateChain have two  main account types, Normal Account and Vault Account, with different  identifier at the start in their addresses:
+GateChain have two  main account types, Standard Account and Vault Account, with different  identifier at the start in their addresses:
 
-Normal Account starts with “gt’’. “gt1” indicates a single-signature Normal Account, and “gt2” indicates a multi- signature  Normal Account.
+Standard Account starts with “gt’’. “gt1” indicates a single-signature Standard Account, and “gt2” indicates a multi- signature  Standard Account.
 Vault Account starts with “vault’.“vault 1” indicates a single-signature Vault Account, and “ vault2” indicates a multi- signature   Vault Account,
 
 With the address identifier mechanism invented by GateChain, the recipient account can easily identify the sending account's  type and set confirmation requirement  accordingly.If it is from a Vault Account, confirmation is safe  only after revocable delay period. -->
@@ -153,9 +153,9 @@ With the address identifier mechanism invented by GateChain, the recipient accou
 
 ### GateChain Address Types ###
 
-GateChain have two  main account types, Normal Account and Vault Account, with different  identifier at the start in their addresses.
+GateChain have two  main account types, Standard Account and Vault Account, with different  identifier at the start in their addresses.
 
-* Normal Account：start with “gt’’. “gt1” indicates a single- signature Normal Account, and “gt2” indicates a multi- signature  Normal Account.
+* Standard Account：start with “gt’’. “gt1” indicates a single- signature Standard Account, and “gt2” indicates a multi- signature  Standard Account.
 * Vault Account：start with “vault’.“vault 1” indicates a single- signature Vault Account, and “ vault2” indicates a multi- signature   Vault Account.
 
 With the address identifier mechanism invented by GateChain, the recipient account can easily identify the sending account's  type and set confirmation requirement  accordingly.If it is from a Vault Account, confirmation is safe  only after revocable delay period.</span>
