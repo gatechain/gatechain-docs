@@ -12,9 +12,9 @@ GateChain ecosystem provides a variety of wallet applications to cater to differ
 ## 2. Related Definitions
 ### 2.1 GateChain Address Types ###
 
-GateChain have two  main account types, Normal Account and Vault Account, with different  identifier at the start in their addresses:
+GateChain have two  main account types, Standard Account and Vault Account, with different  identifier at the start in their addresses:
 
-* Normal Account：start with “gt’’. “gt1” indicates a single- signature Normal Account, and “gt2” indicates a multi- signature  Normal Account.
+* Standard Account：start with “gt’’. “gt1” indicates a single- signature Standard Account, and “gt2” indicates a multi- signature  Standard Account.
 * Vault Account：start with “vault’.“vault 1” indicates a single- signature Vault Account, and “ vault2” indicates a multi- signature   Vault Account.
 
 With the address identifier mechanism invented by GateChain, the recipient account can easily identify the sending account's  type and set confirmation requirement  accordingly.If it is from a Vault Account, confirmation is safe  only after revocable delay period.
@@ -58,11 +58,11 @@ Below are identifiers  different  transaction types start with:
 - GateChain provides local wallets and  need not to register an account before logging in. But setting up a login password is required when running the wallet for the first time.  The password will also be used as “unlock password” for many other operations at the wallet. It is of vital Importance!  If it is lost, your asset will be at risk. Please setup a complicated password and save it safely.<br/>![](./images/open.png)</br>
 
 - Revocable transaction is invented by GateChain. To avoid abuse of this safety feature, GateChain uses prefix identifiers to give distinct mark. When receiving a transaction, you can check with  two rules to determine if it is  irrevocable and safe to use. 
-> 1. Normal Account starts with" gt". Transactions from address starting with “gt” is irrevocable.
-> 2. Transaction ID from Normal Account starts with" IRREVOCABLEPAY-" .Transaction with this prefix is irrevocable.
+> 1. Standard Account starts with" gt". Transactions from address starting with “gt” is irrevocable.
+> 2. Transaction ID from Standard Account starts with" IRREVOCABLEPAY-" .Transaction with this prefix is irrevocable.
 > 
-### 4.2 Create Normal Account
-- 1 ）At main interface, click “Create Account ” , then  choose   “Single Signature ”-->> “Normal Account ”.
+### 4.2 Create Standard Account
+- 1 ）At main interface, click “Create Account ” , then  choose   “Single Signature ”-->> “Standard Account ”.
 
 ![](./images/1.png)
 
@@ -74,7 +74,7 @@ Below are identifiers  different  transaction types start with:
 
 ![](./images/3.png)
 
-- 4 ）Account is created successfully. Pay attention to the identifier of single sigature account. Normal account starts with “gt”.
+- 4 ）Account is created successfully. Pay attention to the identifier of single sigature account. Standard Account starts with “gt”.
 
 ![](./images/4.png)
 
@@ -123,13 +123,13 @@ Besides creating an account, you can also use “Import account” function to i
  
 ![](./images/13.png)<br/>![](./images/14.png)![](./images/15.png)</br>
 
-> You can also activate Vault Account through a normal account.
+> You can also activate Vault Account through a Standard Account.
 > 
 > - Access to the overview interface of another account you will use it to activate the Vault Account. Click "Activate other account" at the right side
 > <br/>![](./images/vault14.png)</br>
 > - Access to activate Vault Account page.
 > - Activation process is as above mentioned.<br/>![](./images/vault15.png)</br>
-> Note: the Normal Account used to activate the Vault Account will auto- fill “Retrieval Account” field. If you want to use another account as Retrieval Account, please modify it. 
+> Note: the Standard Account used to activate the Vault Account will auto- fill “Retrieval Account” field. If you want to use another account as Retrieval Account, please modify it. 
 
 ### 4.6 The clearing time of Vault Account can be changed
 Steps as follows:
@@ -150,7 +150,7 @@ GateChain provides  two notification channels, via email and via short message.
 - 2 ) Fill the account address to monitor and the mobile phones and emails to receive alert notification. 
  <br/>![](./images/monitor2.png)</br>
   
-### 4.8 Normal Account Irrevocable Payment
+### 4.8 Standard Account Irrevocable Payment
 - 1 ）From the wallet list, select the account to make the payment transfer and Click to access to account overview.<br/>![](./images/18.png)</br>
 
 - 2 ) Select “Transfer” button.<br/>![](./images/19.png)</br>
@@ -166,9 +166,9 @@ GateChain provides  two notification channels, via email and via short message.
 <br/>![](./images/22.png)</br>
 
 Note 
->1.Normal Account starts with gt. Transaction is  irrevocable from address with prefix “gt” and you can receive it safely.
+>1.Standard Account starts with gt. Transaction is  irrevocable from address with prefix “gt” and you can receive it safely.
 
->2.Transaction from Normal Account starts with IRREVOCABLEPAY --.Transaction with such prefix is irrevocable.
+>2.Transaction from Standard Account starts with IRREVOCABLEPAY --.Transaction with such prefix is irrevocable.
 
 - 7 ) View “Transfer Records” at account overview for this transaction record.
 
@@ -176,7 +176,7 @@ Note
 
 ### 4.9 Vault Account Revocable Payment
 
-Transfer from Vault Account will take effect with a delay. Compared with Normal Account, additional information is needed when make a transfer from Vault Account. Steps as follows:
+Transfer from Vault Account will take effect with a delay. Compared with Standard Account, additional information is needed when make a transfer from Vault Account. Steps as follows:
 
 - 1 ）Send Revocable Payment from a Vault Account<br/>![](./images/vault1.png)</br>
 
@@ -221,7 +221,7 @@ The wallet supports  account export, account delete, view private keys  and othe
 
 - View account details.<br/>![](./images/account3.png)</br>
 
-> Normal Account only show “Account info’. While Vault Account will show"Vault Settings” in addition to “Account info”.
+> Standard Account only show “Account info’. While Vault Account will show"Vault Settings” in addition to “Account info”.
 
 ### 5.1 Account Export
 - single signature account export
@@ -242,9 +242,9 @@ The wallet supports  account export, account delete, view private keys  and othe
 - Enter the unlock pass and click “Confirm”button. The account is deleted.
 <br/>![](./images/account8.png)</br>
 
-### 5.4 Multiple signatures account
-#### 5.4.1 Create a Multisig account
-* 1 ）At the main interface, click “Account”. Select   “multi-signature ”--->>“Normal Account”.<br/>![](./images/multi0.png)</br>
+### 5.4 Multiple Signatures Account
+#### 5.4.1 Create a Multisig Account
+* 1 ）At the main interface, click “Account”. Select   “multi-signature ”--->>“Standard Account”.<br/>![](./images/multi0.png)</br>
 
 * 2 ）Enter “Account name” and  select “total members”(2-7), “required signatures” and “member’s public key”(can use public key created in the wallet or enter a public key not locally created). Click "Next".<br/>![](./images/multi2.png)</br>
 * 3 ）Access to confirmation page and click “Create” button to finish.<br/>![](./images/multi3.png)</br>
@@ -252,7 +252,7 @@ The wallet supports  account export, account delete, view private keys  and othe
 * 5 ）Publishing public key will incur a fee. Choose a payment account and click “Next".<br/>![](./images/multi5.png)</br>
 * 6 ）Confirm the information and enter the unlock pass.A transaction initiated successfully message will be returned.<br/>![](./images/multi6.png)</br>
 
-> For Multisig  Vault Account, its account creation  process is the same with a normal multisig  account, and its activation process is the same with a normal  Vault Account.
+> For Multisig  Vault Account, its account creation  process is the same with a Standard Multisig Account, and its activation process is the same with a normal  Vault Account.
 
 #### 5.4.2 Export Multisig Account
 * 1 ）From account list , select the multisig account to export and access to account details.<br/>![](./images/multi7.png)</br>	
@@ -268,12 +268,12 @@ The wallet supports  account export, account delete, view private keys  and othe
 > <br/>![](./images/multi9.png)</br>
 
 ---
-### 6. GateChain Blockchain Explorer)
+### 6. GateChain Blockchain Explorer
 -  To View account, transaction id, block, validator and more, visit block explorer for testnet at [https://explorer.gatechain.io/](https://explorer.gatechain.io/)。
 
 ![](./images/17.png)
 
-### 7. Developer Document GateChain Documentation)
+### 7. Developer Document GateChain Documentation
 - View developer document here:[https://www.gatechain.io/docs](https://www.gatechain.io/docs) 
 
 
