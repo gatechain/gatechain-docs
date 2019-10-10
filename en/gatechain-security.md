@@ -8,13 +8,13 @@ GateChain can provide safety  guarantee respectively to tackle  safety problems 
 
 ## Definition
 
-### I Normal Account
+### I Standard Account
 
-- A normal account is a traditional blockchain account, suitable for normal transfer. Changes to account sate takes effect immediately. It does not support “revoke”request. 
+- A Standard Account is a traditional blockchain account, suitable for normal transfer. Changes to account sate takes effect immediately. It does not support “revoke”request. 
 
 ### II Vault Account
 
-- Vault account is an account created for allowing revocable transaction. It supports delayed transaction. When creating Vault Account, you need to bind a newly created normal account.
+- Vault account is an account created for allowing revocable transaction. It supports delayed transaction. When creating Vault Account, you need to bind a newly created Standard Account.
 
 ### III Account types
 - Single  signature account
@@ -46,7 +46,7 @@ gatecli vault-account create gt11d9t6p5g69kzz0rf39av5s24tqvdprwk6s6a57r gt11cmsf
 Description：
 
 * Must use a newly created account to send a create Vault Account transaction directly.
-* If a normal transaction is sent to this account first, this account becomes a normal account and can not send create Vault Account transaction any more.
+* If a normal transaction is sent to this account first, this account becomes a Standard Account and can not send create Vault Account transaction any more.
 * Clearing height must be greater than （current height+delay height）.
 
 
