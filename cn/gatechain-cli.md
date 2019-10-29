@@ -127,7 +127,7 @@ gatecli vault-account create gt11d9t6p5g69kzz0rf39av5s24tqvdprwk6s6a57r gt11cmsf
 
 说明：
 
-* 必须使用新生成的账户作为基础账户和找回账户，用来发送创建保险账户交易，
+* 必须使用新生成的账户作为基础账户，用来发送创建保险账户交易，
 * 如果先向该账户发送了普通交易，该账户即为普通账户，不能用来再发送创建保险账户交易
 * 清算高度需要大于（当前高度+延迟生效高度）
 
@@ -188,6 +188,17 @@ gatecli block show [区块高度] --chain-id [链ID]
 ```bash
 gatecli block show 10001 --chain-id testnet
 ```
+
+###3.2 查询某个区块高度时所有验证节点列表
+```bash
+gatecli block validator-list [区块高度] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli block validator-list 2000 --chain-id testnet
+```
+
 
 ##4 交易
 ###4.1 查询单笔交易
@@ -505,6 +516,97 @@ gatecli proposal vote 8 yes --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --
 	* abstain：弃权
 	* nowithveto：不反对
 
+###7.5 查询所有提案	
+```bash
+gatecli proposal list --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal list --chain-id testnet
+```
+
+###7.6 查询某个提案的某个投票详情	
+```bash
+gatecli proposal voting-show [提案编号] [投票人地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal voting-show 1 gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+```
+
+###7.7 查询某个提案的所有投票详情	
+```bash
+gatecli proposal voting-list [提案编号] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal voting-list 1 --chain-id testnet
+```
+
+###7.8 查询管理参数：投票、票数、抵押	
+```bash
+gatecli proposal voting-params --chain-id [链ID]
+```
+```bash
+gatecli proposal tallying-params --chain-id [链ID]
+```
+```bash
+gatecli proposal deposit-params --chain-id [链ID]
+```
+
+###7.9 查询所有管理参数	
+```bash
+gatecli proposal params --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal params --chain-id testnet
+```
+
+###7.10 查询某个提案的提议者账户		
+```bash
+gatecli proposal proposer [提案编号] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal proposer 1 --chain-id testnet
+```
+
+###7.11 查询某个账户在某个提案的抵押情况
+```bash
+gatecli proposal deposit-show [提案编号] [账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal deposit-show 1 gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+```
+
+###7.12 查询某个提案的所有抵押情况	
+```bash
+gatecli proposal deposit-list [提案编号] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal deposit-list 1 --chain-id testnet
+```
+
+###7.13 查询某个提案的投票票数	
+```bash
+gatecli proposal tallying [提案编号] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli proposal tallying 1 --chain-id testnet
+```
+
 ##8 交易对
 ###8.1 提交交易对提案
 ```bash
@@ -752,6 +854,239 @@ gatecli validator show gt1valoper19weu7ur3rrq7kydldu53hrm755s9gg0fzxc7k7 --chain
 ```bash
 gatecli validator list --chain-id [链ID]
 ```
+
+###10.5 委托代币到验证节点 
+```bash
+gatecli staking delegate [验证节点账户] [委托代币数量]  --from [发送者账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking delegate gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.6 转移委托到另一个验证节点	
+```bash
+gatecli staking redelegate [原验证节点账户] [目标验证节点账户] [委托代币数量] --from [发送者账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking redelegate gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze gt1valoper1hur6z8626cz2ksmmgv36e3w68kcw7ttss8qr7h 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.7 从验证节点解绑	
+```bash
+gatecli staking unbond [验证节点账户] [解绑代币数量] --from [发送者账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking unbond gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.8 验证节点解禁	
+```bash
+gatecli slashing unjail --from [发送者账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli slashing unjail --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.9 查询验证节点的签名信息	
+```bash
+gatecli slashing signing-info [验证节点公钥] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli slashing signing-info gt1valconspub1zcjduepq5thyvy8fnw5a2vfa6k6r5qjf7u8dqm702k89la4fxjkppxkfhrdqsgeaw8 --chain-id testnet
+```
+
+###10.10 委托人从验证节点提取收益	
+```bash
+gatecli distribution withdraw-rewards [验证节点地址] --from [发送者账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli distribution withdraw-rewards gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.11 委托人设置提取收益的账户	
+```bash
+gatecli distribution set-withdraw-account [提取收益账户] --from [发送者账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli distribution set-withdraw-account gt11e9jz38gvtayyh97hhlxk26kh7zttn6hz27j65s --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.12 委托人从验证节点提取全部收益
+```bash
+gatecli distribution withdraw-all-rewards --from [发送者账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli distribution withdraw-all-rewards --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.13 单个验证节点仍未支付的委托收益列表
+```bash
+gatecli distribution validator-outstanding-rewards [验证节点账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli distribution validator-outstanding-rewards gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+###10.14 单个验证节点的手续费收入列表	
+```bash
+gatecli distribution commission [验证节点账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli distribution commission gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+###10.15 单个验证节点的惩罚列表
+```bash
+gatecli distribution slashes [验证节点账户地址] [开始块高] [结束块高] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli distribution slashes gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100 1000 --chain-id testnet
+```
+
+###10.16 单个委托者的委托收益列表
+```bash
+gatecli distribution rewards [委托者地址] [验证节点地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli distribution rewards gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+说明：可选择在某验证节点获得的收益列表
+
+
+###10.17 查询某验证节点所有的委托	
+```bash
+gatecli staking delegations-to [验证节点地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking delegations-to gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+###10.18 查询某验证节点所有已解除的委托
+```bash
+gatecli staking unbonding-delegations-from [验证节点地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking unbonding-delegations-from gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+###10.19 查询某验证节点所有转移委托的记录
+```bash
+gatecli staking redelegations-from [验证节点地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking redelegations-from gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+###10.20 查询某个验证节点上的某个委托人
+```bash
+gatecli staking delegation [委托者地址] [验证节点地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking delegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+###10.21 查询所有验证节点上的某个委托人
+```bash
+gatecli staking delegations [委托者地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking delegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.22 查询某委托人在某有验证节点--已经解除的委托记录
+```bash
+gatecli staking unbonding-delegation [委托者地址] [验证节点地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking unbonding-delegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+###10.23 查询某委托人在所有验证节点--已经解除的委托记录
+```bash
+gatecli staking unbonding-delegations [委托者地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking unbonding-delegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.24 查询某委托人在两个验证节点的转移委托记录
+```bash
+gatecli staking redelegation [委托者地址] [原验证节点账户] [目标验证节点账户] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking redelegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze gt1valoper1hur6z8626cz2ksmmgv36e3w68kcw7ttss8qr7h --chain-id testnet
+```
+
+###10.25 查询某委托人所有的转移委托记录
+```bash
+gatecli staking redelegations [委托者地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking redelegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###10.26 查询当前的惩罚参数	
+```bash
+gatecli slashing params --chain-id [链ID]
+```
+
+###10.27 查询分配和基金会参数		
+```bash
+gatecli distribution params --chain-id [链ID]
+```
+
+###10.28 查询权益质押的参数信息	
+```bash
+gatecli staking params --chain-id [链ID]
+```
+
+###10.29 查询当前质押池的信息		
+```bash
+gatecli staking pool --chain-id [链ID]
+```
+
 ## 11 去中心化交易所
 ###11.1 存代币到交易所
 ```bash
