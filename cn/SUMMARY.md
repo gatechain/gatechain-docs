@@ -8,6 +8,7 @@
 
 * [命令行 CLI](cli/README.md)
 	* [普通账户 Account](cli/account.md)
+	* [共识账户 con-account](cli/con-account.md)
 	* [保险账户 Vault-account](cli/vault-account.md)
 	* [区块 Block](cli/block.md)
 	* [交易 TX](cli/tx.md)
@@ -15,7 +16,6 @@
 	* [代币 token](cli/token.md)
 	* [交易对 trading-pair](cli/trading-pair.md)
 	* [基金会 foundation](cli/foundation.md)
-	* [共识账户 con-account](cli/con-account.md)
 	* [抵押 staking](cli/staking.md)
 	* [分发 distribution](cli/distribution.md)
 	* [去中心化交易所 dex](cli/dex.md)
