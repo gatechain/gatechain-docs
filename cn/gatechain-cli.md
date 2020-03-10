@@ -4,8 +4,8 @@
 > 本文档所有交易指令(非查询命令)都需要支付一定量的交易费。
 > 可使用--gas-prices或者--fees 为交易添加交易费
 > 
-> 命令中所用到的资产数额（Asset amount）均为乘以1E8转换后的正整数值(Integer of the Value)
-> 资产数额（Asset amount）支持科学计数法，比如10E9GC就表示1.0GC
+> 命令中所用到的资产数额（Asset amount）均为乘以10E18转换后的正整数值(Integer of the Value)
+> 资产数额（Asset amount）支持科学计数法，比如10E9 NanoGC就表示1.0GC
 
 ## 1. account
 ### 账户类型
@@ -524,11 +524,6 @@ gatecli con-account online
 gatecli con-account online --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 
 --pubkey gc1pub1addwnpepqty4t2h3depgqnp2jfm4kqrmuwauawyrate0cpcduzpqucgujhtugtpazyw --moniker newcon-account --commission-max-change-rate "0.01" --commission-max-rate "0.01" --commission-rate "0.01" --chain-id testnet
 ```
-说明：
-
-* `commission-rate` 必须符合以下要求:
-	* 必须介于0到共识账户的`commission-max-rate`值 之间
-	* 每天只能变化一次,且变化范围不能超过 共识账户 的 `commission-max-change-rate` .
 
 ###9.3 下线共识账户
 ```bash

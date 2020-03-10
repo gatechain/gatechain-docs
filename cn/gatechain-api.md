@@ -3,8 +3,8 @@
 >通过本文档提供的构造交易的接口
 >其请求参数必须设置大于0gc的交易费
 > 
-> 命令中所用到的资产数额（Asset amount）均为乘以1E8转换后的正整数值(Integer of the Value)
-> 资产数额（Asset amount）支持科学计数法，比如10E9GC就表示1.0GC
+> 命令中所用到的资产数额（Asset amount）均为乘以10E18转换后的正整数值(Integer of the Value)
+> 资产数额（Asset amount）支持科学计数法，比如10E9 NanoGC就表示1.0GC
 
 ## 1 account
 ###1.1 查询账户信息
