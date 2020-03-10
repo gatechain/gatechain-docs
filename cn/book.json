@@ -1,0 +1,25 @@
+{
+	"title": "GateChain",
+	"author": "GateChain Team",
+	"description": "GateChain Team",
+	"language": "en",
+	"styles": {
+        "website": "styles/website.css"
+    },
+	"plugins": [
+		"-lunr",
+		"-search",
+		"-sharing",
+		"-livereload",
+		"back-to-top-button",
+		"expandable-chapters-small",
+		"insert-logo",
+		"search-pro"
+	],
+	"pluginsConfig": {
+		"insert-logo": {
+			"url": "/images/GT.png",
+			"style": "background: none; max-height: 30px; min-height: 30px"
+		}
+	}
+}

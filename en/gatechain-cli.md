@@ -189,6 +189,17 @@ Example：
 gatecli block show 10001 --chain-id testnet
 ```
 
+###3.2 Query a single block all validator list
+```bash
+gatecli block validator-list [block height] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli block validator-list 2000 --chain-id testnet
+```
+
+
 ##4  Transaction
 ###4.1 Query a single transaction
 ```bash
@@ -459,20 +470,7 @@ Example：
 gatecli gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" --deposit="10aaa-94f" --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
 ```
 
-###7.2 Query a proposal info
-```bash
-gatecli proposal show [proposal serial number] --chain-id [chain ID]
-```
-Example：
-
-```bash
-gatecli proposal show 8 --chain-id testnet
-```
-Description：
-
-* A proposal serial number will receive after submitting a proposal.
-
-###7.3 Staking for proposal
+###7.2 Staking for proposal
 ```bash
 gatecli proposal deposit [proposal serial number] [token amount] --from [sender account] --chain-id [chain ID]
 ```
@@ -487,7 +485,7 @@ Description：
 
 * when the staked tokens meet the requirement, the proposal will go to voting phase.
 
-###7.4 Vote for proposal
+###7.3 Vote for proposal
 ```bash
 gatecli proposal vote [proposal serial number] [side taking in vote] --from [sender account] --chain-id [chain ID]
 ```
@@ -504,6 +502,110 @@ Description：
 	* no：disagree
 	* abstain：abstain
 	* nowithveto：no objection
+
+###7.4 Query a proposal info
+```bash
+gatecli proposal show [proposal serial number] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal show 8 --chain-id testnet
+```
+Description：
+
+* A proposal serial number will receive after submitting a proposal.
+
+###7.5 Query all proposals 
+```bash
+gatecli proposal list --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal list --chain-id testnet
+```
+
+###7.6 Query a proposal vote tally
+```bash
+gatecli proposal tallying [proposal-id] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal tallying 1 --chain-id testnet
+```
+
+###7.7 Query single voting details for a specific proposal
+```bash
+gatecli proposal voting-show [proposal-id] [Voter-address] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal voting-show 1 gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+```
+
+###7.8 Query all voting details for a specific proposal
+```bash
+gatecli proposal voting-list [proposal-id] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal voting-list 1 --chain-id testnet
+```
+
+###7.9 Query params：vote、vote tally、deposit
+```bash
+gatecli proposal voting-params --chain-id [chain ID]
+```
+```bash
+gatecli proposal tallying-params --chain-id [chain ID]
+```
+```bash
+gatecli proposal deposit-params --chain-id [chain ID]
+```
+
+###7.10 Query all params
+```bash
+gatecli proposal params --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal params --chain-id testnet
+```
+
+###7.11 Query proposer account of proposal
+```bash
+gatecli proposal proposer [proposal-id] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal proposer 1 --chain-id testnet
+```
+
+###7.12 Query deposit info of a single account in the specific proposal
+```bash
+gatecli proposal deposit-show [proposal-id] [depositer-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal deposit-show 1 gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+```
+
+###7.13 Query deposit info of all account in the specific proposal
+```bash
+gatecli proposal deposit-list [proposal-id] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli proposal deposit-list 1 --chain-id testnet
+```
 
 ##8 Trading pair
 ###8.1 submit a trading pair proposal
@@ -752,8 +854,251 @@ gatecli validator show gt1valoper19weu7ur3rrq7kydldu53hrm755s9gg0fzxc7k7 --chain
 ```bash
 gatecli validator list --chain-id [chain ID]
 ```
-## 11 Decentralized exchange
-###11.1 Deposit token to Decentralized Exchange
+
+##11 
+###11.1 Delegate
+####11.1.1 Delegate token to verification node
+```bash
+gatecli staking delegate [validator-add] [amount]  --from [sender account] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking delegate gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.1.2 Query the info of a single delegation account in the single validation node
+```bash
+gatecli staking delegation [delegator-addr] [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking delegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+####11.1.3 Query the info of a single delegation account in all verification node
+```bash
+gatecli staking delegations [delegator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking delegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###11.2 Redelegate
+####11.2.1 Redelegate
+```bash
+gatecli staking redelegate [src-validator-addr] [dst-validator-addr] [amount] --from [sender account] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking redelegate gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze gt1valoper1hur6z8626cz2ksmmgv36e3w68kcw7ttss8qr7h 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.2.2 Query all redelegate records of the single delegation account
+
+```bash
+gatecli staking redelegations [delegator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking redelegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.2.3 Query redelegate records of a single delegation account in two verification nodes
+```bash
+gatecli staking redelegation [delegator-addr] [src-validator-addr] [dst-validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking redelegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze gt1valoper1hur6z8626cz2ksmmgv36e3w68kcw7ttss8qr7h --chain-id testnet
+```
+
+###11.3 Unbond
+####11.3.1 Unbind from validation node
+```bash
+gatecli staking unbond [validator-addr] [amount] --from [sender account] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking unbond gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.3.2 Query untied delegation records of a single delegation account in a single verification node
+
+```bash
+gatecli staking unbonding-delegation [delegator-addr] [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking unbonding-delegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+####11.3.3 Query untied delegation records of a single delegation account in all verification nodes
+
+```bash
+gatecli staking unbonding-delegations [delegator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking unbonding-delegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+###11.4 Rewards
+####11.4.1 Setup an account to withdraw rewards
+```bash
+gatecli distribution set-withdraw-account [withdraw-addr] --from [sender account] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli distribution set-withdraw-account gt11e9jz38gvtayyh97hhlxk26kh7zttn6hz27j65s --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.4.2 Withdraw rewards from verification node
+```bash
+gatecli distribution withdraw-rewards [validator-addr] --from [sender account] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli distribution withdraw-rewards gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.4.3 Withdraw all rewards from verification node
+```bash
+gatecli distribution withdraw-all-rewards --from [sender account] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli distribution withdraw-all-rewards --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.4.4 Query the delegation rewards of the delegation account
+```bash
+gatecli distribution rewards [delegator-addr] [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli distribution rewards gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+Description：Delegation rewards at optional  a single verification node
+
+###11.5 validator node
+####11.5.1 Query all delegation of the validation node
+```bash
+gatecli staking delegations-to [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking delegations-to gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+####11.5.2 Query all redelegate records of the verification node
+```bash
+gatecli staking redelegations-from [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking redelegations-from gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+####11.5.3 Query all unbond delegation of the validation node
+```bash
+gatecli staking unbonding-delegations-from [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli staking unbonding-delegations-from gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+####11.5.4 Query unpaid delegation rewards of the verification node
+```bash
+gatecli distribution validator-outstanding-rewards [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli distribution validator-outstanding-rewards gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+####11.5.5 Query the verification nodes commission
+```bash
+gatecli distribution commission [validator-addr] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli distribution commission gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+```
+
+####11.5.6 Query penalty list of validation node 
+```bash
+gatecli distribution slashes [validator-addr] [start-height] [end-height] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli distribution slashes gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100 1000 --chain-id testnet
+```
+
+####11.5.7 	Validation node unjail
+```bash
+gatecli slashing unjail --from [sender account] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli slashing unjail --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+```
+
+####11.5.8 Query signing info of the verification node
+```bash
+gatecli slashing signing-info [validator-pubkey] --chain-id [chain ID]
+```
+Example：
+
+```bash
+gatecli slashing signing-info gt1valconspub1zcjduepq5thyvy8fnw5a2vfa6k6r5qjf7u8dqm702k89la4fxjkppxkfhrdqsgeaw8 --chain-id testnet
+```
+
+####11.5.9 Query stake deposit pool info
+```bash
+gatecli staking pool --chain-id [chain ID]
+```
+
+###11.6	Params
+
+####11.6.1 Query penalty params
+```bash
+gatecli slashing params --chain-id [chain ID]
+```
+
+####11.6.2 Query allocation and foundation params
+```bash
+gatecli distribution params --chain-id [chain ID]
+```
+
+####11.6.3 Query stake deposit params
+```bash
+gatecli staking params --chain-id [chain ID]
+```
+
+## 12 Decentralized exchange
+###12.1 Deposit token to Decentralized Exchange
 ```bash
 gatecli dex deposit [token amount]
 --gas-prices [gas price]
@@ -770,7 +1115,7 @@ Description：
 * Transfer a certain amount of token from user’s account to the exchange account.
 * Making any transaction in   Decentralized Exchange requires user having enough account balance at exchange. It is the very first step to trade.
 
-###11.2 Withdraw token  from exchange to user account
+###12.2 Withdraw token  from exchange to user account
 ```bash
 gatecli dex withdraw [account public key] [token amount to withdraw] [nonce random number] [signatures] [timestamp] [Gas Prices]
 --from [initiator account]
@@ -785,7 +1130,7 @@ Description：
 
 *User submits a withdrawal request. If it is approved, admin user will execute this command to finish user withdrawal operation. 
 
-###11.3 Sign a withdrawal transaction
+###12.3 Sign a withdrawal transaction
 ```bash
 gatecli dex sign-withdraw
 --pubkey [account public key]
@@ -804,7 +1149,7 @@ Description
 
 * This signing information is used in signature field at 11.2 command.
 
-### 11.4 Sign a trading order
+### 12.4 Sign a trading order
 ```bash
 gatecli dex sign-order
 --order-nonce [order serial number]
@@ -824,7 +1169,7 @@ Description：
 
 * This signing information is used in maker-sign and taker-sign field at 11.7 command.
 
-### 11.5 sign a cancel order
+### 12.5 sign a cancel order
 ```bash
 gatecli dex sign-cancelorder
 --orderid [order serial number ]
@@ -836,7 +1181,7 @@ Description：
  
 * This signing information is used in sign field to cancel order.
 
-### 11.6 Query a user balance at exchange
+### 12.6 Query a user balance at exchange
 ```bash
 gatecli dex query-account [account] --chain-id [chain ID]
 ```
@@ -850,7 +1195,7 @@ Description：
 
 * Based on user account info to query its token balance at exchange.
 
-### 11.7 Record trading information
+### 12.7 Record trading information
 ```bash
 gatecli dex trade
 --tradeid [trade  ID，you can use this ID to invoke query-trade command to query transaction details.]
@@ -896,7 +1241,7 @@ Description：
 * Admin account sign  and save the trade to blockchain. And add or deduct the corresponding amount for tokens  maker and taker stored at the exchange.
 * Fee and gas transfer is made to fee user account. This deal is done.
 
-### 11.8 Query a trade details.
+### 12.8 Query a trade details.
 ```bash
 gatecli dex query-trade [trade ID] --chain-id [chain ID]
 ```
@@ -910,7 +1255,7 @@ Description：
 
 * Based on a trade id defined by Exchange to query details for this trade.
 
-### 11.9 Setup an admin account 
+### 12.9 Setup an admin account 
 ```bash
 gatecli dex set-admin [admin type：admin/fee] [account] --from [sender account] --chain-id [chain ID]
 ```
@@ -924,7 +1269,7 @@ Description：
 
 * only owner has the privilege to setup admin and fee users.
 
-### 11.10 Query an admin account 
+### 12.10 Query an admin account 
 ```bash
 gatecli dex query-admin [admin type：owner/admin/fee] --chain-id [chain ID]
 ```
@@ -938,7 +1283,7 @@ Description：
 *query account of three user types:owner/admin/fee.
 
 
-## 12 Start a local RPC service
+## 13 Start a local RPC service
 ```bash
 gatecli rest-server
 ```
@@ -947,7 +1292,7 @@ Description：
 
 * When RPC service starts, command line can not be executed due to  storage lock.
 
-## 13 status
+## 14 status
 ```bash
 gatecli status
 ```
@@ -956,7 +1301,7 @@ Description：
 
 * Query  a local node service status 
 
-##14 version number
+##15 version number
 ```bash
 gatecli version
 ```
@@ -965,7 +1310,7 @@ Description：
 
 *Query  a command line version information
 
-## 15 Help
+## 16 Help
 ```bash
 gatecli [command 1] [command 2] [command 3]... --help
 ```
