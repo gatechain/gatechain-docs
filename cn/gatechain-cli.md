@@ -5,16 +5,16 @@
 > 可使用--gas-prices或者--fees 为交易添加交易费
 > 
 > 命令中所用到的资产数额（Asset amount）均为乘以1E8转换后的正整数值(Integer of the Value)
-> 资产数额（Asset amount）支持科学计数法，比如10E18GT就表示10.0GT
+> 资产数额（Asset amount）支持科学计数法，比如10E9GC就表示1.0GC
 
-## 1. 账户
+## 1. account
 ### 账户类型
 - 单签账户
-	- 前缀：`gt1`
-	- 示例：`gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc`
+	- 前缀：`gc1`
+	- 示例：`gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88`
 - 多签账户
-	- 前缀：`gt2`
-	- 示例：`gt210fm6dxdd08sh4ptaxt8t2mapaywp5zq57fxx9p`
+	- 前缀：`gc2`
+	- 示例：`gc21kfwurleaskangv45ssmpzs2sprhxjsfdztca9d`
 - 保险单签账户
 	- 前缀：`vault1`
 	- 示例：`vault118mlcn9uxmmuv33s0y8zdl9lmms7jxnexjme28e`
@@ -35,7 +35,7 @@ gatecli account create [账户] --multisig [账户列表] --multisig-threshold [
 示例：
 
 ```bash
-gatecli account create gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --multisig gt110nxr6.....,gt113454xdr..... --multisig-threshold 2
+gatecli account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --multisig gc110nxr6.....,gc113454xdr..... --multisig-threshold 2
 ```
 说明：
 
@@ -55,27 +55,27 @@ gatecli account show [账户] --chain-id [链ID]
 示例：
 
 ```
-gatecli account show gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --chain-id testnet
+gatecli account show gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 ### 1.5 修改账户密码
 ```bash
-gatecli account update [账户]
+gatecli account update [name]
 ```
 示例：
 
 ```
-gatecli account update gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc
+gatecli account update 1583472684
 ```
 
 ### 1.6 删除账户
 ```
-gatecli account delete [账户]
+gatecli account delete [name]
 ```
 示例：
 
 ```
-gatecli account delete gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc
+gatecli account delete 1583472684
 ```
 
 ###1.7 查询账户余额
@@ -86,31 +86,33 @@ gatecli account balance [账户] --chain-id [链ID]
 示例：
 
 ```bash
-gatecli account balance gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --chain-id testnet
-```
-###1.8 公布多签账户
-```bash
-gatecli account publish-multisig [to_address]  [pubkey] --chain-id [链ID]
-```
-
-示例：
-
-```bash
-gatecli account publish-multisig gt11za9h6j2j98p953hu60mm2a609uj5ujrnget43k gt1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2 --from gt11wmnygdl4mtrz3x9sgkev5rhajzxxqh2j0gr3vr --chain-id testnet
+gatecli account balance gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 ###1.8 查询账户公钥
 ```bash
-gatecli account show-key [addr]
+gatecli account show-key [name]
 ```
 
 示例：
 
 ```bash
-gatecli account show-key gt11wmnygdl4mtrz3x9sgkev5rhajzxxqh2j0gr3vr
+gatecli account show-key 1583472684
 ```
 
-## 2. 保险账户
+###1.9 公布多签账户
+```bash
+gatecli account publish-multisig [账户] [公钥] --chain-id [链ID]
+```
+
+示例：
+
+```bash
+gatecli account publish-multisig gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2 --from gc11wmnygdl4mtrz3x9sgkev5rhajzxxqh2j0gr3vr --chain-id testnet
+```
+
+
+## 2. vault-account
 ###2.1 创建保险账户
 
 ```bash
@@ -122,7 +124,7 @@ gatecli vault-account create [基础账户] [找回账户] [延迟生效高度] 
 示例：
 
 ```bash
-gatecli vault-account create gt11d9t6p5g69kzz0rf39av5s24tqvdprwk6s6a57r gt11cmsfq3hmzzhze2z3mgrxq5x8ndhq6nkxyu9l2l 38 300 30gt --from gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --chain-id testnet
+gatecli vault-account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx 38 300 30gc --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 说明：
@@ -141,7 +143,7 @@ gatecli vault-account update-clearing-height [新的清算高度] --from [发送
 示例：
 
 ```bash
-gatecli vault-account update-clearing-height 100000 --from gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --chain-id testnet
+gatecli vault-account update-clearing-height 100000 --from vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49 --chain-id testnet
 ```
 
 说明：
@@ -158,7 +160,7 @@ gatecli vault-account clear [保险账户1]([保险账户2] [保险账户3]...) 
 示例：
 
 ```bash
-gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --chain-id testnet
+gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx --chain-id testnet
 ```
 
 说明：
@@ -174,10 +176,10 @@ gatecli vault-account show [保险账户] --chain-id [链ID]
 示例：
 
 ```bash
-gatecli vault-account show vault118mlcn9uxmmuv33s0y8zdl9lmms7jxnexjme28e --chain-id testnet
+gatecli vault-account show vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49 --chain-id testnet
 ```
 
-## 3 区块
+## 3 block
 ###3.1 查询单个区块信息
 ```bash
 gatecli block show [区块高度] --chain-id [链ID]
@@ -189,18 +191,8 @@ gatecli block show [区块高度] --chain-id [链ID]
 gatecli block show 10001 --chain-id testnet
 ```
 
-###3.2 查询单个区块的所有验证节点列表
-```bash
-gatecli block validator-list [区块高度] --chain-id [链ID]
-```
-示例：
 
-```bash
-gatecli block validator-list 2000 --chain-id testnet
-```
-
-
-##4 交易
+##4 tx
 ###4.1 查询单笔交易
 ```bash
 gatecli tx show [交易Hash] --chain-id [链ID]
@@ -235,7 +227,7 @@ gatecli tx send [接收者账户] [转移代币数量] --from [发送者账户] 
 示例：
 
 ```bash
-gatecli tx send gt11w8c3vj8045la70y6g862jd7tt09u02jhzvp2y2 10gt --from gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --chain-id testnet
+gatecli tx send gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 10gc --from gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
 ```
 
 说明：
@@ -250,7 +242,7 @@ gatecli tx sign [交易文件] --from [签名者账户] --multisig [多签账户
 示例：
 
 ```bash
-gatecl tx sign tx.json --from gt110nxr6854yn8gf6pl890qc6flj5g48d63jerjcc --chain-id testnet --output-document=s4_sign.json
+gatecl tx sign tx.json --from gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet --output-document=s4_sign.json
 ```
 
 ###4.5 多签
@@ -261,7 +253,7 @@ gatecli tx multisign [交易文件] [多签账户] [签名文件1] [签名文件
 示例：
 
 ```bash
-gatecli tx multisign tx.json gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v s4_sign.json s3_sign.json --chain-id testnet > tx_with_sign.json
+gatecli tx multisign tx.json gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek s4_sign.json s3_sign.json --chain-id testnet > tx_with_sign.json
 ```
 
 ###4.6 广播
@@ -286,7 +278,7 @@ gatecli tx encode [文件路径]
 gatecli tx encode tx_sign.json
 ```
 
-## 5 可撤回交易
+## 5 revocable-tx
 ###5.1 发送可撤回交易
 ```bash
 gatecli revocable-tx send [接收者账户] [转移代币数量] --from [发送者账户] --chain-id [链ID]
@@ -295,7 +287,7 @@ gatecli revocable-tx send [接收者账户] [转移代币数量] --from [发送�
 示例：
 
 ```bash
-gatecli revocable-tx send gt11w8c3vj8045la70y6g862jd7tt09u02jhzvp2y2 10gt --from vault118mlcn9uxmmuv33s0y8zdl9lmms7jxnexjme28e --chain-id testnet
+gatecli revocable-tx send gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek 10gc --from vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49 --chain-id testnet
 ```
 
 说明：
@@ -334,10 +326,10 @@ gatecli revocable-tx revoke [交易Hash] --from [发送者账户] --chain-id [�
 示例：
 
 ```bash
-gatecli revocable-tx revoke 0E3B67C685C271632CE6F4DAA2AB06AF7E8077509E1CB5310F63F6C147786E12 --from vault118mlcn9uxmmuv33s0y8zdl9lmms7jxnexjme28e --chain-id testnet
+gatecli revocable-tx revoke 0E3B67C685C271632CE6F4DAA2AB06AF7E8077509E1CB5310F63F6C147786E12 --from vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49 --chain-id testnet
 ```
 
-##6 代币
+##6 token
 ###6.1 发行代币
 ```bash
 gatecli token issue [代币名称] [代币符号] [发行总量] --gas [数量] --from [发送者账户] --chain-id [链ID]
@@ -346,7 +338,7 @@ gatecli token issue [代币名称] [代币符号] [发行总量] --gas [数量] 
 示例：
 
 ```bash
-gatecli token issue TestToken aaa 100000000000000000000000 --gas 300000 --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+gatecli token issue TestToken aaa 100000000000000000000000 --gas 9000000 --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 说明：
@@ -354,25 +346,11 @@ gatecli token issue TestToken aaa 100000000000000000000000 --gas 300000 --from g
 * 代币符号必须全大写，长度2-15个字符
 * ISSUE创建成功后，可以通过查询`issue-tx-id`或查询账户余额来验证结果。
 * 代币创建时候另有两个flag:
-  * `--token-mintable`  此代币是否可以增发
-  * `--token-freezable` 此代币是否可以冻结
+  * `--mintable`  此代币是否可以增发
+  * `--freezable` 此代币是否可以冻结
 
-###6.2 查询代币发行情况
-```bash
-gatecli token show-issue [issue-tx-id] --chain-id [链ID]
-```
 
-示例：
-
-```bash
-gatecli token show-issue E1C18208EC8BFDC83444AD96E7834EDBAAE50A6745E0DACE822BDB1D86AC2FDA --chain-id testnet
-```
-
-说明：
-
-* `issue-tx-id`为发行代币（6.1）返回的交易Hash。
-
-###6.3 查询代币信息
+###6.2 查询代币信息
 ```bash
 gatecli token show [链上代币符号] --chain-id [链ID]
 ```
@@ -388,41 +366,41 @@ gatecli token show aaa-789 --chain-id testnet
 * 此命令中的”链上代币符号“，不同于发行代币时的参数“代币符号”。
 * 例如用户发行代币，传入的“代币符号”为aaa。为了避免链上存在重名的代币，发行成功后，区块链中记载的“链上代币符号”为aaa-[随机字符串]。
 
-###6.4 查询所有代币
+###6.3 查询所有代币
 ```bash
 gatecli token list --chain-id [链ID]
 ```
 
 
-###6.5 增发代币
+###6.4 增发代币
 ```bash
 gatecli token mint [代币数量] --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli token mint 100000000000aaa-94f --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+gatecli token mint 100000000000aaa-94f --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 说明：
 
-* 增发的代币，在发行时必须使用了参数 --token-mintable
+* 增发的代币，在发行时必须使用了参数 --mintable
 * 代币数量的单位是链上代币符号（aaa-94f）
 * 增发的量加上之前发行的量，不能超过默认最大值（100亿）
 
-###6.6 销毁代币
+###6.5 销毁代币
 ```bash
 gatecli token burn [代币数量] --from [发送者账户] --chain-id [链ID] 
 ```
 示例：
 
 ```bash
-gatecli token burn 100000000000aaa-94f  --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+gatecli token burn 100000000000aaa-94f  --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 说明：
 
 * 代币数量的单位是链上代币符号（aaa-94f）
 
-###6.7 冻结代币
+###6.6 冻结代币
 ```bash
 gatecli token freeze [链上代币符号] --from [发送者账户] --chain-id [链ID] 
 ```
@@ -430,14 +408,14 @@ gatecli token freeze [链上代币符号] --from [发送者账户] --chain-id [�
 示例：
 
 ```bash
-gatecli token freeze aaa-94f --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+gatecli token freeze aaa-94f --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 说明：
 
-* 冻结的代币，在发行时必须使用了参数 --token-freezable
+* 冻结的代币，在发行时必须使用了参数 --freezable
 
-###6.8 解冻代币
+###6.7 解冻代币
 ```bash
 gatecli token unfreeze [链上代币符号] --from [发送者账户] --chain-id [链ID] 
 ```
@@ -445,225 +423,39 @@ gatecli token unfreeze [链上代币符号] --from [发送者账户] --chain-id 
 示例：
 
 ```bash
-gatecli token unfreeze aaa-94f --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+gatecli token unfreeze aaa-94f --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 说明：
 
-* 解冻的代币，在发行时必须使用了参数 --token-freezable
+* 解冻的代币，在发行时必须使用了参数 --freezable
 * 代币之前的状态必须是冻结状态
 
-##7 提案
-###7.1 提交提案
+##7 trading-pair
+###7.1 提交交易对提案
 ```bash
-gatecli proposal submit 
---title="[提案名称]" 
---description="[提案描述]" 
---type="[提案类型]" 
---deposit="[质押代币数量]" 
---from [发送者账户] 
---chain-id [链ID]
+gatecli trading-pair submit [基准代币符号] [报价代币符号] [初始价格] --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" --deposit="10aaa-94f" --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
+gatecli trading-pair submit-proposal YY-9B3 GC 100 --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-###7.2 为提案质押
-```bash
-gatecli proposal deposit [提案编号] [代币数量] --from [发送者] --chain-id [链ID]
-```
-
-示例：
-
-```bash
-gatecli proposal deposit 8 10000000gt --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
-```
-
-说明：
-
-* 当质押代币数量达到要求后，提案进入投票阶段
-
-###7.3 为提案投票
-```bash
-gatecli proposal vote [提案编号] [投票意见] --from [发送者账户] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal vote 8 yes --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
-```
-
-说明：
-
-* 投票意见分为： 
-	* yes：同意
-	* no：不同意
-	* abstain：弃权
-	* nowithveto：不反对
-
-###7.4 查询提案信息
-```bash
-gatecli proposal show [提案编号] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal show 8 --chain-id testnet
-```
-说明：
-
-* 提交提案之后，可以得到提案编号。
-
-
-###7.5 查询所有提案	
-```bash
-gatecli proposal list --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal list --chain-id testnet
-```
-
-###7.6 查询提案的投票票数	
-```bash
-gatecli proposal tallying [提案编号] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal tallying 1 --chain-id testnet
-```
-
-###7.7 查询指定提案的单个投票详情	
-```bash
-gatecli proposal voting-show [提案编号] [投票人地址] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal voting-show 1 gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
-```
-
-###7.8 查询指定提案的所有投票详情	
-```bash
-gatecli proposal voting-list [提案编号] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal voting-list 1 --chain-id testnet
-```
-
-###7.9 查询管理参数：投票、票数、质押	
-```bash
-gatecli proposal voting-params --chain-id [链ID]
-```
-```bash
-gatecli proposal tallying-params --chain-id [链ID]
-```
-```bash
-gatecli proposal deposit-params --chain-id [链ID]
-```
-
-###7.10 查询所有管理参数	
-```bash
-gatecli proposal params --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal params --chain-id testnet
-```
-
-###7.11 查询提案的提议者账户		
-```bash
-gatecli proposal proposer [提案编号] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal proposer 1 --chain-id testnet
-```
-
-###7.12 查询单个账户在指定提案的质押情况
-```bash
-gatecli proposal deposit-show [提案编号] [账户地址] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal deposit-show 1 gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
-```
-
-###7.13 查询指定提案的所有质押情况	
-```bash
-gatecli proposal deposit-list [提案编号] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli proposal deposit-list 1 --chain-id testnet
-```
-
-##8 交易对
-###8.1 提交交易对提案
-```bash
-gatecli trading-pair submit-proposal
---title [提案名称]
---description [提案描述]
---type [提案类型]
---deposit [质押代币数量]
---init-price [初始化价格]
---base-symbol [基准代币符号]
---quote-symbol [报价代币符号]
---voting-period [选举周期秒数]
---expire-time [预期时间（块高度）]
---from [发送者账户]
---chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli trading-pair submit-proposal --title "list trading Proposal" --description "Add trading pair proposal" --type TradingList --deposit "10gt" --init-price 100000 --base-symbol aaa-4db --quote-symbol gt --voting-period 60 --expire-time 50000000  --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
-```
-
-###8.2 发布交易对
-```bash
-gatecli trading-pair publish [交易对提案编号] 
---base-symbol=[基准代币符号] 
---quote-symbol=[报价代币符号]
---from [发送者账户]
---chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli trading-pair publish 9 --quote-symbol gt --base-symbol aaa-4db --from gt116z4sq6y0dmk45e7ft6qqwrtsmuj5z08r8nh57v --chain-id testnet
-```
-
-说明：
-
-* 交易对提案的质押和投票过程，与普通提案的操作方法相同（见7.3、7.4）。
-* 在投票通过之后，才可以对交易对执行发布动作。
-* 交易对发布成功后，可以通过基准代币符号和报价代币符号，来查看对应的交易对信息（见8.3）。
-
-###8.3 查询交易对
+###7.2 查询交易对
 ```bash
 gatecli trading-pair show [基准代币符号] [报价代币符号] --chain-id [链ID] 
 ```
 示例：
 
 ```bash
-gatecli trading-pair show gt aaa-4db --chain-id testnet
+gatecli trading-pair show YY-9B3 GC --chain-id testnet
 ```
 
-##9 基金会
-###9.1 初始化
+##8 foundation
+###8.1 初始化
 ```bash
-gated foundation configure [配置文件路径]
+gated add-foundation [配置文件路径]
 ```
 示例:
 
@@ -679,7 +471,7 @@ gated foundation configure foundation.json
 	"reward": "0.02",
 	"confirm_period":"22800000000000",
 	"members": [{
-		"address": "gt11657rsnh95jyvy6qerghe0trkkwp9ut3zskxg26",
+		"address": "gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
 		"proportion": "1"
 	}]
 }
@@ -692,407 +484,299 @@ gated foundation configure foundation.json
 * members:基金会成员,address(成员账户),proportion(成员权益)
 * confirm_period:基金会修改方案通过后的确认期限,超过该期限则提案作废
 
-###9.2 提交修改基金会的提案（命令行模式）
+###8.2 查询基金会信息
 ```bash
-gatecli foundation submit-proposal 
---title "[提案标题]" 
---description "[提案描述]" 
---type "[提案类型]" 
---deposit "[质押代币数量]" 
---extra "[基金会修改方案的json字符串]" 
---from [发送者账户]
---chain-id [链ID]
+gatecli foundation members --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli foundation members --chain-id testnet
+```
+
+##9 consensus-account
+###9.1 创建共识账户
+```bash
+gatecli con-account create [账户地址] --chain-id [链ID]
 ```
 示例:
 
 ```bash
-gatecli foundation submit-proposal --title "Test Foundation Proposal" --description "foundation new scheme" --type "Text" --deposit "10000000gt" --extra "{\"member_scheme\":[{\"deal_address\":\"gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk\",\"deal_proportion\":\"12\",\"deal_type\":\"insert\"}]}" --from gt113g4ht8mvrw9meqjyf2xd4e4hp7yu865x5q5csu --chain-id testnet
+gatecli con-account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 说明：
+* 创建共识账户时，请保证账户中有足够的 `gc` 代币。
 
-* 基金会的账户设置需提交提案，待提案通过后，基金会账户需等待确认提案（见9.4），才可以改变链上状态(基金会账户)。
-
-###9.3 提交修改基金会的提案（文件模式）
+###9.2 上线共识账户
 ```bash
-gatecli foundation submit-proposal 
---proposal "[提案配置文件路径]" 
+gatecli con-account online 
 --from [发送者账户] 
---chain-id [链ID]
+--pubkey [发送者账户公钥] 
+--moniker [名称] 
+--commission-max-change-rate [每天最大手续费率变化]
+--commission-max-rate [最大手续费率]
+--commission-rate [手续费率]
+--chain-id [链ID] 
 ```
 示例:
 
 ```bash
-gatecli foundation submit-proposal --proposal "proposal.json" --from gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
-```
-
-proposal.json文件内容:
-
-```file
-{
-  "title": "Test Foundation Proposal",
-  "description": "foundation new scheme",
-  "type": "Foundation",
-  "deposit": "10000000gt",
-  "extra":"{\"member_scheme\":[{\"deal_address\":\"gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk\",\"deal_proportion\":\"12\",\"deal_type\":\"insert\"},{\"deal_address\":\"gt11fd0zlkskwpfx73nm5n5et5tqphuxegkpax9hqt\",\"deal_proportion\":\"1\",\"deal_type\":\"delete\"},{\"deal_address\":\"gt113g4ht8mvrw9meqjyf2xd4e4hp7yu865x5q5csu\",\"deal_proportion\":\"1\",\"deal_type\":\"update\"}]}"
-}
-```
-
-extra配置详情(extra为基金会修改方案,其内容是json字符串):
-
-```file
-{
-	"member_scheme": [{
-		"deal_address": "gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk",
-		"deal_proportion": "12",
-		"deal_type": "insert"
-	}, {
-		"deal_address": "gt11fd0zlkskwpfx73nm5n5et5tqphuxegkpax9hqt",
-		"deal_proportion": "1",
-		"deal_type": "delete"
-	}, {
-		"deal_address": "gt113g4ht8mvrw9meqjyf2xd4e4hp7yu865x5q5csu",
-		"deal_proportion": "1",
-		"deal_type": "update"
-	}]
-}
-```
-说明：
-
-* Extra字段必须为转义后的json字符串
-* Extra字段内容为基金会详细配置
-	* deal_address为需操作的基金会账户
-	* deal_proportion为该账户在基金会中的权益
-	* deal_type为操作类型:insert(新增),update(更新,只能修改该账户的权益),delete(删除)
-
-###9.3 确认修改基金会的提案
-```bash
-gatecli foundation confirm-proposal [提案编号] --from [发送者账户] --chain-id [链ID]
-```
-
-示例：
-
-```bash
-gatecli foundation confirm-proposal 13 --from gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
-```
-说明：
-
-* 基金会修改提案投票通过后，需进行确认。确认后会根据提案内容修改基金会。
-* 基金会有确认期限，超过期限未确认，提案作废。
-* 任何人均可确认，但只有第一个确认交易会成功。
-* 目前此命令只用于确认基金会修改提案，其他类型提案不确认。
-* 确认期限为初始化配置,详见9.1中confirm_period
-
-###9.4 查询基金会信息
-```bash
-gatecli foundation show --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli foundation show --chain-id testnet
-```
-
-##10 验证节点
-###10.1 创建验证节点
-```bash
-gatecli validator create
-  --amount [绑定gt数量]
-  --pubkey [验证节点公钥]
-  --moniker [验证节点名称]
-  --commission-rate [手续费率]
-  --commission-max-rate [最大手续费率]
-  --commission-max-change-rate [每天最大手续费率变化]
-  --min-self-delegation [最低委托数量]
-  --gas [gas数量]
-  --gas-prices [gas价格]
-  --from [发送者账户]
-  --chain-id [链ID]
-```
-示例:
-
-```bash
-gatecli validator create --amount 1000000gt --pubkey gt1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyucu0wzge4hx8ndl5c9qd02s5zwnu8l --moniker "newValidator" --commission-rate "0.10" --commission-max-rate "0.20" --commission-max-change-rate "0.01" --min-self-delegation "1" --gas "auto" --gas-prices "0.025gt" --from gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
-```
-说明：
-
-* 指定佣金参数时，`commission-max-change-rate` 被用于衡量`commission-rate`的变化。如: 佣金率 从1%到2%是100%的变化, 但是只有变化率是1%。
-* 该命令用于启动一个新节点，连接已存在的`testnet` 或 `mainnet`时，需要将该节点作为validator时使用。
-* 创建验证节点时，请保证账户中有足够的 `gt` 代币。
-
-###10.2 编辑验证节点
-```bash
-gatecli validator edit
-  --moniker [验证节点名称]
-  --website [网站地址]
-  --commission-rate [手续费率]
-  --gas [gas数量]
-  --gas-prices [gas价格]
-  --from [发送者账户]
-  --chain-id [链ID]
-```
-示例:
-
-```bash
-gatecli validator edit --moniker "newValidator" --website "www.abc.com" --details "To infinity and beyond!" --commission-rate 0.10 --gas auto	--gas-prices 0.025gt --from gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
+gatecli con-account online --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 
+--pubkey gc1pub1addwnpepqty4t2h3depgqnp2jfm4kqrmuwauawyrate0cpcduzpqucgujhtugtpazyw --moniker newcon-account --commission-max-change-rate "0.01" --commission-max-rate "0.01" --commission-rate "0.01" --chain-id testnet
 ```
 说明：
 
 * `commission-rate` 必须符合以下要求:
-	* 必须介于0到validator的`commission-max-rate`值 之间
-	* 每天只能变化一次,且变化范围不能超过 validator 的 `commission-max-change-rate` .
+	* 必须介于0到共识账户的`commission-max-rate`值 之间
+	* 每天只能变化一次,且变化范围不能超过 共识账户 的 `commission-max-change-rate` .
 
-###10.3 查询验证节点信息
+###9.3 下线共识账户
 ```bash
-gatecli validator show [验证节点账户] --chain-id [链ID]
+gatecli con-account offline --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli validator show gt1valoper19weu7ur3rrq7kydldu53hrm755s9gg0fzxc7k7 --chain-id testnet
+gatecli con-account offline --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-###10.4 查询验证节点列表
+###9.4 查询共识账户信息
 ```bash
-gatecli validator list --chain-id [链ID]
-```
-
-## 11 权益质押和分发
-###11.1 委托
-#### 11.1.1 委托代币到验证节点 
-```bash
-gatecli staking delegate [验证节点账户] [委托代币数量]  --from [发送者账户] --chain-id [链ID]
+gatecli con-account show [共识账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking delegate gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli con-account show gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 
-####11.1.2 查询指定委托账户在单个验证节点的委托信息
+###9.5 查询未上线共识账户信息
 ```bash
-gatecli staking delegation [委托账户地址] [验证节点地址] --chain-id [链ID]
+gatecli con-account show-key [未上线共识账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking delegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+gatecli con-account show gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
 ```
 
-####11.1.3 查询指定委托账户在所有验证节点的委托信息
+###9.6 查询本地共识账户列表（待定）
+```bash
+gatecli con-account list-local --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli con-account list-local --chain-id testnet
+```
+
+## 10 staking
+###10.1 委托代币到共识账户 
+```bash
+gatecli staking delegate [共识账户地址] [委托代币数量]  --from [发送者账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking delegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100000000GC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+```
+
+###10.2 查询某账户在某共识账户的委托信息
+```bash
+gatecli staking delegation [委托账户地址] [共识账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking delegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+```
+
+###10.3 查询某账户在所有共识账户的委托信息
 ```bash
 gatecli staking delegations [委托账户地址] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking delegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli staking delegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-###11.2 转移委托
-####11.2.1 转移委托
+###10.4 转移委托
 ```bash
-gatecli staking redelegate [原验证节点账户] [目标验证节点账户] [委托代币数量] --from [发送者账户] --chain-id [链ID]
+gatecli staking redelegate [原共识账户] [目标共识账户] [委托代币数量] --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking redelegate gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze gt1valoper1hur6z8626cz2ksmmgv36e3w68kcw7ttss8qr7h 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli staking redelegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000GC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-####11.2.2 查询指定委托账户所有的转移委托记录
+###10.5 查询某账户所有的转移委托记录
 ```bash
 gatecli staking redelegations [委托账户地址] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking redelegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli staking redelegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-####11.2.3 查询指定委托账户在两个验证节点的转移委托记录
+###10.6 查询某账户在两个共识账户之间的转移委托记录
 ```bash
-gatecli staking redelegation [委托账户地址] [原验证节点账户] [目标验证节点账户] --chain-id [链ID]
+gatecli staking redelegation [委托账户地址] [原共识账户] [目标共识账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking redelegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze gt1valoper1hur6z8626cz2ksmmgv36e3w68kcw7ttss8qr7h --chain-id testnet
+gatecli staking redelegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 --chain-id testnet
 ```
 
-###11.3 解绑
-####11.3.1 从验证节点解绑	
+###10.7 从某共识账户解绑	
 ```bash
-gatecli staking unbond [验证节点账户] [解绑代币数量] --from [发送者账户] --chain-id [链ID]
+gatecli staking unbond [共识账户] [解绑代币数量] --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking unbond gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100000000GT --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli staking unbond gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000GC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-####11.3.2 查询指定委托账户在单个验证节点已经解除的委托记录
+###10.8 查询某账户在某共识账户已解除的委托记录
 ```bash
-gatecli staking unbonding-delegation [委托账户地址] [验证节点地址] --chain-id [链ID]
+gatecli staking unbonding-delegation [委托账户地址] [共识账户地址] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking unbonding-delegation gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+gatecli staking unbonding-delegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 --chain-id testnet
 ```
 
-####11.3.3 查询指定委托账户在所有验证节点已经解除的委托记录
+###10.9 查询某账户在所有共识账户已经解除的委托记录
 ```bash
 gatecli staking unbonding-delegations [委托账户地址] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking unbonding-delegations gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli staking unbonding-delegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-###11.4 收益
-####11.4.1 委托人设置提取收益的账户	
+###10.10 查询某共识账户所有的委托	
+```bash
+gatecli staking delegations-to [共识账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking delegations-to gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+```
+
+###10.11 查询某共识账户所有转移委托的记录
+```bash
+gatecli staking redelegations-from [共识账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking redelegations-from gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+```
+
+###10.12 查询某共识账户所有已解除的委托
+```bash
+gatecli staking unbonding-delegations-from [共识账户地址] --chain-id [链ID]
+```
+示例：
+
+```bash
+gatecli staking unbonding-delegations-from gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+```
+###10.13 查询权益质押池的信息		
+```bash
+gatecli staking pool --chain-id [链ID]
+```
+
+###10.14 查询权益质押的参数
+```bash
+gatecli staking params --chain-id [链ID]
+```
+
+
+##11 distribution
+###11.1 委托人设置提取收益的账户	
 ```bash
 gatecli distribution set-withdraw-account [提取收益账户] --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli distribution set-withdraw-account gt11e9jz38gvtayyh97hhlxk26kh7zttn6hz27j65s --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli distribution set-withdraw-account gc11kfwurleaskangv45ssmpzs2sprhxjsfdlqgqjs --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-####11.4.2 委托账户从验证节点提取收益	
+###11.2 某账户从某共识账户提取部分收益
 ```bash
-gatecli distribution withdraw-rewards [验证节点地址] --from [发送者账户] --chain-id [链ID]
+gatecli distribution withdraw-rewards [共识账户地址] --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli distribution withdraw-rewards gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli distribution withdraw-rewards gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-####11.4.3 委托账户从验证节点提取全部收益
+###11.3 某账户从某共识账户提取全部收益
 ```bash
 gatecli distribution withdraw-all-rewards --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli distribution withdraw-all-rewards --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
+gatecli distribution withdraw-all-rewards --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-####11.4.4 查询委托账户的委托收益
+###11.4 查询账户的委托收益
 ```bash
-gatecli distribution rewards [委托账户地址] [验证节点地址] --chain-id [链ID]
+gatecli distribution rewards [委托账户地址] [共识账户地址] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli distribution rewards gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+gatecli distribution rewards gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 说明：可选择在某验证节点获得的收益列表
 
-###11.5 验证节点
-####11.5.1 查询验证节点所有的委托	
+
+###11.5 查询某共识账户仍未支付的委托收益
 ```bash
-gatecli staking delegations-to [验证节点地址] --chain-id [链ID]
+gatecli distribution validator-outstanding-rewards [共识账户地址] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking delegations-to gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+gatecli distribution validator-outstanding-rewards gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 
-####11.5.2 查询验证节点所有转移委托的记录
+###11.6 查询某共识账户的手续费收入
 ```bash
-gatecli staking redelegations-from [验证节点地址] --chain-id [链ID]
+gatecli distribution commission [共识账户地址] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking redelegations-from gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
+gatecli distribution commission gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 
-####11.5.3 查询验证节点所有已解除的委托
+###11.7 查询某共识账户的惩罚
 ```bash
-gatecli staking unbonding-delegations-from [验证节点地址] --chain-id [链ID]
+gatecli distribution slashes [共识账户地址] [开始块高] [结束块高] --chain-id [链ID]
 ```
 示例：
 
 ```bash
-gatecli staking unbonding-delegations-from gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
-```
+gatecli distribution slashes gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100 1000 --chain-id testnet
+```	
 
-####11.5.4 查询验证节点仍未支付的委托收益
-```bash
-gatecli distribution validator-outstanding-rewards [验证节点账户地址] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli distribution validator-outstanding-rewards gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
-```
-
-####11.5.5 查询验证节点的手续费收入	
-```bash
-gatecli distribution commission [验证节点账户地址] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli distribution commission gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze --chain-id testnet
-```
-
-####11.5.6 查询验证节点的惩罚
-```bash
-gatecli distribution slashes [验证节点账户地址] [开始块高] [结束块高] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli distribution slashes gt1valoper14zc8tkc4sued70xvkapp8qcnzljpxjxw6jmhze 100 1000 --chain-id testnet
-```
-
-####11.5.7 验证节点解禁	
-```bash
-gatecli slashing unjail --from [发送者账户] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli slashing unjail --from gt11pu9rttkyh9a5fn8hzen9pxun8pgmmwnjuvqjvh --chain-id testnet
-```
-
-####11.5.8 查询验证节点的签名信息	
-```bash
-gatecli slashing signing-info [验证节点公钥] --chain-id [链ID]
-```
-示例：
-
-```bash
-gatecli slashing signing-info gt1valconspub1zcjduepq5thyvy8fnw5a2vfa6k6r5qjf7u8dqm702k89la4fxjkppxkfhrdqsgeaw8 --chain-id testnet
-```
-
-####11.5.9 查询权益质押池的信息		
-```bash
-gatecli staking pool --chain-id [链ID]
-```
-
-###11.6 参数	
-
-####11.6.1 查询惩罚参数	
-```bash
-gatecli slashing params --chain-id [链ID]
-```
-
-####11.6.2 查询分配和基金会参数		
+###11.8 查询分配和基金会参数		
 ```bash
 gatecli distribution params --chain-id [链ID]
-```
-
-####11.6.3 查询权益质押的参数
-```bash
-gatecli staking params --chain-id [链ID]
 ```
 
 ## 12 去中心化交易所
@@ -1106,7 +790,7 @@ gatecli dex deposit [接收账户] [代币数量]
 示例：
 
 ```bash
-gatecli dex deposit gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk 100gt --gas-prices 0.00001gt --from gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
+gatecli dex deposit gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100gc --gas-prices 0.00001gc --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 说明：
 
@@ -1122,7 +806,7 @@ gatecli dex withdraw [账户公钥] [提取的代币数量] [nonce随机数] [�
 示例：
 
 ```bash
-gatecli dex withdraw gt1pub1addwnpepq23pmf725xuy549spdxj7pzv6vfc0l4440ccpam7t00raejms48vcguukmg 100gt 2 8c8de782766405ddd26224e1f954e78354e8f1bcccf7d1dd5d14f4be4f22d20d12fe0ec39aab651fb29091c0c0eb474896b0bf3916b7fcc611d0a08a50ed4bd0 1563183005 10gt --from gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
+gatecli dex withdraw gc1pub1addwnpepq23pmf725xuy549spdxj7pzv6vfc0l4440ccpam7t00raejms48vcguukmg 100gc 2 8c8de782766405ddd26224e1f954e78354e8f1bcccf7d1dd5d14f4be4f22d20d12fe0ec39aab651fb29091c0c0eb474896b0bf3916b7fcc611d0a08a50ed4bd0 1563183005 10gc --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 说明：
 
@@ -1139,7 +823,7 @@ gatecli dex sign-withdraw
 示例：
 
 ```bash
-gatecli dex sign-withdraw --pubkey gt1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyucu0wzge4hx8ndl5c9qd02s5zwnu8l --time 1566211704 --coin 10gt --nonce 2 
+gatecli dex sign-withdraw --pubkey gc1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyucu0wzge4hx8ndl5c9qd02s5zwnu8l --time 1566211704 --coin 10gc --nonce 2 
 ```
 
 说明:
@@ -1159,7 +843,7 @@ gatecli dex sign-order
 示例：
 
 ```bash
-gatecli dex sign-order --orderside buy --ordernonce 1 --orderpubkey  gt1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyucu0wzge4hx8ndl5c9qd02s5zwnu8l --orderamount 10gt --orderprice 1aaa-343 --time 1560394691
+gatecli dex sign-order --orderside buy --ordernonce 1 --orderpubkey  gc1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyucu0wzge4hx8ndl5c9qd02s5zwnu8l --orderamount 10gc --orderprice 1aaa-343 --time 1560394691
 ```
 
 说明：
@@ -1185,7 +869,7 @@ gatecli dex query-account [账户] --chain-id [链ID]
 示例：
 
 ```bash
-gatecli dex query-account gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
+gatecli dex query-account gc11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id testnet
 ```
 
 说明：
@@ -1227,14 +911,14 @@ gatecli dex trade
 示例：
 
 ```bash
-gatecli dex trade --tradeid 10000 --market eos_stake --maker-orderid 1 --maker-nonce 1 --maker-pubkey gt1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyucu0wzge4hx8ndl5c9qd02s5zwnu8l --maker-side buy --maker-amount 1000coin174876e800 --maker-price 1gt --maker-sign 9539a65e1981fea2ffe4888563d91ff4ed6c05eb0218bfc59ee1bc5a2fc6de7b40f21f09d93345a848e1e75ec05f50a39e272956e320039cd25cd110d1d8a1c1 --maker-time 1560394691 --taker-orderid 2 --taker-nonce 1 --taker-pubkey gt1pub1addwnpepqfchpz8uks3rav2gsqdnce234fyu2m574xd0esl0kf9u8u39qjdqqr08qtn --taker-side sell --taker-amount 1000coin174876e800 --taker-price 1gt --taker-sign 4e83879e926c67985b9cf5fc02f5919b7e778d48a6087b3cd8e283525b13a0fa07b1174ad3e2666d36e7703f4c62e2339d4ab4760144493e3589dbdcaf52631a --taker-time 1560394691	 --price 1gt--amount 10coin174876e800 --maker-add-amount 1000coin174876e800 --maker-sub-amount 1000gt --maker-fee 1gt	 --taker-fee 1gt	--taker-gas 1gt --from gt11tyye64g5dnr6vauaaq6dysfpprseuvsufpfv72 --chain-id testnet
+gatecli dex trade --tradeid 10000 --market eos_stake --maker-orderid 1 --maker-nonce 1 --maker-pubkey gc1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyucu0wzge4hx8ndl5c9qd02s5zwnu8l --maker-side buy --maker-amount 1000coin174876e800 --maker-price 1gc --maker-sign 9539a65e1981fea2ffe4888563d91ff4ed6c05eb0218bfc59ee1bc5a2fc6de7b40f21f09d93345a848e1e75ec05f50a39e272956e320039cd25cd110d1d8a1c1 --maker-time 1560394691 --taker-orderid 2 --taker-nonce 1 --taker-pubkey gc1pub1addwnpepqfchpz8uks3rav2gsqdnce234fyu2m574xd0esl0kf9u8u39qjdqqr08qtn --taker-side sell --taker-amount 1000coin174876e800 --taker-price 1gc --taker-sign 4e83879e926c67985b9cf5fc02f5919b7e778d48a6087b3cd8e283525b13a0fa07b1174ad3e2666d36e7703f4c62e2339d4ab4760144493e3589dbdcaf52631a --taker-time 1560394691	 --price 1gc --amount 10coin174876e800 --maker-add-amount 1000coin174876e800 --maker-sub-amount 1000gc --maker-fee 1gc	 --taker-fee 1gc	--taker-gas 1gc --from gc11tyye64g5dnr6vauaaq6dysfpprseuvsufpfv72 --chain-id testnet
 ```
 
 说明：
 
-* 此例子中，maker下单想购买1000coin174876e800，出价1gt，即以1000gt购买1000coin174876e800
-* taker下单想出售1000coin174876e800，出价1gt，即以1000coin174876e800购买1000gt
-* 交易所撮合成此交易，最终成交价格为1gt，token数量为1000coin174876e800
+* 此例子中，maker下单想购买1000coin174876e800，出价1gc，即以1000gc购买1000coin174876e800
+* taker下单想出售1000coin174876e800，出价1gc，即以1000coin174876e800购买1000gc
+* 交易所撮合成此交易，最终成交价格为1gc，token数量为1000coin174876e800
 * 由admin账户签名，保存此交易信息到链上，并对maker和taker预先存储在交易所的对应token进行扣减和增加
 * fee和gas转账到fee用户账户，此交易完成
 
@@ -1259,7 +943,7 @@ gatecli dex set-admin [管理员类型：admin/fee] [账户] --from [发送人�
 示例：
 
 ```bash
-gatecli dex set-admin admin gt11r37332mrckrcg2mwm6w38nzfyeg2jgudmfvyw8 --from gt11tyye64g5dnr6vauaaq6dysfpprseuvsufpfv72 --chain-id testnet
+gatecli dex set-admin admin gc11r37332mrckrcg2mwm6w38nzfyeg2jgudmfvyw8 --from gc11tyye64g5dnr6vauaaq6dysfpprseuvsufpfv72 --chain-id testnet
 ```
 
 说明：

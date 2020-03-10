@@ -1,81 +1,13 @@
 ##GateChain API文档
 
 >通过本文档提供的构造交易的接口
->其请求参数必须设置大于0gt的交易费
+>其请求参数必须设置大于0gc的交易费
 > 
 > 命令中所用到的资产数额（Asset amount）均为乘以1E8转换后的正整数值(Integer of the Value)
-> 资产数额（Asset amount）支持科学计数法，比如10E18GT就表示10.0GT
+> 资产数额（Asset amount）支持科学计数法，比如10E9GC就表示1.0GC
 
-
-###1 查询最新块信息
-```
-GET /block/latest
-```
-返回:
-
-```
-{"block_meta": {......}}
-```
-
----
-
-###2 查询指定高度的块信息
-```
-GET /block/{height}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| height | 块高度（>=1）|
-
-返回:
-
-```
-{"block_meta": {......}}
-```
-
----
-
-###3 查询交易信息
-```
-GET /tx/{hash}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| hash | 交易HASH |
-
-返回:
-
-```
-{"height":"...", "tx": {......}...}
-```
-
----
-
-###4 按条件查询交易
-```
-GET /tx?sender={sender}&action={action}&recipient={recipient}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| sender | 发送者账户 |
-| action | 动作类型 |
-| recipient | 接收者账户 |
-
-返回:
-
-```
-{"type":"...", "value": {......}...}
-```
-
----
-
-###5 查询账户信息
+## 1 account
+###1.1 查询账户信息
 ```
 GET /account/{account}
 ```
@@ -88,12 +20,52 @@ GET /account/{account}
 返回:
 
 ```
-{"type":"...", "value": {......}...}
+{
+    "height":"5129",
+    "result":{
+        "type":"AccountResp",
+        "value":{
+            "account_field":{
+                "type":"VaultAccount",
+                "value":{
+                    "base_account":{
+                        "account_number":"7",
+                        "address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+                        "public_key":{
+                            "type":"tendermint/PubKeySecp256k1",
+                            "value":"Augr+YcqdYO5fN0imCuuHaTrR+3eZTdMIkAbCIIWnB/+"
+                        },
+                        "sequence":"4",
+                        "tokens":[
+                            {
+                                "amount":"89999999999999880",
+                                "denom":"GC"
+                            }
+                        ]
+                    },
+                    "clearing_height":{
+                        "last_clearing_effect_height":"0",
+                        "last_clearing_height":"0",
+                        "next_clearing_effect_height":"0",
+                        "next_clearing_height":"0"
+                    },
+                    "delay_height":"0",
+                    "received_revocable_tokens":null,
+                    "security_address":"",
+                    "sent_revocable_tokens":null,
+                    "vault_address":[
+                        "vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49"
+                    ]
+                }
+            },
+            "account_type":0
+        }
+    }
+}
 ```
-
 ---
 
-###6 查询指定账户的余额
+###1.2 查询账户余额
 ```
 GET /account/balance/{account}
 ```
@@ -106,120 +78,80 @@ GET /account/balance/{account}
 返回:
 
 ```
-[{"denom":"...","amount":"..."}]
-```
-
----
-
-###7 发送交易
-```
-POST /tx
-```
-
-请求BODY示例:
-
-```
 {
-	"tx": {
-		"msg": [{
-			"type": "gate/MsgSend",
-			"value": {
-				"from_address": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-				"to_address": "gt110euwduf3unz9332rsgaxzfyy408yqajvjcsacn",
-				"amount": [{
-					"denom": "gt",
-					"amount": "200000000"
-				}]
-			}
-		}],
-		"fee": {
-			"amount": null,
-			"gas": "200000"
-		},
-		"signatures": [{
-			"pub_key": {
-				"type": "tendermint/PubKeySecp256k1",
-				"value": "A+33aULKbgRV7bmmb7mEIr6eMu3tkT3GmDKsSm+Tv2tK"
-			},
-			"signature": "hghJdloTqC6Tcrow9MeAetVlP1ONT0NiRIg8hmsrIGlptmUo3xj8N7VTgKBeDzFTrjwbwuRFnKY6LB+Ox3+QwA=="
-		}],
-		"memo": ""
-	},
-	"return": "block"
+    "height":"5483",
+    "result":[
+        {
+            "amount":"8999999989968",
+            "denom":"GC"
+        },
+    ]
 }
 ```
-
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| return | block：在交易提交后返回；sync：CheckTx后返回；async：立即返回。 |
-
-返回:
-
-```
-{"txhash": "..."...}
-```
-
 ---
 
-###8 查询节点状态信息
+###1.3 公布多签账户
 ```
-GET /status
+POST /account/publish-multisig/{address}
 ```
-
-返回:
-
-```
-{"channels":"4020212223303800","id":"...."....}
-```
-
----
-
-###9 普通交易
-```
-POST  /tx/send/{account}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| account | 接收账户 |
-
 请求BODY示例：
 
 ```
 {
-	"base_req": {
-		"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-		"memo": "",
-		"chain_id": "testnet",
-		"account_number": "0",
-		"sequence": "4",
-		"gas": "200000",
-		"gas_adjustment": "1.2",
-		"fees": [{
-			"denom": "gt",
-			"amount": "5000"
-		}],
-		"simulate": false
-  	},
-  	"amount": [{
-		"denom": "gt",
-	  	"amount": "5000"
-	}]
+  "base_req": {
+    "from": "gc11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "1",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "2"
+      }
+    ],
+    "simulate": false
+  },
+  "pubkey":"gc1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2"
 }
 ```
 
-返回:
+返回示例：
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgPublishMultiSigAccount",
+                "value":{
+                    "from_address":"gc11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr",
+                    "to_address":"gc11zpxee6l20jnprfqgctas2tnw7xvwqpv3z0lyz8",
+						"pubkey":"gc1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2"
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"2"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
 
----
+## 2 vault-account
+###2.1 创建保险账户
 
-###10 创建保险账户
 ```
 POST  /vault-account/create/{base-account}
 ```
@@ -234,32 +166,32 @@ POST  /vault-account/create/{base-account}
 ```
 {
   "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
+    "from": "gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "4",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "5000"
+      }
+    ],
+    "simulate": false
   },
   "amount": [
-	{
-	  "denom": "gt",
-	  "amount": "5000"
-	}
+    {
+      "denom": "GC",
+      "amount": "500000000"
+    }
   ],
-  "insurance_req":{
-	"security": "gt110euwduf3unz9332rsgaxzfyy408yqajvjcsacn",
-	"pubkey": "",
-	"delay_height": "3600",
-	"clear_time": "50000000"
+  "vault_req":{
+    "security": "gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+    "pubkey": "",
+    "delay_height": "100",
+    "clear_height": "50000"
   }
 }
 ```
@@ -267,12 +199,708 @@ POST  /vault-account/create/{base-account}
 返回:
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgCreateVault",
+                "value":{
+                    "from_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+                    "to_address":"gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek",
+                    "security_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+                    "delay_height":"100",
+                    "clearing_height":"50000",
+                    "amount":[
+                        {
+                            "denom":"GC",
+                            "amount":"500000000"
+                        }
+                    ],
+                    "pubkey":""
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
+```
+---
+
+###2.2 更改清算高度
+```
+POST /vault-account/update-clearing-height
+```
+
+请求BODY示例：
+
+```
+{
+  "base_req": {
+    "from": "vault115ljwsxqhxvu54ndg95kyxn7f82uj2yk380ucm4",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "4",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "5000"
+      }
+    ],
+    "simulate": false
+  },
+  "clearing_height": "6200"
+}
+```
+
+返回：
+
+```
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgUpdateClearingHeight",
+                "value":{
+                    "vault_address":"gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek",
+                    "clearing_height":"6200"
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
+```
+---
+
+###2.3 清算交易
+```
+POST /vault-account/clear
+```
+
+请求BODY示例：
+
+```
+{
+    "base_req": {
+    "from": "gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "4",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "5000"
+      }
+    ],
+    "simulate": false
+  },
+  "vaults": ["vault115ljwsxqhxvu54ndg95kyxn7f82uj2yk380ucm4"]
+}
+```
+
+返回：
+
+```
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgClearVaultAccount",
+                "value":{
+                    "from_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+                    "vault_address":[
+                        "gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek"
+                    ]
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
+```
+---
+###2.4 查询保险账户的所有可撤回交易
+```
+GET  /vault-account/list-revocable-txs/{vault-account}
+```
+参数:
+
+| 参数名 | 说明 |
+| ----| ---- |
+| vault-account | 保险账户 |
+
+返回：
+
+```
+{
+    "height":"6947",
+    "result":[
+        {
+            "height":"6947",
+            "msg_index":"0",
+            "tokens":[
+                {
+                    "amount":"5",
+                    "denom":"GC"
+                }
+            ],
+            "tx_hash":"REVOCABLEPAY-BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8"
+        }
+    ]
+}
+```
+---
+
+## 3 block
+###3.1 查询最新块信息
+```
+GET /block/latest
+```
+返回:
+
+```
+{
+    "hash":"MHCH5NHC2IMVJA6DSLKJFSK4AYNDCMFC5SC32VOVDIPVEIBVRGHA",
+    "previousBlockHash":"2IZH63THDKR4W3SBQSDI2C44CZ5GI6CYHGJJPZ3D4A3ZXUS3OLTQ",
+    "seed":"XEEEQ5LXSASPY4YSMT7ZBZ4RDSLOPDPQXNNUOYA75VTZXJYCZ5RA",
+    "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+    "round":"6913",
+    "period":"0",
+    "txnRoot":"WRS2VL2OQ5LPWBYLNBCZV3MEQ4DACSRDES6IUKHGOWYQERJRWC5A",
+    "reward":"0",
+    "rate":"0",
+    "frac":"0",
+    "txns":{
+
+    },
+    "txnps":{
+        "proxyTransactions":null
+    },
+    "timestamp":"1583535648",
+    "UpgradeState":{
+        "currentProtocol":"v1",
+        "nextProtocol":"",
+        "nextProtocolApprovals":"0",
+        "nextProtocolVoteBefore":"0",
+        "nextProtocolSwitchOn":"0"
+    },
+    "UpgradeVote":{
+        "upgradePropose":"",
+        "upgradeApprove":false
+    }
+}
 ```
 
 ---
 
-###11 可撤回交易
+###3.2 查询指定高度的块信息
+```
+GET /block/{height}
+```
+参数:
+
+| 参数名 | 说明 |
+| ----| ---- |
+| height | 块高度（>=1）|
+
+返回:
+
+```
+{
+    "hash":"HO7BW75ECIXFBTBIFMYAIDDWGSRAEOGDC3GJUOEULBPD5L2M3C5Q",
+    "previousBlockHash":"5ZKJQICRC2QS3H2UO5YFQPLFKQ6DUNTDBBF3573P6IQTADHD57MA",
+    "seed":"5GIMQOE4GYGKSLGIDUNNY3YMBXIZVRTK2GQLNHFRCNZE5AJQBIIQ",
+    "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+    "round":"6847",
+    "period":"0",
+    "txnRoot":"MLZADT4OGH4A7HEM6T275WKQQWLIONQ2OLPY2DAZQMIZIWTDQJ5Q",
+    "reward":"0",
+    "rate":"0",
+    "frac":"0",
+    "txns":{
+
+    },
+    "txnps":{
+        "proxyTransactions":[
+            "ugG5zc/tCjlHsWHOChSn5OgYFzM5Ss2oLSxDT8k6uSUS0RIUCN182YZJQCg9iZzFMx+mjZdFgOgaBwoCR0MSATUSDQoHCgJHQxIBMRDAmgwaagom61rphyECf5JSNgVnJU01dhlUy/vAyGh0gTpTldbMYJDevIrLtoASQFDNGmgLIEh9h9NF6VQ5Y63fNgMQe/49Im1OlaJpoOXKJUpAzPuPSkNPe4B1Z3OXQFJODd+TabdsDW26cyv41iQ="
+        ]
+    },
+    "timestamp":"1583533998",
+    "UpgradeState":{
+        "currentProtocol":"v1",
+        "nextProtocol":"",
+        "nextProtocolApprovals":"0",
+        "nextProtocolVoteBefore":"0",
+        "nextProtocolSwitchOn":"0"
+    },
+    "UpgradeVote":{
+        "upgradePropose":"",
+        "upgradeApprove":false
+    }
+}
+```
+
+---
+
+
+## 4 tx
+###4.1 发送交易
+```
+POST /tx
+```
+
+请求BODY示例:
+
+```
+{
+    "tx": {
+        "msg":[
+            {
+                "type":"MsgSend",
+                "value":{
+                    "from_address":"gc1125f44npt4phnuwp3puqg0m7wgjqsdnmc7xywry",
+                    "to_address":"gc11vrwg5flr3hxys4c7g4yh5wj242xqvdkrmm7q3n",
+                    "amount":[
+                        {
+                            "denom":"GC",
+                            "amount":"5000"
+                        }
+                    ]
+                }
+            }
+        ],
+		"fee": {
+			"amount": [{
+				"denom": "GC",
+				"amount": "5000"
+			}],
+			"gas": "200000"
+		},
+		"signatures": [{
+			"pub_key": {
+				"type": "tendermint/PubKeySecp256k1",
+				"value": "A+0DI+zbNVSb1cyLdhqGkVlS8nCm0eoUqpev/Z57XIIT"
+			},
+			"signature": "f0qd0BFAOWP76sMHE+PG6U0cL+MeeFV1xrT/8k3lrUF06YG2sko6LB045jnHFU5SlhWeb1tzyV5jWry/lgoaRQ=="
+		}],
+        "memo": ""
+    },
+    "return": "block"
+}
+```
+
+参数:
+
+| 参数名 | 说明 |
+| ----| ---- |
+| return | block：在交易提交后返回；sync：CheckTx后返回；async：立即返回。 |
+
+返回:
+
+```
+{
+    "height":"899",
+    "txhash":"BASIC-9D5D04AF30B14EB6A67B6155EC3868902CFB19520E5EABCF52C060634C7100D5",
+    "data":"wAG5zc/tCjzcKqCFChRVE1rMK6hvPjgxDwCH785EgQbPeBIUYNyKJ+ONzEhXHkVJejpKqowGNsMaCgoCR1QSBDUwMDASEAoKCgJHVBIENTAwMBDAmgwaagom61rphyED7QMj7Ns1VJvVzIt2GoaRWVLycKbR6hSql6/9nntcghMSQH9KndARQDlj++rDBxPjxulNHC/jHnhVdca0//JN5a1BdOmBtrJKOiwdOOY5xxVOUpYVnm9bc8leY1q8v5YKGkU=",
+    "raw_log":"boradcast tx success"
+}
+```
+---
+
+###4.2 普通交易
+```
+POST  /tx/send/{account}
+```
+参数:
+
+| 参数名 | 说明 |
+| ----| ---- |
+| account | 接收账户 |
+
+请求BODY示例：
+
+```
+{
+    "base_req": {
+        "from": "gc11kfwurleaskangv45ssmpzs2sprhxjsfdlqgqjs",
+        "memo": "",
+        "chain_id": "testnet",
+        "account_number": "0",
+        "sequence": "4",
+        "gas": "200000",
+        "gas_adjustment": "1.2",
+        "fees": [{
+            "denom": "GC",
+            "amount": "5000"
+        }],
+        "simulate": false
+    },
+    "amount": [{
+        "denom": "GC",
+        "amount": "5000"
+    }]
+}
+```
+
+返回:
+
+```
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgSend",
+                "value":{
+                    "from_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+                    "to_address":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx",
+                    "amount":[
+                        {
+                            "denom":"GC",
+                            "amount":"5000"
+                        }
+                    ]
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
+```
+---
+
+###4.3 查询交易信息
+```
+GET /tx/{hash}
+```
+参数:
+
+| 参数名 | 说明 |
+| ----| ---- |
+| hash | 交易HASH |
+
+返回:
+
+```
+{
+    "events":[
+        {
+            "attributes":[
+                {
+                    "key":"sender",
+                    "value":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88"
+                },
+                {
+                    "key":"module",
+                    "value":"bank"
+                },
+                {
+                    "key":"action",
+                    "value":"send"
+                }
+            ],
+            "type":"message"
+        },
+        {
+            "attributes":[
+                {
+                    "key":"recipient",
+                    "value":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"
+                },
+                {
+                    "key":"amount",
+                    "value":"5GC"
+                }
+            ],
+            "type":"transfer"
+        }
+    ],
+    "gas_used":"58063",
+    "gas_wanted":"200000",
+    "height":"6659",
+    "logs":[
+        {
+            "events":[
+                {
+                    "attributes":[
+                        {
+                            "key":"sender",
+                            "value":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88"
+                        },
+                        {
+                            "key":"module",
+                            "value":"bank"
+                        },
+                        {
+                            "key":"action",
+                            "value":"send"
+                        }
+                    ],
+                    "type":"message"
+                },
+                {
+                    "attributes":[
+                        {
+                            "key":"recipient",
+                            "value":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"
+                        },
+                        {
+                            "key":"amount",
+                            "value":"5GC"
+                        }
+                    ],
+                    "type":"transfer"
+                }
+            ],
+            "log":"",
+            "msg_index":0,
+            "success":true
+        }
+    ],
+    "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"},{"key":"amount","value":"5GC"}]}]}]",
+    "timestamp":"2020-03-07T05:14:58+08:00",
+    "tx":{
+        "type":"StdTx",
+        "value":{
+            "fee":{
+                "amount":[
+                    {
+                        "amount":"1",
+                        "denom":"GC"
+                    }
+                ],
+                "gas":"200000"
+            },
+            "memo":"",
+            "msg":[
+                {
+                    "type":"MsgSend",
+                    "value":{
+                        "amount":[
+                            {
+                                "amount":"5",
+                                "denom":"GC"
+                            }
+                        ],
+                        "from_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+                        "to_address":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"
+                    }
+                }
+            ],
+            "signatures":[
+                {
+                    "pub_key":{
+                        "type":"tendermint/PubKeySecp256k1",
+                        "value":"Augr+YcqdYO5fN0imCuuHaTrR+3eZTdMIkAbCIIWnB/+"
+                    },
+                    "signature":"2Xt5AUOmnbp22a5rwky9p/0oZHoKZ4tH9aVqE8L7R41+/mAbCsgFmFkIhwLwQV5chl/M4e9xvTzyBaWv9OGkuA=="
+                }
+            ]
+        }
+    },
+    "txhash":"IRREVOCABLEPAY-9CA1921DD0F9AE6CA6E334396740CA6E218EB40365EF91E83775CB2D6B3D112E"
+}
+```
+
+---
+
+###4.4 按条件查询交易
+```
+GET /tx?message.sender={sender}&message.action={action}&message.recipient={recipient}&order={asc/desc}
+```
+参数:
+
+| 参数名 | 说明 |
+| ----| ---- |
+| sender | 发送者账户 |
+| action | 动作类型 |
+| recipient | 接收者账户 |
+
+返回:
+
+```
+{
+    "count":"1",
+    "limit":"30",
+    "page_number":"1",
+    "page_total":"1",
+    "total_count":"1",
+    "txs":[
+        {
+            "events":[
+                {
+                    "attributes":[
+                        {
+                            "key":"sender",
+                            "value":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88"
+                        },
+                        {
+                            "key":"module",
+                            "value":"bank"
+                        },
+                        {
+                            "key":"action",
+                            "value":"send"
+                        }
+                    ],
+                    "type":"message"
+                },
+                {
+                    "attributes":[
+                        {
+                            "key":"recipient",
+                            "value":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"
+                        },
+                        {
+                            "key":"amount",
+                            "value":"5GC"
+                        }
+                    ],
+                    "type":"transfer"
+                }
+            ],
+            "gas_used":"58063",
+            "gas_wanted":"200000",
+            "height":"6659",
+            "logs":[
+                {
+                    "events":[
+                        {
+                            "attributes":[
+                                {
+                                    "key":"sender",
+                                    "value":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88"
+                                },
+                                {
+                                    "key":"module",
+                                    "value":"bank"
+                                },
+                                {
+                                    "key":"action",
+                                    "value":"send"
+                                }
+                            ],
+                            "type":"message"
+                        },
+                        {
+                            "attributes":[
+                                {
+                                    "key":"recipient",
+                                    "value":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"
+                                },
+                                {
+                                    "key":"amount",
+                                    "value":"5GC"
+                                }
+                            ],
+                            "type":"transfer"
+                        }
+                    ],
+                    "log":"",
+                    "msg_index":0,
+                    "success":true
+                }
+            ],
+            "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"},{"key":"amount","value":"5GC"}]}]}]",
+            "timestamp":"2020-03-07T05:14:58+08:00",
+            "tx":{
+                "type":"StdTx",
+                "value":{
+                    "fee":{
+                        "amount":[
+                            {
+                                "amount":"1",
+                                "denom":"GC"
+                            }
+                        ],
+                        "gas":"200000"
+                    },
+                    "memo":"",
+                    "msg":[
+                        {
+                            "type":"MsgSend",
+                            "value":{
+                                "amount":[
+                                    {
+                                        "amount":"5",
+                                        "denom":"GC"
+                                    }
+                                ],
+                                "from_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+                                "to_address":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx"
+                            }
+                        }
+                    ],
+                    "signatures":[
+                        {
+                            "pub_key":{
+                                "type":"tendermint/PubKeySecp256k1",
+                                "value":"Augr+YcqdYO5fN0imCuuHaTrR+3eZTdMIkAbCIIWnB/+"
+                            },
+                            "signature":"2Xt5AUOmnbp22a5rwky9p/0oZHoKZ4tH9aVqE8L7R41+/mAbCsgFmFkIhwLwQV5chl/M4e9xvTzyBaWv9OGkuA=="
+                        }
+                    ]
+                }
+            },
+            "txhash":"IRREVOCABLEPAY-9CA1921DD0F9AE6CA6E334396740CA6E218EB40365EF91E83775CB2D6B3D112E"
+        }
+    ]
+}
+```
+
+---
+
+## 5 revocable-tx
+###5.1 可撤回交易
 ```
 POST  /revocable-tx/send/{account}
 ```
@@ -287,7 +915,7 @@ POST  /revocable-tx/send/{account}
 ```
 {
   "base_req": {
-	"from": "vault11rjac62lz7l7xkak46xq03qdradkju8qu0z0qp2",
+	"from": "gc11578zewhe03eycdtvnqcuxt8z3qzg226qj68k6r",
 	"memo": "",
 	"chain_id": "testnet",
 	"account_number": "0",
@@ -296,7 +924,7 @@ POST  /revocable-tx/send/{account}
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "gt",
+		"denom": "GC",
 		"amount": "5000"
 	  }
 	],
@@ -304,7 +932,7 @@ POST  /revocable-tx/send/{account}
   },
   "amount": [
 	{
-	  "denom": "gt",
+	  "denom": "GC",
 	  "amount": "5000"
 	}
   ]
@@ -314,30 +942,42 @@ POST  /revocable-tx/send/{account}
 返回:
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgRevocableSend",
+                "value":{
+                    "from_address":"gc11578zewhe03eycdtvnqcuxt8z3qzg226qj68k6r",
+                    "to_address":"gc112t5v8z8z4qwzmzvhrr8f4u3yhrjmvm9uw58lnw",
+                    "amount":[
+                        {
+                            "denom":"GC",
+                            "amount":"5000"
+                        }
+                    ]
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
 
 ---
 
-###12 查询保险账户的所有可撤回交易
-```
-GET  /vault-account/list-revocable-txs/{vault-account}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| vault-account | 保险账户 |
-
-返回：
-
-```
-{"type":"...", "value": {......}...}
-```
-
----
-
-###13 撤回可撤回交易
+###5.2 撤回可撤回交易
 ```
 POST /revocable-tx/revoke/{tx-hash}
 ```
@@ -352,20 +992,20 @@ POST /revocable-tx/revoke/{tx-hash}
 ```
 {
   "base_req": {
-	"from": "vault11rjac62lz7l7xkak46xq03qdradkju8qu0z0qp2",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
+    "from": "vault115ljwsxqhxvu54ndg95kyxn7f82uj2yk380ucm4",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "4",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "1"
+      }
+    ],
+    "simulate": false
   },
   "index": "0"
 }
@@ -374,99 +1014,46 @@ POST /revocable-tx/revoke/{tx-hash}
 返回：
 
 ```
-{"msg": "..."...}
-```
-
----
-
-###14 更改清算高度
-```
-POST /vault-account/update-clearing-height
-```
-
-请求BODY示例：
-
-```
 {
-  "base_req": {
-	"from": "vault11rjac62lz7l7xkak46xq03qdradkju8qu0z0qp2",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
-  },
-  "clear_time": "10000000"
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgRevoke",
+                "value":{
+                    "vault_address":"gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek",
+                    "security_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+                    "revoke_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+                    "height":"6947",
+                    "tx_hash":"BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8",
+                    "msg_index":"0",
+                    "amount":[
+                        {
+                            "denom":"GC",
+                            "amount":"5"
+                        }
+                    ]
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"1"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
 }
 ```
-
-返回：
-
-```
-{"msg": "..."...}
-```
-
 ---
 
-
-###15 清算交易
-```
-POST /vault-account/clear
-```
-
-请求BODY示例：
-
-```
-{
-  	"base_req": {
-	"from": "vault11lka0de7gqg5eg8un0nax2cpp2clyj24gpge33y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
-  },
-  "insurances": ["vault11lka0de7gqg5eg8un0nax2cpp2clyj24gpge33y"]
-}
-```
-
-返回：
-
-```
-{"msg": "..."...}
-```
-
----
-
-
-###16 多签普通/保险账户转账交易 
-
-* 多签普通账户的交易构建方法和普通账户的交易构建一致。见接口9
-* 多签保险账户的交易构建方法和保险账户的交易构建一致。见接口11、13、14、15
-* 构建交易完成后，需要线下进行多签（具体见多签命令行相关操作）
-* 然后广播发送带有签名的交易。见接口7
-
-
----
-
-
-###17 发行代币
+## 6 token
+###6.1 发行代币
 ```
 POST  /token/issue/{symbol}
 ```
@@ -481,75 +1068,64 @@ POST  /token/issue/{symbol}
 ```
 {
   "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
+    "from": "gc11hjn7n3g62r97w0syhy8gmy2wlvfd0n64uzevlp",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "4",
+    "gas": "80445444",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "5000"
+      }
+    ],
+    "simulate": false
   },
   "token_name": "test token",
-  "total_supply": "1000000000000000000",
-  "mintable": false
+  "total_supply": "1000000000000000",
+  "mintable": true,
+  "freezable": true
 }
 ```
 
 返回：
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"IssueToken",
+                "value":{
+                    					"source_address":"gc11hjn7n3g62r97w0syhy8gmy2wlvfd0n64uzevlp",
+                    "token_name":"test token",
+                    "symbol":"YJ",
+                    "total_supply":"1000000000000000",
+                    "mintable":true,
+                    "freezable":true
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"80445444"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
-
 ---
 
-
-###18 查询代币发行状态
-```
-GET  /token/show-issue/{issue-tx-id}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| issue-tx-id | 代币发行交易Hash |
-
-返回：
-
-```
-{"value":"...","type":"..."...}
-```
-
----
-
-    
-###19 查询代币
-```
-GET  /token/show/{symbol}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| symbol | 代币符号 |
-
-返回：
-
-```
-{"value":"...","type":"..."...}
-```
-
----
-
-
-###20 增发代币 
+###6.2 增发代币 
 ```
 POST /token/mint/{symbol}
 ```
@@ -564,7 +1140,7 @@ POST /token/mint/{symbol}
 ```
 {
   "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
+	"from": "gc11hjn7n3g62r97w0syhy8gmy2wlvfd0n64uzevlp",
 	"memo": "",
 	"chain_id": "testnet",
 	"account_number": "0",
@@ -573,26 +1149,51 @@ POST /token/mint/{symbol}
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "gt",
+		"denom": "GC",
 		"amount": "5000"
 	  }
 	],
 	"simulate": false
   },
-  "amount": "1000000000000000"
+  "amount": "10000000"
 }
 ```
 
 返回：
 
 ```
-{"value":"...","type":"..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MintToken",
+                "value":{
+                  "source_address":"gc11hjn7n3g62r97w0syhy8gmy2wlvfd0n64uzevlp",
+                    "amount":{
+                        "denom":"YJ-9D3",
+                        "amount":"10000000"
+                    }
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
-
 ---
 
-
-###21 冻结代币
+###6.3 冻结代币
 ```
 POST /token/freeze/{symbol}
 ```
@@ -606,32 +1207,55 @@ POST /token/freeze/{symbol}
 
 ```
 {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
+    "from": "gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "4",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "5000"
+      }
+    ],
+    "simulate": false
 }
 ```
 
 返回：
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"FreezeToken",
+                "value":{
+                  "source_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+                    "symbol":"YY-A69"
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
-
 ---
 
-###22 解冻代币
+###6.4 解冻代币
 ```
 POST /token/unfreeze/{symbol}
 ```
@@ -645,32 +1269,55 @@ POST /token/unfreeze/{symbol}
 
 ```
 {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
+    "from": "gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+    "memo": "",
+    "chain_id": "testnet",
+    "account_number": "0",
+    "sequence": "4",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "GC",
+        "amount": "5000"
+      }
+    ],
+    "simulate": false
 }
 ```
 
 返回：
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"UnfreezeToken",
+                "value":{
+                  "source_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+                    "symbol":"YY-A69"
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
-
 ---
 
-###23 销毁代币 
+###6.5 销毁代币 
 ```
 POST /token/burn/{symbol}
 ```
@@ -684,48 +1331,61 @@ POST /token/burn/{symbol}
 
 ```
 {
-	"base_req": {
-		"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-		"memo": "",
-		"chain_id": "testnet",
-		"account_number": "0",
-		"sequence": "4",
-		"gas": "200000",
-		"gas_adjustment": "1.2",
-		"fees": [{
-			"denom": "gt",
-			"amount": "5000"
-		}],
-		"simulate": false
-	},
-	"amount": "1000000000000000"
+    "base_req": {
+        "from": "gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+        "memo": "",
+        "chain_id": "testnet",
+        "account_number": "0",
+        "sequence": "4",
+        "gas": "200000",
+        "gas_adjustment": "1.2",
+        "fees": [{
+            "denom": "GC",
+            "amount": "5000"
+        }],
+        "simulate": false
+    },
+    "amount": "10000"
 }
 ```
 
 返回：
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"BurnToken",
+                "value":{
+                    "from_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+                    "sub":{
+                        "denom":"YY-A69",
+                        "amount":"10000"
+                    }
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"200000"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
-
 ---
 
-###24 查询所有代币 
+###6.6 查询代币
 ```
-GET  /token/list
-```
-
-返回：
-
-```
-{"issues": ["..."]}
-```
-
----
-
-###25 交易对发布
-```
-POST /trading-pair/publish
+GET  /token/show/{symbol}
 ```
 参数:
 
@@ -733,42 +1393,136 @@ POST /trading-pair/publish
 | ----| ---- |
 | symbol | 代币符号 |
 
+返回：
+
+```
+{
+    "height":"0",
+    "result":{
+        "type":"Token",
+        "value":{
+            "freezable":true,
+            "freezed":false,
+            "mintable":true,
+            "source_address":"gc11hjn7n3g62r97w0syhy8gmy2wlvfd0n64uzevlp",
+            "symbol":"YJ-9D3",
+            "token_name":"test token",
+            "total_supply":"1000000000000000"
+        }
+    }
+}
+```
+---
+
+###6.7 查询所有代币 
+```
+GET  /token/list
+```
+
+返回：
+
+```
+{
+    "height":"0",
+    "result":{
+        "tokens":[
+            {
+                "type":"Token",
+                "value":{
+                    "freezable":true,
+                    "freezed":false,
+                    "mintable":true,
+                  "source_address":"gc11hjn7n3g62r97w0syhy8gmy2wlvfd0n64uzevlp",
+                    "symbol":"YJ-9D3",
+                    "token_name":"test token",
+                    "total_supply":"1000000000000000"
+                }
+            },
+            {
+                "type":"Token",
+                "value":{
+                    "freezable":false,
+                    "freezed":false,
+                    "mintable":false,
+                  "source_address":"gc112t5v8z8z4qwzmzvhrr8f4u3yhrjmvm9uw58lnw",
+                    "symbol":"YY-66F",
+                    "token_name":"test",
+                    "total_supply":"900000000000000"
+                }
+            }
+        ]
+    }
+}
+```
+---
+
+## 7 trading-pair
+###7.1 提交交易对提案
+```
+POST  /token/trading-pair
+```
+
 请求BODY示例：
 
 ```
 {
-  "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
-  },
-  "proposal_id": "1",
-  "base_symbol": "gt",
-  "quote_symbol": "aaa-bf5"
+    "base_req":{
+        "from":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+        "memo":"",
+        "chain_id":"testnet",
+        "account_number":"0",
+        "sequence":"4",
+        "gas":"80445444",
+        "gas_adjustment":"1.2",
+        "fees":[
+            {
+                "denom":"GC",
+                "amount":"5000"
+            }
+        ],
+        "simulate":false
+    },
+    "token_name":"test token",
+    "initPrice":"1000000000000000",
+    "base_symbol":"GC",
+    "quote_symbol":"YY-A69"
 }
 ```
 
 返回：
 
 ```
-{"msg": "..."...}
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgTradingList",
+                "value":{
+                    "init_price":"1000000000000000",
+                    "base_symbol":"GC",
+                    "quote_symbol":"YY-A69",
+                    "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg"
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"GC",
+                    "amount":"5000"
+                }
+            ],
+            "gas":"80445444"
+        },
+        "signatures":null,
+        "memo":""
+    }
+}
 ```
-
 ---
 
- 
-###26 查询交易对 
+###7.2 查询交易对 
 ```
 GET /trading-pair/{base-symbol}/{quote-symbol}
 ```
@@ -782,400 +1536,26 @@ GET /trading-pair/{base-symbol}/{quote-symbol}
 返回：
 
 ```
-{"result": true}
-```
-
----
-
-
-###27 提交提案
-```
-POST /proposal/submit
-```
-
-请求BODY示例：
-
-```
 {
-  "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
-  },
-  "title": "string",
-  "description": "string",
-  "proposal_type": "text",
-  "proposer": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-  "initial_deposit": [
-	{
-	  "denom": "gt",
-	  "amount": "50"
-	}
-  ]
-}
-```
-
-返回：
-
-```
-{"msg": "..."...}
-```
-
----
-
-
-###28 查询提案
-```
-GET /proposal/{proposal-id}
-```
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| proposal-id | 提案编号 |
-
-返回：
-
-```
-{"proposal_content":"...","proposal_id":"..."...}
-```
-
----
-
-###29 提交交易对提案
-```
-POST  /trading-pair/proposal/submit
-```
-
-请求BODY示例：
-
-```
-{
-  "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
-  },
-  "title": "string",
-  "description": "string",
-  "proposal_type": "TradingList",
-  "proposer": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-  "initial_deposit": [
-	{
-	  "denom": "gt",
-	  "amount": "50"
-	}
-  ],
-  "base_symbol":"aaa-df4",
-  "quote_symbol":"gt",
-  "init_price":"10000000000",
-  "expire_time":"5046546",
-  "voting_period":"4555"
-}
-```
-
-返回：
-
-```
-{"msg": "..."...}
-```
-
----
-	
-###30 为提案质押
-```
-POST  /proposal/deposit/{proposal-id}
-```
-
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| proposal-id | 提案编号 |
-
-请求BODY示例：
-
-```
-{
-  "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
-  },
-  "depositor": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-  "amount": [
-	{
-	  "denom": "gt",
-	  "amount": "50"
-	}
-  ]
-}
-```
-
-返回：
-
-```
-{"msg": "..."...}
-```
-
----
-
-
-###31 为提案投票
-```
-POST  /proposal/vote/{proposal-id}
-```
-
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| proposal-id | 提案编号 |
-
-请求BODY示例：
-
-```
-{
-  "base_req": {
-	"from": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
-	"fees": [
-	  {
-		"denom": "gt",
-		"amount": "5000"
-	  }
-	],
-	"simulate": false
-  },
-  "voter": "gt11a8jhycg9hwgnk7nzr60hxe4s7q30x7jgm5lr9y",
-  "option": "yes"
-}
-```
-
-返回：
-
-```
-{"msg": "..."...}
-```
-
----
-
-###32 查询提案质押情况
-```
-GET  /proposal/deposit/show/{proposal-id}
-```
-
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| proposal-id | 提案编号 |
-
-返回：
-
-```
-[{"amount":"...","proposal_id":"..."...}...]
-```
-
----
-
-###33 查询提案投票情况
-```
-GET  /proposal/vote/show/{proposal-id}
-```
-
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| proposal-id | 提案编号 |
-
-返回：
-
-```
-[{"voter":"...","proposal_id":"..."...}...]
-```
-
----
-
-###34 提交修改基金会提案
-```
-POST  /foundation/proposal/submit
-```
-**注意:rest接口仅提供修改基金会成员提案交易的创建功能。提案交易的提交需要进行离线签名然后使用接口7 广播发送带有签名的交易**
-
-请求BODY示例：
-
-```
-{
-     	"base_req": {
-     		"from": "gt11dpea5pjvfhgezjar32aduwlf9ydlwgvwnmmq5q",
-     		"memo": "",
-     		"chain_id": "testnet",
-     		"account_number": "0",
-     		"sequence": "1",
-     		"gas": "200000",
-     		"gas_adjustment": "1.2",
-     		"fees": [{
-     			"denom": "gt",
-     			"amount": "50"
-     		}],
-     		"simulate": false
-     	},
-     	"title": "Test Foundation Proposal",
-     	"description": "foundation newe scheme",
-     	"proposal_type": "foundation",
-     	"proposer": "gt11dpea5pjvfhgezjar32aduwlf9ydlwgvwnmmq5q",
-     	"initial_deposit": [{
-     		"denom": "gt",
-     		"amount": "50"
-     	}],
-     	"extra": "{\"member_scheme\":[{\"deal_address\":\"gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk\",\"deal_proportion\":\"12\",\"deal_type\":\"insert\"},{\"deal_address\":\"gt11fd0zlkskwpfx73nm5n5et5tqphuxegkpax9hqt\",\"deal_proportion\":\"1\",\"deal_type\":\"delete\"},{\"deal_address\":\"gt113g4ht8mvrw9meqjyf2xd4e4hp7yu865x5q5csu\",\"deal_proportion\":\"1\",\"deal_type\":\"update\"}]}"
-     }
-
-```
-
-返回示例：
-
-```    
-{
-	"type": "auth/StdTx",
-	"value": {
-		"msg": [{
-			"type": "gate/MsgSubmitProposal",
-			"value": {
-				"title": "Test Foundation Proposal",
-				"description": "foundation newe scheme",
-				"proposal_type": "Foundation",
-				"proposer": "gt11dpea5pjvfhgezjar32aduwlf9ydlwgvwnmmq5q",
-				"initial_deposit": [{
-					"denom": "gt",
-					"amount": "50"
-				}],
-				"extra": "{\"member_scheme\":[{\"deal_address\":\"gt11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk\",\"deal_proportion\":\"12\",\"deal_type\":\"insert\"},{\"deal_address\":\"gt11fd0zlkskwpfx73nm5n5et5tqphuxegkpax9hqt\",\"deal_proportion\":\"1\",\"deal_type\":\"delete\"},{\"deal_address\":\"gt113g4ht8mvrw9meqjyf2xd4e4hp7yu865x5q5csu\",\"deal_proportion\":\"1\",\"deal_type\":\"update\"}]}"
-			}
-		}],
-		"fee": {
-			"amount": [{
-				"denom": "gt",
-				"amount": "50"
-			}],
-			"gas": "200000"
-		},
-		"signatures": null,
-		"memo": ""
-	}
-}
-```
-
----
-
-###34 确认基金会修改提案
-```
-POST  /foundation/proposal/confirm/{proposal-id}
-```
-
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| proposal-id | 提案编号 |
-
-**注意:rest接口仅提供基金会修改提案确认交易的创建功能。交易的提交需要进行离线签名然后使用接口1.6 广播发送带有签名的交易**
-        
-请求BODY示例
-
-```        
-{
-  	"base_req": {
-  		"from": "gt11j6rg5xjytecfrqglgp9nfrh3pvlp595lrdz7c0",
-  		"memo": "",
-  		"chain_id": "testnet",
-  		"account_number": "0",
-  		"sequence": "1",
-  		"gas": "200000",
-  		"gas_adjustment": "1.2",
-  		"fees": [{
-  			"denom": "gt",
-  			"amount": "50"
-  		}],
-  		"simulate": false
-  	},
-  	"confirmer":"gt11j6rg5xjytecfrqglgp9nfrh3pvlp595lrdz7c0"
-  }
-```
-
-返回示例:
-
-```    
-{
-    "type":"auth/StdTx",
-    "value":{
-        "msg":[
-            {
-                "type":"gate/MsgConfirmFoundationProposal",
-                "value":{
-                    "proposal_id":"1",
-                    "from_address":"gt11j6rg5xjytecfrqglgp9nfrh3pvlp595lrdz7c0"
-                }
-            }
-        ],
-        "fee":{
-            "amount":[
-                {
-                    "denom":"gt",
-                    "amount":"50"
-                }
-            ],
-            "gas":"200000"
-        },
-        "signatures":null,
-        "memo":""
+    "height":"0",
+    "result":{
+        "type":"BaseTradingList",
+        "value":{
+            "base_symbol":"GC",
+            "init_price":"1000",
+            "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+            "quote_symbol":"YY-A69",
+            "valid_height":"5198",
+            "valid_time":"2020-03-03T06:32:44Z"
+        }
     }
 }
 ```
 
 ---
 
-###35 查看基金会成员
+## 8 foundation
+###8.1 查看基金会成员
 ```
 GET  /foundation/distribution
 ```
@@ -1210,11 +1590,10 @@ GET  /foundation/distribution
      ]
 }
 ```
-
 ---
 
-
-###36 去中心化交易所存储交易信息
+## 9 dex
+###9.1 去中心化交易所存储交易信息
 ```
 POST  /dex/trade
 ```
@@ -1345,7 +1724,7 @@ POST  /dex/trade
 ---
 
 
-###37 账户充代币到去中心化交易所
+###9.2 账户充代币到去中心化交易所
 ```
 POST  /dex/deposit
 ```
@@ -1408,7 +1787,7 @@ POST  /dex/deposit
 
 ---
 
-###38 从去中心化交易所提取代币
+###9.3 从去中心化交易所提取代币
 ```
 POST  /dex/withdraw
 ```
@@ -1474,7 +1853,7 @@ POST  /dex/withdraw
 
 ---
 
-###39 去中心化交易所设置管理员账户
+###9.4 去中心化交易所设置管理员账户
 ```
 POST  /dex/set-admin
 ```
@@ -1534,7 +1913,7 @@ POST  /dex/set-admin
 
 ---
 
-###40 去中心化交易所查询交易信息
+###9.5 去中心化交易所查询交易信息
 ```
 GET		/dex/query-trade/{trade-id}
 ```
@@ -1617,7 +1996,7 @@ GET		/dex/query-trade/{trade-id}
 ---
 
 
-###41 去中心化交易所查询账户信息
+###9.6 去中心化交易所查询账户信息
 ```
 GET /dex/query-account/{dex-account}
 ```
@@ -1642,7 +2021,7 @@ GET /dex/query-account/{dex-account}
 
 ---
 
-###42 去中心化交易所查询管理员信息
+###9.7 去中心化交易所查询管理员信息
 ```
 GET /dex/query-admin/{admin-type}
 ```
@@ -1664,62 +2043,28 @@ GET /dex/query-admin/{admin-type}
 	}
 }
 ```
+---
 
-###43 公布多签账户
+## 10 查询节点状态信息
 ```
-GET /account/publish-multisig/{address}
-```
-请求BODY示例：
-
-```
-{
-  "base_req": {
-    "from": "gt11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr",
-    "memo": "",
-    "chain_id": "testnet",
-    "account_number": "0",
-    "sequence": "1",
-    "gas": "200000",
-    "gas_adjustment": "1.2",
-    "fees": [
-      {
-        "denom": "gt",
-        "amount": "2"
-      }
-    ],
-    "simulate": false
-  },
-  "pubkey":"gt1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2"
-}
+GET /status
 ```
 
-返回示例：
+返回:
 
 ```
-{
-    "type": "auth/StdTx",
-    "value": {
-        "fee": {
-            "amount": [
-                {
-                    "amount": "2",
-                    "denom": "gt"
-                }
-            ],
-            "gas": "200000"
-        },
-        "memo": "",
-        "msg": [
-            {
-                "type": "gate/MsgPublishMultiSigAccount",
-                "value": {
-                    "from_address": "gt11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr",
-                    "pubkey": "gt1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2",
-                    "to_address": "gt11za9h6j2j98p953hu60mm2a609uj5ujrnget43k"
-                }
-            }
-        ],
-        "signatures": null
-    }
-}
+{"channels":"4020212223303800","id":"...."....}
 ```
+
+---
+
+##11 多签普通/保险账户转账交易 
+
+* 多签普通账户的交易构建方法和普通账户的交易构建一致。见模块tx
+* 多签保险账户的交易构建方法和保险账户的交易构建一致。见模块vault-account
+* 构建交易完成后，需要线下进行多签（具体见多签命令行相关操作）
+* 然后广播发送带有签名的交易。见4.1
+
+
+
+
