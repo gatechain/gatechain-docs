@@ -18,7 +18,7 @@
 	],
 	"pluginsConfig": {
 		"insert-logo": {
-			"url": "images/GT.png",
+			"url": "/images/GT.png",
 			"style": "background: none; max-height: 30px; min-height: 30px"
 		}
 	}
