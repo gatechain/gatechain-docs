@@ -22,9 +22,6 @@
 		"insert-logo": {
 			"url": "/images/GT.png",
 			"style": "background: none; max-height: 30px; min-height: 30px"
-		},
-		"code": {
-			"copyButtons": true
 		}
 	}
 }
