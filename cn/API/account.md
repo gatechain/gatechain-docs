@@ -6,11 +6,12 @@ GET /account/{account}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :---- | :---- |
 | account | 账户 |
 
 返回:
 
+%accordion% %accordion%
 ```
 {
     "height":"5129",
@@ -55,7 +56,9 @@ GET /account/{account}
     }
 }
 ```
----
+%/accordion%
+
+
 
 ### 查询账户余额
 ```
@@ -69,6 +72,8 @@ GET /account/balance/{account}
 
 返回:
 
+%accordion% %accordion%
+
 ```
 {
     "height":"5483",
@@ -80,13 +85,16 @@ GET /account/balance/{account}
     ]
 }
 ```
----
+%/accordion%
+
 
 ### 公布多签账户
 ```
 POST /account/publish-multisig/{address}
 ```
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -109,8 +117,11 @@ POST /account/publish-multisig/{address}
   "pubkey":"gc1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2"
 }
 ```
+%/accordion%
 
 返回示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -140,5 +151,6 @@ POST /account/publish-multisig/{address}
     }
 }
 ```
+%/accordion%
 
 
