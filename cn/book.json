@@ -24,7 +24,7 @@
 			"style": "background: none; max-height: 30px; min-height: 30px"
 		},
 		"code": {
-			"copyButtons": false
+			"copyButtons": true
 		}
 	}
 }
