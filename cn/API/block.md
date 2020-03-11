@@ -5,7 +5,7 @@ GET /block/latest
 ```
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -55,7 +55,7 @@ GET /block/{height}
 
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {

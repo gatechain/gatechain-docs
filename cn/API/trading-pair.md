@@ -6,7 +6,8 @@ POST  /token/trading-pair
 
 请求BODY示例：
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -36,7 +37,8 @@ POST  /token/trading-pair
 
 返回：
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -82,7 +84,8 @@ GET /trading-pair/{base-symbol}/{quote-symbol}
 
 返回：
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {

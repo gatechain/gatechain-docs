@@ -6,7 +6,8 @@ POST /tx
 
 请求BODY示例:
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -55,7 +56,8 @@ POST /tx
 
 返回:
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -79,7 +81,8 @@ POST  /tx/send/{account}
 
 请求BODY示例：
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -107,7 +110,8 @@ POST  /tx/send/{account}
 
 返回:
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -156,7 +160,8 @@ GET /tx/{hash}
 
 返回:
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -294,7 +299,8 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
 
 返回:
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {

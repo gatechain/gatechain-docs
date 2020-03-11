@@ -11,7 +11,8 @@ POST  /revocable-tx/send/{account}
 
 请求BODY示例：
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -43,7 +44,8 @@ POST  /revocable-tx/send/{account}
 
 返回:
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -93,7 +95,8 @@ POST /revocable-tx/revoke/{tx-hash}
 
 请求BODY示例：
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
@@ -120,7 +123,8 @@ POST /revocable-tx/revoke/{tx-hash}
 
 返回：
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {

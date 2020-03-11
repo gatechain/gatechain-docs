@@ -6,8 +6,7 @@ POST  /dex/trade
 
 请求BODY示例：
 
-%accordion% %accordion%
-
+%accordion%json%accordion%
 ```
 {
     "base_req": {
@@ -43,12 +42,12 @@ POST  /dex/trade
     }
 }
 ```
-%/accordion% 
+%/accordion%
+
 
 返回示例：
 
-%accordion% %accordion%
-
+%accordion%json%accordion%
 ```
 {
   "type": "auth/StdTx",
@@ -133,7 +132,6 @@ POST  /dex/trade
 ```
 %/accordion%
 
-
 ### 账户充代币到去中心化交易所
 ```
 POST  /dex/deposit
@@ -141,8 +139,7 @@ POST  /dex/deposit
 
 请求BODY示例：
 
-%accordion% %accordion%
-
+%accordion%json%accordion%
 ```
 {
     "base_req": {
@@ -157,13 +154,12 @@ POST  /dex/deposit
         "amount" : "10gt"
     }
 }
-```    
+``` 
 %/accordion%
 
 返回示例：
 
-%accordion% %accordion%
-
+%accordion%json%accordion%
 ```
 {
   "type": "auth/StdTx",
@@ -199,7 +195,6 @@ POST  /dex/deposit
   }
 }
 ```
-
 %/accordion%
 
 
@@ -210,10 +205,10 @@ POST  /dex/withdraw
 
 **只有管理员有权限执行此操作**
 
-%accordion% %accordion%
 
 请求BODY示例：
 
+%accordion%json%accordion%
 ```
 {
     "base_req": {
@@ -234,8 +229,7 @@ POST  /dex/withdraw
 
 返回示例：
 
-%accordion% %accordion%
-
+%accordion%json%accordion%
 ```
 {
   "type": "auth/StdTx",
@@ -282,7 +276,7 @@ POST  /dex/set-admin
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -303,7 +297,7 @@ POST  /dex/set-admin
     
 返回示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -351,7 +345,7 @@ GET		/dex/query-trade/{trade-id}
     
 返回示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -436,7 +430,7 @@ GET /dex/query-account/{dex-account}
 
 返回示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 [{
@@ -463,7 +457,7 @@ GET /dex/query-admin/{admin-type}
 
 返回示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {

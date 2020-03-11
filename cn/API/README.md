@@ -12,7 +12,8 @@ GET /status
 
 返回:
 
-%accordion% %accordion%
+
+%accordion%json%accordion%
 
 ```
 {
