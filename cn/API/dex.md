@@ -6,6 +6,8 @@ POST  /dex/trade
 
 请求BODY示例：
 
+%accordion% %accordion%
+
 ```
 {
     "base_req": {
@@ -41,8 +43,11 @@ POST  /dex/trade
     }
 }
 ```
-    
+%/accordion% 
+
 返回示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -126,8 +131,7 @@ POST  /dex/trade
   }
 }
 ```
-
----
+%/accordion%
 
 
 ### 账户充代币到去中心化交易所
@@ -136,6 +140,8 @@ POST  /dex/deposit
 ```
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -152,8 +158,11 @@ POST  /dex/deposit
     }
 }
 ```    
+%/accordion%
 
 返回示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -191,7 +200,8 @@ POST  /dex/deposit
 }
 ```
 
----
+%/accordion%
+
 
 ### 从去中心化交易所提取代币
 ```
@@ -199,6 +209,8 @@ POST  /dex/withdraw
 ```
 
 **只有管理员有权限执行此操作**
+
+%accordion% %accordion%
 
 请求BODY示例：
 
@@ -218,8 +230,11 @@ POST  /dex/withdraw
     }
 }
 ```
+%/accordion%
 
 返回示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -256,8 +271,7 @@ POST  /dex/withdraw
   }
 }
 ```
-
----
+%/accordion%
 
 ### 去中心化交易所设置管理员账户
 ```
@@ -267,6 +281,8 @@ POST  /dex/set-admin
 **只有现管理员有权限设置新管理员**
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -283,8 +299,11 @@ POST  /dex/set-admin
     }
 }
 ```
+%/accordion%
     
 返回示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -317,7 +336,8 @@ POST  /dex/set-admin
 }
 ```
 
----
+%/accordion%
+
 
 ### 去中心化交易所查询交易信息
 ```
@@ -330,6 +350,8 @@ GET		/dex/query-trade/{trade-id}
 | trade-id | 交易ID |
     
 返回示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -399,7 +421,7 @@ GET		/dex/query-trade/{trade-id}
  }
 ```
 
----
+%/accordion%
 
 
 ### 去中心化交易所查询账户信息
@@ -414,6 +436,8 @@ GET /dex/query-account/{dex-account}
 
 返回示例：
 
+%accordion% %accordion%
+
 ```
 [{
 	"denom": "gt",
@@ -425,7 +449,7 @@ GET /dex/query-account/{dex-account}
 }]
 ```
 
----
+%/accordion%
 
 ### 去中心化交易所查询管理员信息
 ```
@@ -439,6 +463,8 @@ GET /dex/query-admin/{admin-type}
 
 返回示例：
 
+%accordion% %accordion%
+
 ```
 {
 	"type": "dex/SetAccInfo",
@@ -449,4 +475,4 @@ GET /dex/query-admin/{admin-type}
 	}
 }
 ```
-
+%/accordion%

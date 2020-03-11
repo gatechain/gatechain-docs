@@ -11,6 +11,8 @@ POST  /token/issue/{symbol}
 
 请求BODY示例：
 
+%accordion% %accordion%
+
 ```
 {
   "base_req": {
@@ -35,8 +37,11 @@ POST  /token/issue/{symbol}
   "freezable": true
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -69,7 +74,7 @@ POST  /token/issue/{symbol}
     }
 }
 ```
----
+%/accordion%
 
 ### 增发代币 
 ```
@@ -82,6 +87,8 @@ POST /token/mint/{symbol}
 | symbol | 代币符号 |
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -104,8 +111,11 @@ POST /token/mint/{symbol}
   "amount": "10000000"
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -137,7 +147,7 @@ POST /token/mint/{symbol}
     }
 }
 ```
----
+%/accordion%
 
 ### 冻结代币
 ```
@@ -150,6 +160,8 @@ POST /token/freeze/{symbol}
 | symbol | 代币符号 |
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -169,8 +181,11 @@ POST /token/freeze/{symbol}
     "simulate": false
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -199,7 +214,7 @@ POST /token/freeze/{symbol}
     }
 }
 ```
----
+%/accordion%
 
 ### 解冻代币
 ```
@@ -212,6 +227,8 @@ POST /token/unfreeze/{symbol}
 | symbol | 代币符号 |
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -231,8 +248,11 @@ POST /token/unfreeze/{symbol}
     "simulate": false
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -261,7 +281,7 @@ POST /token/unfreeze/{symbol}
     }
 }
 ```
----
+%/accordion%
 
 ### 销毁代币 
 ```
@@ -274,6 +294,8 @@ POST /token/burn/{symbol}
 | symbol | 代币符号 |
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -294,8 +316,11 @@ POST /token/burn/{symbol}
     "amount": "10000"
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -327,7 +352,7 @@ POST /token/burn/{symbol}
     }
 }
 ```
----
+%/accordion%
 
 ### 查询代币
 ```
@@ -340,6 +365,8 @@ GET  /token/show/{symbol}
 | symbol | 代币符号 |
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -358,7 +385,7 @@ GET  /token/show/{symbol}
     }
 }
 ```
----
+%/accordion%
 
 ### 查询所有代币 
 ```
@@ -366,6 +393,8 @@ GET  /token/list
 ```
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -400,5 +429,6 @@ GET  /token/list
     }
 }
 ```
+%/accordion%
 
 

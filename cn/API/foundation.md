@@ -6,6 +6,8 @@ GET  /foundation/distribution
 
 返回示例：
 
+%accordion% %accordion%
+
 ```     
 {
      "reward":"0.020000000000000000",
@@ -34,3 +36,4 @@ GET  /foundation/distribution
      ]
 }
 ```
+%/accordion%

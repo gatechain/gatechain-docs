@@ -11,6 +11,8 @@ POST  /revocable-tx/send/{account}
 
 请求BODY示例：
 
+%accordion% %accordion%
+
 ```
 {
   "base_req": {
@@ -37,8 +39,11 @@ POST  /revocable-tx/send/{account}
   ]
 }
 ```
+%/accordion%
 
 返回:
+
+%accordion% %accordion%
 
 ```
 {
@@ -74,7 +79,7 @@ POST  /revocable-tx/send/{account}
 }
 ```
 
----
+%/accordion%
 
 ### 撤回可撤回交易
 ```
@@ -87,6 +92,8 @@ POST /revocable-tx/revoke/{tx-hash}
 | tx-hash | 可撤回交易Hash |
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -109,8 +116,11 @@ POST /revocable-tx/revoke/{tx-hash}
   "index": "0"
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -149,5 +159,6 @@ POST /revocable-tx/revoke/{tx-hash}
     }
 }
 ```
+%/accordion%
 
 

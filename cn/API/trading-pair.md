@@ -6,6 +6,8 @@ POST  /token/trading-pair
 
 请求BODY示例：
 
+%accordion% %accordion%
+
 ```
 {
     "base_req":{
@@ -30,8 +32,11 @@ POST  /token/trading-pair
     "quote_symbol":"YY-A69"
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -62,7 +67,7 @@ POST  /token/trading-pair
     }
 }
 ```
----
+%/accordion%
 
 ### 查询交易对 
 ```
@@ -76,6 +81,8 @@ GET /trading-pair/{base-symbol}/{quote-symbol}
 | quote-symbol | 报价代币符号 |
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -93,4 +100,4 @@ GET /trading-pair/{base-symbol}/{quote-symbol}
     }
 }
 ```
-
+%/accordion%

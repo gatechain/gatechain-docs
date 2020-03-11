@@ -12,10 +12,32 @@ GET /status
 
 返回:
 
-```
-{"channels":"4020212223303800","id":"...."....}
-```
+%accordion% %accordion%
 
+```
+{
+    "node_status":{
+        "lastRound":"768",
+        "lastConsensusVersion":"v1",
+        "nextConsensusVersion":"v1",
+        "nextConsensusVersionRound":"769",
+        "nextConsensusVersionSupported":true,
+        "timeSinceLastRound":"1346643544",
+        "catchupTime":"0",
+        "hasSyncedSinceStartup":false
+    },
+    "application_version":{
+        "name":"gate",
+        "server_name":"gated",
+        "client_name":"gatecli",
+        "version":"0.8.1-265-g67521af8",
+        "commit":"67521af80eb609a7f9fb66d07255ef515030cd69",
+        "build_tags":"netgo,ledger",
+        "go":"go version go1.13.7 darwin/amd64"
+    }
+}
+```
+%/accordion%
 
 
 

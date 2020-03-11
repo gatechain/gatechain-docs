@@ -6,9 +6,8 @@
 
 随着GateChain开发工作的不断推进，本站点的文档也将同步更新，请关注我们的官方信息，以确保您能及时获得GateChain最新讯息！
 
-</span>
 
-<span id="eco">
+
   
 ## GateChain生态 ##
 
@@ -56,9 +55,9 @@ GT发行计划为：
 
 同时GT在生态中通过使用的普及不断提升价值，并通过生态成员回购公开销毁等方式实现流通量减少，抑制通胀。
 
-</span>
 
-<span id="wallet">
+
+
 
 ### GateChain 钱包 ###
 
@@ -129,7 +128,7 @@ GateChain引入全新的概念，为资金安全提供了完备自洽的理论�
 * <span id="rt">可撤回交易 （Revocable Transaction）：从保险账户发起的交易为可撤回交易，在可撤回时间内可以通过发起撤回交易将资金撤回到找回账户，超过可撤回时间之后资金将无法被撤回。</span>
 * <span id="irt">不可撤回交易 （Irrevocable Transaction）：从普通账户发起的交易为不可撤回交易，一旦被区块链确认，将无法被撤回。</span>
 
-<span id="addrt">
+
 
 ### GateChain 的地址类型 ###
 
@@ -140,9 +139,9 @@ GateChain的账户分普通账户（Normal Account）和保险账户（Vault Acc
 
 使用GateChain定义的地址前缀标识机制，收款账户易于识别付款账户的类型。由此，对于保险账户发送的付款交易，用户可注意到并根据自身需求确认收款，在可撤回时间之后安全确认。
 
-</span>
 
-<span id="transt">
+
+
 
 ### GateChain 的交易类型 ###
 
@@ -158,7 +157,7 @@ GateChain具有多种转账交易类型。为便于用户有效识别不同的�
 * 清算保险账户（Vault Clear）：“VAULTCLEAR-”
 * 其他未命名交易类型（Untitled）： “BASIC-”
 
-</span>
+
 
 
 ## 快速入门

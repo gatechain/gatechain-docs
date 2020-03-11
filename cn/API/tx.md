@@ -6,6 +6,8 @@ POST /tx
 
 请求BODY示例:
 
+%accordion% %accordion%
+
 ```
 {
     "tx": {
@@ -43,6 +45,7 @@ POST /tx
     "return": "block"
 }
 ```
+%/accordion%
 
 参数:
 
@@ -52,6 +55,8 @@ POST /tx
 
 返回:
 
+%accordion% %accordion%
+
 ```
 {
     "height":"899",
@@ -60,7 +65,7 @@ POST /tx
     "raw_log":"boradcast tx success"
 }
 ```
----
+%/accordion%
 
 ### 普通交易
 ```
@@ -73,6 +78,8 @@ POST  /tx/send/{account}
 | account | 接收账户 |
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -96,8 +103,11 @@ POST  /tx/send/{account}
     }]
 }
 ```
+%/accordion%
 
 返回:
+
+%accordion% %accordion%
 
 ```
 {
@@ -132,7 +142,7 @@ POST  /tx/send/{account}
     }
 }
 ```
----
+%/accordion%
 
 ### 查询交易信息
 ```
@@ -145,6 +155,8 @@ GET /tx/{hash}
 | hash | 交易HASH |
 
 返回:
+
+%accordion% %accordion%
 
 ```
 {
@@ -266,8 +278,7 @@ GET /tx/{hash}
     "txhash":"IRREVOCABLEPAY-9CA1921DD0F9AE6CA6E334396740CA6E218EB40365EF91E83775CB2D6B3D112E"
 }
 ```
-
----
+%/accordion%
 
 ### 按条件查询交易
 ```
@@ -282,6 +293,8 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
 | recipient | 接收者账户 |
 
 返回:
+
+%accordion% %accordion%
 
 ```
 {
@@ -412,4 +425,4 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
     ]
 }
 ```
-
+%/accordion%

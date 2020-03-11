@@ -5,6 +5,8 @@ GET /block/latest
 ```
 返回:
 
+%accordion% %accordion%
+
 ```
 {
     "hash":"MHCH5NHC2IMVJA6DSLKJFSK4AYNDCMFC5SC32VOVDIPVEIBVRGHA",
@@ -38,7 +40,8 @@ GET /block/latest
 }
 ```
 
----
+%/accordion%
+
 
 ### 查询指定高度的块信息
 ```
@@ -51,6 +54,8 @@ GET /block/{height}
 | height | 块高度（>=1）|
 
 返回:
+
+%accordion% %accordion%
 
 ```
 {
@@ -86,5 +91,5 @@ GET /block/{height}
     }
 }
 ```
-
+%/accordion%
 

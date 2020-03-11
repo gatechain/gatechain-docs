@@ -12,6 +12,8 @@ POST  /vault-account/create/{base-account}
 
 请求BODY示例：
 
+%accordion% %accordion%
+
 ```
 {
   "base_req": {
@@ -44,8 +46,11 @@ POST  /vault-account/create/{base-account}
   }
 }
 ```
+%/accordion%
 
 返回:
+
+%accordion% %accordion%
 
 ```
 {
@@ -84,7 +89,7 @@ POST  /vault-account/create/{base-account}
     }
 }
 ```
----
+%/accordion%
 
 ### 更改清算高度
 ```
@@ -92,6 +97,8 @@ POST /vault-account/update-clearing-height
 ```
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -114,8 +121,11 @@ POST /vault-account/update-clearing-height
   "clearing_height": "6200"
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -144,7 +154,7 @@ POST /vault-account/update-clearing-height
     }
 }
 ```
----
+%/accordion%
 
 ### 清算交易
 ```
@@ -152,6 +162,8 @@ POST /vault-account/clear
 ```
 
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
@@ -174,8 +186,11 @@ POST /vault-account/clear
   "vaults": ["vault115ljwsxqhxvu54ndg95kyxn7f82uj2yk380ucm4"]
 }
 ```
+%/accordion%
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -206,7 +221,8 @@ POST /vault-account/clear
     }
 }
 ```
----
+%/accordion%
+
 ### 查询保险账户的所有可撤回交易
 ```
 GET  /vault-account/list-revocable-txs/{vault-account}
@@ -218,6 +234,8 @@ GET  /vault-account/list-revocable-txs/{vault-account}
 | vault-account | 保险账户 |
 
 返回：
+
+%accordion% %accordion%
 
 ```
 {
@@ -237,4 +255,5 @@ GET  /vault-account/list-revocable-txs/{vault-account}
     ]
 }
 ```
+%/accordion%
 
