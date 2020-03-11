@@ -3,7 +3,13 @@
 }
 
 .code-line {
-	white-space: pre-wrap; !important;
+	white-space: pre-wrap !important;
+    word-break: break-all !important;
+    word-wrap: break-word !important;
+}
+
+.lang-bash {
+	white-space: normal !important;
     word-break: break-all !important;
     word-wrap: break-word !important;
 }
