@@ -11,7 +11,7 @@ GET /account/{account}
 
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 ```
 {
     "height":"5129",
@@ -72,7 +72,7 @@ GET /account/balance/{account}
 
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -94,7 +94,7 @@ POST /account/publish-multisig/{address}
 ```
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -121,7 +121,7 @@ POST /account/publish-multisig/{address}
 
 返回示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
