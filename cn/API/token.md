@@ -11,7 +11,7 @@ POST  /token/issue/{symbol}
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -41,7 +41,7 @@ POST  /token/issue/{symbol}
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -88,7 +88,7 @@ POST /token/mint/{symbol}
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -115,7 +115,7 @@ POST /token/mint/{symbol}
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -161,7 +161,7 @@ POST /token/freeze/{symbol}
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -185,7 +185,7 @@ POST /token/freeze/{symbol}
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -228,7 +228,7 @@ POST /token/unfreeze/{symbol}
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -252,7 +252,7 @@ POST /token/unfreeze/{symbol}
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -295,7 +295,7 @@ POST /token/burn/{symbol}
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -320,7 +320,7 @@ POST /token/burn/{symbol}
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -366,7 +366,7 @@ GET  /token/show/{symbol}
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -394,7 +394,7 @@ GET  /token/list
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {

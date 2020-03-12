@@ -6,7 +6,7 @@ POST  /dex/trade
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -46,9 +46,9 @@ POST  /dex/trade
 %/accordion%
 
 
-返回示例：
+返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -142,7 +142,7 @@ POST  /dex/deposit
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -164,9 +164,9 @@ POST  /dex/deposit
 ```    
 %/accordion%
 
-返回示例：
+返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -216,7 +216,7 @@ POST  /dex/withdraw
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -236,9 +236,9 @@ POST  /dex/withdraw
 ```
 %/accordion%
 
-返回示例：
+返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -286,7 +286,7 @@ POST  /dex/set-admin
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -308,9 +308,9 @@ POST  /dex/set-admin
 ```
 %/accordion%
     
-返回示例：
+返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -356,9 +356,9 @@ GET		/dex/query-trade/{trade-id}
 | :----| :---- |
 | trade-id | 交易ID |
     
-返回示例：
+返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -441,9 +441,9 @@ GET /dex/query-account/{dex-account}
 | :----| :---- |
 | dex-account | DEX账户 |
 
-返回示例：
+返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 [{
@@ -468,9 +468,9 @@ GET /dex/query-admin/{admin-type}
 | :----| :---- |
 | admin-type| owner/admin/fee |
 
-返回示例：
+返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {

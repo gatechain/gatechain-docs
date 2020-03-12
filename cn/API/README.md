@@ -7,13 +7,14 @@
 
 
 ## 查询节点状态信息
+
 ```
 GET /status
 ```
 
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {

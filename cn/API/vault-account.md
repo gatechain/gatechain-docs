@@ -12,7 +12,7 @@ POST  /vault-account/create/{base-account}
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -50,7 +50,7 @@ POST  /vault-account/create/{base-account}
 
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -98,7 +98,7 @@ POST /vault-account/update-clearing-height
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -125,7 +125,7 @@ POST /vault-account/update-clearing-height
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -163,7 +163,7 @@ POST /vault-account/clear
 
 请求BODY示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -190,7 +190,7 @@ POST /vault-account/clear
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -235,7 +235,7 @@ GET  /vault-account/list-revocable-txs/{vault-account}
 
 返回：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {

@@ -2,14 +2,12 @@
     display: none !important;
 }
 
-.code-line {
+div.code-wrapper code {
 	white-space: pre-wrap !important;
     word-break: break-all !important;
     word-wrap: break-word !important;
 }
 
-.lang-bash {
-	white-space: normal !important;
-    word-break: break-all !important;
-    word-wrap: break-word !important;
+code .code-line {
+	white-space: pre !important;
 }

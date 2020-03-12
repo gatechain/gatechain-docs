@@ -5,7 +5,7 @@ GET /block/latest
 ```
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {
@@ -42,7 +42,6 @@ GET /block/latest
 
 %/accordion%
 
-
 ### 查询指定高度的块信息
 ```
 GET /block/{height}
@@ -50,12 +49,12 @@ GET /block/{height}
 参数:
 
 | 参数名 | 说明 |
-| :----| :---- |
+| ----| ---- |
 | height | 块高度（>=1）|
 
 返回:
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```
 {

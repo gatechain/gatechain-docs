@@ -6,7 +6,7 @@ GET  /foundation/distribution
 
 返回示例：
 
-%accordion% %accordion%
+%accordion%json%accordion%
 
 ```     
 {
