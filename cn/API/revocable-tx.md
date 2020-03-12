@@ -6,7 +6,7 @@ POST  /revocable-tx/send/{account}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | account | 接收账户，可以是普通账户或保险账户 |
 
 请求BODY示例：
@@ -88,7 +88,7 @@ POST /revocable-tx/revoke/{tx-hash}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | tx-hash | 可撤回交易Hash |
 
 请求BODY示例：

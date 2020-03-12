@@ -7,7 +7,7 @@ POST  /vault-account/create/{base-account}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :--- |
 | base-account | 基础账户 |
 
 请求BODY示例：
@@ -230,7 +230,7 @@ GET  /vault-account/list-revocable-txs/{vault-account}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | vault-account | 保险账户 |
 
 返回：

@@ -67,7 +67,7 @@ GET /account/balance/{account}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | account | 账户 |
 
 返回:

@@ -76,7 +76,7 @@ GET /trading-pair/{base-symbol}/{quote-symbol}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | base-symbol | 基准代币符号 |
 | quote-symbol | 报价代币符号 |
 

@@ -1,10 +1,7 @@
 
 ### 存代币到交易所
 ```bash
-gatecli dex deposit [接收账户] [代币数量]
---gas-prices [gas价格]
---from [用户的账户]
---chain-id [链ID]
+gatecli dex deposit [接收账户] [代币数量]--gas-prices [gas价格]--from [用户的账户] --chain-id [链ID]
 ```
 示例：
 
@@ -18,9 +15,7 @@ gatecli dex deposit gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100gc --gas-price
 
 ### 从交易所提取代币到用户账户
 ```bash
-gatecli dex withdraw [账户公钥] [提取的代币数量] [nonce随机数] [签名] [时间戳] [Gas Prices]
---from [发起者账户]
---chain-id [链ID]
+gatecli dex withdraw [账户公钥] [提取的代币数量] [nonce随机数] [签名] [时间戳] [Gas Prices]--from [发起者账户]--chain-id [链ID]
 ```
 示例：
 
@@ -33,11 +28,7 @@ gatecli dex withdraw gc1pub1addwnpepq23pmf725xuy549spdxj7pzv6vfc0l4440ccpam7t00r
 
 ### 为取币交易签名
 ```bash
-gatecli dex sign-withdraw
---pubkey [账户公钥]
---time [时间戳]
---coin [代币数量]
---nonce [随机数]
+gatecli dex sign-withdraw --pubkey [账户公钥] --time [时间戳] --coin [代币数量] --nonce [随机数]
 ```
 示例：
 
@@ -51,13 +42,7 @@ gatecli dex sign-withdraw --pubkey gc1pub1addwnpepqgs7q64h3l0avv7gakkrgyln26qjyu
 
 ### 为交易订单签名
 ```bash
-gatecli dex sign-order
---order-nonce [订单编号]
---order-side [订单类型:sell/buy]
---order-pubkey [账户公钥]
---order-amount [代币数量]
---order-price [订单出价]
---time [时间戳]
+gatecli dex sign-order --order-nonce [订单编号] --order-side [订单类型:sell/buy] --order-pubkey [账户公钥] --order-amount [代币数量] --order-price [订单出价] --time [时间戳]
 ```
 示例：
 
@@ -71,10 +56,7 @@ gatecli dex sign-order --orderside buy --ordernonce 1 --orderpubkey  gc1pub1addw
 
 ### 为取消订单签名
 ```bash
-gatecli dex sign-cancelorder
---orderid [订单编号]
---market [市场名称]
---pubkey [账户公钥]
+gatecli dex sign-cancelorder --orderid [订单编号] --market [市场名称] --pubkey [账户公钥]
 ```
 
 说明：
@@ -97,34 +79,7 @@ gatecli dex query-account gc11le7mk4k0c8ye7r3pw0wapg83v7rgw706zuq2nk --chain-id 
 
 ### 记录交易信息
 ```bash
-gatecli dex trade
---tradeid [交易ID，可凭此ID调用query-trade命令查询交易详情]
---market [交易所名称]
---maker-orderid [maker订单号]
---maker-nonce [maker指定的随机数]
---maker-pubkey [maker公钥]
---maker-side [maker订单是买还是卖，可选buy/sell]
---maker-amount [maker订单想购买代币的数量]
---maker-price [maker订单出价]
---maker-sign [maker订单的签名]
---maker-time [maker订单的创建时间戳]
---taker-orderid [taker订单号]
---taker-nonce [taker指定的随机数]
---taker-pubkey [taker账户的公钥]
---taker-side [taker订单是买还是卖，可选buy/sell]
---taker-amount [taker订单想出售token的数量]
---taker-price [taker订单出价]
---taker-sign [taker订单信息的签名]
---taker-time [taker订单的创建时间]
---price [交易成交价格]
---amount [交易成交的代币数量]
---maker-add-amount [maker需要增加的代币]
---maker-sub-amount [maker需要减少的代币]
---maker-fee [maker需要扣除的手续费]
---taker-fee [taker需要扣除的手续费]
---taker-gas [taker需要扣除的Gas]
---from [管理员的账户]
---chain-id [链ID]
+gatecli dex trade --tradeid [交易ID，可凭此ID调用query-trade命令查询交易详情] --market [交易所名称] --maker-orderid [maker订单号] --maker-nonce [maker指定的随机数] --maker-pubkey [maker公钥] --maker-side [maker订单是买还是卖，可选buy/sell] --maker-amount [maker订单想购买代币的数量] --maker-price [maker订单出价] --maker-sign [maker订单的签名] --maker-time [maker订单的创建时间戳] --taker-orderid [taker订单号] --taker-nonce [taker指定的随机数] --taker-pubkey [taker账户的公钥] --taker-side [taker订单是买还是卖，可选buy/sell] --taker-amount [taker订单想出售token的数量] --taker-price [taker订单出价] --taker-sign [taker订单信息的签名] --taker-time [taker订单的创建时间] --price [交易成交价格] --amount [交易成交的代币数量] --maker-add-amount [maker需要增加的代币] --maker-sub-amount [maker需要减少的代币] --maker-fee [maker需要扣除的手续费] --taker-fee [taker需要扣除的手续费] --taker-gas [taker需要扣除的Gas] --from [管理员的账户] --chain-id [链ID]
 ```
 
 示例：

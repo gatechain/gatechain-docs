@@ -1,8 +1,8 @@
-# 概述
+# 介绍 introduction
 
 欢迎来到GateChain文档网站！
 
-本文档给出GateChain的概要，包括基础概念、功能特点、面向新用户的入手教程，以及面向深度用户和开发者的Command Line Interface（Cli）和API等详细技术细节。
+本文档给出GateChain的概要，包括基础概念、功能特点、面向新用户的入手教程，以及面向深度用户和开发者的Command Line Interface（cli）和api等详细技术细节。
 
 随着GateChain开发工作的不断推进，本站点的文档也将同步更新，请关注我们的官方信息，以确保您能及时获得GateChain最新讯息！
 
@@ -15,16 +15,16 @@
 
 GateChain以及基于GateChain的DEX其主要目的是采用全新的解决方案，构建一个企业级的安全、高效的去中心化数字资产存储，发布以及交易生态系统。-->
 
-GateChain生态，包括GateChain主链、GateChain DEX、GT、钱包等，构建了企业级的安全、高效的去中心化数字资产存储、发布及交易生态系统，提供了一种全新的区块链安全交易解决方案，
+GateChain生态，包括GateChain主链、GateChain DEX、GC、钱包等，构建了企业级的安全、高效的去中心化数字资产存储、发布及交易生态系统，提供了一种全新的区块链安全交易解决方案，
 
 生态主要提供以下功能：
 
-1. **转账支付**：	支持用户使用钱包、客户端发送和接收GateChain Token(GT)以及其他链上资产。
-2. **资产发行**：		发行自己的Token以实现资产数字化，并使用GT作为交易载体对自己的数字资产进行管理，细节请查阅[资产管理](./gatechain-asset.md)。
+1. **转账支付**：	支持用户使用钱包、客户端发送和接收GateChain CoinGC以及其他链上资产。
+2. **资产发行**：		发行自己的Token以实现资产数字化，并使用GC作为交易载体对自己的数字资产进行管理，细节请查阅[资产管理](./gatechain-asset.md)。
 3. **去中心化跨链交易**：	基于GateChain支持不同数字货币之间的高性能去中心化交易。
 4. **资产安全存储**：		通过独创保险账户技术和清算保障体系来对账户进行全方位保护，支持对非正常交易的撤销/清算操作，细节请查阅[交易保障](./gatechain-security.md)。
 5. **多重签名**：		多个相关签名拥有者对同一账户下的数字资产进行定制化管理，满足企业级需求，细节请查阅[多重签名](./gatechain-multisig.md)。
-6. **POS挖矿收益**:	为保障区块链底层健康稳定，鼓励用户参与PoS挖矿获得GT奖励作为稳定的收益回报。
+6. **POS挖矿收益**:	为保障区块链底层健康稳定，鼓励用户参与PoS挖矿获得GC奖励作为稳定的收益回报。
 
 ### GateChain公链 ###
 
@@ -40,23 +40,11 @@ GateChain DEX是基于Gatehain的去中心化交易，具有超高性能的撮�
 
 点击[GateChain去中心化交易所](./gatechain-dex.md)获得更多细节。
 
-### GateChain Token ###
+### GateChain CoinGC ###
 
-GateChain Token (GT) 是GateChain主链的原生资产。GT用于支付网络转账手续费，提供GateChain的PoS权益挖矿奖励，是支撑主网运行的基础。GT是[GateChain.io生态](#eco)的重要成员。
+GateChain CoinGC是GateChain主链的原生资产。GC用于支付网络转账手续费，提供GateChain的PoS权益挖矿奖励，是支撑主网运行的基础。GC是[GateChain生态](#eco)的重要成员。
 
-GT发行计划为：
-
-* 初始总量为3亿枚。在首发中按照公开透明的方式，已经全部赠送给用户。
-* 10年后，GT总量设计达10亿枚。其中：
-  * 2亿枚用于开发投入，锁定12个月后分10年线性释放；
-  * 1亿枚用于市场拓展，锁定12个月后分10年线性释放；
-  * 2亿枚用于生态建设，锁定12个月后分10年线性释放；
-  * 2亿枚通过PoS挖矿产出。 
-
-同时GT在生态中通过使用的普及不断提升价值，并通过生态成员回购公开销毁等方式实现流通量减少，抑制通胀。
-
-
-
+TODO GC发行计划为：
 
 
 ### GateChain 钱包 ###
@@ -134,7 +122,7 @@ GateChain引入全新的概念，为资金安全提供了完备自洽的理论�
 
 GateChain的账户分普通账户（Normal Account）和保险账户（Vault Account）两类。不同账户类型，对应于不同的地址前缀标识：
 
-* 普通账户（Normal Account）：以“gt”作为前缀标识。其中，“gt1”表示普通单签账户，“gt2”表示普通多签账户。
+* 普通账户（Normal Account）：以“gc”作为前缀标识。其中，“gc1”表示普通单签账户，“gc2”表示普通多签账户。
 * 保险账户（Vault Account）：以“vault”作为前缀标识。其中，“vault1”表示保险单签账户，“vault2”表示保险多签账户。
 
 使用GateChain定义的地址前缀标识机制，收款账户易于识别付款账户的类型。由此，对于保险账户发送的付款交易，用户可注意到并根据自身需求确认收款，在可撤回时间之后安全确认。
@@ -169,5 +157,5 @@ GateChain具有多种转账交易类型。为便于用户有效识别不同的�
 
 - **全节点和本地测试网**：每个用户都可以自由搭建并运行一个完整的节点并运行自己的测试网络。全节点具有GateChain所有功能。详细安装部署步骤介绍请参阅“[安装部署](./gatechain-build.md)”。
   - **加入测试网**： 全节点可以接入到GateChain的公共测试网络（需要与测试网络保持版本一致。<!--，最新代码[由此](待开发)获取-->）实现对网络中的交易、区块信息等各项事务实时监控、广播。
-  - **CLI**：GateChain在钱包以外，还提供客户端程序。用户可以使用命令行接口（CLI）与GateChain进行交互。通过命令行接口（CLI），用户可以操作GateChain链上账户，包括账户管理、交易管理、资产管理等，并对链上数据进行简单查询，例如查询账户余额、交易详情等。细节请参阅“[Command Line Interface Reference](./gatechain-cli.md)”。
-  - **API**： GateChain节点提供高级REST API服务，相关API信息请参阅“[REST API 列表](./gatechain-api.md)”。
+  - **CLI**：GateChain在钱包以外，还提供客户端程序。用户可以使用命令行接口（CLI）与GateChain进行交互。通过命令行接口（CLI），用户可以操作GateChain链上账户，包括账户管理、交易管理、资产管理等，并对链上数据进行简单查询，例如查询账户余额、交易详情等。细节请参阅“[Command Line Interface Reference](./cli/README.md)”。
+  - **API**： GateChain节点提供高级REST API服务，相关API信息请参阅“[REST API 列表](./API/README.md)”。

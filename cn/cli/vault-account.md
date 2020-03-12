@@ -2,9 +2,7 @@
 ### 创建保险账户
 
 ```bash
-gatecli vault-account create [基础账户] [找回账户] [延迟生效高度] [清算高度] [转移代币数量] 
---from [发送者账户] 
---chain-id [链ID]
+gatecli vault-account create [基础账户] [找回账户] [延迟生效高度] [清算高度] [转移代币数量] --from [发送者账户] --chain-id [链ID]
 ```
 
 示例：

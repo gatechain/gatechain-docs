@@ -11,39 +11,40 @@ POST  /dex/trade
 ```
 {
     "base_req": {
-        "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "chain_id" : "testing"
     },
     "trade" : {
         "tradeid" : "100000",
-        "market" : "validatortoken_gt",
+        "market" : "validatortoken_gc",
         "maker-orderid" : "3",
         "maker-nonce" : "1",
-        "maker-pubkey" : "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+        "maker-pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
         "maker-side" : "buy",
         "maker-amount" : "1000validatortoken",
-        "maker-price" : "1gt",
+        "maker-price" : "1gc",
         "maker-sign" : "deae06a585193aaa29305f215040c9004c9b818e211963e0387bfda5909f97643d26fddd93f60263d142aacb6c0498d22c1e0b647a87f342fd215277f0033952",
         "maker-time" : "1566894567",
         "taker-orderid" : "4",
         "taker-nonce" : "1",
-        "taker-pubkey" : "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+        "taker-pubkey" : "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
         "taker-side" : "sell",
         "taker-amount" : "1000validatortoken",
-        "taker-price" : "1gt",
+        "taker-price" : "1gc",
         "taker-sign" : "c384d31098f317863e682756e9cdbaa5ae88c43a002f2624a0f530c9d98d862932470c0eff946331de326c11905c04d27ddb72883e64961bae8ab7b872f0d58d",
         "taker-time" : "1566894567",
-        "price" : "1gt",
+        "price" : "1gc",
         "amount" : "10validatortoken",
         "maker-add-amount" : "10validatortoken",
-        "maker-sub-amount" : "10gt",
+        "maker-sub-amount" : "10gc",
         "maker-fee" : "1validatortoken",
-        "taker-fee" : "1gt",
-        "taker-gas" : "1gt"
+        "taker-fee" : "1gc",
+        "taker-gas" : "1gc"
     }
 }
 ```
-%/accordion% 
+%/accordion%
+
 
 返回示例：
 
@@ -83,41 +84,41 @@ POST  /dex/trade
             "maker-orderid": "3",
             "maker-price": {
               "amount": "1",
-              "denom": "gt"
+              "denom": "gc"
             },
-            "maker-pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+            "maker-pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
             "maker-side": "buy",
             "maker-sign": "3q4GpYUZOqopMF8hUEDJAEybgY4hGWPgOHv9pZCfl2Q9Jv3dk/YCY9FCqstsBJjSLB4LZHqH80L9IVJ38AM5Ug==",
             "maker-sub-Amount": {
               "amount": "10",
-              "denom": "gt"
+              "denom": "gc"
             },
             "maker-time": "2019-08-27T08:29:27Z",
-            "market": "validatortoken_gt",
+            "market": "validatortoken_gc",
             "price": {
               "amount": "1",
-              "denom": "gt"
+              "denom": "gc"
             },
-            "sender": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "sender": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
             "taker-amount": {
               "amount": "1000",
               "denom": "validatortoken"
             },
             "taker-fee": {
               "amount": "1",
-              "denom": "gt"
+              "denom": "gc"
             },
             "taker-gas": {
               "amount": "1",
-              "denom": "gt"
+              "denom": "gc"
             },
             "taker-nonce": "1",
             "taker-orderid": "4",
             "taker-price": {
               "amount": "1",
-              "denom": "gt"
+              "denom": "gc"
             },
-            "taker-pubkey": "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+            "taker-pubkey": "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
             "taker-side": "sell",
             "taker-sign": "w4TTEJjzF4Y+aCdW6c26pa6IxDoALyYkoPUwydmNhikyRwwO/5RjMd4ybBGQXATSfdtyiD5klhuuire4cvDVjQ==",
             "taker-time": "2019-08-27T08:29:27Z",
@@ -145,16 +146,19 @@ POST  /dex/deposit
 
 ```
 {
-    "base_req": {
-        "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+    "base_req":{
+        "from":"gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "fees":[
-                                {"amount":"2000","denom":"gt"}
-                            ],
-        "chain_id" : "testing"
+            {
+                "amount":"2000",
+                "denom":"gc"
+            }
+        ],
+        "chain_id":"testing"
     },
-    "deposit" : {
-        "to" : "gt11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp",
-        "amount" : "10gt"
+    "deposit":{
+        "to":"gc11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp",
+        "amount":"10gc"
     }
 }
 ```    
@@ -172,7 +176,7 @@ POST  /dex/deposit
       "amount": [
         {
           "amount": "2000",
-          "denom": "gt"
+          "denom": "gc"
         }
       ],
       "gas": "200000"
@@ -186,11 +190,11 @@ POST  /dex/deposit
             "amount": [
               {
                 "amount": "10",
-                "denom": "gt"
+                "denom": "gc"
               }
             ],
-            "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
-            "to": "gt11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp"
+            "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "to": "gc11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp"
           }
         }
       }
@@ -210,23 +214,23 @@ POST  /dex/withdraw
 
 **只有管理员有权限执行此操作**
 
-%accordion% %accordion%
-
 请求BODY示例：
+
+%accordion% %accordion%
 
 ```
 {
     "base_req": {
-        "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "chain_id" : "testing"
     },
     "withdraw" : {
-        "pubkey" : "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
-        "coin" : "10gt",
+        "pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+        "coin" : "10gc",
         "nonce" : "2",
         "time" : "1563183005",
         "sign" : "45274cf1e0aa5d0582ecb9961f66384270146b2a16b43d8965d90c5270f2cf8f7af86b000d33f77c63a8862d113251c64cdb5f2921c3bbf1d3215709327942c7",
-        "gas" : "1gt"
+        "gas" : "1gc"
     }
 }
 ```
@@ -249,18 +253,18 @@ POST  /dex/withdraw
       {
         "type": "dex/MsgWithdraw",
         "value": {
-          "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+          "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
           "gas": {
             "amount": "1",
-            "denom": "gt"
+            "denom": "gc"
           },
           "withdraw": {
             "coin": {
               "amount": "10",
-              "denom": "gt"
+              "denom": "gc"
             },
             "nonce": "2",
-            "pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+            "pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
             "sign": "RSdM8eCqXQWC7LmWH2Y4QnAUayoWtD2JZdkMUnDyz496+GsADTP3fGOohi0RMlHGTNtfKSHDu/HTIVcJMnlCxw==",
             "time": "2019-07-15T09:30:05Z"
           }
@@ -286,16 +290,19 @@ POST  /dex/set-admin
 
 ```
 {
-    "base_req": {
-        "from": "gt11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
+    "base_req":{
+        "from":"gc11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
         "fees":[
-                {"amount":"2000","denom":"gt"}
-            ],
-        "chain_id" : "testing"
+            {
+                "amount":"2000",
+                "denom":"gc"
+            }
+        ],
+        "chain_id":"testing"
     },
-    "setadmin" : {
-        "acc" : "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
-        "type": "admin"
+    "setadmin":{
+        "acc":"gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "type":"admin"
     }
 }
 ```
@@ -313,7 +320,7 @@ POST  /dex/set-admin
       "amount": [
         {
           "amount": "2000",
-          "denom": "gt"
+          "denom": "gc"
         }
       ],
       "gas": "200000"
@@ -324,8 +331,8 @@ POST  /dex/set-admin
         "type": "dex/MsgAdmin",
         "value": {
           "SetAdminInfo": {
-            "acc": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
-            "from": "gt11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
+            "acc": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "from": "gc11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
             "typ": "admin"
           }
         }
@@ -346,7 +353,7 @@ GET		/dex/query-trade/{trade-id}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | trade-id | 交易ID |
     
 返回示例：
@@ -358,37 +365,37 @@ GET		/dex/query-trade/{trade-id}
    "type": "dex/Trade",
    "value": {
      "tradeid": "100001",
-     "market": "validatortoken-1e9_gt",
+     "market": "validatortoken-1e9_gc",
      "maker-orderid": "5",
      "maker-nonce": "2",
-     "maker-pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+     "maker-pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
      "maker-side": "buy",
      "maker-amount": {
        "denom": "validatortoken-1e9",
        "amount": "1000"
      },
      "maker-price": {
-       "denom": "gt",
+       "denom": "gc",
        "amount": "1"
      },
      "maker-sign": "dAjjeMv6hh1p6LM3UfY+N4iUJ/kdxtkNBM8vhpkox7R4e1UKN2ONrxsJSec+rwQdDC5+rBKaEludxMuRGNzG1g==",
      "maker-time": "2019-08-27T08:29:27Z",
      "taker-orderid": "6",
      "taker-nonce": "2",
-     "taker-pubkey": "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+     "taker-pubkey": "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
      "taker-side": "sell",
      "taker-amount": {
        "denom": "validatortoken-1e9",
        "amount": "1000"
      },
      "taker-price": {
-       "denom": "gt",
+       "denom": "gc",
        "amount": "1"
      },
      "taker-sign": "ZGWMCR7PjGs3p808dxhrKtflFvIDMbvfkVketvUgjptVWsZpg+H6xzZWT4FYOYwWLkQ/2ZKQqgwrt4Mg8wgUgw==",
      "taker-time": "2019-08-27T08:29:27Z",
      "price": {
-       "denom": "gt",
+       "denom": "gc",
        "amount": "1"
      },
      "amount": {
@@ -400,7 +407,7 @@ GET		/dex/query-trade/{trade-id}
        "amount": "10"
      },
      "maker-sub-Amount": {
-       "denom": "gt",
+       "denom": "gc",
        "amount": "10"
      },
      "maker-fee": {
@@ -408,15 +415,15 @@ GET		/dex/query-trade/{trade-id}
        "amount": "1"
      },
      "taker-fee": {
-       "denom": "gt",
+       "denom": "gc",
        "amount": "1"
      },
      "taker-gas": {
-       "denom": "gt",
+       "denom": "gc",
        "amount": "1"
      },
      "time": "2019-09-03T03:49:17.782624089Z",
-     "sender": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja"
+     "sender": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja"
    }
  }
 ```
@@ -431,7 +438,7 @@ GET /dex/query-account/{dex-account}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | dex-account | DEX账户 |
 
 返回示例：
@@ -440,7 +447,7 @@ GET /dex/query-account/{dex-account}
 
 ```
 [{
-	"denom": "gt",
+	"denom": "gc",
 	"amount": "1090"
 },
 {
@@ -458,7 +465,7 @@ GET /dex/query-admin/{admin-type}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | admin-type| owner/admin/fee |
 
 返回示例：
@@ -470,7 +477,7 @@ GET /dex/query-admin/{admin-type}
 	"type": "dex/SetAccInfo",
 	"value": {
 		"typ": "fee",
- 		"acc": "gt11uqyqvmzwvqprv50x73lkzkxlgm9mw3fr7u003y",
+ 		"acc": "gc11uqyqvmzwvqprv50x73lkzkxlgm9mw3fr7u003y",
  		"from": ""
 	}
 }

@@ -4,6 +4,13 @@
 POST /tx
 ```
 
+参数:
+
+| 参数名 | 说明 |
+| :----| :---- |
+| return | block：在交易提交后返回；sync：CheckTx后返回；async：立即返回。 |
+
+
 请求BODY示例:
 
 %accordion% %accordion%
@@ -47,12 +54,6 @@ POST /tx
 ```
 %/accordion%
 
-参数:
-
-| 参数名 | 说明 |
-| ----| ---- |
-| return | block：在交易提交后返回；sync：CheckTx后返回；async：立即返回。 |
-
 返回:
 
 %accordion% %accordion%
@@ -74,7 +75,7 @@ POST  /tx/send/{account}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | account | 接收账户 |
 
 请求BODY示例：
@@ -151,7 +152,7 @@ GET /tx/{hash}
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | hash | 交易HASH |
 
 返回:
@@ -287,10 +288,11 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
 参数:
 
 | 参数名 | 说明 |
-| ----| ---- |
+| :----| :---- |
 | sender | 发送者账户 |
 | action | 动作类型 |
 | recipient | 接收者账户 |
+
 
 返回:
 

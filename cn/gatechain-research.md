@@ -13,6 +13,7 @@ GateChain重要创新点，是提出并实现了一种链上保险账户“Vault
 
 GateChain目前已经完成2篇学术研究论文和1篇进行中的学术论文，所有论文将在发表后对外公布，敬请关注。
 
+[Blockchain That Support Revocable Transaction Model](https://arxiv.org/abs/2001.11259)
 
 ## GateChain主链构架 ###
 

@@ -1,4 +1,4 @@
-# GateChain Command Line Interface（CLI）
+# 命令行 cli
 
 > 本文档所有交易指令(非查询命令)都需要支付一定量的交易费;
 > 可使用--gas-prices或者--fees 为交易添加交易费.
@@ -43,8 +43,7 @@ gatecli [命令1] [命令2] [命令3]... --help
 
 * 如果想得到更多关于命令行操作说明，请使用help
 
-## 其他
-###报错处理
+##报错处理
 ```bash
 Must specify these options: --chain-id  when --trust-node is false
 ```
