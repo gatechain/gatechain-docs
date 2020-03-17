@@ -1,4 +1,4 @@
-# 资产 asset
+# 概述
 
 用户资产将以Token的形式储存在GateChain上，所有资产都必须符合GateChain的Token管理标准。
 

@@ -1,4 +1,4 @@
-# 介绍 introduction
+## 概述
 
 欢迎来到GateChain文档网站！
 
@@ -9,7 +9,7 @@
 
 
   
-## GateChain生态 ##
+## 生态
 
 <!--### GateChain功能 ###
 
@@ -26,11 +26,11 @@ GateChain生态，包括GateChain主链、GateChain DEX、GC、钱包等，构�
 5. **多重签名**：		多个相关签名拥有者对同一账户下的数字资产进行定制化管理，满足企业级需求，细节请查阅[多重签名](./gatechain-multisig.md)。
 6. **POS挖矿收益**:	为保障区块链底层健康稳定，鼓励用户参与PoS挖矿获得GC奖励作为稳定的收益回报。
 
-### GateChain公链 ###
+### GateChain 公链 
 
 GateChain是专注于用户资产安全和去中心化交易的新一代公有链。其独创的线上热保险账户及支撑交易模型的设计，实现了一种安全的清算保障机制，创造性地解决了用户数字资产被盗、私钥损毁丢失等难题，支持去中心化交易和跨链转移等行业核心应用场景。相对于比特币、以太坊等传统公有区块链而言，GateChain专注于链上资金安全，提出并完善了包括[普通账户（Normal Account）](#na)、[保险账户（Vault Account）](#va)、[找回账户（Retrieval Account）](#ra)、[清算高度（Clearing Height）](#ch)、[可撤回时间（Revocable Delay Period）](#rdp)、[地址标识（Address Type）](#addrt)、[交易ID标识（Transaction Type）](#transt)等诸多创新概念。
 
-### GateChain DEX ###
+### GateChain DEX
 
 <!--GateChain DEX是基于Gatehain的去中心化交易功能，具有超高性能的撮合引擎和极低的参与成本，在用户自己掌握账户私钥的情况下自由参与交易，通过私有加密钱包或硬件钱包保障用户资产安全和解决对中心化平台的信任问题。为用户提供高度透明、安全、便捷的交易体验，并支持多币种跨链交易。-->
 
@@ -40,14 +40,14 @@ GateChain DEX是基于Gatehain的去中心化交易，具有超高性能的撮�
 
 点击[GateChain去中心化交易所](./gatechain-dex.md)获得更多细节。
 
-### GateChain CoinGC ###
+### GateChain CoinGC
 
 GateChain CoinGC是GateChain主链的原生资产。GC用于支付网络转账手续费，提供GateChain的PoS权益挖矿奖励，是支撑主网运行的基础。GC是[GateChain生态](#eco)的重要成员。
 
 TODO GC发行计划为：
 
 
-### GateChain 钱包 ###
+### GateChain 钱包 
 
 <!--GateChain 针对个人，专业用户和企业用户提供丰富的钱包应用。 测试网阶段提供基于Windows和Mac OS平台的桌面版钱包，专业用户也可以通过API方式访问和测试。主网阶段还将提供命令行钱包，以及基于Android和iOS的手机版钱包，Web钱包，多签钱包，硬件钱包等多种针对个人和企业的生态工具。-->
 
@@ -58,7 +58,7 @@ TODO GC发行计划为：
 在主网阶段，GateChain还将提供多种针对个人、专业用户和企业用户的钱包应用，包括命令行钱包、基于Android和iOS的手机版钱包、Web钱包、多签钱包、硬件钱包等。
 
 
-## GateChain典型应用 ##
+## 典型应用 
 
 <!--为兼顾日常支付的快速高效和资金存储的安全可靠，GateChain具有普通账户（Normal Account）和保险账户（Vault Account）两种类型的账户。普通账户账户中的资金可以快速支付，支付后不能撤回，私钥丢失后也不能恢复，普通账户跟比特币的地址特性很相近。而GateChain最主要的发明-链上保险账户“Vault Account”-具有被盗资金可撤回以及私钥丢失可以恢复的重要安全特性。将这两种账户的特性相结合，GateChain在个人和专业领域均具有广泛的应用。-->
 
@@ -89,7 +89,7 @@ GateChain为个人用户提供了普通账户和保险账户。普通账户用�
 
 
 
-## GateChain 学术研究 ##
+## 学术研究 
 
 为推进区块链技术的发展及应用落地，GateChain研究工作专注于链上交易安全的理论及应用研究。主要创新性工作包括：
 

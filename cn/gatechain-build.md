@@ -1,25 +1,25 @@
-# 部署 build
+# 概述
 
 >本文档涉及的版本为测试版，后继开发工作在持续进行。目前只针对专业生态机构开放。
 
 GateChain全节点是GateChain运行的核心支撑。GateChain全节点`full node`具备GateChain的所有功能，包括构建本地GateChain测试网或加入GateChain公共测试网，同时支持下载链上区块数据，验证业务逻辑，参与链上治理（暂不开放）等功能。
 
-## 1. 支持环境
+## 支持环境
 GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos），windows环境以及docker安装。
 
-## 2. 配置需求
+## 配置需求
 - 系统需求，装有较新版本的Mac OS X及以上版本，Windows 7以上版本或者Unix系统
 - 8Gb以上内存以及100Gb以上的磁盘空间
 - 至少1MB/s的稳定互联网接入带宽
  
-## 3. GateChain全节点安装步骤
+## 安装步骤
 
 介绍安装 `gated` and `gatecli`的具体步骤。
 
 > 注意:请确保环境中已安装`curl`
 
-### 3.1 Unix环境(mac OS,ubuntu,centos)
-#### 安装 Go
+#### Unix环境(mac OS,ubuntu,centos)
+##### 安装 Go
 
 请根据[go 官方文档](https://golang.org/doc/install)安装 `go`.
 
@@ -37,7 +37,7 @@ echo "export PATH=$PATH:$GOBIN" >> ~/.bash_profile
 GateChain 需要 **Go 1.11.5+** .
 :::
 
-#### 命令行安装GateChain全节点
+##### 命令行安装GateChain全节点
 
 下载最新版本的GateChain代码, 使用`master`分支代码进行编译安装.
 
@@ -50,8 +50,8 @@ cd gatechain && git checkout master
 make tools install
 ```
 
-### 3.2 Windos环境
-#### 安装 Go
+####  Windos环境
+##### 安装 Go
 
 请根据[go 官方文档](https://golang.org/doc/install)安装 `go`.**推荐以msi方式安装**
 
@@ -81,7 +81,7 @@ c:\workspace\go\pkg
 GateChain 需要 **Go 1.11.5+** .
 :::
 
-#### 安装GateChain全节点
+##### 安装GateChain全节点
 
 下载最新版本的gate代码, 使用`master`分支代码进行编译安装.
 
@@ -106,7 +106,7 @@ go install .\cmd\gate\cmd\gated
 go install .\cmd\gate\cmd\gatecli
 ```
 
-### 3.3 docker安装
+####  docker安装
 
 1.docker镜像导入
 
@@ -120,7 +120,7 @@ docker load -i gatechaintest.tar
 docker run -it gate:latest /bin/bash
 ```
 
-### 验证安装结果
+#### 验证安装结果
 验证是否安装成功.
 
 ```
@@ -139,7 +139,7 @@ go version go1.12 linux/amd64
 ```
 
 
-## 4. 创建本地测试网
+## 创建本地测试网
 
 ####1.初始化创世区块文件
 
@@ -183,7 +183,7 @@ gated start
 cp ~/.gated/api.token ~/.gatecli/
 ```
 
-## 5. 加入测试网
+## 加入测试网
 
 ####1.创建.gated
 
