@@ -19,7 +19,7 @@ gatecli distribution withdraw-rewards [共识账户地址] --from [发送者账�
 gatecli distribution withdraw-rewards gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-### 委托账户从单个共识账户提取全部收益
+### 委托账户从共识账户提取全部收益
 ```bash
 gatecli distribution withdraw-all-rewards --from [发送者账户] --chain-id [链ID]
 ```

@@ -4,13 +4,6 @@
 POST /tx
 ```
 
-参数:
-
-| 参数名 | 说明 |
-| :----| :---- |
-| return | block：在交易提交后返回；sync：CheckTx后返回；async：立即返回。 |
-
-
 请求BODY示例:
 
 %accordion%json%accordion%
@@ -22,8 +15,8 @@ POST /tx
             {
                 "type":"MsgSend",
                 "value":{
-                    "from_address":"gc1125f44npt4phnuwp3puqg0m7wgjqsdnmc7xywry",
-                    "to_address":"gc11vrwg5flr3hxys4c7g4yh5wj242xqvdkrmm7q3n",
+                    "from_address":"gc11n520sv7xpclec87dwtz7kglvdcns7aafuf2m28",
+                    "to_address":"gc11hl9wp3cn8whm2sejf6vf33u6qx60m23nsrgzkl",
                     "amount":[
                         {
                             "denom":"GC",
@@ -33,23 +26,25 @@ POST /tx
                 }
             }
         ],
-		"fee": {
-			"amount": [{
-				"denom": "GC",
-				"amount": "5000"
-			}],
-			"gas": "200000"
-		},
-		"signatures": [{
-			"pub_key": {
-				"type": "tendermint/PubKeySecp256k1",
-				"value": "A+0DI+zbNVSb1cyLdhqGkVlS8nCm0eoUqpev/Z57XIIT"
-			},
-			"signature": "f0qd0BFAOWP76sMHE+PG6U0cL+MeeFV1xrT/8k3lrUF06YG2sko6LB045jnHFU5SlhWeb1tzyV5jWry/lgoaRQ=="
-		}],
+        "fee": {
+            "amount": [{
+                "denom": "GC",
+                "amount": "5000"
+            }],
+            "gas": "200000"
+        },
+        "nonces":[
+            "zqXGZkrT4jk9+fq9EwkyURflovwv53BqEgdtKsoxCuc="
+        ],
+        "signatures": [{
+            "pub_key": {
+                "type": "gatechain/PubKeySecp256k1",
+                "value": "Aq7tHj3+wFUnqlvg7hrVqYkH0RwqDR7vNbEUAEAlR/nO"
+            },
+            "signature": "bh8MORRUgBhNrkMp6aULX6dO5EoCQqCsmVXIwBi//s9PYR4MJiCprIe5Jt6Isj/hhnBUp0ZSkEgin53FdnSuaA=="
+        }],
         "memo": ""
-    },
-    "return": "block"
+    }
 }
 ```
 %/accordion%
