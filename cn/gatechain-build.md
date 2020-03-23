@@ -197,8 +197,8 @@ mkdir ~/.gated (可自定义目录)
 scp root@×××.×××.×××.×××:~/.gated/config.json ~/.gated/ (第一步创建的目录)
 scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/ (第一步创建的目录)
 ```
-##### DevNet  [config.json](/devnet/config.json "DevNet config.json")  [genesis.json](/devnet/genesis.json "DevNet genesis.json") 
-##### TestNet [config.json](/testnet/config.json "TestNet config.json")  [genesis.json](/testnet/config.json "TestNet genesis.json")
+##### DevNet <a href="/devnet/config.json" target="_blank">config.json</a>  <a href="/devnet/genesis.json" target="_blank">genesis.json</a>
+##### TestNet <a href="/testnet/config.json" target="_blank">config.json</a>  <a href="/testnet/genesis.json" target="_blank">genesis.json</a>
 
 ####3.更改路径
 
