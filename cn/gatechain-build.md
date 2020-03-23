@@ -188,20 +188,28 @@ cp ~/.gated/api.token ~/.gatecli/
 ####1.创建.gated
 
 ```bash
-mkdir ~/.gated
+mkdir ~/.gated (可自定义目录)
 ```
 
 ####2.复制config、genesis文件
 
 ```
-scp root@×××.×××.×××.×××:~/.gated/config.json ~/.gated/
-scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/
+scp root@×××.×××.×××.×××:~/.gated/config.json ~/.gated/ (第一步创建的目录)
+scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/ (第一步创建的目录)
 ```
+##### DevNet <a href="/devnet/config.json" target="_blank">config.json</a>  <a href="/devnet/genesis.json" target="_blank">genesis.json</a>
+##### TestNet <a href="/testnet/config.json" target="_blank">config.json</a>  <a href="/testnet/genesis.json" target="_blank">genesis.json</a>
 
 ####3.更改路径
 
 ```bash
-修改config.json/RootDir为自己的.gated文件夹的绝对路径
+修改config.json "RootDir" 为 (第一步创建的目录), "DNSBootstrapID" 为 "<network>.gatenode.cc"
+
+开发链
+修改genesis.json "network" 为 "devnet"
+
+测试链
+修改genesis.json "network" 为 "testnet"
 ```
 
 ####4.启动节点
