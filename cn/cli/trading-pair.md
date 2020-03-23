@@ -6,7 +6,7 @@ gatecli trading-pair submit [基准代币符号] [报价代币符号] [初始价
 示例：
 
 ```bash
-gatecli trading-pair submit-proposal YY-9B3 GC 100 --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli trading-pair submit-proposal YY-9B3 NANOGC 100 --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 ### 查询交易对
@@ -16,7 +16,7 @@ gatecli trading-pair show [基准代币符号] [报价代币符号] --chain-id [
 示例：
 
 ```bash
-gatecli trading-pair show YY-9B3 GC --chain-id testnet
+gatecli trading-pair show YY-9B3 NANOGC --chain-id testnet
 ```
 
 

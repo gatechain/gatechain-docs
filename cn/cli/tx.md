@@ -7,7 +7,7 @@ gatecli tx send [接收者账户] [转移代币数量] --from [发送者账户] 
 示例：
 
 ```bash
-gatecli tx send gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 10gc --from gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
+gatecli tx send gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 10NANOGC --from gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
 ```
 
 说明：

@@ -6,7 +6,7 @@ gatecli staking delegate [共识账户地址] [委托代币数量]  --from [委�
 示例：
 
 ```bash
-gatecli staking delegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100000000GC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking delegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100000000NANOGC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 ### 查询委托账户在单个共识账户的委托信息
@@ -36,7 +36,7 @@ gatecli staking redelegate [原共识账户地址] [目标共识账户地址] [�
 示例：
 
 ```bash
-gatecli staking redelegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000GC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking redelegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000NANOGC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 ### 查询指定委托账户所有的转移委托记录
@@ -66,7 +66,7 @@ gatecli staking unbond [共识账户地址] [解绑代币数量] --from [发送�
 示例：
 
 ```bash
-gatecli staking unbond gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000GC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking unbond gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000NANOGC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 ### 查询委托账户在单个共识账户已解除的委托记录

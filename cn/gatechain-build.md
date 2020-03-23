@@ -156,7 +156,7 @@ gatecli account create validator
 ####3.添加Genesis账户
 
 ```bash
-gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000GC
+gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000NANOGC
 ```
 
 ####4.添加共识账户
