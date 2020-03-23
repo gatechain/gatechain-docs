@@ -197,12 +197,19 @@ mkdir ~/.gated (可自定义目录)
 scp root@×××.×××.×××.×××:~/.gated/config.json ~/.gated/ (第一步创建的目录)
 scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/ (第一步创建的目录)
 ```
+##### DevNet  [config.json](/devnet/config.json "DevNet config.json")  [genesis.json](/devnet/genesis.json "DevNet genesis.json") 
+##### TestNet [config.json](/testnet/config.json "TestNet config.json")  [genesis.json](/testnet/config.json "TestNet genesis.json")
 
 ####3.更改路径
 
 ```bash
 修改config.json "RootDir" 为 (第一步创建的目录), "DNSBootstrapID" 为 "<network>.gatenode.cc"
-修改genesis.json "network" 为 "devnet" (开发链)  或 "testnet" (测试链)
+
+开发链
+修改genesis.json "network" 为 "devnet"
+
+测试链
+修改genesis.json "network" 为 "testnet"
 ```
 
 ####4.启动节点
