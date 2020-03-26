@@ -28,7 +28,7 @@ POST  /token/trading-pair
     },
     "token_name":"test token",
     "initPrice":"1000000000000000",
-    "base_symbol":"GC",
+    "base_symbol":"NANOGC",
     "quote_symbol":"YY-A69"
 }
 ```
