@@ -26,7 +26,7 @@ POST  /vault-account/create/{base-account}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "5000"
       }
     ],
@@ -34,7 +34,7 @@ POST  /vault-account/create/{base-account}
   },
   "amount": [
     {
-      "denom": "GC",
+      "denom": "NANOGC",
       "amount": "500000000"
     }
   ],
@@ -85,7 +85,8 @@ POST  /vault-account/create/{base-account}
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -112,7 +113,7 @@ POST /vault-account/update-clearing-height
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "5000"
       }
     ],
@@ -143,14 +144,15 @@ POST /vault-account/update-clearing-height
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -177,7 +179,7 @@ POST /vault-account/clear
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "5000"
       }
     ],
@@ -210,14 +212,15 @@ POST /vault-account/clear
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -247,7 +250,7 @@ GET  /vault-account/list-revocable-txs/{vault-account}
             "tokens":[
                 {
                     "amount":"5",
-                    "denom":"GC"
+                    "denom":"NANOGC"
                 }
             ],
             "tx_hash":"REVOCABLEPAY-BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8"

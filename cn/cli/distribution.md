@@ -1,7 +1,7 @@
 
 ### 设置提取委托收益的账户	
 ```bash
-gatecli distribution set-withdraw-account [提取收益账户] --from [发送者账户] --chain-id [链ID]
+gatecli distribution set-withdraw-addr [提取收益账户] --from [发送者账户] --chain-id [链ID]
 ```
 示例：
 

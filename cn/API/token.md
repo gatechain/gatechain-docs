@@ -25,7 +25,7 @@ POST  /token/issue/{symbol}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "5000"
       }
     ],
@@ -63,14 +63,15 @@ POST  /token/issue/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"80445444"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -102,7 +103,7 @@ POST /token/mint/{symbol}
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "GC",
+		"denom": "NANOGC",
 		"amount": "5000"
 	  }
 	],
@@ -136,14 +137,15 @@ POST /token/mint/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -174,7 +176,7 @@ POST /token/freeze/{symbol}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "5000"
       }
     ],
@@ -203,14 +205,15 @@ POST /token/freeze/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -241,7 +244,7 @@ POST /token/unfreeze/{symbol}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "5000"
       }
     ],
@@ -270,14 +273,15 @@ POST /token/unfreeze/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -308,7 +312,7 @@ POST /token/burn/{symbol}
         "gas": "200000",
         "gas_adjustment": "1.2",
         "fees": [{
-            "denom": "GC",
+            "denom": "NANOGC",
             "amount": "5000"
         }],
         "simulate": false
@@ -341,14 +345,15 @@ POST /token/burn/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```

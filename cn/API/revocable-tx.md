@@ -25,7 +25,7 @@ POST  /revocable-tx/send/{account}
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "GC",
+		"denom": "NANOGC",
 		"amount": "5000"
 	  }
 	],
@@ -33,7 +33,7 @@ POST  /revocable-tx/send/{account}
   },
   "amount": [
 	{
-	  "denom": "GC",
+	  "denom": "NANOGC",
 	  "amount": "5000"
 	}
   ]
@@ -57,7 +57,7 @@ POST  /revocable-tx/send/{account}
                     "to_address":"gc112t5v8z8z4qwzmzvhrr8f4u3yhrjmvm9uw58lnw",
                     "amount":[
                         {
-                            "denom":"GC",
+                            "denom":"NANOGC",
                             "amount":"5000"
                         }
                     ]
@@ -67,14 +67,15 @@ POST  /revocable-tx/send/{account}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"5000"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
@@ -107,7 +108,7 @@ POST /revocable-tx/revoke/{tx-hash}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "1"
       }
     ],
@@ -138,7 +139,7 @@ POST /revocable-tx/revoke/{tx-hash}
                     "msg_index":"0",
                     "amount":[
                         {
-                            "denom":"GC",
+                            "denom":"NANOGC",
                             "amount":"5"
                         }
                     ]
@@ -148,14 +149,15 @@ POST /revocable-tx/revoke/{tx-hash}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"1"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```

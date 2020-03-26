@@ -18,7 +18,7 @@ GET  /foundation/distribution
             "proportion":"2",
             "funds_pool":[
                 {
-                    "denom":"gc",
+                    "denom":"NANOGC",
                     "amount":"0.800000000000000001"
                 }
             ]
@@ -28,7 +28,7 @@ GET  /foundation/distribution
             "proportion":"1",
             "funds_pool":[
                 {
-                    "denom":"gc",
+                    "denom":"NANOGC",
                     "amount":"0.399999999999999999"
                 }
             ]

@@ -32,7 +32,7 @@ GET /account/{account}
                         "tokens":[
                             {
                                 "amount":"89999999999999880",
-                                "denom":"GC"
+                                "denom":"NANOGC"
                             }
                         ]
                     },
@@ -80,7 +80,7 @@ GET /account/balance/{account}
     "result":[
         {
             "amount":"8999999989968",
-            "denom":"GC"
+            "denom":"NANOGC"
         },
     ]
 }
@@ -108,7 +108,7 @@ POST /account/publish-multisig/{address}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "GC",
+        "denom": "NANOGC",
         "amount": "2"
       }
     ],
@@ -140,14 +140,15 @@ POST /account/publish-multisig/{address}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGC",
                     "amount":"2"
                 }
             ],
             "gas":"200000"
         },
         "signatures":null,
-        "memo":""
+        "memo":"",
+        "valid_height":null
     }
 }
 ```
