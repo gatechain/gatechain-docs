@@ -61,8 +61,7 @@ A multi-sig account is distinct from a single signature account. It has two type
 - Multisig Vault Account
 
   ```
-  Transactions sending from a multisig Vault Account (delay  transaction, revoke transaction, change clearing height transaction, and clear transaction) are the same with a single signature  Vault Account.
-  As a multisig Vault Account needs multiple signatures to send a transaction, compound commands are used to finish transaction signing. Use `--generate-only` to generate  transaction information pending signing and  let signers to sign. At last, collect all the signatures  and broadcast.
+  Transactions sending from a multisig Vault Account (delay  transaction, revoke transaction, change clearing height transaction, and clear transaction) are the same with a single signature  Vault Account. As a multisig Vault Account needs multiple signatures to send a transaction, compound commands are used to finish transaction signing. Use `--generate-only` to generate  transaction information pending signing and  let signers to sign. At last, collect all the signatures  and broadcast.
   ```
 
   Take clear transaction as an example. Other transactions (delay transaction, revoke transaction, and change clearing height transaction) take the same procedures：
