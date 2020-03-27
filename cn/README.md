@@ -19,7 +19,7 @@ GateChain生态，包括GateChain主链、GateChain DEX、GC、钱包等，构�
 
 生态主要提供以下功能：
 
-1. **转账支付**：	支持用户使用钱包、客户端发送和接收GateChain CoinGC以及其他链上资产。
+1. **转账支付**：	支持用户使用钱包、客户端发送和接收GateChain Coin GC以及其他链上资产。
 2. **资产发行**：		发行自己的Token以实现资产数字化，并使用GC作为交易载体对自己的数字资产进行管理，细节请查阅[资产管理](./gatechain-asset.md)。
 3. **去中心化跨链交易**：	基于GateChain支持不同数字货币之间的高性能去中心化交易。
 4. **资产安全存储**：		通过独创保险账户技术和清算保障体系来对账户进行全方位保护，支持对非正常交易的撤销/清算操作，细节请查阅[交易保障](./gatechain-security.md)。
@@ -40,9 +40,9 @@ GateChain DEX是基于Gatehain的去中心化交易，具有超高性能的撮�
 
 点击[GateChain去中心化交易所](./gatechain-dex.md)获得更多细节。
 
-### GateChain CoinGC
+### GateChain Coin GC
 
-GateChain CoinGC是GateChain主链的原生资产。GC用于支付网络转账手续费，提供GateChain的PoS权益挖矿奖励，是支撑主网运行的基础。GC是[GateChain生态](#eco)的重要成员。
+GateChain Coin GC是GateChain主链的原生资产。GC用于支付网络转账手续费，提供GateChain的PoS权益挖矿奖励，是支撑主网运行的基础。GC是[GateChain生态](#eco)的重要成员。
 
 ### GateChain 钱包 
 
