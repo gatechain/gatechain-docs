@@ -54,7 +54,7 @@
     * [Local Testnet](gatechain-build.md#create-a-local-testnet)
     * [Join Testnet](gatechain-build.md#join-testnet)
 * [Wallet](gatechain-wallet.md)
-    * [Overview](gatechain-wallet.md#overview)
+    * [Overview](gatechain-wallet.md#1-gatechain-wallet-introduction)
     * [Specification](gatechain-wallet.md#2-related-definitions)
     * [Download & Install](gatechain-wallet.md#3-download-and-installation)
     * [Quick Start](gatechain-wallet.md#4-get-started)
