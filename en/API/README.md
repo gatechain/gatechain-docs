@@ -1,6 +1,6 @@
 ##GateChain API document
 
->Structural transaction interface provided  in this document, request parameter must set a transaction fee greater than  0gc
+>Structural transaction interface provided  in this document, request parameter must set a transaction fee greater than  0GC
 >
 > Any asset amount in command  is converted to  Integer of the Value by multiplying 10E18 
 > Asset amount supports scientific notation, e.g.10E9 NanoGC stands for 1GC

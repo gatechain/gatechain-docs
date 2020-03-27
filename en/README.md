@@ -142,7 +142,7 @@ With the address identifier mechanism invented by GateChain, the recipient accou
 
 GateChain has two main account types, Normal Account, and Vault Account, with a different identifier at the start in their addresses.
 
-* Normal Account：start with “gt’’. “gt1” indicates a single- signature Normal Account, and “gt2” indicates a multi-signature Normal Account. 
+* Normal Account：start with “gc’’. “gc1” indicates a single- signature Normal Account, and “gc2” indicates a multi-signature Normal Account. 
 * Vault Account：start with “vault’.“vault 1” indicates a single- signature Vault Account, and “ vault2” indicates a multi-signature Vault Account.
 
 With the address identifier mechanism invented by GateChain, the recipient account can easily identify the sending account's type and set the confirmation requirement accordingly. If it is from a Vault Account, confirmation is safe only after a revocable delay period.

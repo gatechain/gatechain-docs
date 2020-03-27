@@ -134,7 +134,7 @@ gatecli dex trade --tradeid 10000 --market eos_stake --maker-orderid 1 --maker-n
 
 Description：
 
-* In this example, maker wants to buy 1000coin174876e800 at the price of 1NANOGC. That is, to buy 1000coin174876e800 with 1000gt.
+* In this example, maker wants to buy 1000coin174876e800 at the price of 1NANOGC. That is, to buy 1000coin174876e800 with 1000NANOGC.
 * Taker wants to sell 1000coin174876e800 at the price of 1NANOGC. That is, to buy 1000NANOGC with 1000coin174876e800.
 * Exchange matches the trade. The  trade final filled  at price 1NANOGC, and  token amount 1000coin174876e800.
 * Admin account signs  and saves the trade to blockchain. And add or deduct the corresponding amount from tokens  maker and taker stored at the exchange.
