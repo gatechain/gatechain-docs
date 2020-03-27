@@ -56,7 +56,7 @@ gatecli con-account show-key [未上线共识账户] --chain-id [链ID]
 示例：
 
 ```bash
-gatecli con-account show gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
+gatecli con-account show-key gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
 ```
 
 ### 查询本地共识账户列表（待定）

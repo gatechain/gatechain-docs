@@ -6,7 +6,7 @@ gated add-foundation [配置文件路径]
 示例:
 
 ```bash
-gated foundation configure foundation.json
+gated add-foundation foundation.json
 ```
 
 基金会初始配置文件详情：
