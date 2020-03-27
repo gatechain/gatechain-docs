@@ -17,7 +17,7 @@ GateChain ecosystem comprises GateChain mainnet, GateChain DEX, GC, wallets, etc
 
 The main features of GateChain ecosystem can be listed as follows:
 
-1. **Transfer/payment**：Using a wallet or client-side Apps, users can send and receive GateChain CoinGC, as well as other popular onchain assets.
+1. **Transfer/payment**：Using a wallet or client-side Apps, users can send and receive GateChain Coin GC, as well as other popular onchain assets.
 2. **Asset issuance**： Users can issue and use their own tokens (e.g., GC) to digitalize and manage their assets. For more details, visit [Asset Management](./gatechain-asset.md).
 3. **Decentralized cross-chain transaction**：GateChain provides support for high-performance decentralized trading among different digital currencies.
 4. **Asset safe storage**：     With a uniquely designed vault account and a clearing technology, an account can have comprehensive protection and support revoking /clearing operations targeting abnormal transactions. For more details, visit [Transaction Protection](./gatechain-security.md).
@@ -39,11 +39,11 @@ GateChain DEX is a decentralized exchange based on GateChain. It has matching en
 
 Anyone who has full control over the private key of his account can exchange freely. GateChain DEX uses private own encrypted wallets or hardware wallets to safeguard users’ assets and solves the trust issue that is present for centralized exchange.
 
-### GateChain CoinGC
+### GateChain Coin GC
 
-<!--GateChain CoinGC  is the native currency of GateChain mainnet. It  fuels the GateChain mainnet and is used to pay  transfer fee  on Gatechain network.It is the incentive reward for PoS staking at GateChain. In addition, it is  an important ecosystem  member for Gate.io exchange. -->
+<!--GateChain Coin GC  is the native currency of GateChain mainnet. It  fuels the GateChain mainnet and is used to pay  transfer fee  on Gatechain network.It is the incentive reward for PoS staking at GateChain. In addition, it is  an important ecosystem  member for Gate.io exchange. -->
 
-GateChain CoinGC is the native currency of GateChain mainnet. It is used to pay transfer fees on GateChain network and works as an incentive reward for PoS staking. It is fundamental to GateChain network. In addition, it is an important ecosystem member for Gate.io exchange.
+GateChain Coin GC is the native currency of GateChain mainnet. It is used to pay transfer fees on GateChain network and works as an incentive reward for PoS staking. It is fundamental to GateChain network. In addition, it is an important ecosystem member for Gate.io exchange.
 
 
 ### GateChain Wallets
