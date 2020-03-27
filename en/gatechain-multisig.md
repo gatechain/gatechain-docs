@@ -8,7 +8,7 @@ A multi-sig account is distinct from a single signature account. It has two type
 
 - Multi- signature Vault Account
   - prefix：`vault2`
-	- example：`vault218mlcn9uxmmuv33s0y8zdl9lmms7jxnexjme28e`
+  - example：`vault218mlcn9uxmmuv33s0y8zdl9lmms7jxnexjme28e`
 
 ## Create a multisig account
 

@@ -14,7 +14,7 @@ Description：
 * Token symbol must be in upper case, 2-15 characters long. 
 * In token creation,  there are another two flags:
 * `--mintable`  whether the token can be additionally issued or not
-  * `--freezable` whether  the token can be frozen or not
+* `--freezable` whether  the token can be frozen or not
 
 ### Issue additional token
 
