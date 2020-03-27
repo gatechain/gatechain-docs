@@ -105,7 +105,7 @@ Please refer to [GateChain Academic Research](./gatechain-research.md) for more 
 
 <!--GateChain is  a novel public chain based on academic research, which has a complete self- consistent safety  system. As it introduces many  new concepts to blockchain industry that have  never been proposed before, we give explanation about  these concepts and terms for better understanding.
 
-Normal Account：Account similar to a Bitcion address that can store asset and is suitable for daily use. Asset in this type of account can be sent instantly and is irreversible once confirmed in blockchain. Lost privatekey can not be restored.
+Normal Account：Account similar to a Bitcion address that can store asset and is suitable for daily use. Asset in this type of account can be sent instantly and is irreversible once confirmed in blockchain. Lost private key can not be restored.
 Vault Account：GateChain’s novel creation. This is a new type of account that allows for  revocable transaction in the case of theft and private key restoration in the case of lost or damaged private key. Transfer asset in this type of account have to wait for  a preset  period of  time. It is suitable for storing and protecting  large amount of asset that is  not for immediate use. 
 Revocable Delay Period：The time duration within which transaction transfer from vault account is revocable. During this time of period (calculated by blocks), recovery of transaction is possible by initiating  a "revoke" operation to return the transaction to “Retrieval Account’.
 Retrieval Account：the preset  account  bound  to  a Vault Account. When a transaction in vault account is revoked, the transaction asset will be moved to this account. 
@@ -114,7 +114,7 @@ Revoke. (verb）: When the transaction initiated from Vault Account is still in 
 Revocable Transaction： transaction initiated from Vault Account is revocable transaction, which allows for  revoking to move the asset to “Retrieval Account” during the revocable delay period. After that revocable period, transaction can not be revoked.
 Irrevocable Transaction：Transactions initiated from Normal Account. It is irreversible once it is confirmed by blockchain.-->
 
-As an innovative public chain focusing on on-chain asset security, GateChain introduces a number of new concepts. GateChain hopes to help users understand GateChain’s security logic more comprehensively by providing the description of the concepts. Also, for the consideration of transaction security, GateChain innovatively put forward the identification of address type and transaction type to facilitate the user to effectively identify different account type and transfer type, to avoid user misoperation.
+As an innovative public chain focusing on on-chain asset security, GateChain introduces a number of new concepts. GateChain hopes to help users understand GateChain’s security logic more comprehensively by providing the description of the concepts. Also, for the consideration of transaction security, GateChain innovatively put forward the identification of address type and transaction type to facilitate the user to effectively identify different account type and transfer type, to avoid user mis-operation.
 
 ### GateChain Basic Concepts
 

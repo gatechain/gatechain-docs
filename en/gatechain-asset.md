@@ -1,6 +1,6 @@
 # Overview
 
-User’s assets will be stored at GateChainin in the form of “Token”. Any asset should comply with  Token Management standards of  GateChain.
+User’s assets will be stored at GateChain in in the form of “Token”. Any asset should comply with  Token Management standards of  GateChain.
 
 Assets owner can issue, additionally issue, burn, and freeze/unfreeze  their assets, all of which will incur fees. Fees will be paid in  GateChain Token.
 

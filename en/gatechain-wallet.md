@@ -72,7 +72,7 @@ Below are identifiers  different  transaction types start with:
 
 ![](./images/3.png)
 
-- 4 ）Account is created successfully. Pay attention to the identifier of single sigature account. Standard Account starts with “gt”.
+- 4 ）Account is created successfully. Pay attention to the identifier of single signature account. Standard Account starts with “gt”.
 
 ![](./images/4.png)
 
@@ -209,7 +209,7 @@ Transfer from Vault Account will take effect with a delay. Compared with Standar
 
 ---
 ## 5. Advanced Features
->This part involves  operations on account. Please use it with caution. misoperations may lead to asset loss. 
+>This part involves  operations on account. Please use it with caution. mis-operations may lead to asset loss. 
 
 The wallet supports  account export, account delete, view private keys  and other operations for accounts in the local wallet account list. 
 

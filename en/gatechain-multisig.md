@@ -19,7 +19,7 @@ A multi-sig account is distinct from a single signature account. It has two type
     - [Use API to Generate a multisig  Vault Account](./API/vault-account.md)
   - Change a multisig  Vault Account's address(vault1->vault2)：
     - Add the `pubkey` parameter when you create the multisig Vault Account
-    - Excute the [Publish multisig account](./cli/account.md) command
+    - Execute the [Publish multisig account](./cli/account.md) command
     - Use the newly created Vault account to transfer out some token
 
 ## Manage multisig account 

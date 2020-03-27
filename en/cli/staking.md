@@ -119,7 +119,7 @@ Example：
 gatecli staking redelegations-from gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 
-### Query all unbond delegation of the consensus account
+### Query all unbound delegation of the consensus account
 
 ```bash
 gatecli staking unbonding-delegations-from [con-account-addr] --chain-id [chain ID]
