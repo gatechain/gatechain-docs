@@ -59,13 +59,26 @@ Example：
 gatecli con-account show-key gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
 ```
 
-### Query local consensus account list
+### Query consensus account list
+
 ```bash
-gatecli con-account list-local --chain-id [chain ID]
+gatecli con-account list --chain-id [chain ID]
+```
+
+Example：
+
+```bash
+gatecli con-account list --chain-id testnet
+```
+
+### Query local consensus account list
+
+```bash
+gatecli con-account list-key --chain-id [chain ID]
 ```
 Example：
 
 ```bash
-gatecli con-account list-local --chain-id testnet
+gatecli con-account list-key --chain-id testnet
 ```
 
