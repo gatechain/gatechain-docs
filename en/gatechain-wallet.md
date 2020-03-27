@@ -49,8 +49,6 @@ Below are identifiers  different  transaction types start with:
 - You can also access to [https://www.gatechain.io/wallets](https://www.gatechain.io/wallets)  to download wallet for PC.
   	
 	>Wallets are  available for Windows  and  Mac OS at this time
-  
- 	 <br/>![](./images/0-1.png)</br>
 
 ## 4. Get Started
 
@@ -268,12 +266,12 @@ The wallet supports  account export, account delete, view private keys  and othe
 > <br/>![](./images/multi9.png)</br>
 
 ---
-### 6. GateChain Blockchain Explorer
+### 6. Blockchain Explorer
 -  To View account, transaction id, block, validator and more, visit block explorer for testnet at [https://explorer.gatechain.io/](https://explorer.gatechain.io/)。
 
 ![](./images/17.png)
 
-### 7. Developer Document GateChain Documentation
+### 7. Developer Document
 - View developer document here:[https://www.gatechain.io/docs](https://www.gatechain.io/docs) 
 
 
