@@ -140,7 +140,7 @@ Description：
 * Admin account signs  and saves the trade to blockchain. And add or deduct the corresponding amount from tokens  maker and taker stored at the exchange.
 * Fee and gas transfer is made to fee user account. This deal is done.
 
-### Query a trade details.
+### Query a trade details
 ```bash
 gatecli dex query-trade [Trade ID] --chain-id [chain ID]
 ```
