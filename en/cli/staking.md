@@ -1,7 +1,7 @@
-### Delegate token to verification node
+### Delegate token to consensus account
 
 ```bash
-gatecli staking delegate [validator-add] [amount]  --from [sender account] --chain-id [chain ID]
+gatecli staking delegate [con-account-addr] [amount]  --from [delegator-addr] --chain-id [chain ID]
 ```
 Example：
 
@@ -9,10 +9,10 @@ Example：
 gatecli staking delegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100000000NANOGC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-### Query the info of a single delegation account in the single validation node
+### Query the info of a single delegation account in the single consensus account
 
 ```bash
-gatecli staking delegation [delegator-addr] [validator-addr] --chain-id [chain ID]
+gatecli staking delegation [delegator-addr] [con-account-addr] --chain-id [chain ID]
 ```
 Example：
 
@@ -20,7 +20,7 @@ Example：
 gatecli staking delegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 
-### Query the info of a single delegation account in all verification node
+### Query the info of a single delegation account in all consensus accounts
 
 ```bash
 gatecli staking delegations [delegator-addr] --chain-id [chain ID]
@@ -34,7 +34,7 @@ gatecli staking delegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-i
 ### Redelegate
 
 ```bash
-gatecli staking redelegate [src-validator-addr] [dst-validator-addr] [amount] --from [sender account] --chain-id [chain ID]
+gatecli staking redelegate [src-con-account-addr] [dst-con-account-addr] [amount] --from [delegator-addr] --chain-id [chain ID]
 ```
 Example：
 
@@ -53,10 +53,10 @@ Example：
 gatecli staking redelegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-### Query redelegate records of a single delegation account in two verification nodes
+### Query redelegate records of a single delegation account in two consensus accounts
 
 ```bash
-gatecli staking redelegation [delegator-addr] [src-validator-addr] [dst-validator-addr] --chain-id [chain ID]
+gatecli staking redelegation [delegator-addr] [src-con-account-addr] [dst-con-account-addr] --chain-id [chain ID]
 ```
 Example：
 
@@ -75,10 +75,10 @@ Example：
 gatecli staking unbond gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000NANOGC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-### Query untied delegation records of a single delegation account in a single verification node
+### Query untied delegation records of a single delegation account in a single consensus account
 
 ```bash
-gatecli staking unbonding-delegation [delegator-addr] [validator-addr] --chain-id [chain ID]
+gatecli staking unbonding-delegation [delegator-addr] [con-account-addr] --chain-id [chain ID]
 ```
 Example：
 
@@ -86,7 +86,7 @@ Example：
 gatecli staking unbonding-delegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 --chain-id testnet
 ```
 
-### Query untied delegation records of a single delegation account in all verification nodes
+### Query untied delegation records of a single delegation account in all consensus accounts
 
 ```bash
 gatecli staking unbonding-delegations [delegator-addr] --chain-id [chain ID]

@@ -9,7 +9,7 @@ Example:
 gatecli con-account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 Description：
-* When creating a consensus account, please insure the account has sufficient `NANOGC` tokens.
+* When creating a consensus account, please ensure the account has sufficient `NANOGC` tokens.
 
 ### Get consensus account online
 ```bash

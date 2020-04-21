@@ -145,7 +145,7 @@ go version go1.12 linux/amd64
 gated init --chain-id=testnet private (Optional parameter --home specify store directory)
 ```
 
-####2.Create a account address 
+####2.Create an account address 
 
 ```bash
 gatecli account create

@@ -96,7 +96,7 @@ gatecli account show-key 1583472684
 ### Publish multisig account
 
 ```bash
-gatecli account publish-multisig [to_address]  [pubkey] --chain-id [chain ID]
+gatecli account publish-multisig [account]  [pubkey] --chain-id [chain ID]
 ```
 
 Example：

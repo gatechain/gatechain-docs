@@ -58,7 +58,9 @@ Below are identifiers  different  transaction types start with:
 - Revocable transaction is invented by GateChain. To avoid abuse of this safety feature, GateChain uses prefix identifiers to give distinct mark. When receiving a transaction, you can check with  two rules to determine if it is  irrevocable and safe to use. 
 > 1. Standard Account starts with" gt". Transactions from address starting with “gt” is irrevocable.
 > 2. Transaction ID from Standard Account starts with" IRREVOCABLEPAY-" .Transaction with this prefix is irrevocable.
-> 
+> 3. Vault Account starts with" vault". Transactions from address starting with “vault” is revocable.
+> 4. Transaction ID from Vault Account starts with" REVOCABLEPAY-" .Transaction with this prefix is revocable.
+>
 ### 4.2 Create Standard Account
 - 1 ）At main interface, click “Create Account ” , then  choose   “Single Signature ”-->> “Standard Account ”.
 
@@ -164,9 +166,11 @@ GateChain provides  two notification channels, via email and via short message.
 <br/>![](./images/22.png)</br>
 
 Note 
->1.Standard Account starts with gt. Transaction is  irrevocable from address with prefix “gt” and you can receive it safely.
-
+>1.Standard Account starts with gt. Transaction is  irrevocable from address with prefix “gt”.
+>
 >2.Transaction from Standard Account starts with IRREVOCABLEPAY --.Transaction with such prefix is irrevocable.
+>
+>**This type of transfer transaction is immediately effective and irrevocable. You can confirm and use it safely after receiving the transaction**
 
 - 7 ) View “Transfer Records” at account overview for this transaction record.
 
@@ -203,10 +207,10 @@ Transfer from Vault Account will take effect with a delay. Compared with Standar
 - 10 ）This transaction will be moved to its bound Retrieval Account account. 
 <br/>![](./images/vault9.png)</br>
 
->Note 1. Note 1. Vault Account  starts with “vault”. Transaction initiated from address with prefix “vault” can be revoked within a  certain period of time. Attention: transaction can only be deemed as success when it is not revoked after the revocable delay period. 
+>1. Vault Account starts with" vault". Transactions from address starting with “vault” is revocable.
+>2. Transaction ID from Vault Account starts with" REVOCABLEPAY-" . Transaction with this prefix is revocable.
 >
->Note 2. Transaction ID from Vault Account  starts with REVOCABLEPAY --. When receiving  transaction with this prefix, attention  will be paid that the transaction can only be deemed as success when it is not revoked after revocable delay period.
-
+>**This type of transfer transaction is only being successfully received if it has not been withdrawn after the withdrawal period.**
 ---
 ## 5. Advanced Features
 >This part involves  operations on account. Please use it with caution. mis-operations may lead to asset loss. 

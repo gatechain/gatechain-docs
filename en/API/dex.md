@@ -436,7 +436,7 @@ return  example:
 
 %/accordion%
 
-### Query all accounts information at decentralized exchange 
+### Query account information at decentralized exchange 
 
 ```
 GET /dex/query-account/{dex-account}
