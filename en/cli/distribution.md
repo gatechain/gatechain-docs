@@ -41,7 +41,6 @@ Example：
 ```bash
 gatecli distribution rewards gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
-Description：Delegation rewards at optional  a single verification node
 
 #### Query unpaid delegation rewards of the consensus account
 
