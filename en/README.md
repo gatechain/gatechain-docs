@@ -39,11 +39,11 @@ GateChain DEX is a decentralized exchange based on GateChain. It has matching en
 
 Anyone who has full control over the private key of his account can exchange freely. GateChain DEX uses private own encrypted wallets or hardware wallets to safeguard users’ assets and solves the trust issue that is present for centralized exchange.
 
-### GateChain Coin GC
+### GateChain Coin & Token
 
 <!--GateChain Coin GC  is the native currency of GateChain mainnet. It  fuels the GateChain mainnet and is used to pay  transfer fee  on Gatechain network.It is the incentive reward for PoS staking at GateChain. In addition, it is  an important ecosystem  member for Gate.io exchange. -->
 
-GateChain Coin GC is the native currency of GateChain mainnet. It is used to pay transfer fees on GateChain network and works as an incentive reward for PoS staking. It is fundamental to GateChain network. In addition, it is an important ecosystem member for Gate.io exchange.
+GateChain Coin(GC) is the native currency of the GateChain mainnet. It is used to pay transfer fees on GateChain’s network and works as the incentive reward for PoS staking. It is fundamental to GateChain’s network. GateChain Token (GT) is an important eco member for the Gate.io exchange. The value of GT increases based on a deflationary model which includes buy-backs and token burning etc.
 
 
 ### GateChain Wallets
