@@ -9,10 +9,10 @@ Example：
 gatecli distribution set-withdraw-account gc11kfwurleaskangv45ssmpzs2sprhxjsfdlqgqjs --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-#### Withdraw rewards from verification node
+#### Withdraw rewards from a single consensus account
 
 ```bash
-gatecli distribution withdraw-rewards [validator-addr] --from [sender account] --chain-id [chain ID]
+gatecli distribution withdraw-rewards [con-account-addr] --from [sender account] --chain-id [chain ID]
 ```
 Example：
 
@@ -20,7 +20,7 @@ Example：
 gatecli distribution withdraw-rewards gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
-#### Withdraw all rewards from verification node
+#### Withdraw all rewards from all consensus accounts
 
 ```bash
 gatecli distribution withdraw-all-rewards --from [sender account] --chain-id [chain ID]
@@ -34,19 +34,18 @@ gatecli distribution withdraw-all-rewards --from gc11kxgm58wpfr6dch276wwtuq07m8v
 #### Query the delegation rewards of the delegation account
 
 ```bash
-gatecli distribution rewards [delegator-addr] [validator-addr] --chain-id [chain ID]
+gatecli distribution rewards [delegator-addr] [con-account-addr] --chain-id [chain ID]
 ```
 Example：
 
 ```bash
 gatecli distribution rewards gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
-Description：Delegation rewards at optional  a single verification node
 
-#### Query unpaid delegation rewards of the verification node
+#### Query unpaid delegation rewards of the consensus account
 
 ```bash
-gatecli distribution validator-outstanding-rewards [validator-addr] --chain-id [chain ID]
+gatecli distribution validator-outstanding-rewards [con-account-addr] --chain-id [chain ID]
 ```
 Example：
 
@@ -54,10 +53,10 @@ Example：
 gatecli distribution validator-outstanding-rewards gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 
-#### Query the verification nodes commission
+#### Query the consensus account's commission
 
 ```bash
-gatecli distribution commission [validator-addr] --chain-id [chain ID]
+gatecli distribution commission [con-account-addr] --chain-id [chain ID]
 ```
 Example：
 
@@ -65,10 +64,10 @@ Example：
 gatecli distribution commission gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
 ```
 
-#### Query penalty list of validation node 
+#### Query penalty list of a consensus account
 
 ```bash
-gatecli distribution slashes [validator-addr] [start-height] [end-height] --chain-id [chain ID]
+gatecli distribution slashes [con-account-addr] [start-height] [end-height] --chain-id [chain ID]
 ```
 Example：
 

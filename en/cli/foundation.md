@@ -32,7 +32,7 @@ Description：
 ### Query a foundation information
 
 ```bash
-gatecli foundation members --chain-id [链ID]
+gatecli foundation members --chain-id [chain ID]
 ```
 
 Example：

@@ -9,7 +9,7 @@ Example:
 gatecli con-account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 Description：
-* When creating a consensus account, please insure the account has sufficient `NANOGC` tokens.
+* When creating a consensus account, please ensure the account has sufficient `NANOGC` tokens.
 
 ### Get consensus account online
 ```bash
@@ -59,13 +59,26 @@ Example：
 gatecli con-account show-key gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
 ```
 
-### Query local consensus account list
+### Query consensus account list
+
 ```bash
-gatecli con-account list-local --chain-id [chain ID]
+gatecli con-account list --chain-id [chain ID]
+```
+
+Example：
+
+```bash
+gatecli con-account list --chain-id testnet
+```
+
+### Query local consensus account list
+
+```bash
+gatecli con-account list-key --chain-id [chain ID]
 ```
 Example：
 
 ```bash
-gatecli con-account list-local --chain-id testnet
+gatecli con-account list-key --chain-id testnet
 ```
 

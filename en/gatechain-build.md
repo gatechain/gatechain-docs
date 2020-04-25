@@ -49,10 +49,10 @@ cd gatechain && git checkout master
 make tools install
 ```
 
-#### Windos environment
-##### Install Go Go
+#### Windows environment
+##### Install Go
 
-Read [go docunment](https://golang.org/doc/install) to install `go`.**recommended installation method:msi**
+Read [go document](https://golang.org/doc/install) to install `go`.**recommended installation method:msi**
 
 In advanced system settings, correctly config  environmental variables `$GOPATH`, `$GOBIN`,`$PATH`,`GO111MODULE`,`GOPROXY `
 
@@ -84,7 +84,7 @@ GateChain needs **Go 1.11.5+** .
 
 Download the latest GateChain code and use `master` branch code for compiling and installing.
 
-Greate a directory src/github.com under GOPATH path.
+Create a directory src/github.com under GOPATH path.
 
 use command line to access to src/github.com  under GOPATH
 
@@ -145,7 +145,7 @@ go version go1.12 linux/amd64
 gated init --chain-id=testnet private (Optional parameter --home specify store directory)
 ```
 
-####2.Create a account address 
+####2.Create an account address 
 
 ```bash
 gatecli account create
