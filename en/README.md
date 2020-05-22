@@ -13,16 +13,16 @@ The documents keep updating as GateChain develops. Follow us and stay tuned.
 
 GateChain and the DEX (Decentralized Exchange ) based on it are aimed to offer a novel solution and build an enterprise-grade   decentralized  ecosystem that can store, issue and trade digital assets efficiently and securely. -->
 
-GateChain ecosystem comprises GateChain mainnet, GateChain DEX, GC, wallets, etc. They form a decentralized ecosystem characterized by enterprise-grade safety and efficiency for digital asset storage, issuance and trading, they present a novel solution for blockchain transaction safety.
+GateChain ecosystem comprises GateChain mainnet, GateChain DEX, GT, wallets, etc. They form a decentralized ecosystem characterized by enterprise-grade safety and efficiency for digital asset storage, issuance and trading, they present a novel solution for blockchain transaction safety.
 
 The main features of GateChain ecosystem can be listed as follows:
 
-1. **Transfer/payment**：Using a wallet or client-side Apps, users can send and receive GateChain Coin GC, as well as other popular onchain assets.
-2. **Asset issuance**： Users can issue and use their own tokens (e.g., GC) to digitalize and manage their assets. For more details, visit [Asset Management](./gatechain-asset.md).
+1. **Transfer/payment**：Using a wallet or client-side Apps, users can send and receive GateChain Token GT, as well as other popular onchain assets.
+2. **Asset issuance**： Users can issue and use their own tokens (e.g., GT) to digitalize and manage their assets. For more details, visit [Asset Management](./gatechain-asset.md).
 3. **Decentralized cross-chain transaction**：GateChain provides support for high-performance decentralized trading among different digital currencies.
 4. **Asset safe storage**：     With a uniquely designed vault account and a clearing technology, an account can have comprehensive protection and support revoking /clearing operations targeting abnormal transactions. For more details, visit [Transaction Protection](./gatechain-security.md).
 5. **Multi-signature**： Multiple signers can share ownership of one account, and get customized management over their digital assets, which best fit the enterprise demands. For more details, visit [Multi-signature](./gatechain-multisig.md).
-6. **POS staking reward**:GC works as a stable incentive for users participating in PoS staking, which safeguards the robustness of underlying blockchain.
+6. **POS staking reward**:GT works as a stable incentive for users participating in PoS staking, which safeguards the robustness of underlying blockchain.
 
 ### GateChain Blockchain
 
@@ -39,11 +39,11 @@ GateChain DEX is a decentralized exchange based on GateChain. It has matching en
 
 Anyone who has full control over the private key of his account can exchange freely. GateChain DEX uses private own encrypted wallets or hardware wallets to safeguard users’ assets and solves the trust issue that is present for centralized exchange.
 
-### GateChain Coin & Token
+### GateChain Token
 
 <!--GateChain Coin GC  is the native currency of GateChain mainnet. It  fuels the GateChain mainnet and is used to pay  transfer fee  on Gatechain network.It is the incentive reward for PoS staking at GateChain. In addition, it is  an important ecosystem  member for Gate.io exchange. -->
 
-GateChain Coin(GC) is the native currency of the GateChain mainnet. It is used to pay transfer fees on GateChain’s network and works as the incentive reward for PoS staking. It is fundamental to GateChain’s network. GateChain Token (GT) is an important eco member for the Gate.io exchange. The value of GT increases based on a deflationary model which includes buy-backs and token burning etc.
+GateChain Token GT is the native currency of the GateChain mainnet. It is used to pay transfer fees on GateChain’s network and works as the incentive reward for PoS staking. It is fundamental to GateChain’s network.
 
 
 ### GateChain Wallets

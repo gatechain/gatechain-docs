@@ -25,7 +25,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -33,7 +33,7 @@ request BODY example ：
   },
   "amount": [
     {
-      "denom": "NANOGC",
+      "denom": "NANOGT",
       "amount": "500000000"
     }
   ],
@@ -115,7 +115,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -147,7 +147,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -184,7 +184,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -218,7 +218,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -258,7 +258,7 @@ return：
             "tokens":[
                 {
                     "amount":"5",
-                    "denom":"NANOGC"
+                    "denom":"NANOGT"
                 }
             ],
             "tx_hash":"REVOCABLEPAY-BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8"

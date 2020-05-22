@@ -9,7 +9,7 @@ gatecli con-account create [账户地址] --chain-id [链ID]
 gatecli con-account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 说明：
-* 创建共识账户时，请保证账户中有足够的 `NANOGC` 代币。
+* 创建共识账户时，请保证账户中有足够的 `NANOGT` 代币。
 
 ### 上线共识账户
 ```bash

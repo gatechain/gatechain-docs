@@ -156,7 +156,7 @@ gatecli account create validator
 ####3.添加Genesis账户
 
 ```bash
-gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000NANOGC
+gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000NANOGT
 ```
 
 ####4.添加共识账户
@@ -195,7 +195,7 @@ mkdir ~/.gated (可自定义目录)
 
 ```
 scp root@×××.×××.×××.×××:~/.gated/config.json ~/.gated/ (第一步创建的目录)
-scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/ (第一步创建的目录)
+scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/ (第 一步创建的目录)
 ```
 ##### DevNet <a href="/devnet/config.json" target="_blank">config.json</a>  <a href="/devnet/genesis.json" target="_blank">genesis.json</a>
 ##### TestNet <a href="/testnet/config.json" target="_blank">config.json</a>  <a href="/testnet/genesis.json" target="_blank">genesis.json</a>

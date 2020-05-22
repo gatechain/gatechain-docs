@@ -7,7 +7,7 @@ gatecli revocable-tx send [recipient account ] [transfer token amount] --from [s
 Example：
 
 ```bash
-gatecli revocable-tx send gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek 10NANOGC --from vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49 --chain-id testnet
+gatecli revocable-tx send gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek 10NANOGT --from vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49 --chain-id testnet
 ```
 
 Description：

@@ -20,7 +20,7 @@ POST  /token/trading-pair
         "gas_adjustment":"1.2",
         "fees":[
             {
-                "denom":"NANOGC",
+                "denom":"NANOGT",
                 "amount":"5000"
             }
         ],
@@ -28,7 +28,7 @@ POST  /token/trading-pair
     },
     "token_name":"test token",
     "initPrice":"1000000000000000",
-    "base_symbol":"NANOGC",
+    "base_symbol":"NANOGT",
     "quote_symbol":"YY-A69"
 }
 ```
@@ -56,7 +56,7 @@ POST  /token/trading-pair
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -91,7 +91,7 @@ GET /trading-pair/{base-symbol}/{quote-symbol}
     "result":{
         "type":"BaseTradingList",
         "value":{
-            "base_symbol":"NANOGC",
+            "base_symbol":"NANOGT",
             "init_price":"1000",
             "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
             "quote_symbol":"YY-A69",

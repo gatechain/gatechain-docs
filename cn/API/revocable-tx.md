@@ -25,7 +25,7 @@ POST  /revocable-tx/send/{account}
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "NANOGC",
+		"denom": "NANOGT",
 		"amount": "5000"
 	  }
 	],
@@ -33,7 +33,7 @@ POST  /revocable-tx/send/{account}
   },
   "amount": [
 	{
-	  "denom": "NANOGC",
+	  "denom": "NANOGT",
 	  "amount": "5000"
 	}
   ]
@@ -57,7 +57,7 @@ POST  /revocable-tx/send/{account}
                     "to_address":"gc112t5v8z8z4qwzmzvhrr8f4u3yhrjmvm9uw58lnw",
                     "amount":[
                         {
-                            "denom":"NANOGC",
+                            "denom":"NANOGT",
                             "amount":"5000"
                         }
                     ]
@@ -67,7 +67,7 @@ POST  /revocable-tx/send/{account}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -108,7 +108,7 @@ POST /revocable-tx/revoke/{tx-hash}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "1"
       }
     ],
@@ -139,7 +139,7 @@ POST /revocable-tx/revoke/{tx-hash}
                     "msg_index":"0",
                     "amount":[
                         {
-                            "denom":"NANOGC",
+                            "denom":"NANOGT",
                             "amount":"5"
                         }
                     ]
@@ -149,7 +149,7 @@ POST /revocable-tx/revoke/{tx-hash}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"1"
                 }
             ],

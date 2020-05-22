@@ -33,7 +33,7 @@ return:
                         "tokens":[
                             {
                                 "amount":"89999999999999880",
-                                "denom":"NANOGC"
+                                "denom":"NANOGT"
                             }
                         ]
                     },
@@ -81,7 +81,7 @@ return:
     "result":[
         {
             "amount":"8999999989968",
-            "denom":"NANOGC"
+            "denom":"NANOGT"
         },
     ]
 }
@@ -110,7 +110,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "2"
       }
     ],
@@ -143,7 +143,7 @@ return  example:
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"2"
                 }
             ],

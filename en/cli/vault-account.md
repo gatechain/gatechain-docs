@@ -9,7 +9,7 @@ gatecli vault-account create [base account] [Retrieval Account] [delay height] [
 Example：
 
 ```bash
-gatecli vault-account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx 38 300 30NANOGC --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli vault-account create gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx 38 300 30NANOGT --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
 ```
 
 Description：

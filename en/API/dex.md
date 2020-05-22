@@ -22,7 +22,7 @@ request BODY example ：
         "maker-pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
         "maker-side" : "buy",
         "maker-amount" : "1000validatortoken",
-        "maker-price" : "1NANOGC",
+        "maker-price" : "1NANOGT",
         "maker-sign" : "deae06a585193aaa29305f215040c9004c9b818e211963e0387bfda5909f97643d26fddd93f60263d142aacb6c0498d22c1e0b647a87f342fd215277f0033952",
         "maker-time" : "1566894567",
         "taker-orderid" : "4",
@@ -30,16 +30,16 @@ request BODY example ：
         "taker-pubkey" : "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
         "taker-side" : "sell",
         "taker-amount" : "1000validatortoken",
-        "taker-price" : "1NANOGC",
+        "taker-price" : "1NANOGT",
         "taker-sign" : "c384d31098f317863e682756e9cdbaa5ae88c43a002f2624a0f530c9d98d862932470c0eff946331de326c11905c04d27ddb72883e64961bae8ab7b872f0d58d",
         "taker-time" : "1566894567",
-        "price" : "1NANOGC",
+        "price" : "1NANOGT",
         "amount" : "10validatortoken",
         "maker-add-amount" : "10validatortoken",
-        "maker-sub-amount" : "10NANOGC",
+        "maker-sub-amount" : "10NANOGT",
         "maker-fee" : "1validatortoken",
-        "taker-fee" : "1NANOGC",
-        "taker-gas" : "1NANOGC"
+        "taker-fee" : "1NANOGT",
+        "taker-gas" : "1NANOGT"
     }
 }
 ```
@@ -84,20 +84,20 @@ return  example:
             "maker-orderid": "3",
             "maker-price": {
               "amount": "1",
-              "denom": "NANOGC"
+              "denom": "NANOGT"
             },
             "maker-pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
             "maker-side": "buy",
             "maker-sign": "3q4GpYUZOqopMF8hUEDJAEybgY4hGWPgOHv9pZCfl2Q9Jv3dk/YCY9FCqstsBJjSLB4LZHqH80L9IVJ38AM5Ug==",
             "maker-sub-Amount": {
               "amount": "10",
-              "denom": "NANOGC"
+              "denom": "NANOGT"
             },
             "maker-time": "2019-08-27T08:29:27Z",
             "market": "validatortoken_gc",
             "price": {
               "amount": "1",
-              "denom": "NANOGC"
+              "denom": "NANOGT"
             },
             "sender": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
             "taker-amount": {
@@ -106,17 +106,17 @@ return  example:
             },
             "taker-fee": {
               "amount": "1",
-              "denom": "NANOGC"
+              "denom": "NANOGT"
             },
             "taker-gas": {
               "amount": "1",
-              "denom": "NANOGC"
+              "denom": "NANOGT"
             },
             "taker-nonce": "1",
             "taker-orderid": "4",
             "taker-price": {
               "amount": "1",
-              "denom": "NANOGC"
+              "denom": "NANOGT"
             },
             "taker-pubkey": "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
             "taker-side": "sell",
@@ -152,14 +152,14 @@ request BODY example ：
         "fees":[
             {
                 "amount":"2000",
-                "denom":"NANOGC"
+                "denom":"NANOGT"
             }
         ],
         "chain_id":"testing"
     },
     "deposit":{
         "to":"gc11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp",
-        "amount":"10NANOGC"
+        "amount":"10NANOGT"
     }
 }
 ```
@@ -178,7 +178,7 @@ return  example:
       "amount": [
         {
           "amount": "2000",
-          "denom": "NANOGC"
+          "denom": "NANOGT"
         }
       ],
       "gas": "200000"
@@ -192,7 +192,7 @@ return  example:
             "amount": [
               {
                 "amount": "10",
-                "denom": "NANOGC"
+                "denom": "NANOGT"
               }
             ],
             "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
@@ -228,11 +228,11 @@ request BODY example ：
     },
     "withdraw" : {
         "pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
-        "coin" : "10NANOGC",
+        "coin" : "10NANOGT",
         "nonce" : "2",
         "time" : "1563183005",
         "sign" : "45274cf1e0aa5d0582ecb9961f66384270146b2a16b43d8965d90c5270f2cf8f7af86b000d33f77c63a8862d113251c64cdb5f2921c3bbf1d3215709327942c7",
-        "gas" : "1NANOGC"
+        "gas" : "1NANOGT"
     }
 }
 ```
@@ -259,12 +259,12 @@ return  example:
           "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
           "gas": {
             "amount": "1",
-            "denom": "NANOGC"
+            "denom": "NANOGT"
           },
           "withdraw": {
             "coin": {
               "amount": "10",
-              "denom": "NANOGC"
+              "denom": "NANOGT"
             },
             "nonce": "2",
             "pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
@@ -300,7 +300,7 @@ request BODY example ：
         "fees":[
             {
                 "amount":"2000",
-                "denom":"NANOGC"
+                "denom":"NANOGT"
             }
         ],
         "chain_id":"testing"
@@ -326,7 +326,7 @@ return  example:
       "amount": [
         {
           "amount": "2000",
-          "denom": "NANOGC"
+          "denom": "NANOGT"
         }
       ],
       "gas": "200000"
@@ -381,7 +381,7 @@ return  example:
        "amount": "1000"
      },
      "maker-price": {
-       "denom": "NANOGC",
+       "denom": "NANOGT",
        "amount": "1"
      },
      "maker-sign": "dAjjeMv6hh1p6LM3UfY+N4iUJ/kdxtkNBM8vhpkox7R4e1UKN2ONrxsJSec+rwQdDC5+rBKaEludxMuRGNzG1g==",
@@ -395,13 +395,13 @@ return  example:
        "amount": "1000"
      },
      "taker-price": {
-       "denom": "NANOGC",
+       "denom": "NANOGT",
        "amount": "1"
      },
      "taker-sign": "ZGWMCR7PjGs3p808dxhrKtflFvIDMbvfkVketvUgjptVWsZpg+H6xzZWT4FYOYwWLkQ/2ZKQqgwrt4Mg8wgUgw==",
      "taker-time": "2019-08-27T08:29:27Z",
      "price": {
-       "denom": "NANOGC",
+       "denom": "NANOGT",
        "amount": "1"
      },
      "amount": {
@@ -413,7 +413,7 @@ return  example:
        "amount": "10"
      },
      "maker-sub-Amount": {
-       "denom": "NANOGC",
+       "denom": "NANOGT",
        "amount": "10"
      },
      "maker-fee": {
@@ -421,11 +421,11 @@ return  example:
        "amount": "1"
      },
      "taker-fee": {
-       "denom": "NANOGC",
+       "denom": "NANOGT",
        "amount": "1"
      },
      "taker-gas": {
-       "denom": "NANOGC",
+       "denom": "NANOGT",
        "amount": "1"
      },
      "time": "2019-09-03T03:49:17.782624089Z",
@@ -453,7 +453,7 @@ return example：
 
 ```
 [{
-	"denom": "NANOGC",
+	"denom": "NANOGT",
 	"amount": "1090"
 },
 {

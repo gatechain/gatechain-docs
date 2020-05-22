@@ -7,7 +7,7 @@ gatecli tx send [recipient account] [transfer token amount ] --from [sender acco
 Example：
 
 ```bash
-gatecli tx send gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 10NANOGC --from gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
+gatecli tx send gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 10NANOGT --from gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain-id testnet
 ```
 
 Description：

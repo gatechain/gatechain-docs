@@ -4,7 +4,7 @@
 > 可使用--gas-prices或者--fees 为交易添加交易费.
 > 
 > 命令中所用到的资产数额（Asset amount）均为乘以10E18转换后的正整数值(Integer of the Value);
-> 资产数额（Asset amount）支持科学计数法，比如10E9 NanoGC就表示1.0GC.
+> 资产数额（Asset amount）支持科学计数法，比如10E9 NanoGT就表示1.0GT.
 
 
 ## 启动本地RPC服务

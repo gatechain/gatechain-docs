@@ -19,7 +19,7 @@ request BODY example ：
         "gas_adjustment":"1.2",
         "fees":[
             {
-                "denom":"NANOGC",
+                "denom":"NANOGT",
                 "amount":"5000"
             }
         ],
@@ -27,7 +27,7 @@ request BODY example ：
     },
     "token_name":"test token",
     "initPrice":"1000000000000000",
-    "base_symbol":"NANOGC",
+    "base_symbol":"NANOGT",
     "quote_symbol":"YY-A69"
 }
 ```
@@ -56,7 +56,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -93,7 +93,7 @@ return：
     "result":{
         "type":"BaseTradingList",
         "value":{
-            "base_symbol":"NANOGC",
+            "base_symbol":"NANOGT",
             "init_price":"1000",
             "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
             "quote_symbol":"YY-A69",

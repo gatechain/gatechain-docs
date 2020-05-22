@@ -4,7 +4,7 @@
 > You can use--gas-prices or--fees  to add fees for transaction
 > 
 > Any asset amount in command  is converted to  Integer of the Value by multiplying 10E18.
->Asset amount supports scientific notation, e.g.10E9 NanoGC stands for 1.0GC
+>Asset amount supports scientific notation, e.g.10E9 NanoGT stands for 1.0GT
 
 
 ## Start a local RPC service

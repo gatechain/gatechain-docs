@@ -25,7 +25,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -64,7 +64,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -107,7 +107,7 @@ request BODY example ：
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "NANOGC",
+		"denom": "NANOGT",
 		"amount": "5000"
 	  }
 	],
@@ -142,7 +142,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -184,7 +184,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -214,7 +214,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -256,7 +256,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -286,7 +286,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -328,7 +328,7 @@ request BODY example ：
         "gas": "200000",
         "gas_adjustment": "1.2",
         "fees": [{
-            "denom": "NANOGC",
+            "denom": "NANOGT",
             "amount": "5000"
         }],
         "simulate": false
@@ -362,7 +362,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],

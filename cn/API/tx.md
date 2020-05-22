@@ -19,7 +19,7 @@ POST /tx
                     "to_address":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k",
                     "amount":[
                         {
-                            "denom":"NANOGC",
+                            "denom":"NANOGT",
                             "amount":"5000"
                         }
                     ]
@@ -29,7 +29,7 @@ POST /tx
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -78,7 +78,7 @@ POST /tx
                         "to_address":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k",
                         "amount":[
                             {
-                                "denom":"NANOGC",
+                                "denom":"NANOGT",
                                 "amount":"5000"
                             }
                         ]
@@ -88,7 +88,7 @@ POST /tx
             "fee":{
                 "amount":[
                     {
-                        "denom":"NANOGC",
+                        "denom":"NANOGT",
                         "amount":"5000"
                     }
                 ],
@@ -142,13 +142,13 @@ POST  /tx/send/{account}
         "gas": "200000",
         "gas_adjustment": "1.2",
         "fees": [{
-            "denom": "NANOGC",
+            "denom": "NANOGT",
             "amount": "5000"
         }],
         "simulate": false
     },
     "amount": [{
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
     }]
 }
@@ -171,7 +171,7 @@ POST  /tx/send/{account}
                     "to_address":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx",
                     "amount":[
                         {
-                            "denom":"NANOGC",
+                            "denom":"NANOGT",
                             "amount":"5000"
                         }
                     ]
@@ -181,7 +181,7 @@ POST  /tx/send/{account}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -237,7 +237,7 @@ GET /tx/{hash}
                 },
                 {
                     "key":"amount",
-                    "value":"5000NANOGC"
+                    "value":"5000NANOGT"
                 }
             ],
             "type":"transfer"
@@ -274,7 +274,7 @@ GET /tx/{hash}
                         },
                         {
                             "key":"amount",
-                            "value":"5000NANOGC"
+                            "value":"5000NANOGT"
                         }
                     ],
                     "type":"transfer"
@@ -285,7 +285,7 @@ GET /tx/{hash}
             "success":true
         }
     ],
-    "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"5000NANOGC"}]}]}]",
+    "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"5000NANOGT"}]}]}]",
     "timestamp":"2020-03-25T19:07:53+08:00",
     "tx":{
         "type":"StdTx",
@@ -294,7 +294,7 @@ GET /tx/{hash}
                 "amount":[
                     {
                         "amount":"5000",
-                        "denom":"NANOGC"
+                        "denom":"NANOGT"
                     }
                 ],
                 "gas":"200000"
@@ -307,7 +307,7 @@ GET /tx/{hash}
                         "amount":[
                             {
                                 "amount":"5000",
-                                "denom":"NANOGC"
+                                "denom":"NANOGT"
                             }
                         ],
                         "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",
@@ -390,7 +390,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                         },
                         {
                             "key":"amount",
-                            "value":"5000NANOGC"
+                            "value":"5000NANOGT"
                         }
                     ],
                     "type":"transfer"
@@ -427,7 +427,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                                 },
                                 {
                                     "key":"amount",
-                                    "value":"5000NANOGC"
+                                    "value":"5000NANOGT"
                                 }
                             ],
                             "type":"transfer"
@@ -438,7 +438,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                     "success":true
                 }
             ],
-            "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"5000NANOGC"}]}]}]",
+            "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"5000NANOGT"}]}]}]",
             "timestamp":"2020-03-25T19:07:53+08:00",
             "tx":{
                 "type":"StdTx",
@@ -447,7 +447,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                         "amount":[
                             {
                                 "amount":"5000",
-                                "denom":"NANOGC"
+                                "denom":"NANOGT"
                             }
                         ],
                         "gas":"200000"
@@ -460,7 +460,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                                 "amount":[
                                     {
                                         "amount":"5000",
-                                        "denom":"NANOGC"
+                                        "denom":"NANOGT"
                                     }
                                 ],
                                 "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",
@@ -515,7 +515,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                         },
                         {
                             "key":"amount",
-                            "value":"200000000000000000000000000NANOGC"
+                            "value":"200000000000000000000000000NANOGT"
                         }
                     ],
                     "type":"transfer"
@@ -552,7 +552,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                                 },
                                 {
                                     "key":"amount",
-                                    "value":"200000000000000000000000000NANOGC"
+                                    "value":"200000000000000000000000000NANOGT"
                                 }
                             ],
                             "type":"transfer"
@@ -563,7 +563,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                     "success":true
                 }
             ],
-            "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"200000000000000000000000000NANOGC"}]}]}]",
+            "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"200000000000000000000000000NANOGT"}]}]}]",
             "timestamp":"2020-03-25T14:28:24+08:00",
             "tx":{
                 "type":"StdTx",
@@ -572,7 +572,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                         "amount":[
                             {
                                 "amount":"1",
-                                "denom":"NANOGC"
+                                "denom":"NANOGT"
                             }
                         ],
                         "gas":"200000"
@@ -585,7 +585,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
                                 "amount":[
                                     {
                                         "amount":"200000000000000000000000000",
-                                        "denom":"NANOGC"
+                                        "denom":"NANOGT"
                                     }
                                 ],
                                 "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",

@@ -154,7 +154,7 @@ gatecli account create
 ####3.Add a genesis account
 
 ```bash
-gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000NANOGC
+gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000NANOGT
 ```
 
 ####4.Add a consensus account

@@ -25,7 +25,7 @@ POST  /token/issue/{symbol}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -63,7 +63,7 @@ POST  /token/issue/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -103,7 +103,7 @@ POST /token/mint/{symbol}
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "NANOGC",
+		"denom": "NANOGT",
 		"amount": "5000"
 	  }
 	],
@@ -137,7 +137,7 @@ POST /token/mint/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -176,7 +176,7 @@ POST /token/freeze/{symbol}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -205,7 +205,7 @@ POST /token/freeze/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -244,7 +244,7 @@ POST /token/unfreeze/{symbol}
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "5000"
       }
     ],
@@ -273,7 +273,7 @@ POST /token/unfreeze/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -312,7 +312,7 @@ POST /token/burn/{symbol}
         "gas": "200000",
         "gas_adjustment": "1.2",
         "fees": [{
-            "denom": "NANOGC",
+            "denom": "NANOGT",
             "amount": "5000"
         }],
         "simulate": false
@@ -345,7 +345,7 @@ POST /token/burn/{symbol}
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],

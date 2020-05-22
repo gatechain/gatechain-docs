@@ -25,7 +25,7 @@ request BODY example ：
 	"gas_adjustment": "1.2",
 	"fees": [
 	  {
-		"denom": "NANOGC",
+		"denom": "NANOGT",
 		"amount": "5000"
 	  }
 	],
@@ -33,7 +33,7 @@ request BODY example ：
   },
   "amount": [
 	{
-	  "denom": "NANOGC",
+	  "denom": "NANOGT",
 	  "amount": "5000"
 	}
   ]
@@ -58,7 +58,7 @@ return:
                     "to_address":"gc112t5v8z8z4qwzmzvhrr8f4u3yhrjmvm9uw58lnw",
                     "amount":[
                         {
-                            "denom":"NANOGC",
+                            "denom":"NANOGT",
                             "amount":"5000"
                         }
                     ]
@@ -68,7 +68,7 @@ return:
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -110,7 +110,7 @@ request BODY example ：
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGC",
+        "denom": "NANOGT",
         "amount": "1"
       }
     ],
@@ -142,7 +142,7 @@ return：
                     "msg_index":"0",
                     "amount":[
                         {
-                            "denom":"NANOGC",
+                            "denom":"NANOGT",
                             "amount":"5"
                         }
                     ]
@@ -152,7 +152,7 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGC",
+                    "denom":"NANOGT",
                     "amount":"1"
                 }
             ],
