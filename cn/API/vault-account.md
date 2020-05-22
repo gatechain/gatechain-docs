@@ -67,7 +67,7 @@ POST  /vault-account/create/{base-account}
                     "clearing_height":"50000",
                     "amount":[
                         {
-                            "denom":"GC",
+                            "denom":"NANOGT",
                             "amount":"500000000"
                         }
                     ],
@@ -78,7 +78,7 @@ POST  /vault-account/create/{base-account}
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],

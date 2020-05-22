@@ -50,7 +50,7 @@ GET /block/{height}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | height | block height（>=1）|
 
 return:

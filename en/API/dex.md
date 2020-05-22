@@ -359,7 +359,7 @@ GET		/dex/query-trade/{trade-id}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | trade-id | trade ID |
 
 return  example:
@@ -444,7 +444,7 @@ GET /dex/query-account/{dex-account}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | dex-account | DEX account |
 
 return example：
@@ -472,7 +472,7 @@ GET /dex/query-admin/{admin-type}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | admin-type| owner/admin/fee |
 
 return example：

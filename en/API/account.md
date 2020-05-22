@@ -6,7 +6,7 @@ GET /account/{account}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | account | account  |
 
 return:
@@ -68,7 +68,7 @@ GET /account/balance/{account}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | account | account |
 
 return:

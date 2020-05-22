@@ -1,7 +1,9 @@
 ## 接口 api
 
 > 通过本文档提供构造交易的接口，其请求参数必须设置大于0NANOGT的交易费;
+> 
 > 通过本文档提供构造交易的接口，其返回交易体中"valid_height"字段需手动设置有效起始高度;
+> 
 > 命令中所用到的资产数额（Asset amount）均为乘以10E18转换后的正整数值(Integer of the Value);
 > 资产数额（Asset amount）支持科学计数法，比如10E9 NanoGT就表示1GT。
 

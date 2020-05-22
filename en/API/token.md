@@ -6,7 +6,7 @@ POST  /token/issue/{symbol}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | symbol | token symbol |
 
 request BODY example ：
@@ -88,7 +88,7 @@ POST /token/mint/{symbol}
 parameter:
 
 | parameter name | description  |
-| -------------- | ------------ |
+| :-------------- | :------------ |
 | symbol         | token symbol |
 
 request BODY example ：
@@ -166,7 +166,7 @@ POST /token/freeze/{symbol}
 parameter:
 
 | parameter name | description  |
-| -------------- | ------------ |
+| :-------------- | :------------ |
 | symbol         | token symbol |
 
 request BODY example ：
@@ -238,7 +238,7 @@ POST /token/unfreeze/{symbol}
 parameter:
 
 | parameter name | description  |
-| -------------- | ------------ |
+| :-------------- | :------------ |
 | symbol         | token symbol |
 
 request BODY example ：
@@ -310,7 +310,7 @@ POST /token/burn/{symbol}
 parameter:
 
 | parameter name | description  |
-| -------------- | ------------ |
+| :-------------- | :------------ |
 | symbol         | token symbol |
 
 request BODY example ：
@@ -386,7 +386,7 @@ GET  /token/show/{symbol}
 parameter:
 
 | parameter name | description  |
-| -------------- | ------------ |
+| :-------------- | :------------ |
 | symbol         | token symbol |
 
 return：

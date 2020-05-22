@@ -79,7 +79,7 @@ GET /trading-pair/{base-symbol}/{quote-symbol}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | base-symbol | base token symbol |
 | quote-symbol | quote token symbol |
 

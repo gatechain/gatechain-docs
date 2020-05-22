@@ -6,7 +6,7 @@ POST  /revocable-tx/send/{account}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | account | recipient account, can be a Standard Account or a vault account |
 
 request BODY example ：
@@ -91,7 +91,7 @@ POST /revocable-tx/revoke/{tx-hash}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | tx-hash | Revocable Transaction Hash |
 
 request BODY example ：

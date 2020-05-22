@@ -6,7 +6,7 @@ POST  /vault-account/create/{base-account}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | base-account | base account |
 
 request BODY example ：
@@ -67,7 +67,7 @@ return:
                     "clearing_height":"50000",
                     "amount":[
                         {
-                            "denom":"GC",
+                            "denom":"NANOGT",
                             "amount":"500000000"
                         }
                     ],
@@ -78,7 +78,7 @@ return:
         "fee":{
             "amount":[
                 {
-                    "denom":"GC",
+                    "denom":"NANOGT",
                     "amount":"5000"
                 }
             ],
@@ -241,7 +241,7 @@ GET  /vault-account/list-revocable-txs/{vault-account}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | vault-account | Vault Account |
 
 return：

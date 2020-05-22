@@ -1,7 +1,9 @@
 ##GateChain API document
 
 >Structural transaction interface provided  in this document, request parameter must set a transaction fee greater than  0NANOGT
+>
 >Structural transaction interface provided  in this document, return to the "valid_height" field in the tx body needs to manually set the effective starting height
+>
 > Any asset amount in command  is converted to  Integer of the Value by multiplying 10E18 
 > Asset amount supports scientific notation, e.g.10E9 NanoGT stands for 1GT
 

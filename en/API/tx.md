@@ -127,7 +127,7 @@ POST  /tx/send/{account}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | account | recipient account |
 
 request BODY example：
@@ -208,7 +208,7 @@ GET /tx/{hash}
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | hash | transaction HASH |
 
 return:
@@ -353,7 +353,7 @@ GET /tx?message.sender={sender}&message.action={action}&message.recipient={recip
 parameter:
 
 | parameter name | description |
-| ----| ---- |
+| :----| :---- |
 | sender | sender account |
 | action | action type |
 | recipient | recipient account  |
