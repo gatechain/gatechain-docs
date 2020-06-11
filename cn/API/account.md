@@ -1,5 +1,6 @@
 
-### 查询账户信息
+### 查询账户信息-[命令行](../cli/account.md#查询账户信息)
+  
 ```
 GET /account/{account}
 ```
@@ -9,12 +10,12 @@ GET /account/{account}
 | :---- | :---- |
 | account | 账户 |
 
-返回:
+返回示例:
 
 %accordion%json%accordion%
 ```
 {
-    "height":"5129",
+    "height":"5129", //区块高度
     "result":{
         "type":"AccountResp",
         "value":{
@@ -23,7 +24,7 @@ GET /account/{account}
                 "value":{
                     "base_account":{
                         "account_number":"7",
-                        "address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
+                        "address":"gt11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88", //账户地址
                         "public_key":{
                             "type":"tendermint/PubKeySecp256k1",
                             "value":"Augr+YcqdYO5fN0imCuuHaTrR+3eZTdMIkAbCIIWnB/+"
@@ -31,23 +32,23 @@ GET /account/{account}
                         "sequence":"4",
                         "tokens":[
                             {
-                                "amount":"89999999999999880",
-                                "denom":"NANOGT"
+                                "amount":"89999999999999880", //账户余额
+                                "denom":"NANOGT" //单位
                             }
                         ]
                     },
-                    "clearing_height":{
-                        "last_clearing_effect_height":"0",
-                        "last_clearing_height":"0",
-                        "next_clearing_effect_height":"0",
-                        "next_clearing_height":"0"
+                    "clearing_height":{ //账户清算高度，只有保险账户有值，普通账户没有
+                        "last_clearing_effect_height":"0", //上一次设置清算高度时的交易高度
+                        "last_clearing_height":"0", //上一次设置的清算高度
+                        "next_clearing_effect_height":"0", //最新设置清算高度时的交易高度
+                        "next_clearing_height":"0" //最新设置的清算高度
                     },
-                    "delay_height":"0",
-                    "received_revocable_tokens":null,
-                    "security_address":"",
-                    "sent_revocable_tokens":null,
+                    "delay_height":"0", //保险账户交易延迟生效高度
+                    "received_revocable_tokens":null, //收到可撤回的代币
+                    "security_address":"", //找回账户
+                    "sent_revocable_tokens":null, //已发送可撤销的代币
                     "vault_address":[
-                        "vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49"
+                        "vault11c7geh5zs34nwct7chmyda8prl8e2jsyuvt9r49" //保险账户地址,此字段如果有值，就表示查询的本账户是该保险账户找回账户
                     ]
                 }
             },
@@ -57,7 +58,6 @@ GET /account/{account}
 }
 ```
 %/accordion%
-
 
 
 ### 查询账户余额
@@ -70,17 +70,17 @@ GET /account/balance/{account}
 | :----| :---- |
 | account | 账户 |
 
-返回:
+返回示例:
 
 %accordion%json%accordion%
 
 ```
 {
-    "height":"5483",
+    "height":"5483", //区块高度
     "result":[
         {
-            "amount":"8999999989968",
-            "denom":"NANOGT"
+            "amount":"8999999989968", //账户余额
+            "denom":"NANOGT" //单位
         },
     ]
 }
@@ -99,22 +99,22 @@ POST /account/publish-multisig/{address}
 ```
 {
   "base_req": {
-    "from": "gc11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr",
+    "from": "gt11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr", //发送者账户
     "memo": "",
-    "chain_id": "testnet",
+    "chain_id": "testnet", //链ID
     "account_number": "0",
     "sequence": "1",
     "gas": "200000",
     "gas_adjustment": "1.2",
     "fees": [
       {
-        "denom": "NANOGT",
-        "amount": "2"
+        "denom": "NANOGT", //单位
+        "amount": "20" // 手续费
       }
     ],
     "simulate": false
   },
-  "pubkey":"gc1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2"
+  "pubkey":"gt1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2" //多签账户公钥
 }
 ```
 %/accordion%
@@ -131,24 +131,24 @@ POST /account/publish-multisig/{address}
             {
                 "type":"MsgPublishMultiSigAccount",
                 "value":{
-                    "from_address":"gc11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr",
-                    "to_address":"gc11zpxee6l20jnprfqgctas2tnw7xvwqpv3z0lyz8",
-						"pubkey":"gc1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2"
+                    "from_address":"gt11kw7pdgxxxdvgaunznjf7xj88scljk0tr7cnddr", //发送者账户
+                    "to_address":"gt11zpxee6l20jnprfqgttas2tnw7xvwqpv3z0lyz8", //多签账户
+						"pubkey":"gt1pub1ytql0csgqgfzd666axrjzqegteuuxvghau9u0q67lltpjqla3ykzz3t8efmh6sqhyt4uhnh3q5fzd666axrjzqkhwmygytf0grzudhv69h9ttcy4xhze0v4mtf4jza6mrp0j3lq68qfzd666axrjzqn6wmq0uuyvxr8tywehal0zyzhpy5tv4h5tpryvc449jmznnzdruqy68ks2" //多签账户公钥
                 }
             }
         ],
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"2"
+                    "denom":"NANOGT", //单位
+                    "amount":"20" //手续费
                 }
             ],
             "gas":"200000"
         },
-        "signatures":null,
+        "signatures":null, //签名
         "memo":"",
-        "valid_height":null
+        "valid_height":null //交易有效高度
     }
 }
 ```
