@@ -1,8 +1,9 @@
 {
-	"title": "GateChain",
+	"title": "GateChain Doc",
 	"author": "GateChain Team",
-	"description": "GateChain Team",
-	"language": "en",
+	"language": "zh-CN",
+	"description": "GateChain Documents",
+	"copyright": "版权所有Copyright 2019-2020, All Rights Reserved",
 	"styles": {
         "website": "styles/website.css"
     },
@@ -14,14 +15,20 @@
 		"back-to-top-button",
 		"accordion",
 		"chapter-fold",
-		"insert-logo",
+		"theme-lixj",
 		"code",
 		"search-pro"
 	],
+	"variables": {
+        "themelixj": {
+            "logo": "/images/GT.png",
+            "summary_title": "目录",
+            "anchor_title": "文章导航"
+        }
+    },
 	"pluginsConfig": {
-		"insert-logo": {
-			"url": "/images/GT.png",
-			"style": "background: none; max-height: 30px; min-height: 30px"
-		}
+		"theme-lixj": {
+          "search-placeholder":"输入关键字搜索"
+        }
 	}
 }

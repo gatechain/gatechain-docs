@@ -11,3 +11,15 @@ div.code-wrapper code {
 code .code-line {
 	white-space: pre !important;
 }
+
+.markdown-section>:last-child {
+	margin-top: 5rem !important;
+}
+
+.markdown-section a {
+	font-size: 16px !important;
+}
+
+.markdown-section a:active, .markdown-section a:focus, .markdown-section a:hover {
+	text-decoration: none !important;
+}
