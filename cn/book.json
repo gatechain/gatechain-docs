@@ -17,6 +17,7 @@
 		"chapter-fold",
 		"theme-lixj",
 		"code",
+		"favicon-absolute",
 		"search-pro"
 	],
 	"variables": {
@@ -29,6 +30,10 @@
 	"pluginsConfig": {
 		"theme-lixj": {
           "search-placeholder":"输入关键字搜索"
+        },
+        "favicon-absolute":{
+            "favicon": "/images/GT.png",
+            "appleTouchIconPrecomposed152": "/images/GT.png"
         }
 	}
 }
