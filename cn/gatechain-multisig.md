@@ -3,12 +3,12 @@
 多签账户类型与单签账户有所区别，其类型如下：
 
 - 普通多签账户
-	- 前缀：`gc2`
-	- 示例：`gc210fm6dxdd08sh4ptaxt8t2mapaywp5zq57fxx9p`
+	- 前缀：'gt2'
+	- 示例：'gt21p8qmx5q8h7h3es3wl4x0y4efgme552hk7x5g6ppeelel2v2vvsthxk0ce65gw9mfls9ugp'
 
 - 保险多签账户
-  - 前缀：`vault2`
-  - 示例：`vault218mlcn9uxmmuv33s0y8zdl9lmms7jxnexjme28e`
+  - 前缀：'vault2'
+  - 示例：'vault21fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww'
 
 ### 创建多签账户
 

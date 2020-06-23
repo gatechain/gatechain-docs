@@ -1,7 +1,8 @@
 
-### 查看基金会成员
+###查询基金会成员列表 [命令行](../cli/foundation.md#查询基金会成员列表-api)
+
 ```
-GET  /foundation/distribution
+GET  /foundation/members
 ```
 
 返回示例：
@@ -10,30 +11,75 @@ GET  /foundation/distribution
 
 ```     
 {
-    "reward":"0.020000000000000000",
-    "max_members":"20",
-    "members":[
+    "height": "0", //区块高度
+    "result": [
         {
-            "address":"gc11e53svtfsjknalpucu3r9gn2c9vfy59ll5nqmte",
-            "proportion":"2",
-            "funds_pool":[
+            "address": "gt11tgjslrwl0j35czlj0ayxq9t7hzd0gtckfwc57qsl3nftl7zyk8gccv5kexetmm3xsv2tj5", //基金会成员账户
+            "funds_pool": [ 
                 {
-                    "denom":"NANOGT",
-                    "amount":"0.800000000000000001"
+                    "amount": "10000000000000000",//总代币数
+                    "denom": "NANOGT" //单位
                 }
-            ]
+            ],
+            "proportion": "1", //基金会成员占比
+            "released": [
+                {
+                    "amount": "4666666666.660000000000000000", //已释放代币数
+                    "denom": "NANOGT" //单位
+                }
+            ],
+            "withdraw": [] //已撤回代币数
         },
-        {
-            "address":"gc11657rsnh95jyvy6qerghe0trkkwp9ut3zskxg26",
-            "proportion":"1",
-            "funds_pool":[
-                {
-                    "denom":"NANOGT",
-                    "amount":"0.399999999999999999"
-                }
-            ]
-        }
+		...
     ]
 }
 ```
 %/accordion%
+
+
+### 查询基金会成员信息 
+
+```
+GET  /v1/foundation/member/{address}
+```
+
+参数:
+
+| 参数名 | 说明 |
+| :----| :---- |
+| address | 基金会成员地址 |
+
+返回示例：
+
+%accordion%json%accordion%
+
+
+```     
+{
+    "height": "0", //区块高度
+    "result": {
+        "type": "Member",
+        "value": {
+            "address": "gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq", //基金会成员账户
+            "funds_pool": [
+                {
+                    "amount": "10000000000000000",//总代币数
+                    "denom": "NANOGT" //单位
+                }
+            ],
+            "proportion": "1", //基金会成员占比
+            "released": [
+                {
+                    "amount": "11333333333.330000000000000000", //已释放代币数
+                    "denom": "NANOGT" //单位
+                }
+            ],
+            "withdraw": [] //已撤回代币数
+        }
+    }
+}
+```
+%/accordion%
+
+
+

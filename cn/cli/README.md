@@ -16,7 +16,7 @@ gatecli rest-server
 
 * RPC服务启动后，由于存储加锁，所以无法执行命令行指令。
 
-## 状态
+## 状态 [API](../API/README.md#状态-命令行)
 ```bash
 gatecli status
 ```

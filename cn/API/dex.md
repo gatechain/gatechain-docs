@@ -11,15 +11,15 @@ POST  /dex/trade
 ```
 {
     "base_req": {
-        "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "chain_id" : "testing"
     },
     "trade" : {
         "tradeid" : "100000",
-        "market" : "validatortoken_gc",
+        "market" : "validatortoken_gt",
         "maker-orderid" : "3",
         "maker-nonce" : "1",
-        "maker-pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+        "maker-pubkey" : "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
         "maker-side" : "buy",
         "maker-amount" : "1000validatortoken",
         "maker-price" : "1NANOGT",
@@ -27,7 +27,7 @@ POST  /dex/trade
         "maker-time" : "1566894567",
         "taker-orderid" : "4",
         "taker-nonce" : "1",
-        "taker-pubkey" : "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+        "taker-pubkey" : "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gtnty5q7rrgzy",
         "taker-side" : "sell",
         "taker-amount" : "1000validatortoken",
         "taker-price" : "1NANOGT",
@@ -46,7 +46,7 @@ POST  /dex/trade
 %/accordion%
 
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -86,7 +86,7 @@ POST  /dex/trade
               "amount": "1",
               "denom": "NANOGT"
             },
-            "maker-pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+            "maker-pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
             "maker-side": "buy",
             "maker-sign": "3q4GpYUZOqopMF8hUEDJAEybgY4hGWPgOHv9pZCfl2Q9Jv3dk/YCY9FCqstsBJjSLB4LZHqH80L9IVJ38AM5Ug==",
             "maker-sub-Amount": {
@@ -94,12 +94,12 @@ POST  /dex/trade
               "denom": "NANOGT"
             },
             "maker-time": "2019-08-27T08:29:27Z",
-            "market": "validatortoken_gc",
+            "market": "validatortoken_gt",
             "price": {
               "amount": "1",
               "denom": "NANOGT"
             },
-            "sender": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "sender": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
             "taker-amount": {
               "amount": "1000",
               "denom": "validatortoken"
@@ -118,7 +118,7 @@ POST  /dex/trade
               "amount": "1",
               "denom": "NANOGT"
             },
-            "taker-pubkey": "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+            "taker-pubkey": "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gtnty5q7rrgzy",
             "taker-side": "sell",
             "taker-sign": "w4TTEJjzF4Y+aCdW6c26pa6IxDoALyYkoPUwydmNhikyRwwO/5RjMd4ybBGQXATSfdtyiD5klhuuire4cvDVjQ==",
             "taker-time": "2019-08-27T08:29:27Z",
@@ -147,7 +147,7 @@ POST  /dex/deposit
 ```
 {
     "base_req":{
-        "from":"gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from":"gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "fees":[
             {
                 "amount":"2000",
@@ -157,14 +157,14 @@ POST  /dex/deposit
         "chain_id":"testing"
     },
     "deposit":{
-        "to":"gc11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp",
+        "to":"gt11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp",
         "amount":"10NANOGT"
     }
 }
 ```    
 %/accordion%
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -193,8 +193,8 @@ POST  /dex/deposit
                 "denom": "NANOGT"
               }
             ],
-            "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
-            "to": "gc11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp"
+            "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "to": "gt11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp"
           }
         }
       }
@@ -221,11 +221,11 @@ POST  /dex/withdraw
 ```
 {
     "base_req": {
-        "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "chain_id" : "testing"
     },
     "withdraw" : {
-        "pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+        "pubkey" : "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
         "coin" : "10NANOGT",
         "nonce" : "2",
         "time" : "1563183005",
@@ -236,7 +236,7 @@ POST  /dex/withdraw
 ```
 %/accordion%
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -253,7 +253,7 @@ POST  /dex/withdraw
       {
         "type": "dex/MsgWithdraw",
         "value": {
-          "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+          "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
           "gas": {
             "amount": "1",
             "denom": "NANOGT"
@@ -264,7 +264,7 @@ POST  /dex/withdraw
               "denom": "NANOGT"
             },
             "nonce": "2",
-            "pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+            "pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
             "sign": "RSdM8eCqXQWC7LmWH2Y4QnAUayoWtD2JZdkMUnDyz496+GsADTP3fGOohi0RMlHGTNtfKSHDu/HTIVcJMnlCxw==",
             "time": "2019-07-15T09:30:05Z"
           }
@@ -291,7 +291,7 @@ POST  /dex/set-admin
 ```
 {
     "base_req":{
-        "from":"gc11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
+        "from":"gt11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
         "fees":[
             {
                 "amount":"2000",
@@ -301,14 +301,14 @@ POST  /dex/set-admin
         "chain_id":"testing"
     },
     "setadmin":{
-        "acc":"gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "acc":"gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "type":"admin"
     }
 }
 ```
 %/accordion%
     
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -331,8 +331,8 @@ POST  /dex/set-admin
         "type": "dex/MsgAdmin",
         "value": {
           "SetAdminInfo": {
-            "acc": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
-            "from": "gc11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
+            "acc": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "from": "gt11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
             "typ": "admin"
           }
         }
@@ -356,7 +356,7 @@ GET		/dex/query-trade/{trade-id}
 | :----| :---- |
 | trade-id | 交易ID |
     
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -365,10 +365,10 @@ GET		/dex/query-trade/{trade-id}
    "type": "dex/Trade",
    "value": {
      "tradeid": "100001",
-     "market": "validatortoken-1e9_gc",
+     "market": "validatortoken-1e9_gt",
      "maker-orderid": "5",
      "maker-nonce": "2",
-     "maker-pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+     "maker-pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
      "maker-side": "buy",
      "maker-amount": {
        "denom": "validatortoken-1e9",
@@ -382,7 +382,7 @@ GET		/dex/query-trade/{trade-id}
      "maker-time": "2019-08-27T08:29:27Z",
      "taker-orderid": "6",
      "taker-nonce": "2",
-     "taker-pubkey": "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+     "taker-pubkey": "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gtnty5q7rrgzy",
      "taker-side": "sell",
      "taker-amount": {
        "denom": "validatortoken-1e9",
@@ -423,7 +423,7 @@ GET		/dex/query-trade/{trade-id}
        "amount": "1"
      },
      "time": "2019-09-03T03:49:17.782624089Z",
-     "sender": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja"
+     "sender": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja"
    }
  }
 ```
@@ -441,7 +441,7 @@ GET /dex/query-account/{dex-account}
 | :----| :---- |
 | dex-account | DEX账户 |
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -468,7 +468,7 @@ GET /dex/query-admin/{admin-type}
 | :----| :---- |
 | admin-type| owner/admin/fee |
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -477,7 +477,7 @@ GET /dex/query-admin/{admin-type}
 	"type": "dex/SetAccInfo",
 	"value": {
 		"typ": "fee",
- 		"acc": "gc11uqyqvmzwvqprv50x73lkzkxlgm9mw3fr7u003y",
+ 		"acc": "gt11uqyqvmzwvqprv50x73lkzkxlgm9mw3fr7u003y",
  		"from": ""
 	}
 }

@@ -1,130 +1,321 @@
 
-### 委托代币到共识账户 
+### 委托代币到共识账户 [API](../API/staking.md#委托代币到共识账户-命令行)
 ```bash
 gatecli staking delegate [共识账户地址] [委托代币数量]  --from [委托账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking delegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100000000NANOGT --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking delegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --chain-id testnet
 ```
 
-### 查询委托账户在单个共识账户的委托信息
+%accordion%返回示例：%accordion%
+
+```bash
+  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 //交易hash，使用gatecli tx show {hash}查询此交易详细信息
+  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+  Raw Log: sync broadcast tx success //交易发送成功
+```
+%/accordion%
+
+
+### 查询委托账户在单个共识账户的委托信息 [API](../API/staking.md#查询委托账户在单个共识账户的委托信息-命令行)
 ```bash
 gatecli staking delegation [委托账户地址] [共识账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking delegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+gatecli staking delegation gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --chain-id testnet
 ```
 
-### 查询委托账户在所有共识账户的委托信息
+%accordion%返回示例：%accordion%
+
+```bash
+Delegation:
+  Delegator:   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Con-account: gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //共识账户地址
+  Shares:      1000.000000000000000000 //委托数量
+  Balance:   1000 //委托代币数量
+```
+%/accordion%
+
+
+### 查询委托账户在所有共识账户的委托信息 [API](../API/staking.md#查询委托账户在所有共识账户的委托信息-命令行)
+
 ```bash
 gatecli staking delegations [委托账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking delegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking delegations gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --chain-id testnet
 ```
 
-### 转移委托
+%accordion%返回示例：%accordion%
+
+```bash
+Delegation:
+  Delegator:   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Con-account: gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //共识账户地址
+  Shares:      1000.000000000000000000 //委托数量
+  Balance:   1000 //委托代币数量
+Delegation: ...
+
+```
+%/accordion%
+
+### 转移委托 [API](../API/staking.md#转移委托-命令行)
+
 ```bash
 gatecli staking redelegate [原共识账户地址] [目标共识账户地址] [委托代币数量] --from [委托账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking redelegate gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000NANOGT --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking redelegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla54 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --chain-id testnet
 ```
 
-### 查询指定委托账户所有的转移委托记录
+%accordion%返回示例：%accordion%
+
+```bash
+  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 //交易hash，使用gatecli tx show {hash}查询此交易详细信息
+  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+  Raw Log: sync broadcast tx success //交易发送成功
+```
+%/accordion%
+
+
+### 查询指定委托账户所有的转移委托记录 [API](../API/staking.md#查询转移委托记录-命令行)
+
 ```bash
 gatecli staking redelegations [委托账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking redelegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking redelegations gt11p8qmx5q8h7h3es3wl4x0y4efgme552hk7x5g6ppeelel2v2vvsthxk0ce65gw9mfls9ugp --chain-id testnet
 ```
+
+%accordion%返回示例：%accordion%
+
+```bash
+Redelegations between:
+  Delegator:                   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Source Con-account:          gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 //原共识账户地址
+  Destination Con-account:     gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //目标共识账户地址
+  Entries:
+    Redelegation Entry #0:
+      Creation height:           876 //发起转移委托交易的高度
+      Min time to undelegate (unix): 2020-07-10 02:47:51 +0000 UTC //从原共识账户解除绑定完成时间  
+      Initial Balance:           10 //最初转移委托代币数量
+      Shares:                    10.000000000000000000 //转移委托数量
+      Balance:                   10 //转移委托代币数量
+Redelegations between:
+ ...
+ 
+```
+%/accordion%
 
 ### 查询委托账户在两个共识账户之间的转移委托记录
 ```bash
 gatecli staking redelegation [委托账户地址] [原共识账户地址] [目标共识账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking redelegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 --chain-id testnet
+gatecli staking redelegation gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --chain-id testnet
 ```
 
-### 从指定共识账户解绑	
-```bash
-gatecli staking unbond [共识账户地址] [解绑代币数量] --from [发送者账户] --chain-id [链ID]
-```
-示例：
+%accordion%返回示例：%accordion%
 
 ```bash
-gatecli staking unbond gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 100000000NANOGT --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+Redelegations between:
+  Delegator:                   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Source Con-account:          gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 //原共识账户地址
+  Destination Con-account:     gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //目标共识账户地址
+  Entries:
+    Redelegation Entry #0:
+      Creation height:           876 //发起转移委托交易的高度
+      Min time to undelegate (unix): 2020-07-10 02:47:51 +0000 UTC //从原共识账户解除绑定完成时间  
+      Initial Balance:           10 //最初转移委托代币数量
+      Shares:                    10.000000000000000000 //转移委托数量
+      Balance:                   10 //转移委托代币数量
 ```
+%/accordion%
 
-### 查询委托账户在单个共识账户已解除的委托记录
-```bash
-gatecli staking unbonding-delegation [委托账户地址] [共识账户地址] --chain-id [链ID]
-```
-示例：
 
-```bash
-gatecli staking unbonding-delegation gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11d0yarljl7zyksc3r9gp95saqnhjdlrtrefcwg8 --chain-id testnet
-```
-
-### 查询委托账户在所有共识账户已经解除的委托记录
-```bash
-gatecli staking unbonding-delegations [委托账户地址] --chain-id [链ID]
-```
-示例：
+### 从共识账户解绑 [API](../API/staking.md#从共识账户解绑-命令行)
 
 ```bash
-gatecli staking unbonding-delegations gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli staking undelegate [共识账户地址] [解绑代币数量] --from [发送者账户] --chain-id [链ID]
+```
+请求示例：
+
+```bash
+gatecli staking undelegate gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 100000000NANOGT --from gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --chain-id testnet
 ```
 
-### 查询指定共识账户所有的委托	
+%accordion%返回示例：%accordion%
+
 ```bash
+  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 //交易hash，使用gatecli tx show {hash}查询此交易详细信息
+  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+  Raw Log: sync broadcast tx success //交易发送成功
+```
+%/accordion%
+
+
+### 查询委托账户在单个共识账户已解除的委托记录 [API](../API/staking.md#查询委托账户在单个共识账户已解除的委托记录-命令行)
+
+```bash
+gatecli staking undelegation [委托账户地址] [共识账户地址] --chain-id [链ID]
+```
+请求示例：
+
+```bash
+gatecli staking undelegation gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --chain-id testnet
+```
+
+%accordion%返回示例：%accordion%
+
+```bash
+Undelegations between:
+  Delegator:   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Con-account: gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //共识账户地址
+	Entries:
+		Undelegation 0:
+		Creation Height:           904 //解绑交易区块高度
+		Min time to undelegate (unix): 2020-07-10 03:34:31 +0000 UTC //解绑完成时间
+		Expected balance:          10 //解绑代币数量
+```
+%/accordion%
+
+
+### 查询委托账户在所有共识账户已经解除的委托记录 [API](../API/staking.md#查询委托账户在所有共识账户已经解除的委托记录-命令行)
+
+```bash
+gatecli staking undelegations [委托账户地址] --chain-id [链ID]
+```
+请求示例：
+
+```bash
+gatecli staking undelegations gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --chain-id testnet
+```
+
+%accordion%返回示例：%accordion%
+
+```bash
+Undelegations between:
+  Delegator:   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Con-account: gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //共识账户地址
+	Entries:
+		Undelegation 0:
+		Creation Height:           904 //解绑交易区块高度
+		Min time to undelegate (unix): 2020-07-10 03:34:31 +0000 UTC //解绑完成时间
+		Expected balance:          10 //解绑代币数量
+Undelegations between:
+	...
+```
+%/accordion%
+
+### 查询指定共识账户所有的委托 [API](../API/staking.md#查询指定共识账户所有的委托-命令行)
+
+```bash 
 gatecli staking delegations-to [共识账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking delegations-to gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+gatecli staking delegations-to gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --chain-id testnet
 ```
 
-### 查询指定共识账户所有转移委托的记录
+%accordion%返回示例：%accordion%
+
+```bash
+Delegation:
+  Delegator:   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Con-account: gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //共识账户地址
+  Shares:      1000.000000000000000000 //委托数量
+  Balance:   1000 //委托代币数量
+```
+%/accordion%
+
+### 查询指定共识账户所有转移委托的记录 [API](../API/staking.md#查询转移委托记录-命令行)
+
 ```bash
 gatecli staking redelegations-from [共识账户地址] --chain-id [链ID]
 ```
-示例：
+请求示例：
 
 ```bash
-gatecli staking redelegations-from gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+gatecli staking redelegations-from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
 ```
 
-### 查询指定共识账户所有已解除的委托
-```bash
-gatecli staking unbonding-delegations-from [共识账户地址] --chain-id [链ID]
-```
-示例：
+%accordion%返回示例：%accordion%
 
 ```bash
-gatecli staking unbonding-delegations-from gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+Redelegations between:
+  Delegator:                   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Source Con-account:          gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 //原共识账户地址
+  Destination Con-account:     gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //目标共识账户地址
+  Entries:
+    Redelegation Entry #0:
+      Creation height:           876 //转移委托交易区块高度
+      Min time to Undelegations (unix): 2020-07-10 02:47:51 +0000 UTC //从原共识账户解除绑定完成时间  
+      Initial Balance:           10 //最初转移委托代币数量
+      Shares:                    10.000000000000000000 //转移委托数量
+      Balance:                   10 //转移委托代币数量
 ```
-### 查询权益质押池的信息		
+%/accordion%
+
+
+### 查询指定共识账户所有已解除的委托 [API](../API/staking.md#查询指定共识账户所有已解除的委托-命令行)
+
 ```bash
-gatecli staking pool --chain-id [链ID]
+gatecli staking undelegations-from  [共识账户地址] --chain-id [链ID]
+```
+请求示例：
+
+```bash
+gatecli staking undelegations-from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
 ```
 
-### 查询权益质押的参数
+%accordion%返回示例：%accordion%
+
+```bash
+Undelegations between:
+  Delegator:   gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s //委托账户地址
+  Con-account: gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 //共识账户地址
+	Entries:
+		Undelegation 0:
+		Creation Height:           904 //解绑交易区块高度
+		Min time to undelegate (unix): 2020-07-10 03:34:31 +0000 UTC //解绑完成时间
+		Expected balance:          10 //解绑代币数量
+Undelegations between:
+	...
+```
+%/accordion%
+
+
+### 查询权益质押的参数 [API](../API/staking.md#查询权益质押的参数-命令行)
+
 ```bash
 gatecli staking params --chain-id [链ID]
 ```
+
+%accordion%返回示例：%accordion%
+
+```bash
+Params:
+  Undelegating Time:    504h0m0s //解除委托完成时间
+  Max Con-accounts:    100 //最大共识账户数
+  Max Entries:       7 //支持最大事务数字(解除委托事务和重新委托事务)
+  Bonded Coin Denom: NANOGT //代币单位
+  Pow Rate:          1 //最小忠诚系数
+  Max Pow Rate:      2 //最大忠诚系数
+```
+%/accordion%
+
+
 

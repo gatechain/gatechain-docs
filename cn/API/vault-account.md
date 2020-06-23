@@ -1,8 +1,9 @@
 
-### 创建保险账户
+### 创建保险账户 [命令行](../cli/vault-account.md#创建保险账户-api)
+######此接口用于生成“创建保险账户”的交易体，将此交易体进行本地签名后，调用“发送交易”接口完成交易广播。
 
 ```
-POST  /vault-account/create/{base-account}
+POST  /v1/vault-account/create/{base-account}
 ```
 参数:
 
@@ -17,38 +18,39 @@ POST  /vault-account/create/{base-account}
 ```
 {
   "base_req": {
-    "from": "gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
-    "memo": "",
-    "chain_id": "testnet",
-    "account_number": "0",
-    "sequence": "4",
-    "gas": "200000",
-    "gas_adjustment": "1.2",
+    "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //发送者账户
+    "memo": "", //交易备注
+    "chain_id": "testnet", //链ID
+    "gas": "200000", //交易消耗的gas数量
     "fees": [
       {
-        "denom": "NANOGT",
-        "amount": "5000"
+        "denom": "NANOGT", //单位
+        "amount": "5000" //手续费
       }
     ],
-    "simulate": false
+    "simulate": false, //是否模拟计算gas
+    "valid_height":[ //交易生效高度
+         "600",
+         "900"
+    ]
   },
   "amount": [
     {
-      "denom": "NANOGT",
-      "amount": "500000000"
+      "denom": "NANOGT", //单位
+      "amount": "500000000" //转移代币数量
     }
   ],
   "vault_req":{
-    "security": "gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
-    "pubkey": "",
-    "delay_height": "100",
-    "clear_height": "50000"
+    "security": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //找回账户
+    "pubkey": "", //创建保险多签账户时填写普通多签账户公钥，创建保险单签账户为空
+    "delay_height": "100", //保险账户交易延迟生效高度
+    "clear_height": "50000" //账户清算高度
   }
 }
 ```
 %/accordion%
 
-返回:
+返回示例:
 
 %accordion%json%accordion%
 
@@ -58,43 +60,48 @@ POST  /vault-account/create/{base-account}
     "value":{
         "msg":[
             {
-                "type":"MsgCreateVault",
+                "type":"MsgCreateVault", //交易类型
                 "value":{
-                    "from_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
-                    "to_address":"gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek",
-                    "security_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
-                    "delay_height":"100",
-                    "clearing_height":"50000",
+                    "from_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //发送者账户
+                    "to_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //接收者账户即保险账户的基础账户
+                    "security_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //找回账户
+                    "delay_height":"100", //保险账户交易延迟生效高度
+                    "clearing_height":"50000", //账户清算高度
                     "amount":[
                         {
-                            "denom":"NANOGT",
-                            "amount":"500000000"
+                            "denom":"NANOGT", //单位
+                            "amount":"500000000" //转移代币数量
                         }
                     ],
-                    "pubkey":""
+                    "pubkey":"" //创建保险多签账户时填写普通多签账户公钥，创建保险单签账户为空
                 }
             }
         ],
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"5000"
+                    "denom":"NANOGT", //单位
+                    "amount":"5000" //手续费
                 }
             ],
-            "gas":"200000"
+            "gas":"200000" //交易消耗的gas
         },
-        "signatures":null,
+        "signatures":null, //签名
         "memo":"",
-        "valid_height":null
+        "valid_height": [ //交易有效高度
+            "600",
+            "900"
+        ] 
     }
 }
 ```
 %/accordion%
 
-### 更改清算高度
+### 修改清算高度 [命令行](../cli/vault-account.md#修改清算高度-api)
+
+######此接口用于生成“修改清算高度”的交易体，将此交易体进行本地签名后，调用“发送交易”接口完成交易广播。
 ```
-POST /vault-account/update-clearing-height
+POST /v1/vault-account/update-clearing-height
 ```
 
 请求BODY示例：
@@ -104,27 +111,28 @@ POST /vault-account/update-clearing-height
 ```
 {
   "base_req": {
-    "from": "vault115ljwsxqhxvu54ndg95kyxn7f82uj2yk380ucm4",
-    "memo": "",
-    "chain_id": "testnet",
-    "account_number": "0",
-    "sequence": "4",
-    "gas": "200000",
-    "gas_adjustment": "1.2",
+    "from": "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //发送者账户
+    "memo": "", //交易备注
+    "chain_id": "testnet", //链ID
+    "gas": "200000", //交易消耗的gas数量
     "fees": [
       {
-        "denom": "NANOGT",
-        "amount": "5000"
+        "denom": "NANOGT", //单位
+        "amount": "5000" //手续费
       }
     ],
-    "simulate": false
+    "simulate": false, //是否模拟计算gas
+    "valid_height": [ //交易有效高度
+         "600",
+         "900"
+   ] 
   },
-  "clearing_height": "6200"
+  "clearing_height": "6200" //新清算高度
 }
 ```
 %/accordion%
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -134,33 +142,38 @@ POST /vault-account/update-clearing-height
     "value":{
         "msg":[
             {
-                "type":"MsgUpdateClearingHeight",
+                "type":"MsgUpdateClearingHeight", //交易类型
                 "value":{
-                    "vault_address":"gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek",
-                    "clearing_height":"6200"
+                    "vault_address":"vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //发送者账户
+                    "clearing_height":"6200" //新清算高度
                 }
             }
         ],
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"5000"
+                    "denom":"NANOGT", //单位
+                    "amount":"5000" //手续费
                 }
             ],
-            "gas":"200000"
+            "gas":"200000" //交易消耗gas
         },
-        "signatures":null,
+        "signatures":null, //签名
         "memo":"",
-        "valid_height":null
+    	 "valid_height": [ //交易有效高度
+           "600",
+           "900"
+   		] 
     }
 }
 ```
 %/accordion%
 
-### 清算交易
+### 账户清算交易 [命令行](../cli/vault-account.md#账户清算交易-api)
+
+######此接口用于生成“账户清算交易”的交易体，将此交易体进行本地签名后，调用“发送交易”接口完成交易广播。
 ```
-POST /vault-account/clear
+POST /v1/vault-account/clear
 ```
 
 请求BODY示例：
@@ -170,27 +183,28 @@ POST /vault-account/clear
 ```
 {
     "base_req": {
-    "from": "gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
-    "memo": "",
-    "chain_id": "testnet",
-    "account_number": "0",
-    "sequence": "4",
-    "gas": "200000",
-    "gas_adjustment": "1.2",
-    "fees": [
+    "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //发送者账户，此为保险账户的找回账户
+    "memo": "", //交易备注
+    "chain_id": "testnet", //链ID
+    "gas": "200000", //交易消耗的gas数量
+    "fees": [ 
       {
-        "denom": "NANOGT",
-        "amount": "5000"
+        "denom": "NANOGT", //单位
+        "amount": "5000" //手续费
       }
     ],
-    "simulate": false
+    "simulate": false, //是否模拟计算gas
+    "valid_height": [ //交易有效高度
+         "600",
+         "900"
+   ] 
   },
-  "vaults": ["vault115ljwsxqhxvu54ndg95kyxn7f82uj2yk380ucm4"]
+  "vaults": ["vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6"] //保险账户地址
 }
 ```
 %/accordion%
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
@@ -200,11 +214,11 @@ POST /vault-account/clear
     "value":{
         "msg":[
             {
-                "type":"MsgClearVaultAccount",
+                "type":"MsgClearVaultAccount", //交易类型
                 "value":{
-                    "from_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
+                    "from_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //发送者账户，此为保险账户的找回账户
                     "vault_address":[
-                        "gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek"
+                        "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6" //保险账户
                     ]
                 }
             }
@@ -212,23 +226,85 @@ POST /vault-account/clear
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"5000"
+                    "denom":"NANOGT", //单位
+                    "amount":"5000" //手续费
                 }
             ],
-            "gas":"200000"
+            "gas":"200000" //交易消耗的gas
         },
-        "signatures":null,
+        "signatures":null, //签名
         "memo":"",
-        "valid_height":null
+        "valid_height": [ //交易有效高度
+            "600",
+            "900"
+        ] 
     }
 }
 ```
 %/accordion%
 
-### 查询保险账户的所有可撤回交易
+###查询保险账户信息 [命令行](../cli/vault-account.md#查询保险账户信息-api)
 ```
-GET  /vault-account/list-revocable-txs/{vault-account}
+GET  /v1/vault-account/{address}
+```
+参数：
+
+| 参数名 | 说明 |
+| :----| :---- |
+| address | 保险账户 |
+
+返回示例:
+
+%accordion%json%accordion%
+
+```
+{
+    "height": "4618", //区块高度
+    "result": {
+        "type": "AccountResp",
+        "value": {
+            "account_field": {
+                "type": "VaultAccount",
+                "value": {
+                    "base_account": {
+                        "account_number": "12",
+                        "address": "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //保险账户
+                        "public_key": {
+                            "type": "gatechain/PubKeyEd25519",
+                            "value": "IK8RZV4tqj/m/s9eEY9agWXF42yA5U3s31Q0D6Zp1rI="
+                        },
+                        "sequence": "0",
+                        "tokens": [
+                            {
+                                "amount": "9889", //账户余额
+                                "denom": "NANOGT" //单位
+                            }
+                        ]
+                    },
+                    "clearing_height": {
+                        "last_clearing_effect_height": "0", //上一次设置清算高度时的交易高度
+                        "last_clearing_height": "0", //上一次设置的清算高度
+                        "next_clearing_effect_height": "3693", //最新设置清算高度时的交易高度
+                        "next_clearing_height": "100000" //最新设置的清算高度
+                    },
+                    "delay_height": "100", //交易延迟生效高度
+                    "received_revocable_tokens": null, //仍可撤回的代币
+                    "security_address": "gt116h05fjhaay7sx3zl9w5ej3tpx3s94yhcsmt0gqcqsq26w2qvsyt4l82vftygtff0pfsr93", //找回账户
+                    "sent_revocable_tokens": [], //已发送可撤回的代币
+                    "vault_address": null //保险账户
+                }
+            },
+            "account_type": 1 //账户类型：0.单签普通账户、1.单签保险账户、2.多签普通账户、3.多签保险账户
+        }
+    }
+}
+```
+%/accordion%
+
+
+### 查询保险账户的所有可撤回交易 [命令行](../cli/revocable-tx.md#查询保险账户的可撤回交易列表-api)
+```
+GET  /v1/vault-account/list-revocable-txs/{vault-account}
 ```
 参数:
 
@@ -236,24 +312,24 @@ GET  /vault-account/list-revocable-txs/{vault-account}
 | :----| :---- |
 | vault-account | 保险账户 |
 
-返回：
+返回示例：
 
 %accordion%json%accordion%
 
 ```
 {
-    "height":"6947",
+    "height":"6947", //区块高度
     "result":[
         {
-            "height":"6947",
+            "height":"6947", //交易生效区块高度
             "msg_index":"0",
             "tokens":[
                 {
-                    "amount":"5",
-                    "denom":"NANOGT"
+                    "amount":"5", //转移代币数量
+                    "denom":"NANOGT" //单位
                 }
             ],
-            "tx_hash":"REVOCABLEPAY-BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8"
+            "tx_hash":"REVOCABLEPAY-BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8" //交易hash
         }
     ]
 }
