@@ -20,12 +20,12 @@ GateChain针对内最典型的两类安全问题的分别提供对应保障措�
 
 ## 保险账户
 
-[cli详细操作](./cli/vault-account.md)
+[CLI详细操作](./cli/vault-account.md)
 
-[api详细操作](./API/vault-account.md)
+[API详细操作](./API/vault-account.md)
 
 ## 安全交易
 
-[cli详细操作](./cli/revocable-tx.md)
+[CLI详细操作](./cli/revocable-tx.md)
 
-[api详细操作](./API/revocable-tx.md)
+[API详细操作](./API/revocable-tx.md)

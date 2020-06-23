@@ -2,7 +2,7 @@
 
 欢迎来到GateChain文档网站！
 
-本文档给出GateChain的概要，包括基础概念、功能特点、面向新用户的入手教程，以及面向深度用户和开发者的Command Line Interface（cli）和api等详细技术细节。
+本文档给出GateChain的概要，包括基础概念、功能特点、面向新用户的入手教程，以及面向深度用户和开发者的Command Line Interface（CLI）和API等详细技术细节。
 
 随着GateChain开发工作的不断推进，本站点的文档也将同步更新，请关注我们的官方信息，以确保您能及时获得GateChain最新讯息！
 
@@ -15,7 +15,7 @@
 
 GateChain以及基于GateChain的DEX其主要目的是采用全新的解决方案，构建一个企业级的安全、高效的去中心化数字资产存储，发布以及交易生态系统。-->
 
-GateChain生态，包括GateChain主链、GateChain DEX、GT、钱包等，构建了企业级的安全、高效的去中心化数字资产存储、发布及交易生态系统，提供了一种全新的区块链安全交易解决方案，
+GateChain生态，包括GateChain主链、GT、钱包等，构建了企业级的安全、高效的去中心化数字资产存储、发布及交易生态系统，提供了一种全新的区块链安全交易解决方案，
 
 生态主要提供以下功能：
 
@@ -92,7 +92,7 @@ GateChain为个人用户提供了普通账户和保险账户。普通账户用�
 
 * 基于链上保险账户（Vault Account）机制的账户模型。保险账户提供被盗资金可撤回以及私钥丢失可以恢复等重要安全特性，为个人用户，企业用户以及资金敏感的银行业提供全新的资产安全解决方案。
 * 支持可撤回逻辑的交易模型RTM（Revokable Transaction Model）。
-* 基于Tendermint的Gatechain主链架构。
+* 基于Algorand和Tendermint的GateChain主链架构。
 
 更多研究细节请参阅[“GateChain学术研究”](./gatechain-research.md)。
 
@@ -148,11 +148,12 @@ GateChain具有多种转账交易类型。为便于用户有效识别不同的�
 ## 快速入门
 
 1. [GateChain桌面钱包使用说明](./gatechain-wallet.md)
-1. 欢迎访问 [测试网区块浏览器](https://explorer.gatechain.io/)
+1. 欢迎访问 [GateChain区块链浏览器](https://explorer.gatechain.io/)
 
 ## 进阶使用
 
 - **全节点和本地测试网**：每个用户都可以自由搭建并运行一个完整的节点并运行自己的测试网络。全节点具有GateChain所有功能。详细安装部署步骤介绍请参阅“[安装部署](./gatechain-build.md)”。
+  - **加入主网**： 全节点可以接入到GateChain的主网络（需要与主网络保持版本一致。<!--，最新代码[由此](待开发)获取-->）实现对网络中的交易、区块信息等各项事务实时监控、广播。
   - **加入测试网**： 全节点可以接入到GateChain的公共测试网络（需要与测试网络保持版本一致。<!--，最新代码[由此](待开发)获取-->）实现对网络中的交易、区块信息等各项事务实时监控、广播。
   - **CLI**：GateChain在钱包以外，还提供客户端程序。用户可以使用命令行接口（CLI）与GateChain进行交互。通过命令行接口（CLI），用户可以操作GateChain链上账户，包括账户管理、交易管理、资产管理等，并对链上数据进行简单查询，例如查询账户余额、交易详情等。细节请参阅“[Command Line Interface Reference](./cli/README.md)”。
   - **API**： GateChain节点提供高级REST API服务，相关API信息请参阅“[REST API 列表](./API/README.md)”。

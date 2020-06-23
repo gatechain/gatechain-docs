@@ -19,7 +19,7 @@ POST  /v1/revocable-tx/send/{account}
 ```
 {
   "base_req": {
-	"from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //发送者账户
+	"from": "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //发送者账户
 	"memo": "", //交易备注
 	"chain_id": "testnet", //链ID
 	"gas": "200000", //交易消耗的gas数量
@@ -194,7 +194,7 @@ GET /v1/revocable-tx/status/{hash}
 
 ```
 {
-    "status": 1, //1：可以撤回，0：不可以撤回
+    "status": 1, //0：不可以撤回，1：可以撤回，2：已撤回
     "revoke_hash": "" //撤回交易hash
 }
 ```

@@ -1,219 +1,105 @@
 # 概述
 
->本文档涉及的版本为测试版，后继开发工作在持续进行。目前只针对专业生态机构开放。
+GateChain全节点是GateChain运行的核心支撑。GateChain全节点"full node"具备GateChain的所有功能，包括构建本地GateChain测试网、加入GateChain公共测试网或加入GateChain主网，同时支持下载链上区块数据，验证及执行业务逻辑，观察共识信息等。
 
-GateChain全节点是GateChain运行的核心支撑。GateChain全节点`full node`具备GateChain的所有功能，包括构建本地GateChain测试网或加入GateChain公共测试网，同时支持下载链上区块数据，验证业务逻辑，参与链上治理（暂不开放）等功能。
-
-## 支持环境
-GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos），windows环境以及docker安装。
+## 支持平台
+GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 
 ## 配置需求
-- 系统需求，装有较新版本的Mac OS X及以上版本，Windows 7以上版本或者Unix系统
-- 8Gb以上内存以及100Gb以上的磁盘空间
+硬件必须满足某些要求才能运行完整节点。
+
+- 系统需求，装有Mac OS 10.14.6及以上版本、CentOS Linux release 7.7.1908及以上版本或者Ubuntu 18.04.2及以上版本	
+- 4核8Gb以上内存以及100Gb以上的磁盘空间
 - 至少1MB/s的稳定互联网接入带宽
  
-## 安装步骤
+## GateChain全节点安装步骤
+#### 方式一:运行脚本自动安装
+  > 注意:请确保环境中已安装 "wget"
+  
+我们将在github维护安装程序脚本("install.sh")它负责链可执行文件的设置。这将使用以下默认值：
 
-介绍安装 `gated` and `gatecli`的具体步骤。
+- 可执行文件位于"/usr/local/bin"(即:"gated" "gatecli")
 
-> 注意:请确保环境中已安装`curl`
+	```
+	# 一键安装 
+	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node_binary/master/node/install.sh)
+	```
+	
+#### 方式二:自定义配置安装
+我们目前使用这个库来存储已编译的节点二进制文件的历史版本。
 
-#### Unix环境(mac OS,ubuntu,centos)
-##### 安装 Go
+- 克隆资源库
+	
+	```
+	git clone https://github.com/gatechain/node_binary.git
+	```
+- 根据修改日志选择对应版本二进制
 
-请根据[go 官方文档](https://golang.org/doc/install)安装 `go`.
+	```
+	cd node-binary/fullnode/{network}/{version}
+	```
+- 	复制二进制文件(即:"gated" "gatecli")到 "/usr/local/bin"
+	
+	```
+	cp gated gatecli /usr/local/bin
+	```
 
-然后正确配置`$GOPATH`, `$GOBIN`, and `$PATH` 
-例如:
+### 配置文件 
 
-```
-mkdir -p $HOME/go/bin 
-echo "export GOPATH=$HOME/go" >> ~/.bash_profile
-echo "export GOBIN=$GOPATH/bin" >> ~/.bash_profile
-echo "export PATH=$PATH:$GOBIN" >> ~/.bash_profile
-```
+为GateChain创建节点文件根目录$GATEHOME(即~/.gated),该目录在启动节点时默认使用，也可在启动命令后加 -h $GATEHOME(可自定义的节点根目录)
 
-::: 提示
-GateChain 需要 **Go 1.11.5+** .
-:::
-
-##### 命令行安装GateChain全节点
-
-下载最新版本的GateChain代码, 使用`master`分支代码进行编译安装.
-
-```
-mkdir -p $GOPATH/src/github.com
-cd $GOPATH/src/github.com
-git clone https://github.com/gatechain/gatechain-rollback-go.git
-mv gatechain-rollback-go gatechain
-cd gatechain && git checkout master
-make tools install
-```
-
-####  Windos环境
-##### 安装 Go
-
-请根据[go 官方文档](https://golang.org/doc/install)安装 `go`.**推荐以msi方式安装**
-
-在高级系统设置中正确配置环境变量`$GOPATH`, `$GOBIN`,`$PATH`,`GO111MODULE`,`GOPROXY `
-
-例如:
-
-1.创建相关文件夹
-
-```
-c:\workspace\go
-c:\workspace\go\bin
-c:\workspace\go\src
-c:\workspace\go\pkg
-```
-2.配置环境变量`$GOPATH`, `$GOBIN`,`$PATH`,`GO111MODULE`,`GOPROXY `
-
-```
-新建用户变量GOPATH值为c:\workspace\go
-新建用户变量GOBIN值为c:\workspace\go\bin
-新建用户变量GO111MODULE值为on
-新建用户变量GOPROXY值为https://goproxy.io
-编辑系统变量PATH最后添加c:\workspace\go\bin
-```
-
-::: 提示
-GateChain 需要 **Go 1.11.5+** .
-:::
-
-##### 安装GateChain全节点
-
-下载最新版本的gate代码, 使用`master`分支代码进行编译安装.
-
-在GOPATH路径下创建目录src/github.com
-
-命令行进入GOPATH下src/github.com
-
-```
-选择powershell程序: cd $env:GOPATH\src\github.com
-选择cmd程序: cd %GOPATH%\src\github.com
-```
-下载代码,选择`master`分支
-
-```
-git clone https://github.com/gatechain/gatechain-rollback-go.git
-cd gatechain && git checkout master
-```
-编译程序
-
-```
-go install .\cmd\gate\cmd\gated
-go install .\cmd\gate\cmd\gatecli
-```
-
-####  docker安装
-
-1.docker镜像导入
-
-```
-cd $GOPATH/src/github.com/gatechain/docker
-docker load -i gatechaintest.tar
-```
-2.运行
-
-```
-docker run -it gate:latest /bin/bash
-```
-
-#### 验证安装结果
-验证是否安装成功.
-
-```
-$ gated version --long
-$ gatecli version --long
-
-```
-安装成功会显示类似如下信息:
-
-```
-gate: 0.33.0
-git commit: 7b4104aced52aa5b59a96c28b5ebeea7877fc4f0
-vendor hash: 5db0df3e24cf10545c84f462a24ddc61882aa58f
-build tags: netgo ledger
-go version go1.12 linux/amd64
-```
+	
+	mkdir ~/.gated
 
 
-## 创建本地测试网
+### 设置配置加入主网或测试网
+将"config.json"  和 "genesis.json" 从 "node-binary/fullnode/{network}/{version}/config/" 复制到 "$GATEHOME/"
 
-####1.初始化创世区块文件
+### 启动节点
 
 ```bash
-gated init --chain-id=testnet private  (选参 --home 指定存放目录)
+gated start
 ```
 
-####2.创建账户地址
+### 创建本地私有链
 
-```bash
+- 初始化创世区块文件
+```
+gated init --chain-id=testing private
+```
+
+- 创建validator地址
+```
 gatecli account create validator
 ```
-
-####3.添加Genesis账户
-
-```bash
-gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000NANOGT
+- 初始化分配账户代币
+```
+gated add-genesis-account [validator-addr] 1000000000000000000000000000NANOGT
+```
+- 初始化共识账户
+```
+gated add-consensus-account [validator-addr]
+```
+- 创建去中心化交易所owner地址
+``` 
+gatecli account create
+```
+- 初始化去中心化交易所owner
+```
+gated add-genesis-dex-owner [owner-addr]
 ```
 
-####4.添加共识账户
-
-```bash
-gated add-consensus-account $(gatecli account show-key validator -a)
+- 启动测试网
 ```
-
-####5.初始化去中心化交易所owner
-
-```bash
-gated add-genesis-dex-owner $(gatecli account show-key validator -a)
-```
-
-####6.启动节点
-
-```bash
 gated start
 ```
 
-####7.gatecli 指令配置
+### 管理节点
+使用 "gatecli" 配置指令
 
-```bash
-cp ~/.gated/api.token ~/.gatecli/
-```
+	cp ~/.gated/api.token ~/.gatecli/
 
-## 加入测试网
+[CLI命令使用说明](./cli/README.md)
 
-####1.创建.gated
+[API接口使用说明](./API/README.md)
 
-```bash
-mkdir ~/.gated (可自定义目录)
-```
-
-####2.复制config、genesis文件
-
-```
-scp root@×××.×××.×××.×××:~/.gated/config.json ~/.gated/ (第一步创建的目录)
-scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/ (第 一步创建的目录)
-```
-##### DevNet <a href="/devnet/config.json" target="_blank">config.json</a>  <a href="/devnet/genesis.json" target="_blank">genesis.json</a>
-##### TestNet <a href="/testnet/config.json" target="_blank">config.json</a>  <a href="/testnet/genesis.json" target="_blank">genesis.json</a>
-
-####3.更改路径
-
-```bash
-修改config.json "RootDir" 为 (第一步创建的目录), "DNSBootstrapID" 为 "<network>.gatenode.cc"
-
-开发链
-修改genesis.json "network" 为 "devnet"
-
-测试链
-修改genesis.json "network" 为 "testnet"
-```
-
-####4.启动节点
-
-```bash
-gated start
-```

@@ -17,9 +17,9 @@
 - 创建保险多签账户
 	-  首先创建普通多签账户，用普通多签账户创建保险多签账户
 
-		- [cli生成保险多签账户](./cli/vault-account.md)
+		- [CLI生成保险多签账户](./cli/vault-account.md)
 
-		- [api生成保险多签账户](./API/vault-account.md)
+		- [API生成保险多签账户](./API/vault-account.md)
 	
 	- 改变保险多签账户地址的方式(vault1->vault2)：
 		- 创建保险多签账户时加公钥
