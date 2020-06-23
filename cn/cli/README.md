@@ -48,7 +48,7 @@ gatecli [命令1] [命令2] [命令3]... --help
 Must specify these options: --chain-id  when --trust-node is false
 ```
 
-如果信任该节点请输入 `--trust-node=true`，否则需要输入`--chain-id`，解决上述错误。
+如果信任该节点请输入 '--trust-node=true'，否则需要输入'--chain-id'，解决上述错误。
 
 
 
