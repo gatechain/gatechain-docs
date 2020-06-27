@@ -1,220 +1,105 @@
 # Overview
 
->This document is for testnet version and for professional and institutional user only at this moment.  Continuous development work is underway.
+GateChain full node is the pivot to keeping GateChain running. A GateChain "full node" has all functionalities of GateChain, including building a local testnet,  and joining  a public testnet  or mainnet. It also supports downloading onchain block data, validating and executing  business logic, observing consensus information, and more
 
-GateChain full node is the pivot to keeping GateChain running. GateChain`full node`has all functions of GateChain, including building a local testnet or joining  a public testnet. It also supports downloading onchain block data, verifying business logic and participating in onchain governance (yet to open) among other functions.
-
-## Supporting Environment
-GateChain full nodes currently supports Unix environment (mac OS,ubuntu, and centos), windows environment, and docker installations.
+## Supporting Platforms
+GateChain full nodes currently can run in Unix environment (mac OS,ubuntu, and centos).
 
 ## Configuration Requirements
-- system requirement:  Mac OS X or later. Windows 7 or later, or Unix system.
-- memory 8Gb or above and disk space  100 Gb or above
-- Stable access connection to Internet, with bandwidth 1MB/s  at least
+To run a full node, the hardware must meet certain requirements.
+
+- system requirement: Mac OS 10.14.6 or later, CentOS Linux release 7.7.1908 or later, or Ubuntu 18.04.2 or later	
+-  Quad-core, 8G RAM, 100Gb  HDD or more
+-  Stable connection to Internet, bandwidth 1MB/s  or more
  
-## Installation Instructions 
+## GateChain Full Node Installation Instructions 
+#### Method 1: Run A Script To Automatically Install
+  > Note:  make sure "wget” has been installed in your environment
+  
+We maintain the install script  ("install.sh" ) at github.  "install.sh" is responsible for the configurations  of the executable file of chain. Value below is used by default:
 
-Step by step installation instructions of  `gated` and `gatecli`.
+- executable file is located at "/usr/local/bin"(that is:"gated" "gatecli")
 
-> Note::Make sure `curl` already installed in the environment 
+	```
+	# One-Click Install 
+	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node_binary/master/node/install.sh)
+	```
+	
+#### Method 2: Customize Configuration And Installation
+We use the repository  to store historical versions of  the compiled node binary file for the time being. 
 
-#### Unix  Environment (mac OS,ubuntu,centos)
-##### Install Go
+- Clone the repository
+	
+	```
+	git clone https://github.com/gatechain/node_binary.git
+	```
+- Choose the correct binary file version according to change log.
 
-Read [go Document ](https://golang.org/doc/install) and install `go`.
+	```
+	cd node-binary/fullnode/{network}/{version}
+	```
+- 	copy the binary file (that is:"gated" "gatecli") to "/usr/local/bin"
+	
+	```
+	cp gated gatecli /usr/local/bin
+	```
 
-Then configure `$GOPATH`, `$GOBIN`, and `$PATH` 
-example:
+### Configure Files
 
-```
-mkdir -p $HOME/go/bin 
-echo "export GOPATH=$HOME/go" >> ~/.bash_profile
-echo "export GOBIN=$GOPATH/bin" >> ~/.bash_profile
-echo "export PATH=$PATH:$GOBIN" >> ~/.bash_profile
-```
+Create root directory  $GATEHOME (or ~/.gated) for Gatechain node file.  The directory is used by default when bootstrap a node. You can also add -h $GATEHOME (customized node root directory) after the start command
 
-:::  Tip
-GateChain requires **Go 1.11.5+** .
-:::
-
-##### Install GateChain Full Node with Command Line
-
-Download the latest GateChain code and use `master`branch code for compiling and installing.
-
-```
-mkdir -p $GOPATH/src/github.com
-cd $GOPATH/src/github.com
-git clone https://github.com/gatechain/gatechain-rollback-go.git
-mv gatechain-rollback-go gatechain
-cd gatechain && git checkout master
-make tools install
-```
-
-####  Windos Environment
-##### Install Go
-
-Read [go Document ](https://golang.org/doc/install) and install `go`.**recommended installation method msi**
-
-In advanced system settings, correctly configure  environmental variables `$GOPATH`, `$GOBIN`,`$PATH`,`GO111MODULE`,`GOPROXY `
-
-Example:
-
-1.Create a folder
-
-```
-c:\workspace\go
-c:\workspace\go\bin
-c:\workspace\go\src
-c:\workspace\go\pkg
-```
-2.Configure environmental variables`$GOPATH`, `$GOBIN`,`$PATH`,`GO111MODULE`,`GOPROXY `
-
-```
-For new user variable GOPATH, value is c:\workspace\go
-For new user variable GOBIN, value is c:\workspace\go\bin
-For new user variable GO111MODULE,value is on
-For new user variable GOPROXY,value is https://goproxy.io
-Edit system variable PATH and add c:\workspace\go\bin
-```
-
-:::  Tip
-GateChain requires **Go 1.11.5+** .
-:::
-
-##### Install GateChain Full Node
-
-Download the latest GateChain code and use `master`branch code for compiling and installing.
-
-Create a directory src/github.com  under GOPATH.
-
-Use command line to access to src/github.com  under GOPATH.
-
-```
-Select powershell program: cd $env:GOPATH\src\github.com
-Select cmd program: cd %GOPATH%\src\github.com
-```
-download code, select `master`branch
-
-```
-git clone https://github.com/gatechain/gatechain-rollback-go.git
-cd gatechain && git checkout master
-```
-Compile Program
-
-```
-go install .\cmd\gate\cmd\gated
-go install .\cmd\gate\cmd\gatecli
-```
-
-####  docker Installation
-
-1.docker mirror image importing
-
-```
-cd $GOPATH/src/github.com/gatechain/docker
-docker load -i gatechaintest.tar
-```
-2.Run
-
-```
-docker run -it gate:latest /bin/bash
-```
-
-#### Verify Installation Result
-Verify if installation is successful.
-
-```
-$ gated version --long
-$ gatecli version --long
-
-```
-If successfully installed, the following information will display:
-
-```
-gate: 0.33.0
-git commit: 7b4104aced52aa5b59a96c28b5ebeea7877fc4f0
-vendor hash: 5db0df3e24cf10545c84f462a24ddc61882aa58f
-build tags: netgo ledger
-go version go1.12 linux/amd64
-```
+	
+	mkdir ~/.gated
 
 
-## Create a Local Testnet
+### Configure  To Join Mainnet Or Testnet
+From"node-binary/fullnode/{network}/{version}/config/", copy "config.json"  and "genesis.json"  to "$GATEHOME/"
 
-####1.Initialize Genesis Block File
+### Start Node
 
 ```bash
-gated init --chain-id=testnet private  (Optional parameter--home specifies store directory)
+gated start
 ```
 
-####2.Create an Account Address 
+### Create A Privatechain Locally  
 
-```bash
+- Initialize the genesis block file
+```
+gated init --chain-id=testing private
+```
+
+- Create validator address
+```
 gatecli account create validator
 ```
-
-####3.Add Genesis Account
-
-```bash
-gated add-genesis-account $(gatecli account show-key validator -a) 1000000000000000000000000000NANOGT
+- Initialize account token distribution 
+```
+gated add-genesis-account [validator-addr] 1000000000000000000000000000NANOGT
+```
+- Initialize consensus accounts
+```
+gated add-consensus-account [validator-addr]
+```
+- Create decentralized exchange owner address
+``` 
+gatecli account create
+```
+- Initialize  decentralized exchange owner
+```
+gated add-genesis-dex-owner [owner-addr]
 ```
 
-####4.Add Consensus Account
-
-```bash
-gated add-consensus-account $(gatecli account show-key validator -a)
+- Start testnet
 ```
-
-####5.Initialize  Decentralized Exchange Owner
-
-```bash
-gated add-genesis-dex-owner $(gatecli account show-key validator -a)
-```
-
-####6.Start Node
-
-```bash
 gated start
 ```
 
-####7.gatecli Command configuration
+### Manage Node
+Use the "gatecli" to configure command
 
-```bash
-cp ~/.gated/api.token ~/.gatecli/
-```
+	cp ~/.gated/api.token ~/.gatecli/
 
-## Join Testnet
+[CLI Operational Instruction](./cli/README.md)
 
+[API Operational Instruction](./API/README.md)
 
-####1.Create.gated
-
-```bash
-mkdir ~/.gated (customizable)
-```
-
-####2.Copy config and genesis Files
-
-```
-scp root@×××.×××.×××.×××:~/.gated/config.json ~/.gated/ (directory created at the first step)
-scp root@×××.×××.×××.×××:~/.gated/genesis.json ~/.gated/ (directory created at the first step)
-```
-##### DevNet <a href="/devnet/config.json" target="_blank">config.json</a>  <a href="/devnet/genesis.json" target="_blank">genesis.json</a>
-##### TestNet <a href="/testnet/config.json" target="_blank">config.json</a>  <a href="/testnet/genesis.json" target="_blank">genesis.json</a>
-
-####3.Modify Path
-
-```bash
-Change config.json "RootDir" to the directory created at the first step, and "DNSBootstrapID" to "<network>.gatenode.cc"
-
-DevNet
-Change genesis.json "network" to "devnet"
-
-TestNet
-Change genesis.json "network" to "testnet"
-```
-
-####4.Start Node
-
-```bash
-gated start
-```

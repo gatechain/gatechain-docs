@@ -1,95 +1,98 @@
-### Query the latest block
 
+### Query The Latest Block Information
 ```
-GET /block/latest
+GET /v1/block/latest
 ```
-return:
+Return example:
 
 %accordion%json%accordion%
 
 ```
 {
-    "hash":"MHCH5NHC2IMVJA6DSLKJFSK4AYNDCMFC5SC32VOVDIPVEIBVRGHA",
-    "previousBlockHash":"2IZH63THDKR4W3SBQSDI2C44CZ5GI6CYHGJJPZ3D4A3ZXUS3OLTQ",
-    "seed":"XEEEQ5LXSASPY4YSMT7ZBZ4RDSLOPDPQXNNUOYA75VTZXJYCZ5RA",
-    "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
-    "round":"6913",
-    "period":"0",
-    "txnRoot":"WRS2VL2OQ5LPWBYLNBCZV3MEQ4DACSRDES6IUKHGOWYQERJRWC5A",
-    "reward":"0",
-    "rate":"0",
-    "frac":"0",
-    "txns":{
-
+    "hash": "H44ZPPWLRIXI3TJ64UZSHKKSJ4XRJMWIGU6FHFQXWFTRY3QHW3426MWP3IA44KJHZHBEHSOYYEWNO",//hash of the current block 
+    "previousBlockHash": "BF4BVNISMRNALPYXZAPPK4LKLVGTUDVWGNA5BQYJVHPDRZXTVGQG3LA4FB6RPHSYX5IEA44BGD3DE",//hash of the preceding block 
+    "seed": "HSIWSUEVTY4VRJCZMJ4VE7MFTDBA6SGIM7LY6YOWJ624ON7LFOINBIT6A3STY4GV52D5IIMNZDVNO",//VRF seed for draw
+    "proposer": "gt11ynwpc98gkh9uxxnkld7gjp5knu5ht75f0223uf298ap6ug6vtx5ank5vfde0pylmu09wzh",//consensus account that make a  proposal in the block
+    "height": "959",//block height
+    "period": "0",//block phase
+    "txnRoot": "LHHTNT65QQOXUV6MQM4LIZ5PRGGY32XQRFTHIO4WXY4BPVBCWEXQFZ2NZU37AYKWOOUFSL4YTX2A4",// hash of the transaction collection in a block
+    "txnps": {//transaction collection
+        "proxyTransactions": null
     },
-    "txnps":{
-        "proxyTransactions":null
+    "timestamp": "1591788058",//time the block is generated at
+    "UpgradeState": { //consensus protocol version status
+        "currentProtocol": "v1", //current version number
+        "nextProtocol": "", //target version number to upgrade to 
+        "nextProtocolApprovals": "0", //votes already received by target version
+        "nextProtocolVoteBefore": "0",//deadline height  to vote to  target version
+        "nextProtocolSwitchOn": "0" // height to upgrade to target version
     },
-    "timestamp":"1583535648",
-    "UpgradeState":{
-        "currentProtocol":"v1",
-        "nextProtocol":"",
-        "nextProtocolApprovals":"0",
-        "nextProtocolVoteBefore":"0",
-        "nextProtocolSwitchOn":"0"
+    "UpgradeVote": { //voting status of consensus protocol upgrade 
+        "upgradePropose": "", //target version number to upgrade to 
+        "upgradeApprove": false //voting results of upgrading to target version
     },
-    "UpgradeVote":{
-        "upgradePropose":"",
-        "upgradeApprove":false
-    }
+    "CertCommitteeInfo": [ //block committee information(in locall certificate)（potential reward winners of next round）
+       "gt117h3k4uaftcql9zaqll5vg2x3gn67576qyklnvmzh9xldczryqpzpdj69xygrm0hvklufun",
+       "singleCommitteePower": "90000341" // consensus account power of this round
+    ],
+    "BlockCommitteeInfo": [ //block committee information（in block head）（reward winners of this round）
+       "gt117h3k4uaftcql9zaqll5vg2x3gn67576qyklnvmzh9xldczryqpzpdj69xygrm0hvklufun",
+       "singleCommitteePower": "90000323" //consensus account power of preceding round 
+    ],
+    "autoOfflineAccounts": [] //consensus accounts auto-offline at specified round
 }
 ```
 
 %/accordion%
 
-### Query a specific block height
-
+### Query A Specific BLock Information [command line](../cli/block.md#Query A Specific BLock Information-api)
 ```
-GET /block/{height}
+GET /v1/block/{height}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
-| :----| :---- |
+| Parameter | Description | 
+| ----| ---- |
 | height | block height（>=1）|
 
-return:
+Return example:
 
 %accordion%json%accordion%
 
 ```
 {
-    "hash":"HO7BW75ECIXFBTBIFMYAIDDWGSRAEOGDC3GJUOEULBPD5L2M3C5Q",
-    "previousBlockHash":"5ZKJQICRC2QS3H2UO5YFQPLFKQ6DUNTDBBF3573P6IQTADHD57MA",
-    "seed":"5GIMQOE4GYGKSLGIDUNNY3YMBXIZVRTK2GQLNHFRCNZE5AJQBIIQ",
-    "proposer":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
-    "round":"6847",
-    "period":"0",
-    "txnRoot":"MLZADT4OGH4A7HEM6T275WKQQWLIONQ2OLPY2DAZQMIZIWTDQJ5Q",
-    "reward":"0",
-    "rate":"0",
-    "frac":"0",
-    "txns":{
-
+    "hash": "H44ZPPWLRIXI3TJ64UZSHKKSJ4XRJMWIGU6FHFQXWFTRY3QHW3426MWP3IA44KJHZHBEHSOYYEWNO",//hash of current block 
+    "previousBlockHash": "BF4BVNISMRNALPYXZAPPK4LKLVGTUDVWGNA5BQYJVHPDRZXTVGQG3LA4FB6RPHSYX5IEA44BGD3DE",//hash of preceding block 
+    "seed": "HSIWSUEVTY4VRJCZMJ4VE7MFTDBA6SGIM7LY6YOWJ624ON7LFOINBIT6A3STY4GV52D5IIMNZDVNO",//VRF seed for draw
+    "proposer": "gt11ynwpc98gkh9uxxnkld7gjp5knu5ht75f0223uf298ap6ug6vtx5ank5vfde0pylmu09wzh",//consensus account to propose in a block
+    "height": "959",//block height
+    "period": "0",//block phase
+    "txnRoot": "LHHTNT65QQOXUV6MQM4LIZ5PRGGY32XQRFTHIO4WXY4BPVBCWEXQFZ2NZU37AYKWOOUFSL4YTX2A4",// hash of the transaction collection in a block
+    "txnps": {//transaction collection
+        "proxyTransactions": null
     },
-    "txnps":{
-        "proxyTransactions":[
-            "ugG5zc/tCjlHsWHOChSn5OgYFzM5Ss2oLSxDT8k6uSUS0RIUCN182YZJQCg9iZzFMx+mjZdFgOgaBwoCR0MSATUSDQoHCgJHQxIBMRDAmgwaagom61rphyECf5JSNgVnJU01dhlUy/vAyGh0gTpTldbMYJDevIrLtoASQFDNGmgLIEh9h9NF6VQ5Y63fNgMQe/49Im1OlaJpoOXKJUpAzPuPSkNPe4B1Z3OXQFJODd+TabdsDW26cyv41iQ="
-        ]
+    "timestamp": "1591788058",//time the block is generated at
+    "UpgradeState": { //consensus protocol version status
+        "currentProtocol": "v1", //current version number
+        "nextProtocol": "", //target version number to upgrade to 
+        "nextProtocolApprovals": "0", //votes already received by target version
+        "nextProtocolVoteBefore": "0",//deadline height  to vote to  target version
+        "nextProtocolSwitchOn": "0" // height to upgrade to target version
     },
-    "timestamp":"1583533998",
-    "UpgradeState":{
-        "currentProtocol":"v1",
-        "nextProtocol":"",
-        "nextProtocolApprovals":"0",
-        "nextProtocolVoteBefore":"0",
-        "nextProtocolSwitchOn":"0"
+    "UpgradeVote": { //consensus protocol upgrade voting status
+        "upgradePropose": "", //target version number to upgrade to 
+        "upgradeApprove": false //voting results of upgrading to target version
     },
-    "UpgradeVote":{
-        "upgradePropose":"",
-        "upgradeApprove":false
-    }
+    "CertCommitteeInfo": [ //block committee information (in localcertificate)（potential reward winners of next round）
+       "gt117h3k4uaftcql9zaqll5vg2x3gn67576qyklnvmzh9xldczryqpzpdj69xygrm0hvklufun",
+       "singleCommitteePower": "90000341" //consensus account power of this round 
+    ],
+    "BlockCommitteeInfo": [ //block committee information（in block head）（reward winners of this round）
+       "gt117h3k4uaftcql9zaqll5vg2x3gn67576qyklnvmzh9xldczryqpzpdj69xygrm0hvklufun",
+       "singleCommitteePower": "90000323" //consensus account power of preceding round 
+    ],
+    "autoOfflineAccounts": [] //consensus accounts auto-offline  at specified round
 }
 ```
-
 %/accordion%
+

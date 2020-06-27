@@ -1,81 +1,161 @@
-#### Setup an account to withdraw rewards
+
+### Setup Account to Fetch Income [API](../API/distribution.md#Setup Account to Fetch Income-command line)
+```bash
+gatecli distribution set-withdraw-addr [account to fetch income] --from [sender account] --chain-id [chain ID]
+```
+Example: 
 
 ```bash
-gatecli distribution set-withdraw-account [withdraw-addr] --from [sender account] --chain-id [chain ID]
+gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
 ```
-Example：
+
+%accordion%Return example: %accordion%
 
 ```bash
-gatecli distribution set-withdraw-account gc11kfwurleaskangv45ssmpzs2sprhxjsfdlqgqjs --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 //transaction hash, using gatecli tx show {hash}to query details of this transaction
+  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+  Raw Log: sync broadcast tx success transaction is sent successfully
 ```
+%/accordion%
 
-#### Withdraw rewards from a single consensus account
+
+### Delegator Account Fetch Partial Income From A Consensus Account [API](../API/distribution.md#Delegator Account Fetch Partial Income From A Consensus Account-command line)
+```bash
+gatecli distribution withdraw-rewards [consensus account address] --from [sender account] --chain-id [chain ID]
+```
+Example: 
 
 ```bash
-gatecli distribution withdraw-rewards [con-account-addr] --from [sender account] --chain-id [chain ID]
+gatecli distribution withdraw-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
 ```
-Example：
+
+%accordion%Return example: %accordion%
 
 ```bash
-gatecli distribution withdraw-rewards gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 //transaction hash, using gatecli tx show {hash}to query details of this transaction
+  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+  Raw Log: sync broadcast tx success transaction is sent successfully
 ```
+%/accordion%
 
-#### Withdraw all rewards from all consensus accounts
 
+### Delegator Account Fetch All Income From A Consensus Account [API](../API/distribution.md# Delegator Account Fetch All Income From A Consensus Account-command line)
 ```bash
 gatecli distribution withdraw-all-rewards --from [sender account] --chain-id [chain ID]
 ```
-Example：
+Example: 
 
 ```bash
-gatecli distribution withdraw-all-rewards --from gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 --chain-id testnet
+gatecli distribution withdraw-all-rewards --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
 ```
 
-#### Query the delegation rewards of the delegation account
+%accordion%Return example: %accordion%
 
 ```bash
-gatecli distribution rewards [delegator-addr] [con-account-addr] --chain-id [chain ID]
+  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 //transaction hash, using gatecli tx show {hash}to query details of this transaction
+  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+  Raw Log: sync broadcast tx success transaction is sent successfully
 ```
-Example：
+%/accordion%
+
+
+### Query Delegation Income of A Delegator Account  In A Consensus Account [API](../API/distribution.md#Query Delegation Income of A Delegator Account  In A Consensus Account -command line)
+```bash
+gatecli distribution rewards[delegator account address] [consensus account address] --chain-id [chain ID]
+```
+Example: 
 
 ```bash
-gatecli distribution rewards gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88 gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+gatecli distribution rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
 ```
 
-#### Query unpaid delegation rewards of the consensus account
+%accordion%Return example: %accordion%
 
 ```bash
-gatecli distribution validator-outstanding-rewards [con-account-addr] --chain-id [chain ID]
+Delegator Total Rewards:
+  Rewards:
+	Con-account: gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 // consensus account address
+	Reward: 21.644616251838158370NANOGT //commission and mining earnings
 ```
-Example：
+%/accordion%
+
+
+### Query Delegation Income of A Delegator Account  In All Consensus Accounts [API](../API/distribution.md#Query Delegation Income of A Delegator Account  In All Consensus Accounts-command line)
+```bash
+gatecli distribution rewards[delegator account address] --chain-id [chain ID]
+```
+Example: 
 
 ```bash
-gatecli distribution validator-outstanding-rewards gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+gatecli distribution rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
 ```
 
-#### Query the consensus account's commission
+%accordion%Return example: %accordion%
 
 ```bash
-gatecli distribution commission [con-account-addr] --chain-id [chain ID]
+Delegator Total Rewards:
+  Rewards:
+	Con-account: gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 // consensus account address
+	Reward: 21.644616251838158370NANOGT //commission and mining earnings
+	Con-account:...
+Total: 11997269037.266215577925788000NANOGT //total delegation income of a delegator account
+
 ```
-Example：
+%/accordion%
+
+
+
+### Query  Delegation Income Pending Paying By A  Consensus Account [API](../API/distribution.md#Query  Delegation Income Pending Paying By A  Consensus Account-command line)
 
 ```bash
-gatecli distribution commission gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg --chain-id testnet
+gatecli distribution outstanding-rewards [consensus account address] --chain-id [chain ID]
 ```
-
-#### Query penalty list of a consensus account
+Example: 
 
 ```bash
-gatecli distribution slashes [con-account-addr] [start-height] [end-height] --chain-id [chain ID]
+gatecli distribution outstanding-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
 ```
-Example：
+
+%accordion%Return example: %accordion%
 
 ```bash
-gatecli distribution slashes gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg 100 1000 --chain-id testnet
+660467079334.408199257068561630NANOGT //delegation income yet to be paid
+```
+%/accordion%
+
+### Query Consensus Account Income [API](../API/distribution.md#Query Consensus Account Income-command line)
+
+```bash
+gatecli distribution commission [consensus account address] --chain-id [chain ID]
+```
+Example: 
+
+```bash
+gatecli distribution commission gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
 ```
 
-#### Query allocation and foundation params
+%accordion%Return example: %accordion%
+
+```bash
+660467079334.408199257068561630NANOGT //commission and mining earnings
+```
+%/accordion%
+
+### Query Distribution And Foundation Parameters [API](../API/distribution.md#Query Distribution And Foundation Parameters-command line)
+
 ```bash
 gatecli distribution params --chain-id [chain ID]
 ```
+
+%accordion%Return example: %accordion%
+
+```bash
+Distribution Params:
+  Community Tax:          "0.020000000000000000" //Community Tax rate
+  Withdraw Addr Enabled:  true
+  First CommitteeReward:  "0.400000000000000000" //The first Committee mining reward rate
+  Second CommitteeReward:  "0.350000000000000000" //The second Committee mining reward rate
+  Third CommitteeReward:  "0.250000000000000000" //The third Committee mining reward rate
+```
+%/accordion%
+

@@ -1,25 +1,26 @@
-### Transaction information stored at an decentralized exchange
+
+### Trades Information Stored At Decentralized Exchange
 
 ```
 POST  /dex/trade
 ```
 
-request BODY example ：
+request BODY example:
 
 %accordion%json%accordion%
 
 ```
 {
     "base_req": {
-        "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "chain_id" : "testing"
     },
     "trade" : {
         "tradeid" : "100000",
-        "market" : "validatortoken_gc",
+        "market" : "validatortoken_gt",
         "maker-orderid" : "3",
         "maker-nonce" : "1",
-        "maker-pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+        "maker-pubkey" : "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
         "maker-side" : "buy",
         "maker-amount" : "1000validatortoken",
         "maker-price" : "1NANOGT",
@@ -27,7 +28,7 @@ request BODY example ：
         "maker-time" : "1566894567",
         "taker-orderid" : "4",
         "taker-nonce" : "1",
-        "taker-pubkey" : "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+        "taker-pubkey" : "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gtnty5q7rrgzy",
         "taker-side" : "sell",
         "taker-amount" : "1000validatortoken",
         "taker-price" : "1NANOGT",
@@ -43,10 +44,10 @@ request BODY example ：
     }
 }
 ```
-
 %/accordion%
 
-return  example:
+
+Return  example:
 
 %accordion%json%accordion%
 
@@ -86,7 +87,7 @@ return  example:
               "amount": "1",
               "denom": "NANOGT"
             },
-            "maker-pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+            "maker-pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
             "maker-side": "buy",
             "maker-sign": "3q4GpYUZOqopMF8hUEDJAEybgY4hGWPgOHv9pZCfl2Q9Jv3dk/YCY9FCqstsBJjSLB4LZHqH80L9IVJ38AM5Ug==",
             "maker-sub-Amount": {
@@ -94,12 +95,12 @@ return  example:
               "denom": "NANOGT"
             },
             "maker-time": "2019-08-27T08:29:27Z",
-            "market": "validatortoken_gc",
+            "market": "validatortoken_gt",
             "price": {
               "amount": "1",
               "denom": "NANOGT"
             },
-            "sender": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "sender": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
             "taker-amount": {
               "amount": "1000",
               "denom": "validatortoken"
@@ -118,7 +119,7 @@ return  example:
               "amount": "1",
               "denom": "NANOGT"
             },
-            "taker-pubkey": "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+            "taker-pubkey": "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gtnty5q7rrgzy",
             "taker-side": "sell",
             "taker-sign": "w4TTEJjzF4Y+aCdW6c26pa6IxDoALyYkoPUwydmNhikyRwwO/5RjMd4ybBGQXATSfdtyiD5klhuuire4cvDVjQ==",
             "taker-time": "2019-08-27T08:29:27Z",
@@ -132,23 +133,22 @@ return  example:
   }
 }
 ```
-
 %/accordion%
 
-### Deposit token to an decentralized exchange from an account
 
+### Deposit Token to A Decentralized Exchange From An Account
 ```
 POST  /dex/deposit
 ```
 
-request BODY example ：
+request BODY example:
 
 %accordion%json%accordion%
 
 ```
 {
     "base_req":{
-        "from":"gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from":"gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "fees":[
             {
                 "amount":"2000",
@@ -158,15 +158,14 @@ request BODY example ：
         "chain_id":"testing"
     },
     "deposit":{
-        "to":"gc11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp",
+        "to":"gt11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp",
         "amount":"10NANOGT"
     }
 }
-```
-
+```    
 %/accordion%
 
-return  example:
+Return  example:
 
 %accordion%json%accordion%
 
@@ -195,8 +194,8 @@ return  example:
                 "denom": "NANOGT"
               }
             ],
-            "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
-            "to": "gc11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp"
+            "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "to": "gt11wcjrdqhhy9dusftu29dqqqdc25klvcgq7lj3vp"
           }
         }
       }
@@ -208,26 +207,26 @@ return  example:
 
 %/accordion%
 
-### Withdraw token from an decentralized exchange
 
+### Withdraw Token From An Decentralized Exchange
 ```
 POST  /dex/withdraw
 ```
 
-**only admin has the privilege to execute this operation.**
+**only admin has the permission to execute this operation.**
 
-request BODY example ：
+request BODY example:
 
 %accordion%json%accordion%
 
 ```
 {
     "base_req": {
-        "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "chain_id" : "testing"
     },
     "withdraw" : {
-        "pubkey" : "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+        "pubkey" : "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
         "coin" : "10NANOGT",
         "nonce" : "2",
         "time" : "1563183005",
@@ -236,10 +235,9 @@ request BODY example ：
     }
 }
 ```
-
 %/accordion%
 
-return  example:
+Return  example:
 
 %accordion%json%accordion%
 
@@ -256,7 +254,7 @@ return  example:
       {
         "type": "dex/MsgWithdraw",
         "value": {
-          "from": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+          "from": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
           "gas": {
             "amount": "1",
             "denom": "NANOGT"
@@ -267,7 +265,7 @@ return  example:
               "denom": "NANOGT"
             },
             "nonce": "2",
-            "pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+            "pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
             "sign": "RSdM8eCqXQWC7LmWH2Y4QnAUayoWtD2JZdkMUnDyz496+GsADTP3fGOohi0RMlHGTNtfKSHDu/HTIVcJMnlCxw==",
             "time": "2019-07-15T09:30:05Z"
           }
@@ -278,25 +276,23 @@ return  example:
   }
 }
 ```
-
 %/accordion%
 
-### Setup an admin account at decentralized exchange 
-
+### Setup Admin Account at Decentralized Exchange 
 ```
 POST  /dex/set-admin
 ```
 
-**only  an existing admin has the privilege to setup a new admin.**
+**only  an existing admin has the permission to setup a new admin.**
 
-request BODY example ：
+request BODY example:
 
 %accordion%json%accordion%
 
 ```
 {
     "base_req":{
-        "from":"gc11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
+        "from":"gt11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
         "fees":[
             {
                 "amount":"2000",
@@ -306,15 +302,14 @@ request BODY example ：
         "chain_id":"testing"
     },
     "setadmin":{
-        "acc":"gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+        "acc":"gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
         "type":"admin"
     }
 }
 ```
-
 %/accordion%
-
-return  example:
+    
+Return  example:
 
 %accordion%json%accordion%
 
@@ -337,8 +332,8 @@ return  example:
         "type": "dex/MsgAdmin",
         "value": {
           "SetAdminInfo": {
-            "acc": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
-            "from": "gc11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
+            "acc": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja",
+            "from": "gt11wc8uc265yfzs3m0xnj0zcsm5th33nhu5qfywds",
             "typ": "admin"
           }
         }
@@ -351,18 +346,18 @@ return  example:
 
 %/accordion%
 
-### Query a trade information at decentralized exchange 
 
+### Query A Trade Information At Decentralized Exchange 
 ```
 GET		/dex/query-trade/{trade-id}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
+| Parameter| Description |
 | :----| :---- |
-| trade-id | trade ID |
-
-return  example:
+| trade-id | transaction ID|
+    
+Return  example:
 
 %accordion%json%accordion%
 
@@ -371,10 +366,10 @@ return  example:
    "type": "dex/Trade",
    "value": {
      "tradeid": "100001",
-     "market": "validatortoken-1e9_gc",
+     "market": "validatortoken-1e9_gt",
      "maker-orderid": "5",
      "maker-nonce": "2",
-     "maker-pubkey": "gc1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
+     "maker-pubkey": "gt1pub1addwnpepq22grmd2m3q54qfred9hw2s6pj6suereyvdpsjka2jensj5u5uzf7yz0xku",
      "maker-side": "buy",
      "maker-amount": {
        "denom": "validatortoken-1e9",
@@ -388,7 +383,7 @@ return  example:
      "maker-time": "2019-08-27T08:29:27Z",
      "taker-orderid": "6",
      "taker-nonce": "2",
-     "taker-pubkey": "gc1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gcnty5q7rrgzy",
+     "taker-pubkey": "gt1pub1addwnpepqf9ylh4cw2dz24d9qurewjvn80p77kpwef6dyhrrf6l0p7gtnty5q7rrgzy",
      "taker-side": "sell",
      "taker-amount": {
        "denom": "validatortoken-1e9",
@@ -429,25 +424,25 @@ return  example:
        "amount": "1"
      },
      "time": "2019-09-03T03:49:17.782624089Z",
-     "sender": "gc11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja"
+     "sender": "gt11y6dgh0d94gqraqax7ptaste5c4ya96nyzswsja"
    }
  }
 ```
 
 %/accordion%
 
-### Query account information at decentralized exchange 
 
+### Query Account Information At Decentralized Exchange 
 ```
 GET /dex/query-account/{dex-account}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
+| Parameter| Description |
 | :----| :---- |
-| dex-account | DEX account |
+| dex-account | DEX Account |
 
-return example：
+Return  example:
 
 %accordion%json%accordion%
 
@@ -464,18 +459,17 @@ return example：
 
 %/accordion%
 
-### Query admin information at decentralized exchange 
-
+### Query Admin Information At Decentralized Exchange 
 ```
 GET /dex/query-admin/{admin-type}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
+| Parameter| Description |
 | :----| :---- |
 | admin-type| owner/admin/fee |
 
-return example：
+Return  example:
 
 %accordion%json%accordion%
 
@@ -484,10 +478,9 @@ return example：
 	"type": "dex/SetAccInfo",
 	"value": {
 		"typ": "fee",
- 		"acc": "gc11uqyqvmzwvqprv50x73lkzkxlgm9mw3fr7u003y",
+ 		"acc": "gt11uqyqvmzwvqprv50x73lkzkxlgm9mw3fr7u003y",
  		"from": ""
 	}
 }
 ```
-
 %/accordion%

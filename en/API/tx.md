@@ -1,39 +1,46 @@
-### Send a transaction
 
+### Send Transaction [command line](../cli/tx.md#Send Transaction-api)
+######Use the interface to finish broadcasting if a transaction body is already locally singed.
 ```
-POST /tx
+POST /v1/tx
 ```
 
-Request BODY example:
+Request BODY example::
 
 %accordion%json%accordion%
 
 ```
+After locally singing a transaction,  you just need to copy the signatures file as request body. No need to copy below content.
 {
-    "tx": {
+    "type":"StdTx",
+    "value":{
         "msg":[
             {
-                "type":"MsgSend",
+                "type":"MsgCreateVault", //transaction type（This transaction is to create a Vault Account. ）
                 "value":{
-                    "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",
-                    "to_address":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k",
+                    "from_address":"gt11tgjslrwl0j35czlj0ayxq9t7hzd0gtckfwc57qsl3nftl7zyk8gccv5kexetmm3xsv2tj5", //sender account
+                    "to_address":"gt11e02xkclka6h64c80az66ampjzzwe739tlnrkxya3ecxrj6e67plh626zad7tqz3w3m8xqt", //recipient account
+                    "security_address":"gt11tgjslrwl0j35czlj0ayxq9t7hzd0gtckfwc57qsl3nftl7zyk8gccv5kexetmm3xsv2tj5", //Retrieval Account 
+                    "delay_height":"100", //delay height before a transaction takes effect
+                    "clearing_height":"50000", //clearing height
                     "amount":[
                         {
-                            "denom":"NANOGT",
-                            "amount":"5000"
+                            "denom":"NANOGT", //unit
+                            "amount":"500" //transfer token amount
                         }
-                    ]
+                    ],
+                    "pubkey":""
                 }
             }
         ],
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"5000"
+                    "denom":"NANOGT", //unit
+                    "amount":"11" //fee
                 }
             ],
-            "gas":"200000"
+            "gas":"200000" //gas consumed by the transaction
         },
         "nonces":[
             null
@@ -41,46 +48,45 @@ Request BODY example:
         "signatures":[
             {
                 "pub_key":{
-                    "type":"tendermint/PubKeyEd25519",
-                    "value":"Gz3RMlEjEVSJCXrBPhyG5fov5EwzE/zamPMLcE4rol4="
+                    "type":"gatechain/PubKeyEd25519",
+                    "value":"pIGmDHUICq/NrI6TYJj8/yGbJfa/EjrJ50ImqSVbPyw="
                 },
-                "signature":"+kIUwpJdHSRB6MHfnWvRkNHTkuDEV70awSyDKP8wp7aJrc+/5p6bc6FCed2KyISxlsIQo/ay8JPCdYEbkqUkAA=="
+                "signature":"CYUFLRQf2JCw1kR0AFIdUhMrc+qu5owzwh1outwoAn6AKf2joFScL2qxWFzHHLO/3uig87E7rFUQmajz47d/Dw==" //signature
             }
         ],
         "memo":"",
-        "valid_height":[
-            "1",
-            "1000"
+        "valid_height":[ //block height at which the transaction takes effect
+            "2300",
+            "2500"
         ]
     }
 }
 ```
-
 %/accordion%
 
-return:
+Return example:
 
 %accordion%json%accordion%
 
 ```
 {
-    "height":"0",
-    "txhash":"IRREVOCABLEPAY-79459C3708F7E38EA35977C12E5ECB659D7F23B772BEB5A58F52DFAA4C72D985",
+    "height":"0", //block height
+    "txhash":"IRREVOCABLEPAY-79459C3708F7E38EA35977C12E5ECB659D7F23B772BEB5A58F52DFAA4C72D985", //transaction hash
     "data":"zgG5zc/tCkDcKqCFChTtdOB+KzokLvRctbEBeDtte5QIlxIUntatO0LfnWuAFDcHJkcXQrv6qA8aDgoGTkFOT0dDEgQ1MDAwEhQKDgoGTkFOT0dDEgQ1MDAwEMCaDBoAImkKJRYk3mQgGz3RMlEjEVSJCXrBPhyG5fov5EwzE/zamPMLcE4rol4SQPpCFMKSXR0kQejB351r0ZDR05LgxFe9GsEsgyj/MKe2ia3Pv+aem3OhQnndisiEsZbCEKP2svCTwnWBG5KlJAAyAwHoBw==",
-    "raw_log":"boradcast tx success",
+    "raw_log":"boradcast tx success", 
     "tx":{
         "type":"StdTx",
         "value":{
             "msg":[
                 {
-                    "type":"MsgSend",
+                    "type":"MsgSend", //transaction type
                     "value":{
-                        "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",
-                        "to_address":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k",
+                        "from_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
+                        "to_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //recipient account
                         "amount":[
                             {
-                                "denom":"NANOGT",
-                                "amount":"5000"
+                                "denom":"NANOGT", //unit
+                                "amount":"5000" //transfer token amount
                             }
                         ]
                     }
@@ -89,11 +95,11 @@ return:
             "fee":{
                 "amount":[
                     {
-                        "denom":"NANOGT",
-                        "amount":"5000"
+                        "denom":"NANOGT", //unit
+                        "amount":"5000" //fee
                     }
                 ],
-                "gas":"200000"
+                "gas":"200000" //gas consumed by the transaction
             },
             "nonces":[
                 null
@@ -101,14 +107,14 @@ return:
             "signatures":[
                 {
                     "pub_key":{
-                        "type":"tendermint/PubKeyEd25519",
+                        "type":"gatechain/PubKeyEd25519",
                         "value":"Gz3RMlEjEVSJCXrBPhyG5fov5EwzE/zamPMLcE4rol4="
                     },
-                    "signature":"+kIUwpJdHSRB6MHfnWvRkNHTkuDEV70awSyDKP8wp7aJrc+/5p6bc6FCed2KyISxlsIQo/ay8JPCdYEbkqUkAA=="
+                    "signature":"+kIUwpJdHSRB6MHfnWvRkNHTkuDEV70awSyDKP8wp7aJrc+/5p6bc6FCed2KyISxlsIQo/ay8JPCdYEbkqUkAA==" //signature
                 }
             ],
             "memo":"",
-            "valid_height":[
+            "valid_height":[ //block height at which a transaction takes effect
                 "1",
                 "1000"
             ]
@@ -116,50 +122,51 @@ return:
     }
 }
 ```
-
 %/accordion%
 
-### Normal transaction
+### Normal Transaction
+
+######The interface generates transaction body  for “Normal Transaction”.After locally signing it, you can invoke “Send Transaction” interface to finish broadcasting.
 
 ```
-POST  /tx/send/{account}
+POST  /v1/tx/send/{account}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
+| Parameter | Description |
 | :----| :---- |
-| account | recipient account |
+| account | Recipient Account |
 
-request BODY example：
+Request BODY example:：
 
 %accordion%json%accordion%
 
 ```
 {
     "base_req": {
-        "from": "gc11kfwurleaskangv45ssmpzs2sprhxjsfdlqgqjs",
-        "memo": "",
-        "chain_id": "testnet",
-        "account_number": "0",
-        "sequence": "4",
-        "gas": "200000",
-        "gas_adjustment": "1.2",
-        "fees": [{
-            "denom": "NANOGT",
-            "amount": "5000"
+        "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
+        "memo": "", //Transaction remarks
+        "chain_id": "testnet", //chain ID
+        "gas": "200000", //gas consumed by the transaction
+        "fees": [{ 
+            "denom": "NANOGT", //unit
+            "amount": "5000" //fee
         }],
-        "simulate": false
+        "simulate": false, //if calculate simulated gas
+        "valid_height":[ //block height at which the transaction takes  effect
+            "600",
+            "900"
+    	]
     },
     "amount": [{
-        "denom": "NANOGT",
-        "amount": "5000"
+        "denom": "NANOGT", //unit
+        "amount": "5000" //transfer token amount
     }]
 }
 ```
-
 %/accordion%
 
-return:
+Return example:
 
 %accordion%json%accordion%
 
@@ -169,14 +176,14 @@ return:
     "value":{
         "msg":[
             {
-                "type":"MsgSend",
+                "type":"MsgSend", //transaction type
                 "value":{
-                    "from_address":"gc11kxgm58wpfr6dch276wwtuq07m8v7g8s9krjx88",
-                    "to_address":"gc11t83m7mngzjzef9dke2avjfe0ws3933kplgs4wx",
+                    "from_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
+                    "to_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //recipient account
                     "amount":[
                         {
-                            "denom":"NANOGT",
-                            "amount":"5000"
+                            "denom":"NANOGT", //unit
+                            "amount":"5000" //transfer token amount
                         }
                     ]
                 }
@@ -185,443 +192,163 @@ return:
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"5000"
+                    "denom":"NANOGT", //unit
+                    "amount":"5000" //fee
                 }
             ],
-            "gas":"200000"
+            "gas":"200000" //gas consumed by the transaction
         },
-        "signatures":null,
+        "signatures":null, //signature
         "memo":"",
-        "valid_height":null
+        "valid_height":[ //block height at which the transaction takes  effect
+            "600",
+            "900"
+    	]
     }
 }
 ```
-
 %/accordion%
 
-### Query a  transaction
-
+### Query A Transaction [command line](../cli/tx.md#Query A Transaction-api)
 ```
-GET /tx/{hash}
+GET /v1/tx/{hash}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
+| Parameter | Description |
 | :----| :---- |
-| hash | transaction HASH |
+| hash | transaction hash |
 
-return:
+Return example:
 
 %accordion%json%accordion%
 
 ```
 {
-    "events":[
-        {
-            "attributes":[
+"data":"AB02B9CDCFED0A6FDC2AA0850A28E151E865950BE2B1B0772852895F3D6DBF475F21B7A8C261E8A9817B8E3E56C97F5319BF6C59095C1228E019A5E99305917528D431DDC13C9776648B6244877F9F19B033DCE3B88B92D3A09586D05AC0E1281A150A064E414E4F4754120B313030303030303030303012120A0C0A064E414E4F47541202313110C09A0C1A3032B98683061DE03543FAB82EA8904E492FFDF1AC56F1BC855316B29E004EB3A02FCF7069CCEA0B1606C549498C28336022690A25E1E1A0FA201BAAF55B7BFB628A0FEFAE3A2BE6114F30A5A373CFF7744DE321FADB2CC202541240D72A4B77AA24B5702EF59BB98E0574F6A24541CEF08B498A8EA8F9532807339F9DBCA1B7176AB78D8C000B62EF18D5B5EFBC2E7EE05E05B800D2EC31AA7C190A320301CC01",
+            "events": [
                 {
-                    "key":"sender",
-                    "value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"
-                },
-                {
-                    "key":"module",
-                    "value":"bank"
-                },
-                {
-                    "key":"action",
-                    "value":"send"
-                }
-            ],
-            "type":"message"
-        },
-        {
-            "attributes":[
-                {
-                    "key":"recipient",
-                    "value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
-                },
-                {
-                    "key":"amount",
-                    "value":"5000NANOGT"
-                }
-            ],
-            "type":"transfer"
-        }
-    ],
-    "gas_used":"72309",
-    "gas_wanted":"200000",
-    "height":"596",
-    "logs":[
-        {
-            "events":[
-                {
-                    "attributes":[
+                    "attributes": [ //attributes of the sender
                         {
-                            "key":"sender",
-                            "value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"
+                            "key": "sender",
+                            "value": "gt11u9g7sev4p03trvrh9pfgjheadkl5whepk75vyc0g4xqhhr372myh75cehak9jz2u3ap0fp" //sender account
                         },
                         {
-                            "key":"module",
-                            "value":"bank"
+                            "key": "module",
+                            "value": "bank"
                         },
                         {
-                            "key":"action",
-                            "value":"send"
+                            "key": "action",
+                            "value": "send"
                         }
                     ],
-                    "type":"message"
+                    "type": "message"
                 },
                 {
-                    "attributes":[
+                    "attributes": [ //attributes of the recipient
                         {
-                            "key":"recipient",
-                            "value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
+                            "key": "recipient",
+                            "value": "gt11uqv6t6vnqkgh22x5x8wuz0yhwejgkcjysale7xdsx0ww8wytjtf6p9vx6pdvpcfgme5xar" // recipient account
                         },
                         {
-                            "key":"amount",
-                            "value":"5000NANOGT"
+                            "key": "amount", //unit
+                            "value": "10000000000NANOGT" //transfer token amount
                         }
                     ],
-                    "type":"transfer"
+                    "type": "transfer"
                 }
             ],
-            "log":"",
-            "msg_index":0,
-            "success":true
-        }
-    ],
-    "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"5000NANOGT"}]}]}]",
-    "timestamp":"2020-03-25T19:07:53+08:00",
-    "tx":{
-        "type":"StdTx",
-        "value":{
-            "fee":{
-                "amount":[
-                    {
-                        "amount":"5000",
-                        "denom":"NANOGT"
-                    }
-                ],
-                "gas":"200000"
-            },
-            "memo":"",
-            "msg":[
+            "gas_used": "60579",
+            "gas_wanted": "200000",
+            "height": "5", //block height of the transaction
+            "logs": [
                 {
-                    "type":"MsgSend",
-                    "value":{
-                        "amount":[
-                            {
-                                "amount":"5000",
-                                "denom":"NANOGT"
-                            }
-                        ],
-                        "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",
-                        "to_address":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
-                    }
-                }
-            ],
-            "nonces":[
-                null
-            ],
-            "signatures":[
-                {
-                    "pub_key":{
-                        "type":"tendermint/PubKeyEd25519",
-                        "value":"Gz3RMlEjEVSJCXrBPhyG5fov5EwzE/zamPMLcE4rol4="
-                    },
-                    "signature":"+kIUwpJdHSRB6MHfnWvRkNHTkuDEV70awSyDKP8wp7aJrc+/5p6bc6FCed2KyISxlsIQo/ay8JPCdYEbkqUkAA=="
-                }
-            ],
-            "valid_height":[
-                "1",
-                "1000"
-            ]
-        }
-    },
-    "txhash":"IRREVOCABLEPAY-79459C3708F7E38EA35977C12E5ECB659D7F23B772BEB5A58F52DFAA4C72D985"
-}
-```
-
-%/accordion%
-
-### Query a transaction based on criteria
-
-```
-GET /tx?message.sender={sender}&message.action={action}&message.recipient={recipient}&order={asc/desc}
-```
-parameter:
-
-| parameter name | description |
-| :----| :---- |
-| sender | sender account |
-| action | action type |
-| recipient | recipient account  |
-
-return:
-
-%accordion%json%accordion%
-
-```
-{
-    "count":"2",
-    "limit":"30",
-    "page_number":"1",
-    "page_total":"1",
-    "total_count":"2",
-    "txs":[
-        {
-            "events":[
-                {
-                    "attributes":[
+                    "events": [
                         {
-                            "key":"sender",
-                            "value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"
-                        },
-                        {
-                            "key":"module",
-                            "value":"bank"
-                        },
-                        {
-                            "key":"action",
-                            "value":"send"
-                        }
-                    ],
-                    "type":"message"
-                },
-                {
-                    "attributes":[
-                        {
-                            "key":"recipient",
-                            "value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
-                        },
-                        {
-                            "key":"amount",
-                            "value":"5000NANOGT"
-                        }
-                    ],
-                    "type":"transfer"
-                }
-            ],
-            "gas_used":"72309",
-            "gas_wanted":"200000",
-            "height":"596",
-            "logs":[
-                {
-                    "events":[
-                        {
-                            "attributes":[
+                            "attributes": [
                                 {
-                                    "key":"sender",
-                                    "value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"
+                                    "key": "sender",
+                                    "value": "gt11u9g7sev4p03trvrh9pfgjheadkl5whepk75vyc0g4xqhhr372myh75cehak9jz2u3ap0fp"
                                 },
                                 {
-                                    "key":"module",
-                                    "value":"bank"
+                                    "key": "module",
+                                    "value": "bank"
                                 },
                                 {
-                                    "key":"action",
-                                    "value":"send"
+                                    "key": "action",
+                                    "value": "send"
                                 }
                             ],
-                            "type":"message"
+                            "type": "message"
                         },
                         {
-                            "attributes":[
+                            "attributes": [
                                 {
-                                    "key":"recipient",
-                                    "value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
+                                    "key": "recipient",
+                                    "value": "gt11uqv6t6vnqkgh22x5x8wuz0yhwejgkcjysale7xdsx0ww8wytjtf6p9vx6pdvpcfgme5xar"
                                 },
                                 {
-                                    "key":"amount",
-                                    "value":"5000NANOGT"
+                                    "key": "amount",
+                                    "value": "10000000000NANOGT"
                                 }
                             ],
-                            "type":"transfer"
+                            "type": "transfer"
                         }
                     ],
-                    "log":"",
-                    "msg_index":0,
-                    "success":true
+                    "log": "",
+                    "msg_index": 0,
+                    "success": true
                 }
             ],
-            "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"5000NANOGT"}]}]}]",
-            "timestamp":"2020-03-25T19:07:53+08:00",
-            "tx":{
-                "type":"StdTx",
-                "value":{
-                    "fee":{
-                        "amount":[
+            "raw_log": "[{\"msg_index\":0,\"success\":true,\"log\":\"\",\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"sender\",\"value\":\"gt11u9g7sev4p03trvrh9pfgjheadkl5whepk75vyc0g4xqhhr372myh75cehak9jz2u3ap0fp\"},{\"key\":\"module\",\"value\":\"bank\"},{\"key\":\"action\",\"value\":\"send\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"gt11uqv6t6vnqkgh22x5x8wuz0yhwejgkcjysale7xdsx0ww8wytjtf6p9vx6pdvpcfgme5xar\"},{\"key\":\"amount\",\"value\":\"10000000000NANOGT\"}]}]}]",
+            "timestamp": "2020-06-15T20:53:28+08:00",
+            "tx": {
+                "type": "StdTx",
+                "value": {
+                    "fee": {
+                        "amount": [
                             {
-                                "amount":"5000",
-                                "denom":"NANOGT"
+                                "amount": "11",
+                                "denom": "NANOGT"
                             }
                         ],
-                        "gas":"200000"
+                        "gas": "200000"
                     },
-                    "memo":"",
-                    "msg":[
+                    "memo": "",
+                    "msg": [
                         {
-                            "type":"MsgSend",
-                            "value":{
-                                "amount":[
+                            "type": "MsgSend",
+                            "value": {
+                                "amount": [
                                     {
-                                        "amount":"5000",
-                                        "denom":"NANOGT"
+                                        "amount": "10000000000",
+                                        "denom": "NANOGT"
                                     }
                                 ],
-                                "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",
-                                "to_address":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
+                                "from_address": "gt11u9g7sev4p03trvrh9pfgjheadkl5whepk75vyc0g4xqhhr372myh75cehak9jz2u3ap0fp",
+                                "to_address": "gt11uqv6t6vnqkgh22x5x8wuz0yhwejgkcjysale7xdsx0ww8wytjtf6p9vx6pdvpcfgme5xar"
                             }
                         }
                     ],
-                    "nonces":[
-                        null
+                    "nonces": [
+                        "MrmGgwYd4DVD+rguqJBOSS/98axW8byFUxayngBOs6Avz3BpzOoLFgbFSUmMKDNg"
                     ],
-                    "signatures":[
+                    "signatures": [ 
                         {
-                            "pub_key":{
-                                "type":"tendermint/PubKeyEd25519",
-                                "value":"Gz3RMlEjEVSJCXrBPhyG5fov5EwzE/zamPMLcE4rol4="
+                            "pub_key": {
+                                "type": "gatechain/PubKeyEd25519",
+                                "value": "G6r1W3v7YooP7646K+YRTzClo3PP93RN4yH62yzCAlQ="
                             },
-                            "signature":"+kIUwpJdHSRB6MHfnWvRkNHTkuDEV70awSyDKP8wp7aJrc+/5p6bc6FCed2KyISxlsIQo/ay8JPCdYEbkqUkAA=="
+                            "signature": "1ypLd6oktXAu9Zu5jgV09qJFQc7wi0mKjqj5UygHM5+dvKG3F2q3jYwAC2LvGNW177wufuBeBbgA0uwxqnwZCg==" //signature
                         }
                     ],
-                    "valid_height":[
+                    "valid_height": [ //block height at which a transaction takes effect
                         "1",
-                        "1000"
+                        "204"
                     ]
                 }
             },
-            "txhash":"IRREVOCABLEPAY-79459C3708F7E38EA35977C12E5ECB659D7F23B772BEB5A58F52DFAA4C72D985"
-        },
-        {
-            "events":[
-                {
-                    "attributes":[
-                        {
-                            "key":"sender",
-                            "value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"
-                        },
-                        {
-                            "key":"module",
-                            "value":"bank"
-                        },
-                        {
-                            "key":"action",
-                            "value":"send"
-                        }
-                    ],
-                    "type":"message"
-                },
-                {
-                    "attributes":[
-                        {
-                            "key":"recipient",
-                            "value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
-                        },
-                        {
-                            "key":"amount",
-                            "value":"200000000000000000000000000NANOGT"
-                        }
-                    ],
-                    "type":"transfer"
-                }
-            ],
-            "gas_used":"57233",
-            "gas_wanted":"200000",
-            "height":"94",
-            "logs":[
-                {
-                    "events":[
-                        {
-                            "attributes":[
-                                {
-                                    "key":"sender",
-                                    "value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"
-                                },
-                                {
-                                    "key":"module",
-                                    "value":"bank"
-                                },
-                                {
-                                    "key":"action",
-                                    "value":"send"
-                                }
-                            ],
-                            "type":"message"
-                        },
-                        {
-                            "attributes":[
-                                {
-                                    "key":"recipient",
-                                    "value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
-                                },
-                                {
-                                    "key":"amount",
-                                    "value":"200000000000000000000000000NANOGT"
-                                }
-                            ],
-                            "type":"transfer"
-                        }
-                    ],
-                    "log":"",
-                    "msg_index":0,
-                    "success":true
-                }
-            ],
-            "raw_log":"[{"msg_index":0,"success":true,"log":"","events":[{"type":"message","attributes":[{"key":"sender","value":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v"},{"key":"module","value":"bank"},{"key":"action","value":"send"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"},{"key":"amount","value":"200000000000000000000000000NANOGT"}]}]}]",
-            "timestamp":"2020-03-25T14:28:24+08:00",
-            "tx":{
-                "type":"StdTx",
-                "value":{
-                    "fee":{
-                        "amount":[
-                            {
-                                "amount":"1",
-                                "denom":"NANOGT"
-                            }
-                        ],
-                        "gas":"200000"
-                    },
-                    "memo":"",
-                    "msg":[
-                        {
-                            "type":"MsgSend",
-                            "value":{
-                                "amount":[
-                                    {
-                                        "amount":"200000000000000000000000000",
-                                        "denom":"NANOGT"
-                                    }
-                                ],
-                                "from_address":"gc11a46wql3t8gjzaazukkcsz7pmd4aegzyhcfmu9v",
-                                "to_address":"gc11nmt26w6zm7wkhqq5xurjv3chg2al42q0ps958k"
-                            }
-                        }
-                    ],
-                    "nonces":[
-                        "kD5yts2zF6C0v04IuzJDkuHcrXi2rJijj6MGW3oc+EU="
-                    ],
-                    "signatures":[
-                        {
-                            "pub_key":{
-                                "type":"tendermint/PubKeyEd25519",
-                                "value":"Gz3RMlEjEVSJCXrBPhyG5fov5EwzE/zamPMLcE4rol4="
-                            },
-                            "signature":"cCXx4/gCT6W2+6GZAHKSPcA4aHj79oiDSonLvcQH6v+/IUJmQAakdBRj5zKmNA0mX1EnSPHXjR951Dn3EpqBBA=="
-                        }
-                    ],
-                    "valid_height":[
-                        "1",
-                        "293"
-                    ]
-                }
-            },
-            "txhash":"IRREVOCABLEPAY-3D8F4B8831722CA7C91FE1EE50E4EC707BC36D03C7D83DAC0CA9C7849ACED26D"
-        }
-    ]
+            "txhash": "IRREVOCABLEPAY-DA2D28BEE24FF2CCF7FB45064BE316D6AB6962CD1C79A53DB427C83EC94A746C0C0A07FC6B74EFBC2C3B1F086F123E34" //transaction hash
 }
 ```
-
 %/accordion%

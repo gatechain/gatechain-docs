@@ -1,48 +1,51 @@
-### Revocable Transaction
+
+### Send  A Revocable Transaction [command line](../cli/revocable-tx.md#Send  A Revocable Transaction-api)
+
+######The interface generates transaction body for “Send  A Revocable Transaction”. After locally signing  it, you can invoke “Send Transaction” interface to finish broadcasting
 
 ```
-POST  /revocable-tx/send/{account}
+POST  /v1/revocable-tx/send/{account}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
+| Parameter | Description |
 | :----| :---- |
-| account | recipient account, can be a Standard Account or a vault account |
+| account | the recipient account, which can be a Standard Account or a Vault Account.  |
 
-request BODY example ：
+Request  BODY example:
 
 %accordion%json%accordion%
 
 ```
 {
   "base_req": {
-	"from": "gc11578zewhe03eycdtvnqcuxt8z3qzg226qj68k6r",
-	"memo": "",
-	"chain_id": "testnet",
-	"account_number": "0",
-	"sequence": "4",
-	"gas": "200000",
-	"gas_adjustment": "1.2",
+	"from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account 
+	"memo": "", //transaction remarks
+	"chain_id": "testnet", //chain ID
+	"gas": "200000", //gas consumed by this transaction
 	"fees": [
 	  {
-		"denom": "NANOGT",
-		"amount": "5000"
+		"denom": "NANOGT", //unit
+		"amount": "5000" //fee
 	  }
 	],
-	"simulate": false
+	"simulate": false, // If calculate simulated gas?
+    "valid_height":[ //height at which the transaction takes effect
+        "600",
+        "900"
+   	 ]
   },
   "amount": [
 	{
-	  "denom": "NANOGT",
-	  "amount": "5000"
+	  "denom": "NANOGT", //unit
+	  "amount": "5000" //transfer token amount 
 	}
   ]
 }
 ```
-
 %/accordion%
 
-return:
+Return example:
 
 %accordion%json%accordion%
 
@@ -52,14 +55,14 @@ return:
     "value":{
         "msg":[
             {
-                "type":"MsgRevocableSend",
+                "type":"MsgRevocableSend", //transaction type
                 "value":{
-                    "from_address":"gc11578zewhe03eycdtvnqcuxt8z3qzg226qj68k6r",
-                    "to_address":"gc112t5v8z8z4qwzmzvhrr8f4u3yhrjmvm9uw58lnw",
+                    "from_address":"vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //sender account
+                    "to_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //recipient account 
                     "amount":[
                         {
-                            "denom":"NANOGT",
-                            "amount":"5000"
+                            "denom":"NANOGT", //unit
+                            "amount":"5000" //transfer token amount 
                         }
                     ]
                 }
@@ -68,61 +71,66 @@ return:
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"5000"
+                    "denom":"NANOGT", //unit
+                    "amount":"5000" //fee
                 }
             ],
-            "gas":"200000"
+            "gas":"200000" //gas consumed by this transaction
         },
-        "signatures":null,
-        "memo":"",
-        "valid_height":null
+        "signatures":null, //signature
+        "memo":"", 
+        "valid_height":[ //height at which the transaction takes effect
+            "600",
+            "900"
+    	]
     }
 }
 ```
 
 %/accordion%
 
-### Revoke a Revocable Transaction
+### Revoke A Revocable Transaction [command line](../cli/revocable-tx.md#Revoke A Revocable Transaction-api)
+
+######The interface generates transaction body for “Revoke A Revocable Transaction”. After locally signing  it, you can invoke “Send Transaction” interface to finish broadcasting.
 
 ```
-POST /revocable-tx/revoke/{tx-hash}
+POST /v1/revocable-tx/revoke/{tx-hash}
 ```
-parameter:
+Parameters:
 
-| parameter name | description |
+| Parameter | Description |
 | :----| :---- |
-| tx-hash | Revocable Transaction Hash |
+| tx-hash | Hash of the revocable transaction |
 
-request BODY example ：
+Request  BODY example:
 
 %accordion%json%accordion%
 
 ```
 {
   "base_req": {
-    "from": "vault115ljwsxqhxvu54ndg95kyxn7f82uj2yk380ucm4",
-    "memo": "",
-    "chain_id": "testnet",
-    "account_number": "0",
-    "sequence": "4",
-    "gas": "200000",
-    "gas_adjustment": "1.2",
+    "from": "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //sender account
+    "memo": "", //transaction remarks
+    "chain_id": "testnet", //chain ID
+    "gas": "200000", //gas consumed by this transaction
     "fees": [
       {
-        "denom": "NANOGT",
-        "amount": "1"
+        "denom": "NANOGT", //unit
+        "amount": "1" //fee
       }
     ],
-    "simulate": false
+    "simulate": false, //If calculate simulated gas?
+    "valid_height":[ //height at which the transaction takes effect
+        "600",
+        "900"
+   	]
   },
-  "index": "0"
+  "index": "0" //serial number of the message
 }
 ```
-
 %/accordion%
 
-return：
+Return example:
 
 %accordion%json%accordion%
 
@@ -132,18 +140,18 @@ return：
     "value":{
         "msg":[
             {
-                "type":"MsgRevoke",
+                "type":"MsgRevoke", //transaction type
                 "value":{
-                    "vault_address":"gc115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek",
-                    "security_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
-                    "revoke_address":"gc11prwhekvxf9qzs0vfnnznx8ax3kt5tq8g3dhvkg",
-                    "height":"6947",
-                    "tx_hash":"BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8",
-                    "msg_index":"0",
+                    "vault_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //base account address of the Vault Account
+                    "security_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //Retrieval Account address
+                    "revoke_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //Account address  transaction is revoked to
+                    "height":"6947", //height at which the revoke transaction takes effect
+                    "tx_hash":"BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8", //transaction hash of the revocable transaction
+                    "msg_index":"0", //serial number of the message
                     "amount":[
                         {
-                            "denom":"NANOGT",
-                            "amount":"5"
+                            "denom":"NANOGT", //unit
+                            "amount":"5" //revoked token amount 
                         }
                     ]
                 }
@@ -152,16 +160,42 @@ return：
         "fee":{
             "amount":[
                 {
-                    "denom":"NANOGT",
-                    "amount":"1"
+                    "denom":"NANOGT", //unit
+                    "amount":"1" //fee of the revoke transaction
                 }
             ],
-            "gas":"200000"
+            "gas":"200000" //gas consumded by this transaction
         },
-        "signatures":null,
-        "memo":"",
-        "valid_height":null
+        "signatures":null, //signature
+        "memo":"", 
+        "valid_height":[ //height at which the transaction takes effect
+            "600",
+            "900"
+    	]
     }
+}
+```
+%/accordion%
+
+### Query Revocable Transaction Status
+
+```
+GET /v1/revocable-tx/status/{hash}
+```
+Parameters:
+
+| Parameter | Description |
+| :----| :---- |
+| hash | transaction Hash of the Revocable Transaction|
+
+Return example:
+
+%accordion%json%accordion%
+
+```
+{
+    "status": 1, //1：revocable，0：irrevocable
+    "revoke_hash": "" //transaction Hash of the Revoke transaction
 }
 ```
 

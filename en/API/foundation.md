@@ -1,40 +1,84 @@
-### Query foundation members
+
+###Query A List of Foundation Members [command line](../cli/foundation.md#Query A List of Foundation Members-api)
 
 ```
-GET  /foundation/distribution
+GET  /foundation/members
 ```
 
-return  example:
+Return example:
 
 %accordion%json%accordion%
 
 ```     
 {
-    "reward":"0.020000000000000000",
-    "max_members":"20",
-    "members":[
+    "height": "0", //block height
+    "result": [
         {
-            "address":"gc11e53svtfsjknalpucu3r9gn2c9vfy59ll5nqmte",
-            "proportion":"2",
-            "funds_pool":[
+            "address": "gt11tgjslrwl0j35czlj0ayxq9t7hzd0gtckfwc57qsl3nftl7zyk8gccv5kexetmm3xsv2tj5", //foundation member account
+            "funds_pool": [ 
                 {
-                    "denom":"NANOGT",
-                    "amount":"0.800000000000000001"
+                    "amount": "10000000000000000",//total token quantity
+                    "denom": "NANOGT" //unit
                 }
-            ]
-        },
-        {
-            "address":"gc11657rsnh95jyvy6qerghe0trkkwp9ut3zskxg26",
-            "proportion":"1",
-            "funds_pool":[
+            ],
+            "proportion": "1", //the  proportion held by the foundation member
+            "released": [
                 {
-                    "denom":"NANOGT",
-                    "amount":"0.399999999999999999"
+                    "amount": "4666666666.660000000000000000", //token already released
+                    "denom": "NANOGT" //unit
                 }
-            ]
-        }
+            ],
+            "withdraw": [] //revoked token amount
+		...
     ]
 }
 ```
-
 %/accordion%
+
+
+### Query Foundation Member Information
+
+```
+GET  /v1/foundation/member/{address}
+```
+
+Parameters:
+
+| Parameter | Description |
+| :----| :---- |
+| address | Foundation member address |
+
+Return example:
+
+%accordion%json%accordion%
+
+
+```     
+{
+    "height": "0", //block height
+    "result": {
+        "type": "Member",
+        "value": {
+            "address": "gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq", //foundation member account
+            "funds_pool": [
+                {
+                    "amount": "10000000000000000",//total token quantity
+                    "denom": "NANOGT" //unit
+                }
+            ],
+            "proportion": "1", //the  proportion held by the foundation member
+            "released": [
+                {
+                    "amount": "11333333333.330000000000000000", //token already released
+                    "denom": "NANOGT" //unit
+                }
+            ],
+            "withdraw": [] //revoked token amount
+        }
+    }
+}
+```
+%/accordion%
+
+
+
