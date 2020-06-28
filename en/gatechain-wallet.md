@@ -9,8 +9,8 @@ GateChain ecosystem provides a variety of wallet applications to cater to differ
 
 * At mainnet phase, GateChain will provide command-line wallet, mobile wallet for Android and iOS, Web wallet, multi-signature wallet, and hardware wallet, among others to cater to individual, professional and enterprise users.
 
-## 2.Specifications
-### 2.1 GateChain  Address Types ###
+## 1.Specifications
+### 1.1 GateChain  Address Types ###
 
 GateChain has two  main account types, Standard Account and Vault Account, with different  identifier at the start in their addresses:
 
@@ -19,7 +19,7 @@ GateChain has two  main account types, Standard Account and Vault Account, with 
 
 With the address identifier system invented by GateChain, the recipient account can easily identify the sending account's  type and set confirmation requirement  accordingly.If it is from a Vault Account, confirmation is safe  only after revocable delay period.
 
-### 2.2 GateChain Transaction Types ###
+### 1.2 GateChain Transaction Types ###
 
 GateChain has many transaction types.  To identify different transaction types efficiently, GateChain creatively provides transaction type identifier.
 
@@ -33,7 +33,7 @@ Below are identifiers  different  transaction types start with:
 * （Vault Clear）：“VAULTCLEAR-”
 * （Untitled）： “BASIC-”
 
-### 2.3 Other Definitions ###
+### 1.3 Other Definitions ###
 * Retrieval Account：the preset  account  bound  to  a Vault Account. When a transaction in vault account is revoked, the transaction asset will be moved to this account. 
 
 * Revocable Delay Period ：The valid duration during which a “revoke ” operation is  allowed after the revocable transaction is initiated. That is,after the revocable transaction is initiated, “revok’ operation is allowed before the preset number of blocks are reached.
@@ -42,7 +42,7 @@ Below are identifiers  different  transaction types start with:
 
 >Any “Time” settings at GateChain is calculated using block height. The current block time is 1s. Please use it as a reference when setup the above time.
 
-## 3. Download and Installation
+## 2. Download and Installation
 
 - You can go to CateChain website [www.gatechain.io](https://www.gatechain.io) ，and click “Wallets” at the top to  download proper wallet version for your operation system.<br/>![](./images/0.png)</br>
 	
@@ -52,9 +52,9 @@ Below are identifiers  different  transaction types start with:
   
   	
 
-## 4. Get Started
+## 3. Get Started
 
-### 4.1 Password and Safety
+### 3.1 Password and Safety
 - GateChain provides local wallets and  need not to register an account before logging in. But setting up a password is required when running the wallet for the first time.  The password will also be used as “unlock password” for many other operations at the wallet. It is of vital Importance!  If it is lost, your asset will be at risk. Please setup a complicated password and save it safely.<br/>![](./images/open.png)</br>
 
 - Revocable transaction is invented by GateChain. To avoid abuse of this safety feature, GateChain uses prefix identifiers to give distinct mark. When receiving a transaction, you can check with  two rules to determine if it is  irrevocable and safe to confirm. 
@@ -63,7 +63,7 @@ Below are identifiers  different  transaction types start with:
 > 3. Vault Account starts with" vault". Transactions from address starting with “vault” is revocable.
 > 4.  Revocable transaction ID starts with" REVOCABLEPAY-" .Transaction with this prefix is revocable.
 
-### 4.2 Create Standard Account
+### 3.2 Create Standard Account
 - 1 ）At main interface, click “Create Account” , then  choose   “Single Signature”-->>“Standard Account”.
 
 ![](./images/1.png)
@@ -80,7 +80,7 @@ Below are identifiers  different  transaction types start with:
 
 ![](./images/4.png)
 
-### 4.3 Account Import
+### 3.3 Account Import
 
 Besides creating an account, you can also use “Import account” function to import one you have created.  Steps as follows:
 
@@ -90,7 +90,7 @@ Besides creating an account, you can also use “Import account” function to i
  <br/>![](./images/account10.png)</br>
 - 3 ）Enter the current unlock password and click “Confirm” button to finish account importing.
 
-### 4.4 Give Me GT 
+### 3.4 Give Me GT 
 - **Get Testnet GT From wallet：** 
 	- At wallet overview interface, you can see a “Give me GT” icon. Click it and a testnet GT application is sent. Testnet GT will display at your wallet balance a few minutes later.<br/>![](./images/5.png)</br>
 
@@ -102,7 +102,7 @@ Besides creating an account, you can also use “Import account” function to i
 
 > <br/>![](./images/5-1.png)</br>
 
-### 4.5 Create Vault Account
+### 3.5 Create Vault Account
 - 1 ）At main interface, click  “Create account”, then select“Single signature ”-->>“Vault account".
 
 ![](./images/7.png)
@@ -134,7 +134,7 @@ Besides creating an account, you can also use “Import account” function to i
 > - Activation process is as above mentioned.<br/>![](./images/vault15.png)</br>
 > Note: the Standard Account used to activate the Vault Account will auto- fill “Retrieval Account” field. If you want to use another account as Retrieval Account, please modify it. 
 
-### 4.6 The Clearing Time of Vault Account Can Be Changed
+### 3.6 The Clearing Time of Vault Account Can Be Changed
 Steps as follows:
 
 - 1 ）Access to the Vault Account you want to change.  Click the change button right to  “Clearing height”<br/>![](./images/vault10.png)</br>
@@ -143,7 +143,7 @@ Steps as follows:
 - 4 ）Change transaction is successfully initiated. <br/>![](./images/vault13.png)</br>
 
 
-### 4.7 Setup Vault Account Activities Monitor
+### 3.7 Setup Vault Account Activities Monitor
 
 GateChain provides  two notification channels, via email and via short message.
 
@@ -151,9 +151,10 @@ GateChain provides  two notification channels, via email and via short message.
 	- Click the icon right to  Vault Account address to access to account monitor settings.<br/>![](./images/monitor1.png)</br>
 	- Or visit [testnet explorer](https://explorer.gatechain.io/monitor) and Click"Monitor"	to access to account monitor Settings page. <br/>![](./images/monitor0.png)</br>
 - 2 ) Fill the account address to monitor and the mobile phones and email address to receive alert notifications. 
- <br/>![](./images/monitor2.png)</br>
+ <br/>![](./images/
+.png)</br>
   
-### 4.8 Standard Account Irrevocable Payment
+### 3.8 Standard Account Irrevocable Payment
 - 1 ）From the wallet list, select the account to make the payment transfer and click it to access to account overview.<br/>![](./images/18.png)</br>
 
 - 2 ) Select “Transfer” button.<br/>![](./images/19.png)</br>
@@ -179,7 +180,7 @@ GateChain provides  two notification channels, via email and via short message.
 
 ![](./images/23.png)
 
-### 4.9 Vault Account Revocable Payment
+### 3.9 Vault Account Revocable Payment
 
 Transfer from Vault Account will take effect with a delay. Compared with Standard Account, additional information is needed when make a transfer from Vault Account. Steps as follows:
 
@@ -217,13 +218,77 @@ Transfer from Vault Account will take effect with a delay. Compared with Standar
 > 
 > **This type of transfer transaction can be successfully received if it is not revoked after Revocable Delay Period.**
 
+
+### 3.10 Delegate Token
+There are two ways to participate in Gatechain POS mining:
+
+1、Build a GateChain full note and work as a consensus account.
+
+2、Delegate your GT to a consensus account.
+
+Wallet support the second,Delegate your GT to a consensus account and get a share of mining reward,Steps as follows：
+
+- 1 ）Go to account main interface,Click “Delegations” button.
+<br/>![](./images/24.png)</br>
+
+- 2 ）Delegations page,In the top right corner of the page click “Delegate” button.
+<br/>![](./images/25.png)</br>
+
+- 3 ）Fill the consensus account and the delegate amount or click in the page“All con-accounts”button，Jump to browser to select consensus account to be delegate.
+<br/>![](./images/26.png)![](./images/27.png)</br>
+
+- 4 ）Confirm delegate info,Click “Confirm” button.
+<br/>![](./images/28.png)</br>
+
+- 5 ）Return to the delegation page,Show my delegation records in the delegation list.
+<br/>![](./images/29.png)</br>
+
+- 6 ）Delegations page,To the right of my delegation list“Delegate”button.You can delegate the consensus account again.
+<br/>![](./images/30.png)</br>
+
+- 7 ）Delegations page,To the right of my delegation list“Redelegate”button.
+<br/>![](./images/31.png)</br>
+
+- 8 ）click “Redelegate” button,Fill in the address and amount to be transferred to the consensus account.
+<br/>![](./images/32.png)</br>
+
+- 9 ）Confirm redelegate info,Click “Confirm” button.
+<br/>![](./images/33.png)</br>
+
+- 10 ）Return to the delegation page,Show my redelegate records in the delegation list.
+<br/>![](./images/34.png)</br>
+
+- 11 ）Delegations page,To the right of my delegation list“Undelegate”button.
+<br/>![](./images/35.png)</br>
+
+- 12 ）click“Undelegate”button，Fill in the number of tokens to be unbound.
+<br/>![](./images/36.png)</br>
+
+- 13 ）Confirm undelegate info,Click “Confirm” button.
+<br/>![](./images/37.png)</br>
+
+- 14 ）Return to the delegation page,Show my "undelegate" in the delegation list，The completion time of undelegating is 21 days.
+<br/>![](./images/38.png)</br>
+
+- 15 ）Delegations page,To the right of my delegation list“Withdraw”button.
+<br/>![](./images/39.png)</br>
+
+- 16 ）click“Withdraw”button, click“Send”button and Confirm Withdraw info.
+<br/>![](./images/40.png)</br>
+
+- 17 ）Return to the delegation page,In the "total rewards" display of the entrustment list,Rewards return to zero,Reward amount is directly returned to account balance.
+<br/>![](./images/41.png)</br>
+
+- 18 ）History list in delegation page,Show specific delegates/redelegate/undelegate/withdraw in the list.
+<br/>![](./images/42.png)</br>
+
 ---
-## 5.  Advanced Features
+## 4.  Advanced Features
 >This part involves  operations on account. Please use it with caution. Mis-operations may lead to asset loss. 
 
 The wallet supports  account export, account delete, view private keys  and other operations for accounts in the local wallet account list. 
 
-- 选Select the account to operate and  click to access  account overview.<br/>![](./images/account1.png)</br>
+- Select the account to operate and  click to access  account overview.<br/>![](./images/account1.png)</br>
 
 - Click upper right corner to access account details.<br/>![](./images/account2.png)</br>
 
@@ -231,27 +296,27 @@ The wallet supports  account export, account delete, view private keys  and othe
 
 > Standard Account only shows “Account info’. While Vault Account shows "Vault Settings” in addition to “Account info”.
 
-### 5.1 Account Export
+### 4.1 Account Export
 - single signature account export
 	- you can export single signature account  to a file for backup. Access to account details. 
 	- lick  “Download” button right to“Keystore”.Enter unlock pass to back up the account.
 <br/>![](./images/account4.png)</br>
 
-### 5.2 View Private Key
+### 4.2 View Private Key
 - Access to account details. Then click “View” button right to“Private key”. Enter the unlock password to view the private key.
 <br/>![](./images/account5.png)![](./images/account6.png)</br>
 
 >Do not screenshot or copy the private key and  save it in  computers that has connection   to  Internet to avoid risk.
 
-### 5.3 Delete Account
+### 4.3 Delete Account
 - Access to Account details and click “Delete Account ”button at the upper right.
 <br/>![](./images/account7.png)</br>
 
 - Enter the unlock pass and click “Confirm”button. The account is deleted.
 <br/>![](./images/account8.png)</br>
 
-### 5.4 Multiple Signatures Account
-#### 5.4.1 Create a Multisig Account
+### 4.4 Multiple Signatures Account
+#### 4.4.1 Create a Multisig Account
 * 1 ）At the main interface, click “Account”. Select   “multi-signature ”--->>“Standard Account”<br/>![](./images/multi0.png)</br>
 
 * 2 ）Enter “Account name” and  select “total members”(2-7), “required signatures” and “member’s public key”(can use public key created in the wallet or enter a public key not locally created). Click "Next".<br/>![](./images/multi2.png)</br>
@@ -263,11 +328,11 @@ The wallet supports  account export, account delete, view private keys  and othe
 > For Multisig  Vault Account, its account creation  process is the same with a Standard Multisig Account, and its activation process is the same with a normal  Vault Account.
 
 
-#### 5.4.2 Export Multisig Account
+#### 4.4.2 Export Multisig Account
 * 1 ）From account list , select the multisig account to export and access to account details.<br/>![](./images/multi7.png)</br>	
 * 2 ) Select “Export multisig account” button. Enter the unlock pass to generate a multisig account file. <br/>![](./images/multi8.png)</br>
 
-#### 5.4.3 Multisig Transaction
+#### 4.4.3 Multisig Transaction
 
 * Initiating a multisig transaction is similar with a normal transaction. Enter the recipient account, amount,etc. Click “Send”. <br/>![](./images/multi9-1.png)</br>
 * After confirming the transaction information, go to “Signature & Broadcast process” page. <br/>![](./images/multi9-2.png)</br>
@@ -277,12 +342,12 @@ The wallet supports  account export, account delete, view private keys  and othe
 > <br/>![](./images/multi9.png)</br>
 
 ---
-## 6. Blockchain Explorer
+## 5. Blockchain Explorer
 -  To View account, transaction id, block, validator and more, visit block explorer for testnet at [https://explorer.gatechain.io/](https://explorer.gatechain.io/)。
 
 ![](./images/17.png)
 
-## 7. Developer Document
+## 6. Developer Document
 -  View more developer document here：[https://www.gatechain.io/docs](https://www.gatechain.io/docs) 
 
 

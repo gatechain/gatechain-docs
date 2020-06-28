@@ -47,7 +47,7 @@ By building a full node to participate in the consensus, you  can earn delegatio
 
 ### Delegate GT to a Consensus Account 
 
-If you do not want to build a node and POS mine as a consensus account, you can choose to delegate your GT to a consensus account and get a share of mining reward. 
+If you do not want to build a node and POS mine as a consensus account, you can choose to delegate your GT to a consensus account and get a share of mining reward. Delegation function can be operated in CLI/API/Wallet.
 
 1. First, choose a consensus account to delegate your GT.
 
@@ -55,13 +55,15 @@ If you do not want to build a node and POS mine as a consensus account, you can 
  	
  	b.You can view using a blockchain explorer：http://explorer.gatechain.io/testnet/consensus
  	
-2.Initiate a  "delegate" transaction to delegate all or  part of your GT to  selected one or more consensus accounts. Now you become a delegator.
+2. Initiate a  "delegate" transaction to delegate all or  part of your GT to  selected one or more consensus accounts. Now you become a delegator.
 
  	 a.Initiate a delegation transaction [CLI](/cli/staking.md#delegate token to consensus accounts-api) [API](/API/staking.md#delegate token to consensus accounts-command-line)
  	 
 3. If the delegation transaction succeeded, you can get a share of the mining reward following the consensus account's POS mining.
 
 4. During delegating, delegator can initiate  three operations to “fetch income” , “shift delegation” or  “undelegate”
+
+	Note:When the principal performs three operations: "again delegate", "redelegate" and "undelegate",Reward amount is directly returned to account balance,To query the specific reward amount, you need to view the content "transfer" in the corresponding transaction details.
 
     a.Delegator can initiate “fetch income” transaction  to extract its share of mining reward income to its own account.
  	 
@@ -70,25 +72,24 @@ If you do not want to build a node and POS mine as a consensus account, you can 
  	 * Query all delegation transactions [API](/API/staking.md#query  delegator account for the delegation transactions list)
  	 
  	 * Set account to fetch delegation income [CLI](/cli/distribution.md#set account to fetch delegation income-api) [API](/API/distribution.md#set account to fetch delegation income-command -line)
- 	 
- 	 *Query delegation income [CLI](/cli/distribution.md#Query delegator account for delegation income-api) [API](/API/distribution.md#Query delegator account for delegation income-command -line)
+ 
+ 	 * Query delegation income [CLI](/cli/distribution.md#Query delegator account for delegation income-api) [API](/API/distribution.md#Query delegator account for delegation income-command -line)
  	 
  	 * Fetch partial income [CLI](/cli/distribution.md#Delegator account fetches part of its income from a single consensus account.-api) [API](/API/distribution.md#Delegator account fetches part of its income from a single consensus account.-command -line)
  	 
  	 * Fetch all income [CLI](/cli/distribution.md#Delegator account fetches  all of its income from consensus account.-api) [API](/API/distribution.md#Delegator account fetches  all of its income from consensus account -command-line)
+	
+  b.Delegator can initiate a “shift delegation” transaction for a given delegation to move GT delegation to another  consensus account 
 
-   b.Delegator can initiate a “shift delegation” transaction for a given delegation to move GT delegation to another  consensus account 
+   * After the delegation shift, the income at From consensus  account will be settled immeditely. But the delegation can not be shifted again from the To consensus account  for a period  of 21 days.
+   
+   * Initiate a shift delegation transaction [CLI](/cli/staking.md#shift delegation-api)  [API](/API/staking.md#shift delegation-command -line)
+   
+   * Query a delegator account for all delegation shifts [CLI](/cli/staking.md#query delegation shifts-api) [API](/API/staking.md#query delegation shifts-command -line)
+   
+   * query  a delegator account for delegation shifts between two consensus accounts  [CLI](/cli/staking.md#query  a delegator account for delegation shifts between two consensus accounts ) [API](/API/staking.md#query delegation shifts-command -line)
 
-  
- 	 * After the delegation shift, the income at From consensus  account will be settled immeditely. But the delegation can not be shifted again from the To consensus account  for a period  of 21 days. 
- 	 
- 	 * Initiate a shift delegation transaction [CLI](/cli/staking.md#shift delegation-api)  [API](/API/staking.md#shift delegation-command -line)
- 	 
- 	 * Query a delegator account for all delegation shifts [CLI](/cli/staking.md#query delegation shifts-api) [API](/API/staking.md#query delegation shifts-command -line)
- 	 
- 	 * query  a delegator account for delegation shifts between two consensus accounts  [CLI](/cli/staking.md#query  a delegator account for delegation shifts between two consensus accounts ) [API](/API/staking.md#query delegation shifts-command -line)
- 	 
-   c.Delegator can “undelegate” its delegation from a consensus account in part of in  whole
+ c.Delegator can “undelegate” its delegation from a consensus account in part of in  whole
  	
  	 * Note, the delegation income will be settled immediately at the consensus account after undelegating. But the earning and principal will be credited 21 days later
  	 
@@ -98,7 +99,7 @@ If you do not want to build a node and POS mine as a consensus account, you can 
  	 
  	 * Query a delegator account for  undelegated records from all consensus account  [CLI](/cli/staking.md#Query a delegator account for  undelegated records from all consensus account api)
  [API](/API/staking.md#Query a delegator account for  undelegated records regarding all consensus account -command -line)
-
+ 
  	 * Query  undelegated records regarding a specific consensus account  [CLI](/cli/staking.md#Query  undelegated records regarding a specific consensus account -api) [API](/API/staking.md#Query  undelegated records regarding a specific consensus account -command -line)
 
  	 
