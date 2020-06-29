@@ -2,7 +2,7 @@
 ###Query A List of Foundation Members [command line](../cli/foundation.md#Query A List of Foundation Members-api)
 
 ```
-GET  /foundation/members
+GET  v1/foundation/members
 ```
 
 Return example:

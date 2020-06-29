@@ -2,7 +2,7 @@
 ###查询基金会成员列表 [命令行](../cli/foundation.md#查询基金会成员列表-api)
 
 ```
-GET  /foundation/members
+GET  v1/foundation/members
 ```
 
 返回示例：
