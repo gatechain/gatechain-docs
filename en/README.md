@@ -167,7 +167,7 @@ Below are identifiers different transaction types start with:
 
 <!-- 1. Online wallet (pending)-->
 1. [GateChain desktop wallet instruction](./gatechain-wallet.md)
-2. Visit [GateChain testnet explorer](https://explorer.gatechain.io/)
+2. Visit [GateChain mainnet explorer](https://explorer.gatechain.io/mainnet/index)
 
 ## Advanced Docs
 

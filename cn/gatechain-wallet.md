@@ -95,7 +95,7 @@ GateChain具有多种转账交易类型。为便于用户有效识别不同的�
 	- 钱包账户概览界面有 “获得测试币 (Give me GT) 图标”，点击后会自动向测试链提交申请拨发测试币，几分钟后测试币就显示在钱包余额里面了。<br/>![](./images/5.png)</br>
 
 - **通过网站获得测试币：** 
-	- 访问网站： https://explorer.gatechain.io/faucet
+	- 访问网站： https://explorer.gatechain.io/mainnet/faucet
 	- 输入要获取测试币的账户地址，点击添加申请，几分钟后测试币就显示在钱包余额里面了。<br/>![](./images/6.png)</br>
 
 > 每个账户在24小时内只能申请一次测试币，每次通过钱包申请测试币将获得以下提示。
@@ -149,7 +149,7 @@ GateChain为保险账户提供了邮件和短信两种告警通知方式。
 
 - 1 ）进入区块链浏览器监控页面
 	- 可以点击保险账户地址右侧图标链接进入账户监控设置页面。<br/>![](./images/monitor1.png)</br>
-	- 或者直接访问[测试网区块浏览器](https://explorer.gatechain.io/testnet/monitor) 点击“监控”进入账户监控设置页面。 <br/>![](./images/monitor0.png)</br>
+	- 或者直接访问[区块浏览器](https://explorer.gatechain.io/mainnet/monitor) 点击“监控”进入账户监控设置页面。 <br/>![](./images/monitor0.png)</br>
 - 2 ) 填写需要监控的账户地址以及用于接收预警信息的手机、邮箱信息。
  <br/>![](./images/monitor2.png)</br>
   
@@ -340,7 +340,7 @@ GateChain的用户有两种方式参与POS挖矿：
 
 ---
 ## 5. 区块浏览器
--  查询账户、交易ID、区块、验证人等信息，请访问测试链区块浏览器[https://explorer.gatechain.io/](https://explorer.gatechain.io/)。
+-  查询账户、交易ID、区块、验证人等信息，请访问测试链区块浏览器[https://explorer.gatechain.io/mainnet/index](https://explorer.gatechain.io/mainnet/index)。
 
 ![](./images/17.png)
 

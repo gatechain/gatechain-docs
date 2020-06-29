@@ -53,8 +53,8 @@ If you do not want to build a node and POS mine as a consensus account, you can 
 
  	a.You can check commission, holding, rate of return etc of a consensus accounts and decide which one to choose.
  	
- 	b.You can view using a blockchain explorer：http://explorer.gatechain.io/testnet/consensus
- 	
+ 	b.You can view using a blockchain explorer：https://explorer.gatechain.io/mainnet/consensus
+ 	 	
 2. Initiate a  "delegate" transaction to delegate all or  part of your GT to  selected one or more consensus accounts. Now you become a delegator.
 
  	 a.Initiate a delegation transaction [CLI](/cli/staking.md#delegate token to consensus accounts-api) [API](/API/staking.md#delegate token to consensus accounts-command-line)

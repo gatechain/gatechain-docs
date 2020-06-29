@@ -53,7 +53,7 @@ GateChain的用户有两种方式参与POS挖矿，下面分别介绍一下这�
 
  	a.可以通过查看共识账户的手续费、持仓、收益率等来选择。
  	
- 	b.可以通过区块链浏览器来查看：https://explorer.gatechain.io/testnet/consensus
+ 	b.可以通过区块链浏览器来查看：https://explorer.gatechain.io/mainnet/consensus
  	
 2. 发起“委托交易”，将自己的部分或者全部GT，委托给某一个/多个共识账户，成为委托人。
 
