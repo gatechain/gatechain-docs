@@ -28,7 +28,7 @@ GET  v1/foundation/members
                     "denom": "NANOGT" //单位
                 }
             ],
-            "withdraw": [] //已撤回代币数
+            "withdraw": [] //已提取代币数
         },
 		...
     ]
@@ -74,7 +74,7 @@ GET  /v1/foundation/member/{address}
                     "denom": "NANOGT" //单位
                 }
             ],
-            "withdraw": [] //已撤回代币数
+            "withdraw": [] //已提取代币数
         }
     }
 }
