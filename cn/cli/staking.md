@@ -297,6 +297,21 @@ Undelegations between:
 ```
 %/accordion%
 
+### 查询权益质押池的信息 [API](../API/staking.md#查询权益质押池的信息-命令行)
+
+```bash
+gatecli staking pool --chain-id [链ID]
+```
+
+%accordion%返回示例：%accordion%
+
+```bash
+Pool:
+  Not Bonded Tokens:  100000000 //未解绑代币数
+  Bonded Tokens:      1000000 //已解绑代币数
+```
+%/accordion%
+
 
 ### 查询权益质押的参数 [API](../API/staking.md#查询权益质押的参数-命令行)
 

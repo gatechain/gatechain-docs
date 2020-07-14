@@ -300,6 +300,21 @@ Undelegations between:
 ```
 %/accordion%
 
+### Query Staking pool [API](../API/staking.md#Query Staking pool-command line)
+
+```bash
+gatecli staking pool --chain-id [chain ID]
+```
+
+%accordion%Return example: %accordion%
+
+```bash
+Pool:
+  Not Bonded Tokens:  10000
+  Bonded Tokens:      0
+```
+%/accordion%
+
 
 ### Query Staking Paramters [API](../API/staking.md#Query Staking Paramters-command line)
 

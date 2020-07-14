@@ -734,6 +734,27 @@ GET /v1/staking/con-account/{con-account}/undelegations
 ```
 %/accordion%
 
+### 查询权益质押池的信息 [命令行](../cli/staking.md#查询权益质押池的信息-api)
+
+```
+GET /v1/staking/pool
+```
+
+返回示例：
+
+%accordion%json%accordion%
+
+```
+{
+    "height": "43433", //区块高度
+    "result": {
+        "bonded_tokens": "2000012230843453", //已解绑代币数
+        "not_bonded_tokens": "2768799795" //未解绑代币数
+    }
+}
+```
+%/accordion%
+
 
 ### 查询权益质押的参数 [命令行](../cli/staking.md#查询权益质押的参数-api)
 

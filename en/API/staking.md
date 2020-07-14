@@ -735,6 +735,26 @@ Return example:
 ```
 %/accordion%
 
+### Query Staking pool [command line](../cli/staking.md#Query Staking pool-api)
+
+```
+GET /v1/staking/pool
+```
+
+Return example:
+
+%accordion%json%accordion%
+
+```
+{
+    "height": "43471",
+    "result": {
+        "bonded_tokens": "2000012230843453",
+        "not_bonded_tokens": "2768799795"
+    }
+}
+```
+%/accordion%
 
 ### Query Staking Parameters [command line](../cli/staking.md#Query Staking Parameters-api)
 
