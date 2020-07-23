@@ -80,6 +80,11 @@ Return example:
 ```
 %/accordion%
 
+Description：
+
+* The vault account can only withdraw the income and principal to this account and cannot be set up separately.
+
+
 ###Delegator Account Fetches Partial Income From A Consensus Account [command line](../cli/distribution.md#Delegator Account Fetches Partial Income From A Consensus Account-api)
 
 ######The interface generates transaction body for “Delegator Account Fetches Partial Income From A Consensus Account ”. After locally signing  it, you can invoke “Send Transaction” interface to finish broadcasting

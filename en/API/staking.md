@@ -735,7 +735,7 @@ Return example:
 ```
 %/accordion%
 
-### Query Staking pool [command line](../cli/staking.md#Query Staking pool-api)
+### Query Staking Pool [command line](../cli/staking.md#Query Staking Pool-api)
 
 ```
 GET /v1/staking/pool

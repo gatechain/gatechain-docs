@@ -227,7 +227,7 @@ gatecl tx sign tx.json --from gt115ljwsxqhxvu54ndg95kyxn7f82uj2yk3epx4ek --chain
 
 ### 多签
 ```bash
-gatecli tx multisign [交易文件] [多签账户] [签名文件1] [签名文件2] ... --chain-id [链ID] > [交易签名文件]
+gatecli tx multisign [交易文件] [多签账户name] [签名文件1] [签名文件2] ... --chain-id [链ID] > [交易签名文件]
 ```
 
 请求示例：

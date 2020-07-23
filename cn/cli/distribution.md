@@ -18,6 +18,10 @@ gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44
 ```
 %/accordion%
 
+说明：
+
+* 保险账户只能将收益和本金提取到本账户，不能单独设置。
+
 
 ### 委托账户从单个共识账户提取部分收益 [API](../API/distribution.md#委托账户从单个共识账户提取部分收益-命令行)
 ```bash

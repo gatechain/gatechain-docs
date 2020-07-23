@@ -18,6 +18,10 @@ gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44
 ```
 %/accordion%
 
+Description：
+
+* The vault account can only withdraw the income and principal to this account and cannot be set up separately.
+
 
 ### Delegator Account Fetch Partial Income From A Consensus Account [API](../API/distribution.md#Delegator Account Fetch Partial Income From A Consensus Account-command line)
 ```bash

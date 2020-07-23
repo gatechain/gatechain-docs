@@ -300,7 +300,7 @@ Undelegations between:
 ```
 %/accordion%
 
-### Query Staking pool [API](../API/staking.md#Query Staking pool-command line)
+### Query Staking Pool [API](../API/staking.md#Query Staking Pool-command line)
 
 ```bash
 gatecli staking pool --chain-id [chain ID]

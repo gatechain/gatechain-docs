@@ -261,6 +261,9 @@ GET /v1/tx/{hash}
             "gas_used": "60579",
             "gas_wanted": "200000",
             "height": "5", //交易区块高度
+            "irrevocable_confirm_number": [  //交易确认高度
+            		"3"
+            ], 
             "logs": [
                 {
                     "events": [

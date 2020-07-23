@@ -49,6 +49,10 @@ By building a full node to participate in the consensus, you  can earn delegatio
 
 If you do not want to build a node and POS mine as a consensus account, you can choose to delegate your GT to a consensus account and get a share of mining reward. Delegation function can be operated in CLI/API/Wallet.
 
+* Note：All account types can delegate consensus accounts，**It is recommended to use vault account initiate delegate，Guarantee the safety of funds.**
+* Delegate initiated by vault account、redelegate、undelegate、withdraw rewardsThe trading rules are exactly the same as the general account，Include：The delegate token takes effect immediately;The next block starts calculating the rewards;There is still a 21 day freezing period for the redelegate/undelegate;The withdrawal rewards will be paid to the account immediately;**But，When an vault account needs to initiate a clearing transaction,It must be ensured that this account does not have any ongoing delegate and freeze funds,Otherwise, the clearing will fail.**Because delegate does not affect the security of funds in the account,Therefore, after the vault account reaches the clearing height, four kinds of delegate transactions can still be initiated.The following is a detailed description of account delegation:
+
+
 1. First, choose a consensus account to delegate your GT.
 
  	a.You can check commission, holding, rate of return etc of a consensus accounts and decide which one to choose.

@@ -80,6 +80,11 @@ POST /v1/distribution/delegator/{delegatorAddr}/withdraw_address
 ```
 %/accordion%
 
+说明：
+
+* 保险账户只能将收益和本金提取到本账户，不能单独设置。
+
+
 ###委托账户从单个共识账户提取部分收益 [命令行](../cli/distribution.md#委托账户从单个共识账户提取部分收益-api)
 
 ######此接口用于生成“委托账户从单个共识账户提取部分收益”的交易体，将此交易体进行本地签名后，调用“发送交易”接口完成交易广播。

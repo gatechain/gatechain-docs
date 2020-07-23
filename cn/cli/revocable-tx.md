@@ -22,7 +22,7 @@ gatecli revocable-tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3
 说明：
 
 * 只有保险账户才可以发送可撤回交易。
-* 保险账户发送的所有交易都是可撤回交易。
+
 
 ### 查询单笔交易 
 ```bash

@@ -23,7 +23,6 @@ gatecli revocable-tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3
 Description：
 
 * Only Vault Account can send a Revocable Transaction.
-* Any transaction sent from a Vault Account is a Revocable Transaction.
 
 ### Query a Single Transaction
 ```bash
