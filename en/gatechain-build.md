@@ -28,17 +28,23 @@ We maintain the install script  ("install.sh" ) at github.  "install.sh" is resp
 #### Method 2: Customize Configuration And Installation
 We use the repository  to store historical versions of  the compiled node binary file for the time being. 
 
+- Install Git LFS
+
+  Git LFS is a command line extension and specification for managing large files with Git.
+
+  Please go to https://git-lfs.github.com/ and install `git lfs`.
+
 - Clone the repository
 	
 	```
-	git clone https://github.com/gatechain/node_binary.git
+	git lfs clone https://github.com/gatechain/node_binary.git
 	```
 - Choose the correct binary file version according to change log.
 
 	```
 	cd node-binary/fullnode/{network}/{version}
 	```
-- 	copy the binary file (that is:"gated" "gatecli") to "/usr/local/bin"
+- Copy the binary file (that is:"gated" "gatecli") to "/usr/local/bin"
 	
 	```
 	cp gated gatecli /usr/local/bin

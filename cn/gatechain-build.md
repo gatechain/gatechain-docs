@@ -28,10 +28,14 @@ GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 #### 方式二:自定义配置安装
 我们目前使用这个库来存储已编译的节点二进制文件的历史版本。
 
+- 安装 Git LFS
+
+  Git LFS 是一个 Git 用来管理大文件的扩展。请访问 https://git-lfs.github.com/ 进行安装。
+
 - 克隆资源库
 	
 	```
-	git clone https://github.com/gatechain/node_binary.git
+	git lfs clone https://github.com/gatechain/node_binary.git
 	```
 - 根据修改日志选择对应版本二进制
 
