@@ -42,7 +42,7 @@ We use the repository  to store historical versions of  the compiled node binary
 - Choose the correct binary file version according to change log.
 
 	```
-	cd node-binary/fullnode/{network}/{version}
+	cd node-binary/node/{network}/{version}/{os_type}
 	```
 - Copy the binary file (that is:"gated" "gatecli") to "/usr/local/bin"
 	
@@ -59,7 +59,7 @@ Create root directory  $GATEHOME (or ~/.gated) for Gatechain node file.  The dir
 
 
 ### Configure  To Join Mainnet Or Testnet
-From"node-binary/fullnode/{network}/{version}/config/", copy "config.json"  and "genesis.json"  to "$GATEHOME/"
+From"node-binary/node/{network}/{version}/config/", copy "config.json"  and "genesis.json"  to "$GATEHOME/"
 
 ### Start Node
 

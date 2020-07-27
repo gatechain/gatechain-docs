@@ -40,7 +40,7 @@ GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 - 根据修改日志选择对应版本二进制
 
 	```
-	cd node-binary/fullnode/{network}/{version}
+	cd node-binary/node/{network}/{version}/{os_type}
 	```
 - 	复制二进制文件(即:"gated" "gatecli")到 "/usr/local/bin"
 	
@@ -57,7 +57,7 @@ GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 
 
 ### 设置配置加入主网或测试网
-将"config.json"  和 "genesis.json" 从 "node-binary/fullnode/{network}/{version}/config/" 复制到 "$GATEHOME/"
+将"config.json"  和 "genesis.json" 从 "node-binary/node/{network}/{version}/config/" 复制到 "$GATEHOME/"
 
 ### 启动节点
 
