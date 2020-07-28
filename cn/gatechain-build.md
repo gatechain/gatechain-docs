@@ -22,7 +22,7 @@ GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 
 	```
 	# 一键安装 
-	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node_binary/master/node/install.sh)
+	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
 	```
 	
 #### 方式二:自定义配置安装
@@ -35,7 +35,7 @@ GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 - 克隆资源库
 	
 	```
-	git lfs clone https://github.com/gatechain/node_binary.git
+	git lfs clone https://github.com/gatechain/node-binary.git
 	```
 - 根据修改日志选择对应版本二进制
 

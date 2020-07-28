@@ -22,7 +22,7 @@ We maintain the install script  ("install.sh" ) at github.  "install.sh" is resp
 
 	```
 	# One-Click Install 
-	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node_binary/master/node/install.sh)
+	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
 	```
 	
 #### Method 2: Customize Configuration And Installation
@@ -37,7 +37,7 @@ We use the repository  to store historical versions of  the compiled node binary
 - Clone the repository
 	
 	```
-	git lfs clone https://github.com/gatechain/node_binary.git
+	git lfs clone https://github.com/gatechain/node-binary.git
 	```
 - Choose the correct binary file version according to change log.
 
