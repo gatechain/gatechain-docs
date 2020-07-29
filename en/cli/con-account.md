@@ -73,6 +73,34 @@ gatecli con-account offline --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72q
 ```
 %/accordion%
 
+
+### Edit Consensus Account
+
+```bash
+gatecli con-account edit --moniker [con-account name] --commission-rate [commission rate] --from [sender account] --chain-id [chain ID]
+```
+
+Example：
+
+```bash
+gatecli con-account edit --moniker con1 --commission-rate 0.03 --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+```
+
+%accordion%Return example：%accordion%
+
+```bash
+  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 //transaction hash，using gatecli tx show {hash} to query
+  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+  Raw Log: sync broadcast tx success //transaction  is successfully sent
+```
+%/accordion%
+
+Description：
+* commission-rate The following requirements must be met:
+	* Must be between 0 and commission-max-rate set by the con-account;
+	* It can only be changed once a day,And the range of change shall not exceed the commission-max-change-rate set by the con-account.
+
+
 ### Query Consensus Account Information
 ```bash
 gatecli con-account show [consensus account] --chain-id [chain ID]
