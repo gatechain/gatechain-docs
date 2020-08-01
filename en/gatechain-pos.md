@@ -9,7 +9,7 @@ There are two ways to participate in Gatechain POS mining, and you can choose ei
 By building a full node to participate in the consensus, you  can earn delegation commission besides mining income, as you  can also  accept delegations from other people.
 
 1. On a linux or mac device of good performance, install the latest GateChain binaries gated according to  [Installation Document](./gatechain-build.md), then start it properly.
-2. Create a standard account on the node and transfer in adequate GT from other accounts.Make sure you have enough GT in this account. 
+2. Create a standard account on the node,Consensus accounts don't need too much balance when they go online,Be able to pay the fees(0.01GT) of online transaction,The minimum amount to participate in the consensus is 1GT(10e9 NANOGT)，Therefore, the balance of the account + the entrusted amount should be ≥ 1GT.
 
   	a.Create a standard account [CLI](/cli/account.md# Generate  single signature account )
   	
@@ -49,6 +49,8 @@ By building a full node to participate in the consensus, you  can earn delegatio
 
 If you do not want to build a node and POS mine as a consensus account, you can choose to delegate your GT to a consensus account and get a share of mining reward. Delegation function can be operated in CLI/API/Wallet.
 
+
+* Explain：There is no minimum delegation limit for the account,But if it is too low, the winning rate will be relatively low,If it's too high, yields will fall,It is suggested to build more nodes.
 * Note：All account types can delegate consensus accounts，**It is recommended to use vault account initiate delegate，Guarantee the safety of funds.**
 * Delegate initiated by vault account、redelegate、undelegate、withdraw rewardsThe trading rules are exactly the same as the general account，Include：The delegate token takes effect immediately;The next block starts calculating the rewards;There is still a 21 day freezing period for the redelegate/undelegate;The withdrawal rewards will be paid to the account immediately;**But，When an vault account needs to initiate a clearing transaction,It must be ensured that this account does not have any ongoing delegate and freeze funds,Otherwise, the clearing will fail.**Because delegate does not affect the security of funds in the account,Therefore, after the vault account reaches the clearing height, four kinds of delegate transactions can still be initiated.The following is a detailed description of account delegation:
 
