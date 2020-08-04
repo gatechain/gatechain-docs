@@ -594,6 +594,87 @@ POST  /v1/staking/delegator/{delegatorAddr}/undelegate
 
 %/accordion%
 
+
+### 代理解除委托 [命令行](../cli/staking.md#代理解除委托-api)
+
+######此接口用于生成“代理解除委托”的交易体，将此交易体进行本地签名后，调用“发送交易”接口完成交易广播。
+
+```
+POST  /v1/staking/delegator/undelegate_by_retrieval_account
+```
+
+
+请求BODY示例：
+
+%accordion%json%accordion%
+
+```
+{
+    "base_req":{
+        "from":"gt11la699nscvukjp5kj07nsgq2styuq63zgy8n04srcldx3dal6fkfa22y8a9fz9thuezvnls", //发送者账户
+        "memo":"", //交易备注
+        "chain_id":"testnet", //链ID
+        "gas":"200000", //交易消耗的gas数量
+        "fees":[
+            {
+                "denom":"NANOGT",
+                "amount":"500" //手续费
+            }
+        ],
+        "simulate":false, //是否模拟计算gas
+        "valid_height":[ //交易有效高度
+            "600",
+            "900"
+    	]
+    },
+    "security_address": "gt11la699nscvukjp5kj07nsgq2styuq63zgy8n04srcldx3dal6fkfa22y8a9fz9thuezvnls", //保险账户的找回账户
+    "delegator_address":["vault11556shquf76lunqu7hz05qtd2yda0gm8y0k2k3ku928nmyhgkjhrh95utu3h5c7wr6wuw7q"] //保险账户
+}
+```
+%/accordion%
+
+返回示例：
+
+%accordion%json%accordion%
+
+```
+{
+    "type": "StdTx",
+    "value": {
+        "msg": [
+            {
+                "type": "MsgUndelegateByRetrievalAccount", //交易类型
+                "value": {
+                    "security_address": "gt11la699nscvukjp5kj07nsgq2styuq63zgy8n04srcldx3dal6fkfa22y8a9fz9thuezvnls", //保险账户的找回账户
+                    "delegator_address": "vault11556shquf76lunqu7hz05qtd2yda0gm8y0k2k3ku928nmyhgkjhrh95utu3h5c7wr6wuw7q", //保险账户
+                }
+            }
+        ],
+        "fee": {
+            "amount": [
+                {
+                    "denom": "NANOGT", //单位
+                    "amount": "500" //手续费
+                } 
+            ],
+            "gas": "200000" //交易消耗的gas
+        },
+        "nonces": [
+            null
+        ],
+        "signatures": null, //签名
+        "memo": "",
+        "valid_height":[ //交易有效高度
+            "600",
+            "900"
+    	]
+    }
+}
+```
+
+%/accordion%
+
+
 ###查询委托账户在单个共识账户已解除的委托记录 [命令行](../cli/staking.md#查询委托账户在单个共识账户已解除的委托记录-api)
 
 ```

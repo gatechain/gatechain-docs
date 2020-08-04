@@ -595,6 +595,85 @@ Return example:
 
 %/accordion%
 
+### Release of delegation through security account [command line](../cli/staking.md#Undelegate From A Consensus Account -api)
+
+######The interface generates transaction body  for “Release of delegation through security account ”.After locally signing  it, you can invoke “Send Transaction” interface to finish broadcasting
+
+```
+POST  /v1/staking/delegator/undelegate_by_retrieval_account
+```
+
+Request BODY example：
+
+%accordion%json%accordion%
+
+```
+{
+    "base_req":{
+        "from":"gt11la699nscvukjp5kj07nsgq2styuq63zgy8n04srcldx3dal6fkfa22y8a9fz9thuezvnls", //sender account
+        "memo":"", //transaction remarks
+        "chain_id":"testnet", //chain ID
+        "gas":"200000", //gas consumed by the transaction
+        "fees":[
+            {
+                "denom":"NANOGT",
+                "amount":"500" //fee
+            }
+        ],
+        "simulate":false, //if calculate simulated gas
+        "valid_height":[ //the block height at which transaction takes effect
+            "600",
+            "900"
+    	]
+    },
+    "security_address": "gt11la699nscvukjp5kj07nsgq2styuq63zgy8n04srcldx3dal6fkfa22y8a9fz9thuezvnls", //security address
+    "delegator_address":["vault11556shquf76lunqu7hz05qtd2yda0gm8y0k2k3ku928nmyhgkjhrh95utu3h5c7wr6wuw7q"]//vault account
+}
+```
+%/accordion%
+
+Return example:
+
+%accordion%json%accordion%
+
+```
+{
+    "type": "StdTx",
+    "value": {
+        "msg": [
+            {
+                "type": "MsgUndelegateByRetrievalAccount", //transaction type
+                "value": {
+                    "security_address": "gt11a0a2pcna4jmkuz4z8af7tejpyh0u8yh2wtktq8xpjt3qaualzdtwxw7r9cwh88pnkfk4xn", //security address
+                    "delegator_address": "vault11556shquf76lunqu7hz05qtd2yda0gm8y0k2k3ku928nmyhgkjhrh95utu3h5c7wr6wuw7q", //vault account
+                }
+            }
+        ],
+        "fee": {
+            "amount": [
+                {
+                    "denom": "NANOGT", //unit
+                    "amount": "500" //fee
+                } 
+            ],
+            "gas": "200000" //gas consumed by the transaction
+        },
+        "nonces": [
+            null
+        ],
+        "signatures": null, //signature
+        "memo": "",
+        "valid_height":[ //the block height at which transaction takes effect
+            "600",
+            "900"
+    	]
+    }
+}
+```
+
+%/accordion%
+
+
 ###Query Undelegations of A Delegator Account in A consensus Account [command line](../cli/staking.md#Query Undelegations of A Delegator Account in A consensus Account-api)
 
 ```
