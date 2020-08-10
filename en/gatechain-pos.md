@@ -109,3 +109,19 @@ If you do not want to build a node and POS mine as a consensus account, you can 
  	 * Query  undelegated records regarding a specific consensus account  [CLI](/cli/staking.md#Query  undelegated records regarding a specific consensus account -api) [API](/API/staking.md#Query  undelegated records regarding a specific consensus account -command -line)
 
  	 
+### Explanation of rewards distribution of consensus account and delegator account
+
+
+The total rewards of each block is 0.4GT+Transaction fees,According to the inverse proportion of the weight of the consensus account entering the committee the distribution（The lower the weight, the higher the rewards）,weight =(Currency holdings+delegation GT quantity)* Loyalty coefficient.
+
+1. Rewards distribution rules of consensus account, There are three cases:
+
+	a.Three consensus accounts were selected into the block Committee, According to the weight proportion of each account, If it is between 40% and 27%, it will be distributed according to the actual proportion, If more than 40% or less than 27%, Distribution by standard:40%.33%.27%;
+
+	b.Two consensus accounts were selected into the block Committee, According to the weight proportion of each account, If it is between 60% and 40%, it will be distributed according to the actual proportion, If more than 60% or less than 40%, Distribution by standard:60%.40%;
+	
+	c.One consensus accounts were selected into the block Committee, Get 100% rewards.
+	
+2. The consensus account and the delegator account shall be allocated the due reward according to the proportion of money held, example:The consensus account should receive 40% of the rewards, Namely 0.16GT, Consensus account holding 10000GT, Delegation quantity 10000GT, 0.16*50%=0.08，Therefore, the consensus account and the delegator account get 0.08GT respectively(The delegator account shall pay a certain fee to the consensus account according to the fee rate).
+
+

@@ -24,6 +24,7 @@
 * [PoS Mining](gatechain-pos.md)
     * [Build Full Node](gatechain-pos.md#build-a-gatechain-full-note-and--work-as-a-consensus-account)
     * [Delegation](gatechain-pos.md#delegate-gt-to-a-consensus-account)
+    * [Rewards](gatechain-pos.md#explanation-of-rewards-distribution-of-consensus-account-and-delegator-account)
 * [API](API/README.md)
     * [Standard Account](API/account.md)
     * [Consensus Account ](API/con-account.md)

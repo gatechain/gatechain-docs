@@ -24,6 +24,7 @@
 * [PoS 挖矿](gatechain-pos.md)
     * [搭建全节点 build full node](gatechain-pos.md#搭建gatechain全节点，成为共识账户)
     * [委托 delegation](gatechain-pos.md#委托gt给共识账户)
+    * [收益 rewards](gatechain-pos.md#共识账户及委托账户的收益分配说明)
 * [API](API/README.md)
     * [普通账户 account](API/account.md)
     * [共识账户 con-account](API/con-account.md)
