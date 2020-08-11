@@ -1,19 +1,18 @@
 # Overview
 
-User’s assets will be stored at GateChain in in the form of “Token”. Any asset should comply with  Token Management standards of  GateChain.
+Issued assets are stored on GateChain in in the form of tokens. Any asset should comply with GateChain's Token Management Standards.
 
-Assets owner can issue, additionally issue, burn, and freeze/unfreeze  their assets, all of which will incur fees. Fees will be paid in  GateChain Token.
+Asset owners can additionally issue, burn, and freeze/unfreeze their assets. These functions incur fees, paid in GateChain Tokens.
 
-> The testnet may differ with the upcoming mainnet in fee schedule.
->
-> Before using the asset management introduced in this document, you have to generate or add a key for operation in your Command Line Interface（CLI).
+
+> Before following the asset management standards introduced in this document, you have to generate or add an operation key in your Command Line Interface（CLI).
 
 
 ## Issuance
 
-With Cli or using API, you can issue your own digital asset  at GateChain.
+Via Cli or API, you can issue your own digital assets on GateChain.
 
-The issuer may fill  information according to requirement first. After being verified, the issuer can publish his own digital asset in the form of Token at GateChain. Below are related commands:
+The issuer may fill in the parameters according to the requirements. After being verified, the issuer can publish his own digital asset in the form of a token on GateChain. Below are the related commands:
 
 ### Token Management
 #####[Operational Details for CLI](./cli/token.md)
