@@ -105,7 +105,7 @@ Use the "gatecli" to configure
 
 	cp ~/.gated/api.token ~/.gatecli/
 
-[CLI Operational Instruction](./cli/README.md)
+[CLI Operational Instructions](./cli/README.md)
 
-[API Operational Instruction](./API/README.md)
+[API Operational Instructions](./API/README.md)
 
