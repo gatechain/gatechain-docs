@@ -1,77 +1,80 @@
 ## PoS Mining
 
-There are two ways to participate in Gatechain POS mining, and you can choose either. We will give below  detailed information:
+There are two ways to take part in Gatechain's POS mining:
 
-1. Build a GateChain full note and  work as a consensus account. 
-2. Delegate your GT to a  consensus account.
+1. Build a GateChain full node and work as a consensus account. 
+2. Delegate your GT to a consensus account.
 
-### Build a GateChain Full Note and  Work as a Consensus Account 
-By building a full node to participate in the consensus, you  can earn delegation commission besides mining income, as you  can also  accept delegations from other people.
+### Build a GateChain Full Node and Work as a Consensus Account 
+By building a full node to participate in the consensus, you can earn delegation commission on top of your mining revenue, as you can opt to accept delegations from other accounts.
 
-1. On a linux or mac device of good performance, install the latest GateChain binaries gated according to  [Installation Document](./gatechain-build.md), then start it properly.
-2. Create a standard account on the node,Consensus accounts don't need too much balance when they go online,Be able to pay the fees(0.01GT) of online transaction,The minimum amount to participate in the consensus is 1GT(10e9 NANOGT)，Therefore, the balance of the account + the entrusted amount should be ≥ 1GT.
+1. On a linux or mac device of good performance, install the latest GateChain binaries according to [Installation Document](./gatechain-build.md).
+2. Create a normal account. Consensus accounts don't need too much balance in order to go live. The minimum amount to participate in the consensus is 1GT(10e9 NANOGT). You should also ensure to be able to pay the fees of online transactions (0.01GT), Therefore, the balance of a consensus account should be ≥ 1GT.
 
-  	a.Create a standard account [CLI](/cli/account.md# Generate  single signature account )
+  	a.Create a single signature account [CLI](/cli/account.md# Generate single signature account )
   	
-  	b.Send a transaction [CLI](/cli/tx.md#Send transactions-api) [API](/API/tx.md# normal transaction)
+  	b.Initiate a transaction [CLI](/cli/tx.md#Send transactions-api) [API](/API/tx.md# normal transaction)
   	
-3. Create a Consensus Account using a standard a account.
+3. Create a Consensus Account using a single signature account.
 
  	a.Create a Consensus Account [CLI](/cli/con-account.md# Create a Consensus Account)
  	
-4. On the node, initiate a "consensus account online transaction"; if successful, the standard account becomes a consensus account. 
+4. On the node, initiate a "consensus account online transaction"; if successful, the single signature normal account becomes a consensus account. 
 
  	a.consensus account online transaction [CLI](/cli/con-account.md#consensus account online)
-5. This consensus account  and the node will participate in the consensus process at GateChain. Make sure your device running  well and network connection is good. 
 
-6. Each time the  consensus account  is elected in  consensus committee, it will get PoS mining reward  and  miner fees. 
+5. This consensus account and its node will participate in GateChain's consensus mechanism. Make sure your system is running well and network connection is stable. 
 
- 	a.Query consensus account for  the POS mining reward and miner fees [CLI](/cli/distribution.md#query consensus account earnings-api) [API](/API/distribution.md#query consensus account earnings-command-line)
+6. Each time the consensus account is elected in the consensus committee, it will be credited with the PoS mining reward. 
+
+ 	a.Query consensus account for the POS mining reward and miner fees [CLI](/cli/distribution.md#query consensus account earnings-api) [API](/API/distribution.md#query consensus account earnings-command-line)
  	
-7. As consensus account, you can accept delegations from others.
+7. As a consensus account, you can accept delegations from accounts.
  	
- 	a.Accepting delegations will add a consensus account's weight in voting and increase the odds to be elected into committee. 
+ 	a.Accepting delegations adds weight to the consensus account's votes and increases the odds to be elected into committee. 
  	
- 	b.Besides getting  mining rewards and miner fees,  a consensus  account can also charge delegator accounts “delegation commission”. The commission rate can be specified when initiating “consensus account online transaction”.。
+ 	b.Besides getting mining rewards, a consensus account can also charge delegator accounts “delegation commission”. The commission rate can be specified when initiating a “consensus account online transaction”.。
  	
- 	c.To query delegation related information, use following interfaces:
+ 	c.To query delegation related information, use the following interfaces:
  	
- 	 * Query a consensus account  for   delegation records [CLI](/cli/staking.md#Query all delegations of a specific consensus account -api)  [API](/API/staking.md#Query all delegations of a specific consensus account -command-line)
+ 	 * Query a consensus account for delegation records [CLI](/cli/staking.md#Query all delegations of a specific consensus account -api)  [API](/API/staking.md#Query all delegations of a specific consensus account -command-line)
  	 
- 	 * Query a consensus account  for  delegation shifts records [CLI](/cli/staking.md#query all  delegation shifts of a specific consensus account -api) [API](/API/staking.md#query delegation shifts -command-line)
+ 	 * Query a consensus account for delegation shifts records [CLI](/cli/staking.md#query all delegation shifts of a specific consensus account -api) [API](/API/staking.md#query delegation shifts -command-line)
  	 
- 	 * Query a consensus account  for  undelegated records  [CLI](/cli/staking.md#Query all undelegated records of a specific consensus account-api) [API](/API/staking.md#Query all undelegated records of a specific consensus account-command-line)
+ 	 * Query a consensus account for undelegated records  [CLI](/cli/staking.md#Query all undelegated records of a specific consensus account-api) [API](/API/staking.md#Query all undelegated records of a specific consensus account-command-line)
  	 
- 	 * Query a consensus account  for  outstanding delegation income [CLI](/cli/distribution.md#Query a consensus account  for  outstanding delegation income-api) [API](/API/distribution.md#Query a consensus account  for  outstanding delegation income-command-line)
+ 	 * Query a consensus account for outstanding delegation income [CLI](/cli/distribution.md#Query a consensus account for outstanding delegation income-api) [API](/API/distribution.md#Query a consensus account for outstanding delegation income-command-line)
 
 
 ### Delegate GT to a Consensus Account 
 
-If you do not want to build a node and POS mine as a consensus account, you can choose to delegate your GT to a consensus account and get a share of mining reward. Delegation function can be operated in CLI/API/Wallet.
+If you do not want to build a node and POS mine as a consensus account, you can opt to delegate your GT to a consensus account and get a share of mining rewards. Delegation can be performed via CLI/API/Wallet.
 
 
-* Explain：There is no minimum delegation limit for the account,But if it is too low, the winning rate will be relatively low,If it's too high, yields will fall,It is suggested to build more nodes.
-* Note：All account types can delegate consensus accounts，**It is recommended to use vault account initiate delegate，Guarantee the safety of funds.**
-* Delegate initiated by vault account、redelegate、undelegate、withdraw rewardsThe trading rules are exactly the same as the general account，Include：The delegate token takes effect immediately;The next block starts calculating the rewards;There is still a 21 day freezing period for the redelegate/undelegate;The withdrawal rewards will be paid to the account immediately;**But，When an vault account needs to initiate a clearing transaction,It must be ensured that this account does not have any ongoing delegate and freeze funds,Otherwise, the clearing will fail.**Because delegate does not affect the security of funds in the account,Therefore, after the vault account reaches the clearing height, four kinds of delegate transactions can still be initiated.The following is a detailed description of account delegation:
+* There is no minimum delegation amount for the account. If too low, then the yielding rate will be relatively low as well. If too high, yields will fall off and it's suggested to build more nodes.
+* All account types can delegate to consensus accounts，**It is recommended to use a vault account, guaranteeing the safety of the funds.**
+* Delegations initiated by vault accounts work exactly the same way as from normal accounts. The delegattion takes effect immediately; rewards are calculated from the very next block. There is still a 21 day freeze period required if you wish to redelegate/undelegate your funds. Reward withdrawals will be credited to the account immediately.**When a vault account initiates a clearing transaction, there mustn't be any ongoing delegations or frozen funds, otherwise the clearing transaction will fail.**Delegation does not affect the security of the accounts' funds, therefore, after the clearing height is reached, four kinds of delegation transactions can still be initiated.
+
+**How-To Delegate:
 
 
-1. First, choose a consensus account to delegate your GT.
+1. First, choose a consensus account to delegate your GT to.
 
- 	a.You can check commission, holding, rate of return etc of a consensus accounts and decide which one to choose.
+ 	a.You can check the commission, holdings, rate of returns etc of a consensus accounts and decide which one to choose.
  	
  	b.You can view using a blockchain explorer：https://explorer.gatechain.io/mainnet/consensus
  	 	
-2. Initiate a  "delegate" transaction to delegate all or  part of your GT to  selected one or more consensus accounts. Now you become a delegator.
+2. Initiate a  "delegate" transaction to delegate all or a portion of your GT to one or more consensus accounts. 
 
  	 a.Initiate a delegation transaction [CLI](/cli/staking.md#delegate token to consensus accounts-api) [API](/API/staking.md#delegate token to consensus accounts-command-line)
  	 
-3. If the delegation transaction succeeded, you can get a share of the mining reward following the consensus account's POS mining.
+3. If the delegation transaction succeededs, you can get a share of the mining reward following the consensus account's POS mining.
 
-4. During delegating, delegator can initiate  three operations to “fetch income” , “shift delegation” or  “undelegate”
+4. While delegating, a delegator can perform three functions: “fetch income” , “shift delegation” or  “undelegate”
 
-	Note:When the principal performs three operations: "again delegate", "redelegate" and "undelegate",Reward amount is directly returned to account balance,To query the specific reward amount, you need to view the content "transfer" in the corresponding transaction details.
+	Note: When the principal performs one of the functions: "fetch income", "shift delegation" and "undelegate", reward amount is directly credited to their account's balance. To query the specific reward amount, you need to view the content of "transfer" in the corresponding transaction details.
 
-    a.Delegator can initiate “fetch income” transaction  to extract its share of mining reward income to its own account.
+    a.Delegator can initiate a “fetch income” transaction and get credited its share of the mining rewards to their own account.
  	 
  	 * Query all delegation info [CLI](/cli/staking.md#Query delegator account for all delegations in all consensus accounts-api) [API](/API/staking.md#Query delegator account for all delegations in all consensus accounts-command -line)
  	 
@@ -85,9 +88,9 @@ If you do not want to build a node and POS mine as a consensus account, you can 
  	 
  	 * Fetch all income [CLI](/cli/distribution.md#Delegator account fetches  all of its income from consensus account.-api) [API](/API/distribution.md#Delegator account fetches  all of its income from consensus account -command-line)
 	
-  b.Delegator can initiate a “shift delegation” transaction for a given delegation to move GT delegation to another  consensus account 
+  b.Delegator can initiate a “shift delegation” transaction for a given delegation to move their GT funds to another consensus account 
 
-   * After the delegation shift, the income at From consensus  account will be settled immeditely. But the delegation can not be shifted again from the To consensus account  for a period  of 21 days.
+   * After the delegation shift, the income from the consensus account will be settled immeditely. But the delegation can not be shifted again from the consensus account for a period of 21 days.
    
    * Initiate a shift delegation transaction [CLI](/cli/staking.md#shift delegation-api)  [API](/API/staking.md#shift delegation-command -line)
    
@@ -99,28 +102,29 @@ If you do not want to build a node and POS mine as a consensus account, you can 
  	
  	 * Note, the delegation income will be settled immediately at the consensus account after undelegating. But the earning and principal will be credited 21 days later
  	 
- 	 * Initiate an  “undelegate” transaction [CLI](/cli/staking.md#undelegate from a consensus account -api) [API](/API/staking.md#undelegate from a consensus account-command -line)
+ 	 * Initiate an “undelegate” transaction [CLI](/cli/staking.md#undelegate from a consensus account -api) [API](/API/staking.md#undelegate from a consensus account-command -line)
  	 
  	 * Query a delegator account for  undelegated records from a consensus account  [CLI](/cli/staking.md#Query a delegator account for  undelegated records from a consensus account -api) [API](/API/staking.md#Query a delegator account for  undelegated records from a consensus account -command -line)
  	 
  	 * Query a delegator account for  undelegated records from all consensus account  [CLI](/cli/staking.md#Query a delegator account for  undelegated records from all consensus account api)
  [API](/API/staking.md#Query a delegator account for  undelegated records regarding all consensus account -command -line)
  
- 	 * Query  undelegated records regarding a specific consensus account  [CLI](/cli/staking.md#Query  undelegated records regarding a specific consensus account -api) [API](/API/staking.md#Query  undelegated records regarding a specific consensus account -command -line)
+ 	 * Query undelegated records regarding a specific consensus account  [CLI](/cli/staking.md#Query  undelegated records regarding a specific consensus account -api) [API](/API/staking.md#Query  undelegated records regarding a specific consensus account -command -line)
 
  	 
-### Explanation of rewards distribution of consensus account and delegator account
+### Rewards distribution structure between consensus and delegator accounts
 
 
-The total rewards of each block is 0.4GT+Transaction fees,According to the inverse proportion of the weight of the consensus account entering the committee the distribution（The lower the weight, the higher the rewards）,weight =(Currency holdings+delegation GT quantity)* Loyalty coefficient.
+The total reward of each block is 0.4GT + Transaction fees.
+(The lower the weight, the higher the rewards), weight =(Currency holdings+delegation GT quantity)* Loyalty coefficient.
 
-1. Rewards distribution rules of consensus account, There are three cases:
+1. Rewards distribution rules of consensus accounts, three cases:
 
-	a.Three consensus accounts were selected into the block Committee, According to the weight proportion of each account, If it is between 40% and 27%, it will be distributed according to the actual proportion, If more than 40% or less than 27%, Distribution by standard:40%.33%.27%;
+	a.Three consensus accounts were selected into the block Committee, according to each account's weight proportions, If they are between 40% and 27%, distribution will occur according to the actual proportions, If more than 40% or less than 27%, distribution will occur evenly split:40%.33%.27%;
 
-	b.Two consensus accounts were selected into the block Committee, According to the weight proportion of each account, If it is between 60% and 40%, it will be distributed according to the actual proportion, If more than 60% or less than 40%, Distribution by standard:60%.40%;
+	b.Two consensus accounts were selected into the block Committee, according to each account's weight proportions, if they are between 60% and 40%, distribution will occur according to the actual proportions, If more than 60% or less than 40%, distribution will occur evenly split:60%.40%;
 	
-	c.One consensus accounts were selected into the block Committee, Get 100% rewards.
+	c.One consensus accounts was selected into the block Committee, gets 100% rewards.
 	
 2. The consensus account and the delegator account shall be allocated the due reward according to the proportion of money held, example:The consensus account should receive 40% of the rewards, Namely 0.16GT, Consensus account holding 10000GT, Delegation quantity 10000GT, 0.16*50%=0.08，Therefore, the consensus account and the delegator account get 0.08GT respectively(The delegator account shall pay a certain fee to the consensus account according to the fee rate).
 
