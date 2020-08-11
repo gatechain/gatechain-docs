@@ -41,7 +41,7 @@ GateChain is a novel next-generation public blockchain, focused on onchain asset
 GateChain DEX, a decentralized exchange with matching engines of ultra high performance and low cost, thus providing users with a safe, quick and transparent trading experience Cross-chain transfes will be supported for multiple currencies. 
 
 
-Anyone who has full control over the private key of his account can trade freely. GateChain DEX uses privately owned encrypted mobile or hardware wallets to safeguard users’ assets and solves the trust issues that arise when trading on centralized exchanges.
+Anyone who has full control over his account's private keys can trade freely and safely. GateChain DEX does not store users' funds or private keys but leverages privately owned encrypted mobile or hardware wallets to safeguard users’ assets and solves the trust issues that arise when trading on centralized exchanges.
 
 ### GateChain Token
 
