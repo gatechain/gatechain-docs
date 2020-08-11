@@ -124,14 +124,14 @@ As an innovative public chain focusing on on-chain asset security, GateChain int
 
 GateChain is a novel public chain. Its principal research has introduced many novel concepts that form the principle fundamentals for building complete self-consistency in assets safety.
 
-* <span id="na">Normal Account：Account similar to a Bitcoin address that can store assets and is suitable for daily use. An asset in this type of account can be sent instantly and is irreversible once confirmed on the blockchain. A lost private key can not be restored.</span>
-* <span id="va">Vault Account：GateChain’s novel creation. This is a new type of account that allows revocable transaction in the case of theft and private key restoration in the case of lost or damaged private key. Transfer of assets in this type of account have to wait for a preset period of time. It is suitable for storing and protecting a large amount of assets that are not for immediate use.</span>
-* <span id="rdp">Revocable Delay Period ：The time duration within which transaction transfer from vault account is revocable. During this time period (calculated by blocks), recovery of a transaction is possible by initiating a "revoke" operation to return the transaction to “Retrieval Account’. </span>
-* <span id="ra">Retrieval Account：the preset account bound to a Vault Account. When a transaction in the vault account is revoked, the transaction asset will be moved to this account. </span>
-* <span id="ch">Clearing Height：it is a future time. At the time when this future block height is hit, the asset in the account will allow clearing. </span>
-* <span id="revoke">Revoke: When the transaction initiated from Vault Account is still in the revocable delay period, the “revoke” operation can be initiated to return the asset to “Retrieval Account’. </span>
-* <span id="rt">Revocable Transaction：any transaction initiated from Vault Account is a revocable transaction, which allows for revoking to move the asset to “Retrieval Account” during the revocable delay period. After the revocable period, the transaction can not be revoked. </span>
-* <span id="irt">Irrevocable Transaction：Transactions initiated from Normal Account. It is irreversible once it is confirmed by blockchain.</span>
+* <span id="na">Normal Account：Storage of assets, suitable for daily use. Assets in this type of account can be sent instantly and transactions are irreversible once confirmed on-chain. Lost private key can not be restored.</span>
+* <span id="va">Vault Account：A new type of account that features revocable transactions. Assets in this type of account are transferred after a preset delay. Suitable for storage and safekeeping of funds not ment for immediate use.</span>
+* <span id="rdp">Revocable Delay Period：The time period during which a transaction from a vault account is revocable. During this period (calculated in blocks), recovery of funds is possible by initiating  a "revoke" request and have the funds sent to the “Retrieval Account’. </span>
+* <span id="ra">Retrieval Account：A predetermined account bound to the Vault Account. When a transaction is revoked, the assets will be transferred to this account. </span>
+* <span id="ch">Clearing Height：A future block height. When this block height is reached, the assets in the account are transferred according to the account holders' instructions. </span>
+* <span id="revoke">Revoke: When a transaction initiated from a Vault Account is still in the revocable delay period, “revoke” request can be initiated and the assets will be sent to the “Retrieval Account’. </span>
+* <span id="rt">Revocable Transaction： A transaction initiated from a Vault Account is a revocable transaction, allowing assets to be transfered to the “Retrieval Account” instead of the original address. After the revocable period, transaction can not be revoked. </span>
+* <span id="irt">Irrevocable Transaction：Transactions initiated from Normal Accounts. It is irreversible once it is confirmed by blockchain.</span>
 
 <!--### GateChain Address Types ###
 
