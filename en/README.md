@@ -74,7 +74,7 @@ A Normal Account is used to store a fraction of assets for daily use while a Vau
 
 For everyday transactions, users can use assets in the Normal Account just like they would on a bitcoin address: a transaction is confirmed upon payment and is irreversible. In the case of a Normal Account's private key loss/theft, the loss is limited to that "daily allowance". Risk is still under control. A Normal Account can be topped up by transfering from the Vault Account and the amount will be received after the revocable delay period that's been set. If a private key theft/loss is found during this period, a "Revoke" request can be initiated from the Vault Account. The transaction will be revoked and moved to the “Retrieval Account”. Funds are safe.
 
-### 2. **Legacy or Grant auto-release**:
+### 2. **Legacy or Grant Auto-Release**:
 
 Digital asset inheritance has been a point of concern for many as it can not be executed similar to bank assets and real estate under the existing applicable laws. The private keys of digital assets are usually kept by the holder himself for security reasons. Without elaborate planning, digital assets can be forever frozen following the death of the holder and leave his lawful heirs no way to access to his legacy. GateChain's Vault Accounts support the release of digital assets at a predetermined time to a beneficiary, without having to worry about private keys loss/theft. 
 
@@ -135,35 +135,35 @@ GateChain is a novel public chain. Its principal research has introduced many no
 
 <!--### GateChain Address Types ###
 
-GateChain has two main account types, Normal Account, and Vault Account, with a different identifier at the start in their addresses:
+GateChain has two main account types, Normal Account, and Vault Account, with a different identifier at the start of their addresses:
 
-Normal Account：start with “gc’’. “gc1” indicates a single- signature Normal Account, and “gc2” indicates a multi-signature Normal Account.
-Vault Account：start with “vault’.“vault 1” indicates a single- signature Vault Account, and “ vault2” indicates a multi-signature Vault Account,
+Normal Account：starts with “gt’’. “gt1” indicates a single-signature Normal Account, and “gt2” indicates a multi-signature Normal Account.
+Vault Account：starts with “vault’.“vault1” indicates a single-signature Vault Account, and “ vault2” indicates a multi-signature Vault Account,
 
-With the address identifier mechanism invented by GateChain, the recipient account can easily identify the sending account's type and set the confirmation requirement accordingly. If it is from a Vault Account, confirmation is safe only after a revocable delay period. -->
+With GateChain's address identifier mechanism, confirmation requirements can be set and carried out accordingly. If it is from a Vault Account, confirmation is safe only after a revocable delay period. -->
 
 ### GateChain Address Types
 
-GateChain has two main account types, Normal Account, and Vault Account, with a different identifier at the start in their addresses.
+GateChain has two main account types, Normal Account, and Vault Account, with a different identifier at the start of their addresses.
 
-* Normal Account：start with “gc’’. “gc1” indicates a single- signature Normal Account, and “gc2” indicates a multi-signature Normal Account. 
-* Vault Account：start with “vault’.“vault 1” indicates a single- signature Vault Account, and “ vault2” indicates a multi-signature Vault Account.
+* Normal Account：starts with "gt". "gt1" indicates a single-signature Normal Account, and "gt2" indicates a multi-signature Normal Account. 
+* Vault Account：starts with "vault"."vault1" indicates a single-signature Vault Account, and "vault2" indicates a multi-signature Vault Account.
 
-With the address identifier mechanism invented by GateChain, the recipient account can easily identify the sending account's type and set the confirmation requirement accordingly. If it is from a Vault Account, confirmation is safe only after a revocable delay period.
+With GateChain's address identifier mechanism, confirmation requirements can be set and carried out accordingly. If a transaction is initiated from a Vault Account, confirmation is safe only after a revocable delay period.
 
 
 ### GateChain Transaction Types
 
-GateChain has many transaction types. To identify different transaction types efficiently, GateChain creatively provides a transaction type identifier.
+GateChain has many transaction types. To identify different transaction types efficiently, GateChain provides a transaction type identifier.
 
-Below are identifiers different transaction types start with:
+Below are the identifiers that different transaction types can start with:
 
-* Irrevocable Pay：“INREVOCABLEPAY-”
-* Revocable Pay：“REVOCABLEPAY-”
-* Account Set： “ACCOUNTSET-”
-* Vault Create：“VAULTCREATE-”
-* Revoke: “REVOKE-”
-* Vault Clear：“VAULTCLEAR-”
+* Irrevocable Payment：“IRREVOCABLEPAY-”
+* Revocable Payment：“REVOCABLEPAY-”
+* Account Setting： “ACCOUNTSET-”
+* Vault Creation：“VAULTCREATE-”
+* Revoke Request: “REVOKE-”
+* Vault Clearance：“VAULTCLEAR-”
 * Untitled： “BASIC-”
 
 
@@ -175,7 +175,7 @@ Below are identifiers different transaction types start with:
 
 ## Advanced Docs
 
-- **Full Node and Local Testnet**：	Anyone can build a full node and run his testnet. A full node has all the functions GateChain has. Detailed installation visit [Install and Deploy](./gatechain-build.md).
-   - **Join Testnet**： A full node can connect to public testnet (use the same version of testnet )<!--，Latest code[get](pending developing)here-->）to monitor and broadcast transaction and block update and other tasks in real time in the network.
-   - **Command Line Interface**：Besides wallets, we also provide client programs, which can interact with GateChain using command line. Many operations can be done to onchain account using a command line interface, including account management, transaction management, and asset management. In addition, simple inquiry to onchain data is also allowed using a command line interface, such as inquiry of account balance, and transaction details.  More Details visit [Command Line Interface Reference](./cli/README.md).
-- **API**：GateChain node provides advanced REST API interface service, related API information visit [REST API List](./API/README.md).
+- **Full Node**：	Anyone can build a full node to participate in the consensus mechanism or run his network. A full node has all the functions GateChain has. Detailed installation visit [Install and Deploy](./gatechain-build.md).
+   - **Join Mainnet**： A full node can connect to the public mainnet (using the same network version)<!--，Latest code[get](pending developing)here-->）to monitor and broadcast transactions, update blocks and other network tasks in real time.
+   - **Command Line Interface**：Client programs which can interact with GateChain using the command line interface are also provided. Many operations can be performed on your onchain account using a command line interface, including account management, transaction management, and asset management. In addition, simple onchain inquiries can be made rearding account balance and transaction details. For more details visit [Command Line Interface Reference](./cli/README.md).
+- **API**：GateChain Nodes support advanced REST API interface service, related API information visit [REST API List](./API/README.md).
