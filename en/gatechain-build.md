@@ -1,22 +1,22 @@
 # Overview
 
-GateChain full node is the pivot to keeping GateChain running. A GateChain "full node" has all functionalities of GateChain, including building a local testnet,  and joining  a public testnet  or mainnet. It also supports downloading onchain block data, validating and executing  business logic, observing consensus information, and more
+GateChain's full nodes are key to keeping the network running. A full node has all of GateChain's features, including building a local testnet, and joining a public testnet or mainnet. It also supports downloading onchain block data, validating and executing business logic, observing consensus information, and more!
 
 ## Supporting Platforms
-GateChain full nodes currently can run in Unix environment (mac OS,ubuntu, and centos).
+GateChain full nodes currently can run in Unix environments (mac OS,ubuntu, and centos).
 
 ## Configuration Requirements
 To run a full node, the hardware must meet certain requirements.
 
-- system requirement: Mac OS 10.14.6 or later, CentOS Linux release 7.7.1908 or later, or Ubuntu 18.04.2 or later	
--  Quad-core, 8G RAM, 100Gb  HDD or more
--  Stable connection to Internet, bandwidth 1MB/s  or more
+-  OS: Mac OS 10.14.6 or above, CentOS Linux release 7.7.1908 or above, Ubuntu 18.04.2 or above;	
+-  Storage: Quad-core, 8G RAM, 100Gb  HDD or more
+-  Network: Stable internet connection, bandwidth 1MB/s  or above.
  
 ## GateChain Full Node Installation Instructions 
 #### Method 1: Run A Script To Automatically Install
-  > Note:  make sure "wget” has been installed in your environment
+  > Note:  make sure "wget” has been installed in your environment.
   
-We maintain the install script  ("install.sh" ) at github.  "install.sh" is responsible for the configurations  of the executable file of chain. Value below is used by default:
+The installation script ("install.sh" ) is located on Github. "install.sh" is responsible for the configuration of the chain's executable file. Value below is used by default:
 
 - executable file is located at "/usr/local/bin"(that is:"gated" "gatecli")
 
@@ -26,7 +26,7 @@ We maintain the install script  ("install.sh" ) at github.  "install.sh" is resp
 	```
 	
 #### Method 2: Customize Configuration And Installation
-We use the repository  to store historical versions of  the compiled node binary file for the time being. 
+We use the repository to store previous versions of the compiled node binary files for the time being. 
 
 - Install Git LFS
 
@@ -39,7 +39,7 @@ We use the repository  to store historical versions of  the compiled node binary
 	```
 	git lfs clone https://github.com/gatechain/node-binary.git
 	```
-- Choose the correct binary file version according to change log.
+- Choose the correct binary file version according to the change log.
 
 	```
 	cd node-binary/node/{network}/{version}/{os_type}
@@ -50,24 +50,24 @@ We use the repository  to store historical versions of  the compiled node binary
 	cp gated gatecli /usr/local/bin
 	```
 
-### Configure Files
+### File Configuration
 
-Create root directory  $GATEHOME (or ~/.gated) for Gatechain node file.  The directory is used by default when bootstrap a node. You can also add -h $GATEHOME (customized node root directory) after the start command
+Create root directory $GATEHOME (or ~/.gated) for Gatechain's node file. The directory is used by default when bootstrapping a node. You can also add -h $GATEHOME (customized node root directory) after the start command
 
 	
 	mkdir ~/.gated
 
 
-### Configure  To Join Mainnet Or Testnet
-From"node-binary/node/{network}/{version}/config/", copy "config.json"  and "genesis.json"  to "$GATEHOME/"
+### Configuration To Join Mainnet Or Testnet
+From "node-binary/node/{network}/{version}/config/", copy "config.json"  and "genesis.json"  to "$GATEHOME/"
 
-### Start Node
+### Starting your Node
 
 ```bash
 gated start
 ```
 
-### Create A Privatechain Locally  
+### Creating A Local Private Chain  
 
 - Initialize the genesis block file
 ```
@@ -100,8 +100,8 @@ gated add-genesis-dex-owner [owner-addr]
 gated start
 ```
 
-### Manage Node
-Use the "gatecli" to configure command
+### Node Management
+Use the "gatecli" to configure 
 
 	cp ~/.gated/api.token ~/.gatecli/
 
