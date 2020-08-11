@@ -58,12 +58,7 @@ GateChain provides various wallet applications ranging from personal to professi
 
 * During the testnet phase, GateChain provided desktop wallets for Windows and Mac OS; professional users could also access and test the API.
 
-* During the mainnet phase, GateChain will provide a wider variety, to cater for every kind of necessity:
-   ~command-line interface wallet,
-   ~mobile wallet (Android/iOS),
-   ~web wallet,
-   ~multi-signature wallet,
-   ~hardware wallet.
+* During the mainnet phase, GateChain will provide a wider variety, to cater for every kind of necessity: {command-line interface wallet | mobile wallet (Android/iOS) | web wallet | multi-signature wallet | hardware wallet}
 
 ## Typical Application
 
