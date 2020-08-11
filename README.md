@@ -1,6 +1,6 @@
 # GateChain Documents
 
-Welcome to GateChain Documents! Please choose docs in your language.  
+Welcome to GateChain's Documents! Please choose your language.  
 
 [GateChain Docs in English](./en/README.md)
 
