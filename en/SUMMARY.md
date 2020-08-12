@@ -52,6 +52,7 @@
     * [Supporting Platforms](gatechain-build.md#supporting-platforms)
     * [Configuration Requirements](gatechain-build.md#configuration-requirements)
     * [Installation Instruction](gatechain-build.md#gatechain-full-node-installation-instructions)
+    * [PoS Mining](gatechain-build.md#pos-mining)
     * [Join Testnet](gatechain-build.md#configure--to-join-mainnet-or-testnet)
     * [Create Local Testnet](gatechain-build.md#create-a-privatechain-locally)
 * [Wallets](gatechain-wallet.md)

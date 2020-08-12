@@ -54,6 +54,7 @@
     * [安装步骤 step](gatechain-build.md#gatechain全节点安装步骤)
     * [配置文件 config file](gatechain-build.md#配置文件)
     * [加入主网/测试网 join mainnet/testnet](gatechain-build.md#设置配置加入主网或测试网)
+    * [参与主网pos挖矿 PoS mining](gatechain-build.md#参与主网pos挖矿)
     * [创建本地私有链 create local private chain](gatechain-build.md#创建本地私有链)
     * [管理节点 management node](gatechain-build.md#管理节点)
 * [钱包 wallet](gatechain-wallet.md)
