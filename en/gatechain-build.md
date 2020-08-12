@@ -67,6 +67,36 @@ From "node-binary/node/{network}/{version}/config/", copy "config.json"  and "ge
 gated start
 ```
 
+### PoS Mining
+By building a full node to participate in the consensus, 
+you need to create a base account on your node.
+```bash
+gatecli account create
+```
+
+After the base account, create a consensus account:
+```bash
+gatecli con-account create [address] --chain-id mainnet
+```
+
+
+Send a con-account online transaction:
+```bash
+gatecli con-account online 
+--from [address] 
+--pubkey [pub key] 
+--moniker [name] 
+--commission-max-change-rate [max change rate]
+--commission-max-rate [max rate]
+--commission-rate [rate]
+--chain-id mainnet
+```
+
+If this online transaction is success, this node will begin participate in the consensus,
+please keep your machine running.
+
+For more detail, follow [POS Mining](/gatechain-pos.md).
+
 ### Creating A Local Private Chain  
 
 - Initialize the genesis block file

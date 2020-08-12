@@ -65,6 +65,33 @@ GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 gated start
 ```
 
+### 参与主网POS挖矿
+如果要将此节点升级为共识节点，参与POS挖矿分得奖励，首先需要在本节点创建一个普通账户
+```bash
+gatecli account create
+```
+
+基于此普通账户，创建共识账户：
+```bash
+gatecli con-account create [账户地址] --chain-id mainnet
+```
+
+发起"共识账户上线"交易：
+```bash
+gatecli con-account online 
+--from [发送者账户] 
+--pubkey [发送者账户公钥] 
+--moniker [名称] 
+--commission-max-change-rate [每天最大手续费率变化]
+--commission-max-rate [最大手续费率]
+--commission-rate [手续费率]
+--chain-id mainnet
+```
+
+共识账户上线成功后，此节点就会开始参与GateChain的共识过程，请保证自己的机器正常运转，网络正常连接。
+
+具体参与共识的流程和奖励情况，请参照[POS挖矿](/gatechain-pos.md)。
+
 ### 创建本地私有链
 
 - 初始化创世区块文件
