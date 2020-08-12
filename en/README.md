@@ -64,7 +64,7 @@ GateChain provides various wallet applications ranging from personal to professi
 
 <!--Considering the demands for efficiency in daily payment and safety in asset storage, GateChain offers two types of accounts, namely  Normal Account and  Vault Account. Similar to the features of a bitcoin address, Normal Account allows instant  payment  and transaction is irreversible. It does not allow private key restoration  if it is lost. While the Vault Account, an major novel creation of GateChain, allows revocable transaction and private key restoration. By combining both types of accounts, GateChain opens broad applications in both personal and professional fields. -->
 
-GateChain offers two types of accounts, either a Normal or a Vault Account, enabling users to seamlessly navigate through the digital era without any safety concerns. Normal Accounts can pay instantly and transactions are irreversible. Private keys cannot be restored, similar to how a bitcoin address functions. The Vault Account thoug, GateChain's innovations, features revocable transactions and private key restoration. By combining both types of accounts, GateChain provides total safety to its users. 
+GateChain offers two types of accounts, either a Normal or a Vault Account, enabling users to seamlessly navigate through the digital era without any safety concerns. Normal Accounts can pay instantly and transactions are irreversible. Private keys cannot be restored, similar to how a bitcoin address functions. The Vault Account though, GateChain's innovations, features revocable transactions and private key restoration. By combining both types of accounts, GateChain provides total safety to its users. 
 
 ### 1. **Individual asset management**：	
 
