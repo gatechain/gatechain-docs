@@ -2,7 +2,7 @@
 
 Issued assets are stored on GateChain in in the form of tokens. Any asset should comply with GateChain's Token Management Standards.
 
-Asset owners can additionally issue, burn, and freeze/unfreeze their assets. These functions incur fees, paid in GateChain Tokens.
+Asset owners can additionally issue, burn, and freeze/unfreeze their assets. These functions incur fees, paid in GateTokens.
 
 
 > Before following the asset management standards introduced in this document, you have to generate or add an operation key in your Command Line Interface（CLI).

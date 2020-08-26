@@ -21,7 +21,7 @@ GateChain sets out to solve these very interesting and complex problems, without
 
 The main features of GateChain's ecosystem can be listed as follows:
 
-1. **Transfers/Payments**：Using a wallet or client-side Apps, users can send and receive GateChain Tokens GT, as well as popular onchain assets.
+1. **Transfers/Payments**：Using a wallet or client-side Apps, users can send and receive GateTokens GT, as well as popular onchain assets.
 2. **Asset Issuance**：Users can issue their own tokens to digitalize and manage their assets. For more details, visit [Asset Management](./gatechain-asset.md).
 3. **Decentralized Cross-Chain Transactions**：GateChain will provide support for high-performance decentralized trading.
 4. **Asset Safe Storage**: With a uniquely designed vault account and a clearing mechanism, an account can be 100% secure with revoking/clearing functions countering abnormal transactions. For more details, visit [Transaction Protection](./gatechain-security.md).
@@ -43,11 +43,11 @@ GateChain DEX, a decentralized exchange with matching engines of ultra high perf
 
 Anyone who has full control over his account's private keys can trade freely and safely. GateChain DEX does not store users' funds or private keys but leverages privately owned encrypted mobile or hardware wallets to safeguard users’ assets and solves the trust issues that arise when trading on centralized exchanges.
 
-### GateChain Token
+### GateToken
 
 <!--GateChain Coin GC  is the native currency of GateChain mainnet. It  fuels the GateChain mainnet and is used to pay  transfer fee  on Gatechain network.It is the incentive reward for PoS staking at GateChain. In addition, it is  an important ecosystem  member for Gate.io exchange. -->
 
-GateChain Token (GT) is the native currency of GateChain's ecosystem. It is used to pay for transaction fees on GateChain’s network and also serves as the PoS staking reward. It is essential to GateChain's functions.
+GateToken (GT) is the native currency of GateChain's ecosystem. It is used to pay for transaction fees on GateChain’s network and also serves as the PoS staking reward. It is essential to GateChain's functions.
 
 
 ### GateChain Wallets
