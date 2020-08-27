@@ -9,13 +9,11 @@ The documents are updated regularly alongside GateChain's development. Follow us
 
 ## Ecosystem
 
-<!-- ### GateChain Features ###
-
-The creation of blockchain technology brought up many advantages in a variety of industries, providing increased security in trustless environments. This type of safety, however, had some disadvantages such as:
+<!--The creation of blockchain technology brought up many advantages in a variety of industries, providing increased security in trustless environments. This type of safety, however, had some disadvantages such as:
 ~Limited efficiency;
 ~Consensus Attacks;
 ~Private Key Loss/Theft;
-~Immutability, a double edged sword if not implemented carefully.
+~Immutability, a double edged sword if not implemented carefully.-->
 
 GateChain sets out to solve these very interesting and complex problems, without compromising any decentralized aspects or advantages. The ecosystem comprises of the GateChain mainnet, GateChain DEX, GT, wallets, and more; forming an enterprise-grade decentralized ecosystem that can store, issue and trade digital assets efficiently and securely.
 
@@ -23,10 +21,9 @@ The main features of GateChain's ecosystem can be listed as follows:
 
 1. **Transfers/Payments**：Using a wallet or client-side Apps, users can send and receive GateTokens GT, as well as popular onchain assets.
 2. **Asset Issuance**：Users can issue their own tokens to digitalize and manage their assets. For more details, visit [Asset Management](./gatechain-asset.md).
-3. **Decentralized Cross-Chain Transactions**：GateChain will provide support for high-performance decentralized trading.
-4. **Asset Safe Storage**: With a uniquely designed vault account and a clearing mechanism, an account can be 100% secure with revoking/clearing functions countering abnormal transactions. For more details, visit [Transaction Protection](./gatechain-security.md).
-5. **Multi-Signature**: Multiple individuals can share ownership of an account, and customize its management, suitable for both enterprise and family demands. For more details, visit [Multi-signature](./gatechain-multisig.md).
-6. **PoS Consensus Mechanism**: GT works as a stable incentive for users participating in staking, ensuring the underlying health and stability of the ecosystem.
+3. **Multi-Signature**: Multiple individuals can share ownership of an account, and customize its management, suitable for both enterprise and family demands. For more details, visit [Multi-signature](./gatechain-multisig.md).
+4.**Asset Safe Storage**: With a uniquely designed vault account and a clearing mechanism, an account can be 100% secure with revoking/clearing functions countering abnormal transactions. For more details, visit [Transaction Protection](./gatechain-security.md).
+5. **PoS Consensus Mechanism**: GT works as a stable incentive for users participating in staking, ensuring the underlying health and stability of the ecosystem.[PoS Mining](./gatechain-pos.md).
 
 ### GateChain Blockchain
 
@@ -34,14 +31,14 @@ The main features of GateChain's ecosystem can be listed as follows:
 
 GateChain is a novel next-generation public blockchain, focused on onchain asset safety and decentralized trading. With a uniquely designed Vault Account and its functions for handling abnormal transactions, GateChain presents a never before seen clearing mechanism, tackling the challenging problems of asset theft and private key loss. Decentralized trading and cross-chain transfers will also be supported alongside other core features. GateChain focuses on on-chain asset safety and introduced the following novel concepts: [Normal Account](#na)、[Vault Account](#va)、[Retrieval Account](#ra)、[Clearing Height](#ch)、[Revocable Delay Period](#rdp)、[Address Type](#addrt)、[Transaction Type](#transt).
 
-### GateChain DEX
+<!--### GateChain DEX
 
 <!--GateChain DEX, a decentralized exchange with matching engines of ultra high performance and low cost, can provide users with a safe, quick and  transparent trading experience as long as they have control over the private keys to their wallets. GateChain DEX leverages private owned encrypted wallets or hardware wallets to safeguard users’ assets and solves trust issues that centralized exchanges face. It also supports cross-chain transfer for multiple currencies. -->
 
-GateChain DEX, a decentralized exchange with matching engines of ultra high performance and low cost, thus providing users with a safe, quick and transparent trading experience Cross-chain transfes will be supported for multiple currencies. 
+<!--GateChain DEX, a decentralized exchange with matching engines of ultra high performance and low cost, thus providing users with a safe, quick and transparent trading experience Cross-chain transfes will be supported for multiple currencies. 
 
 
-Anyone who has full control over his account's private keys can trade freely and safely. GateChain DEX does not store users' funds or private keys but leverages privately owned encrypted mobile or hardware wallets to safeguard users’ assets and solves the trust issues that arise when trading on centralized exchanges.
+Anyone who has full control over his account's private keys can trade freely and safely. GateChain DEX does not store users' funds or private keys but leverages privately owned encrypted mobile or hardware wallets to safeguard users’ assets and solves the trust issues that arise when trading on centralized exchanges.-->
 
 ### GateToken
 
