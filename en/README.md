@@ -57,7 +57,7 @@ GateChain provides various wallet applications ranging from personal to professi
 
 * During the mainnet phase, GateChain will provide a wider variety, to cater for every kind of necessity: {command-line interface wallet | mobile wallet (Android/iOS) | web wallet | multi-signature wallet | hardware wallet}
 
-## Typical Application
+## Application
 
 <!--Considering the demands for efficiency in daily payment and safety in asset storage, GateChain offers two types of accounts, namely  Normal Account and  Vault Account. Similar to the features of a bitcoin address, Normal Account allows instant  payment  and transaction is irreversible. It does not allow private key restoration  if it is lost. While the Vault Account, an major novel creation of GateChain, allows revocable transaction and private key restoration. By combining both types of accounts, GateChain opens broad applications in both personal and professional fields. -->
 
