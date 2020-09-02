@@ -13,10 +13,10 @@ A multisignature account functions differently from a single signature one and c
 
 ### Creating a Multisignature Account
 
-- [Greate a Multisignature Standard Accounts](./cli/account.md)
+- [Greate a Multisignature Standard Account](./cli/account.md)
 
 - Greate a Multisignature Vault Account
-	-  Use the  multisig  Standard Account created at the first step to create a  multisig  Vault Account.
+	-  Use the multisig Standard Account created at the first step to create a multisig Vault Account.
 
 		- [Create Multisig  Vault Accounts with  CLI](./cli/vault-account.md)
 
@@ -61,7 +61,7 @@ A multisignature account functions differently from a single signature one and c
 ```
 When sending transactions (delayed transaction, revocable transaction, change clearing height transaction, and clearing transaction), multisignature Vault Accounts work the same way as single signature Vault Accounts. As a multisignature Vault Account needs multiple signatures to send a transaction, compound commands are used to finish transaction's signing. Use`--generate-only`to generate the transaction information pending and let owners sign, then collect all the signatures and broadcast.
 ```
-Take a clearing transaction as an example. Other transactions (delay transaction, revoke transaction, and change clearing height transaction) follow the same procedure:
+Take a clearing transaction as an example. Other transactions (delay, revoke, and clearing height change) follow the same procedure:
 
 	- Generate transaction info
 	```bash
