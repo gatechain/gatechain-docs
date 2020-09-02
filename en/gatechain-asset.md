@@ -1,6 +1,6 @@
 # Overview
 
-Issued assets are stored on GateChain in in the form of tokens. Any asset should comply with GateChain's Token Management Standards.
+Issued assets are stored on GateChain in in the form of tokens. Issued assets should comply with GateChain's Token Management Standards.
 
 Asset owners can additionally issue, burn, and freeze/unfreeze their assets. These functions incur fees, paid in GateTokens.
 
