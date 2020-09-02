@@ -22,7 +22,7 @@ The main features of GateChain's ecosystem can be listed as follows:
 1. **Transfers/Payments**：Using a wallet or client-side Apps, users can send and receive GateTokens GT, as well as popular onchain assets.
 2. **Asset Issuance**：Users can issue their own tokens to digitalize and manage their assets. For more details, visit [Asset Management](./gatechain-asset.md).
 3. **Multi-Signature**: Multiple individuals can share ownership of an account, and customize its management, suitable for both enterprise and family demands. For more details, visit [Multi-signature](./gatechain-multisig.md).
-4.**Asset Safe Storage**: With a uniquely designed vault account and a clearing mechanism, an account can be 100% secure with revoking/clearing functions countering abnormal transactions. For more details, visit [Transaction Protection](./gatechain-security.md).
+4. **Asset Safe Storage**: With a uniquely designed vault account and a clearing mechanism, an account can be 100% secure with revoking/clearing functions countering abnormal transactions. For more details, visit [Transaction Protection](./gatechain-security.md).
 5. **PoS Consensus Mechanism**: GT works as a stable incentive for users participating in staking, ensuring the underlying health and stability of the ecosystem.[PoS Mining](./gatechain-pos.md).
 
 ### GateChain Blockchain
