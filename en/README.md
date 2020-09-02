@@ -172,7 +172,7 @@ Below are the identifiers that different transaction types can start with:
 
 ## Advanced Docs
 
-- **Full Node**：	Anyone can build a full node to participate in the consensus mechanism or run his network. A full node has all the functions GateChain has. Detailed installation visit [Install and Deploy](./gatechain-build.md).
-   - **Join Mainnet**： A full node can connect to the public mainnet (using the same network version)<!--，Latest code[get](pending developing)here-->）to monitor and broadcast transactions, update blocks and other network tasks in real time.
-   - **Command Line Interface**：Client programs which can interact with GateChain using the command line interface are also provided. Many operations can be performed on your onchain account using a command line interface, including account management, transaction management, and asset management. In addition, simple onchain inquiries can be made rearding account balance and transaction details. For more details visit [Command Line Interface Reference](./cli/README.md).
-- **API**：GateChain Nodes support advanced REST API interface service, related API information visit [REST API List](./API/README.md).
+- **Full Node**: Anyone can build a full node and participate in the consensus mechanism or run his own network. A full node has all of GateChain's functions. For detailed installation instructions visit [Install and Deploy](./gatechain-build.md).
+   - **Connect**： A full node can connect to the public mainnet (using the same network version)<!--，Latest code[get](pending developing)here-->）to monitor and broadcast transactions, update blocks and other network tasks in real time.
+   - **CLI**：Client programs which can interact with GateChain using the command line interface are also provided. Many operations can be performed on your onchain account using a command line interface, including account management, transaction management, and asset management. In addition, simple onchain inquiries can be made rearding account balance and transaction details. For more details visit [Command Line Interface Reference](./cli/README.md).
+   - **API**：GateChain Nodes support advanced REST API interface services, for more details visit [REST API List](./API/README.md).
