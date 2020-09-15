@@ -15,7 +15,7 @@ The documents are updated regularly alongside GateChain's development. Follow us
 ~Private Key Loss/Theft;
 ~Immutability, a double edged sword if not implemented carefully.-->
 
-GateChain sets out to solve these very interesting and complex problems, without compromising any decentralized aspects or advantages. The ecosystem comprises of the GateChain mainnet, GateChain DEX, GT, wallets, and more; forming an enterprise-grade decentralized ecosystem that can store, issue and trade digital assets efficiently and securely.
+GateChain sets out to solve the very interesting and complex problems that emerged alongside blockchains, without compromising any decentralized aspects or advantages. The ecosystem comprises of the GateChain mainnet, GateChain DEX, GT, wallets, and more; forming an enterprise-grade decentralized ecosystem that can store, issue and trade digital assets efficiently and securely.
 
 The main features of GateChain's ecosystem can be listed as follows:
 
