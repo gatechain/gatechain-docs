@@ -102,7 +102,7 @@ POST /v1/account/publish-multisig/{address}
 {
   "base_req": {
     "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //发送者账户
-    "memo": "",//交易备注
+    "memo": "",//交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
     "chain_id": "testnet", //链ID
     "gas": "200000",//交易消耗的gas数量
     "fees": [

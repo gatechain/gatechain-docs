@@ -22,6 +22,9 @@ gatecli tx send gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxj
 Description:
 
 * The recipient can be a Standard Account or a Vault Account
+* If you want to add a remarks for this transaction,You can use --memo [remarks content],The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
+
+
 
 ###  Query a Single Transaction [API](../API/tx.md#Query a Single Transaction -command line)
 ```bash

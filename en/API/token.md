@@ -22,7 +22,7 @@ Request BODY example:
 {
   "base_req": {
     "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
-    "memo": "", //transaction remarks
+    "memo": "", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
     "chain_id": "testnet", //chain ID
     "gas": "80445444", //gas consumed by the transaction
     "fees": [
@@ -108,7 +108,7 @@ Request BODY example:
 {
   "base_req": {
 	"from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
-	"memo": "", //transaction remarks
+	"memo": "", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
 	"chain_id": "testnet", //chain ID
 	"gas": "200000", //gas consumed by the transaction
 	"fees": [
@@ -186,7 +186,7 @@ Request BODY example
 ```
 {
     "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
-    "memo": "", //transaction remarks
+    "memo": "", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
     "chain_id": "testnet", //chain ID
     "gas": "200000", //gas consumed by the transaction
     "fees": [
@@ -260,7 +260,7 @@ Request BODY example:
 ```
 {
     "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
-    "memo": "",  //transaction remarks
+    "memo": "",  ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
     "chain_id": "testnet", chain ID
     "gas": "200000", //gas consumed by the transaction
     "fees": [
@@ -317,6 +317,8 @@ Return example：
 
 ### Burn Token [command line](../cli/token.md#Burn Token-api)
 ######The interface generates transaction body  for “Burn Token”.After locally signing  it, you can invoke “Send Transaction” interface to finish broadcasting.
+
+```
 POST /v1/token/burn/{symbol}
 ```
 Parameters
@@ -333,7 +335,7 @@ Request BODY example:
 {
     "base_req": {
         "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account
-        "memo": "", //transaction remarks
+        "memo": "", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
         "chain_id": "testnet", //chain ID
         "gas": "200000", //gas consumed by the transaction
         "fees": [{

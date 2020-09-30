@@ -22,6 +22,8 @@ gatecli tx send gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxj
 说明：
 
 * 接受者可以是普通账户或保险账户
+* 如果想为此交易添加留言，可以使用--memo [留言内容]，留言内容长度限制为中文最多85个字符/英文最多256个字符
+
 
 ### 查询单笔交易 [API](../API/tx.md#查询单笔交易-命令行)
 ```bash

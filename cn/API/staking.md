@@ -20,7 +20,7 @@ POST /v1/staking/delegator/{delegatorAddr}/delegate
 {
     "base_req":{
         "from":"gt110hwwuh7chle04dk38ut7l0uz8estmnsl78kmdqppnhrvvyrps92lzqh5q52ny4ztv5gaq9", //发送者账户
-        "memo":"", //交易备注
+        "memo":"", //交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
         "chain_id":"testnet", //链ID
         "gas":"200000", //交易消耗的gas
         "fees":[
@@ -380,7 +380,7 @@ POST /v1/staking/delegator/{delegatorAddr}/redelegate
 {
     "base_req":{
         "from":"gt110hwwuh7chle04dk38ut7l0uz8estmnsl78kmdqppnhrvvyrps92lzqh5q52ny4ztv5gaq9", //发送者账户
-        "memo":"", //交易备注
+        "memo":"", //交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
         "chain_id":"testnet", //链ID
         "gas":"200000", //交易消耗的gas数量
         "fees":[
@@ -522,7 +522,7 @@ POST  /v1/staking/delegator/{delegatorAddr}/undelegate
 {
     "base_req":{
         "from":"gt11a0a2pcna4jmkuz4z8af7tejpyh0u8yh2wtktq8xpjt3qaualzdtwxw7r9cwh88pnkfk4xn", //发送者账户
-        "memo":"", //交易备注
+        "memo":"", //交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
         "chain_id":"testnet", //链ID
         "gas":"200000", //交易消耗的gas数量
         "fees":[
@@ -612,7 +612,7 @@ POST  /v1/staking/delegator/undelegate_by_retrieval_account
 {
     "base_req":{
         "from":"gt11la699nscvukjp5kj07nsgq2styuq63zgy8n04srcldx3dal6fkfa22y8a9fz9thuezvnls", //发送者账户
-        "memo":"", //交易备注
+        "memo":"", //交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
         "chain_id":"testnet", //链ID
         "gas":"200000", //交易消耗的gas数量
         "fees":[

@@ -20,7 +20,7 @@ POST  /v1/revocable-tx/send/{account}
 {
   "base_req": {
 	"from": "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //发送者账户
-	"memo": "", //交易备注
+	"memo": "", //交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
 	"chain_id": "testnet", //链ID
 	"gas": "200000", //交易消耗的gas数量
 	"fees": [
@@ -110,7 +110,7 @@ POST /v1/revocable-tx/revoke/{tx-hash}
 {
   "base_req": {
     "from": "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //发送者账户
-    "memo": "", //交易备注
+    "memo": "", //交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
     "chain_id": "testnet", //链ID
     "gas": "200000", //交易消耗的gas数量
     "fees": [

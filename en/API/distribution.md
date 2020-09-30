@@ -20,7 +20,7 @@ Request BODY example:
 {
     "base_req":{
         "from":"gt11a0a2pcna4jmkuz4z8af7tejpyh0u8yh2wtktq8xpjt3qaualzdtwxw7r9cwh88pnkfk4xn", //sender account
-        "memo":"", //transaction remarks
+        "memo":"", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
         "chain_id":"testnet", //chain ID
         "gas":"200000", //gas consumed by this  transaction
         "fees":[
@@ -108,7 +108,7 @@ Request BODY example:
 {
     "base_req":{
         "from":"gt11a0a2pcna4jmkuz4z8af7tejpyh0u8yh2wtktq8xpjt3qaualzdtwxw7r9cwh88pnkfk4xn", //sender account
-        "memo":"", //transaction remarks
+        "memo":"", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
         "chain_id":"testnet", //chain ID
         "gas":"200000", //Gas consumed by this  transaction
         "fees":[
@@ -190,7 +190,7 @@ Request BODY example:
 {
     "base_req":{
         "from":"gt11qfee0959earfv7euauzw8l0fljymwjx34m6s2ccvjhupc59dg93enajhuft3eq50tvz39x", //sender account
-        "memo":"", //transaction remarks
+        "memo":"", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
         "chain_id":"testnet", //chain ID
         "gas":"200000", //Gas consumed by this  transaction
         "fees":[
