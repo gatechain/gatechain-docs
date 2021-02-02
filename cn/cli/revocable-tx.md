@@ -66,7 +66,7 @@ gatecli revocable-tx list [保险账户] --chain-id [链ID]
 请求示例：
 
 ```bash
-gatecli revocable-tx list gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli revocable-tx list vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --chain-id testnet
 ```
 %accordion%返回示例：%accordion%
 

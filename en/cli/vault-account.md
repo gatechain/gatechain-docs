@@ -51,7 +51,6 @@ gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k
 Description：
 
 * New clearing height must be greater than the current block height+delay height of the Vault Account
-* The height at which this transaction takes effect should be less than the old clearing height.
 
 
 ### Account Clearing Transaction [API](../API/vault-account.md#Account Clearing Transaction-command line)

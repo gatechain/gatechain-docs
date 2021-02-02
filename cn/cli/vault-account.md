@@ -51,7 +51,6 @@ gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k
 说明：
 
 * 新的清算高度必须大于区块链当前高度 + 保险账户延迟生效高度
-* 本交易的生效高度要小于旧的清算高度
 
 
 ### 账户清算交易 [API](../API/vault-account.md#账户清算交易-命令行)
