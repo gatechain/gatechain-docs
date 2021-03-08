@@ -1,5 +1,5 @@
 ## 区块链浏览器
-主网地址：http://explorer.gatechain.io/mainnet/index
+主网：http://explorer.gatechain.io/mainnet/index
 
 测试网：http://explorer.gatechain.io/testnet/
 
@@ -49,6 +49,8 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 > 链 ID: 66
 > 
 > 符号: GT
+> 
+> 区块浏览器: https://explorer.gatechain.io/mainnet/
 
 ### 将您的“gt”账户余额转入到MetaMask账户余额中
 

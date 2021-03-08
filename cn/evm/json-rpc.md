@@ -32,14 +32,6 @@
 | [`eth_getTransactionByHash`](#eth_getTransactionByHash)                           | Eth       | ✔           |                           |
 | [`eth_getTransactionByBlockHashAndIndex`](#eth_getTransactionByBlockHashAndIndex) | Eth       | ✔           |                           |
 | [`eth_getTransactionReceipt`](#eth_getTransactionReceipt)                         | Eth       | ✔           |                           |
-| [`eth_newFilter`](#eth_newFilter)                                                 | Eth       | ✔           |                           |
-| [`eth_newBlockFilter`](#eth_newBlockFilter)                                       | Eth       | ✔           |                           |
-| [`eth_newPendingTransactionFilter`](#eth_newPendingTransactionFilter)             | Eth       | ✔           |                           |
-| [`eth_uninstallFilter`](#eth_uninstallFilter)                                     | Eth       | ✔           |                           |
-| [`eth_getFilterChanges`](#eth_getFilterChanges)                                   | Eth       | ✔           |                           |
-| [`eth_getLogs`](#eth_getLogs)                                                     | Eth       | ✔           |                           |                                     
-| [`eth_subscribe`](#eth_subscribe)                                                 | Websocket | ✔           |                           |
-| [`eth_unsubscribe`](#eth_unsubscribe)                                             | Websocket | ✔           |                           |
 
 
 
@@ -64,9 +56,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 
 // 结果
 {
-  "id":67,
-  "jsonrpc":"2.0",
-  "result": "Mist/v0.9.3/darwin/go1.4.1"
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "gate enhanced-1.0.5-135-gf00ae80"
 }
 ```
 
@@ -117,11 +109,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 ```
 String - 当前连接网络的ID
 
-"1": Ethereum Mainnet
-"2": Morden Testnet (deprecated)
-"3": Ropsten Testnet
-"4": Rinkeby Testnet
-"42": Kovan Testnet
+"1337": Meteora
+"66":   Mainnet
 ```
 
 #### 示例
@@ -134,7 +123,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 {
   "id":67,
   "jsonrpc": "2.0",
-  "result": "3"
+  "result": "1337"
 }
 ```
 
@@ -164,7 +153,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 {
   "id":67,
   "jsonrpc": "2.0",
-  "result": "54"
+  "result": "0x41"
 }
 ```
 
@@ -193,13 +182,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 // 结果（已同步）
 {
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": {
-    startingBlock: '0x384',
-    currentBlock: '0x386',
-    highestBlock: '0x454'
-  }
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "currentBlock": 106699
+    }
 }
 
 //结果（未同步）
@@ -261,9 +248,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 
 // 结果
 {
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": ["0x407d73d8a49eeb85d32cf465507dd71d507100c1"]
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": [
+        "0xd9a549bcca822b696718802ec4aad4e1acc24367",
+        "0xcfe9c51a8039e74b0cce28642be0504fc898094a",
+        "0xa1968292d334ef64b56b01862d6ac1b2a8548b91"
+    ]
 }
 ```
 
@@ -291,7 +282,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 {
   "id":83,
   "jsonrpc": "2.0",
-  "result": "0x4b7" // 1207
+  "result": "0x1a0e1" // 106721
 }
 ```
 
@@ -326,7 +317,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x0234c8a3397aab58" // 158972490234375000
+  "result": "0x6c3a050b1aedb4000" // 124776820000000000000
 }
 ```
 
@@ -969,277 +960,4 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
      status: '0x1'
   }
 }
-```
-
-### <span id="eth_newFilter">eth_newFilter</span>
-
-基于给定的选项创建一个过滤器对象，接收状态变化时的通知。要检查状态是否变化， 请调用eth_getFilterChanges。
-关于特定主题过滤器的说明：主题是顺序相关的。如果一个交易的日志有主题[A, B]，那么将被 以下的主题过滤器匹配：
-
-[] 任何主题
-[A] 先匹配A主题
-[null, B] 先匹配其他主题，再匹配B主题
-[A, B] 先匹配A主题，再匹配B主题，最后匹配其他主题
-[[A, B], [A, B]] "先匹配A主题或B主题，再匹配A主题或B主题，最后匹配其他主题
-
-#### 参数
-```
-Object - 过滤器选项对象：
-
-fromBlock: QUANTITY|TAG - 可选，默认值："latest"。整数块编号，或字符串"latesr"表示最后挖出的块，"pending"或"earliest"用于未挖出的交易。
-toBlock: QUANTITY|TAG - 可选，默认值："latest"。整数块编号，或字符串"latesr"表示最后挖出的块，"pending"或"earliest"用于未挖出的交易。
-address: DATA|Array, 20字节 - 可选，合约地址或生成日志的一组地址
-topics: Array of DATA, - 可选，32字节主题数组，每个主题可以是数组或使用or选项连接
-params: [{
-  "fromBlock": "0x1",
-  "toBlock": "0x2",
-  "address": "0x8888f1f195afa192cfee860698584c030f4c9db1",
-  "topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", null, ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x0000000000000000000000000aff3454fce5edbc8cca8697c15331677e6ebccc"]]
-}]
-```
-
-#### 返回值
-```
-QUANTITY - 过滤器编号
-```
-
-#### 示例
-
-```json
-// 请求
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-
-// 结果
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0x1" // 1
-}
-```
-
-### <span id="eth_newBlockFilter">eth_newBlockFilter</span>
-
-在节点中创建一个过滤器，以便当新块生成时进行通知。要检查状态是否变化， 请调用eth_getFilterChanges
-
-#### 参数
-```
-无
-```
-
-#### 返回值
-```
-QUANTITY - 过滤器编号
-
-```
-
-#### 示例
-
-```json
-// 请求
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-
-// 结果
-{
-  "id":1,
-  "jsonrpc":  "2.0",
-  "result": "0x1" // 1
-}
-```
-
-### <span id="eth_newPendingTransactionFilter">eth_newPendingTransactionFilter</span>
-
-
-在节点中创建一个过滤器，以便当产生挂起交易时进行通知。 要检查状态是否发生变化，请调用eth_getFilterChanges。
-
-#### 参数
-```
-无
-```
-
-#### 返回值
-```
-QUANTITY - 过滤器编号
-
-```
-
-#### 示例
-
-```json
-// 请求
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-
-// 结果
-{
-  "id":1,
-  "jsonrpc":  "2.0",
-  "result": "0x1" // 1
-}
-```
-
-### <span id="eth_uninstallFilter">eth_uninstallFilter</span>
-
-卸载具有指定编号的过滤器。当不在需要监听时，总是需要执行该调用。另外，过滤器 如果在一定时间内未接收到eth_getFilterChanges调用会自动超时。
-
-#### 参数
-```
-QUANTITY - 过滤器编号
-
-params: [
-  "0xb" // 11
-]
-```
-
-#### 返回值
-```
-Boolean - 如果成功卸载则返回true，否则返回false
-
-```
-
-#### 示例
-
-```json
-// 请求
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-
-// 结果
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": true
-}
-```
-
-### <span id="eth_getFilterChanges">eth_getFilterChanges</span>
-
-轮询指定的过滤器，并返回自上次轮询之后新生成的日志数组。
-
-#### 参数
-```
-QUANTITY - 过滤器编号
-
-params: [
-  "0x16" // 22
-]
-```
-
-#### 返回值
-```
-Array - 日志对象数组，如果自从上次轮询后没有新生成的日志，则返回空数组。
-
-使用eth_newBlockFilter创建的过滤器将返回块hash（32字节），例如["0x3454645634534..."]。
-
-使用eth_newPendingTransactionFilter创建的过滤器将返回交易hash (32字节)，例如["0x6345343454645..."]。
-
-使用eth_newFilter创建的过滤器，日志对象具有如下参数：
-
-removed: TAG - 如果由于链重组，日志被删除则返回true，如果是有效日志则返回false
-logIndex: QUANTITY - 日志在块内的索引序号。对于挂起日志，该值为null
-transactionIndex: QUANTITY - 创建日志的交易索引序号，对于挂起日志，该值为null
-transactionHash: DATA, 32字节 - 创建该日志的交易的hash。对于挂起日志，该值为null
-blockHash: DATA, 32字节 - 该日志所在块的hash。对于挂起日志，该值为null
-blockNumber: QUANTITY - 该日志所在块的编号。对于挂起日志，该值为null
-address: DATA, 20字节 - 该日志的源地址
-data: DATA - 包含该日志的一个或多个32字节无索引参数
-topics: Array of DATA -0~4个32字节索引日志参数的数据。在solidity中，第一个主题是事件签名，例如 Deposit(address,bytes32,uint256)，除非你声明的是匿名事件
-```
-
-#### 示例
-
-```json
-// 请求
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-
-// 结果
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": [{
-    "logIndex": "0x1", // 1
-    "blockNumber":"0x1b4", // 436
-    "blockHash": "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
-    "transactionHash":  "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
-    "transactionIndex": "0x0", // 0
-    "address": "0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d",
-    "data":"0x0000000000000000000000000000000000000000000000000000000000000000",
-    "topics": ["0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5"]
-    },{
-      ...
-    }]
-}
-```
-
-### <span id="eth_getLogs">eth_getLogs</span>
-
-返回指定过滤器中的所有日志。
-
-#### 参数
-```
-Object - 过滤器选项对象：
-	fromBlock: QUANTITY|TAG - 可选，默认值："latest"。整数块编号，或字符串"latesr"表示最后挖出的块，"pending"或"earliest"用于未挖出的交易。
-	toBlock: QUANTITY|TAG - 可选，默认值："latest"。整数块编号，或字符串"latesr"表示最后挖出的块，"pending"或"earliest"用于未挖出的交易。
-	address: DATA|Array, 20字节 - 可选，合约地址或生成日志的一组地址。
-	topics: Array of DATA, - 可选，32字节主题数组，主题是按顺序的，每个主题可以是“or”选项的数组。
-	blockhash: DATA, 32字节 -可选，随着EIP-234的加入，blockHash将成为一个新的过滤器选项，它限制使用32字节hash blockHash返回到单个块的日志。使用blockHash相当于fromBlock=toBlock=hash blockHash的块号。如果筛选条件中存在blockHash，则不允许使用fromBlock和toBlock。
-
-params: [{
-  "topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]
-}]
-```
-
-#### 返回值
-```
-请参考eth_getFilterChanges调用。
-
-```
-
-#### 示例
-
-```json
-// 请求
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
-
-// 结果
-请参考eth_getFilterChanges。
-
-```
-
-### <span id="eth_subscribe">eth_subscribe</span>
-
-使用JSON-RPC通知进行订阅。这使客户端可以等待事件，而不是轮询事件。
-
-它通过订阅特定事件来工作。该节点将返回订阅ID。对于与订阅匹配的每个事件，带有相关数据的通知将与订阅ID一起发送。
-
-#### 参数
-```
-订阅名称
-可选参数
-```
-#### 返回示例
-
-```json
-// 请求
-{"id": 1, "method": "eth_subscribe", "params": ["newHeads", {"includeTransactions": true}]}
-
-// 结果
-< {"jsonrpc":"2.0","result":"0x34da6f29e3e953af4d0c7c58658fd525","id":1}
-```
-
-### <span id="eth_unsubscribe">eth_unsubscribe</span>
-
-
-使用订阅ID取消订阅事件
-
-#### 参数
-```
-订阅ID
-```
-
-#### 示例
-
-```json
-// 请求
-{"id": 1, "method": "eth_unsubscribe", "params": ["0x34da6f29e3e953af4d0c7c58658fd525"]}
-
-// 结果
-{"jsonrpc":"2.0","result":true,"id":1}
 ```
