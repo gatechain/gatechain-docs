@@ -154,7 +154,7 @@ GateChain provides  two notification channels, via email and via short message.
  <br/>![](./images/
 .png)</br>
   
-### 3.8 Standard Account Irrevocable Payment
+### <span id="evm"> 3.8 Standard Account Irrevocable Payment </span>
 - 1 ）From the wallet list, select the account to make the payment transfer and click it to access to account overview.<br/>![](./images/18.png)</br>
 
 - 2 ) Select “Transfer” button.<br/>![](./images/19.png)</br>
