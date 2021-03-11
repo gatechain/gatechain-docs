@@ -10,11 +10,11 @@ Download：https://www.gatechain.io/wallets
 
 ## How to Connect MetaMask
 
-`GateChain-Evm` is the native module based on `Gatemint` consensus, which supports `Ethereum` smart contracts and provides rpc services to connect to `MetaMask`. Users can deploy and call contracts on `GateChain` by simply switching to `GateChain` network. 
+"GateChain-Evm" is the native module based on "Gatemint" consensus, which supports "Ethereum" smart contracts and provides rpc services to connect to "MetaMask". Users can deploy and call contracts on "GateChain" by simply switching to "GateChain" network. 
 
 ### MetaMask Introduction
 
-`MetaMask` is created to build a more safe and accessible `Ethereum` network. It connects users to blockchain and manage accounts, supported on Chrome, Brave and Safari.
+"MetaMask" is created to build a more safe and accessible "Ethereum" network. It connects users to blockchain and manage accounts, supported on Chrome, Brave and Safari.
 
 ### Install
 
