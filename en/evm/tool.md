@@ -46,7 +46,7 @@ Example: Install in Chrome browser
 
 > Network name: GateChain （customized）
 > 
-> RPC URL: http://api.gatenode.cc:6060
+> RPC URL: https://evm.gatenode.cc
 > 
 > Chain ID: 66
 > 
@@ -85,7 +85,7 @@ Solidity is the programming language designed for developing smart contracts on 
 
 ### Create Contract
 
-1. Open remix website（http://remix.ethereum.org , click “New File” to create a XXX.sol file
+1. Open remix website(http://remix.ethereum.org), click “New File” to create a XXX.sol file
 ![](../images/remix1.png)
 2. Click the file you created, and start to write your own smart contract code. 
 3. Once the development is completed, start compiling smart contract. 
@@ -147,7 +147,7 @@ const mnemonic = fs.readFileSync(".secret").toString().trim();
 	module.exports = {
 	  networks: {
 	    GateChain: {
-	      provider: () => new HDWalletProvider(mnemonic, `http://mainnet.gatenode.cc:6060`),
+	      provider: () => new HDWalletProvider(mnemonic, `https://evm.gatenode.cc`),
 	      network_id: 66,
 	      confirmations: 10,
 	      timeoutBlocks: 200,

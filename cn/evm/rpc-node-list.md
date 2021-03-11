@@ -2,7 +2,7 @@
 
 ### 主网
 
-1. RPC URL：http://mainnet.gatenode.cc:6060
+1. RPC URL：https://evm.gatenode.cc
 2. 链ID：66
 
 ### Meteora网

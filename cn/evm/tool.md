@@ -44,7 +44,7 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 
 > 网络名称: GateChain （可自定义）
 > 
-> RPC URL: http://api.gatenode.cc:6060
+> RPC URL: https://evm.gatenode.cc
 > 
 > 链 ID: 66
 > 
@@ -149,7 +149,7 @@ Remix是一个开源的用于Solidity智能合约开发的Web端IDE，提供基�
 	module.exports = {
 	  networks: {
 	    GateChain: {
-	      provider: () => new HDWalletProvider(mnemonic, `http://mainnet.gatenode.cc:6060`),
+	      provider: () => new HDWalletProvider(mnemonic, `https://evm.gatenode.cc`),
 	      network_id: 66,
 	      confirmations: 10,
 	      timeoutBlocks: 200,
