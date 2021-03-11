@@ -44,7 +44,7 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 
 > 网络名称: GateChain （可自定义）
 > 
-> RPC URL: http://mainnet.gatenode.cc:6060
+> RPC URL: http://api.gatenode.cc:6060
 > 
 > 链 ID: 66
 > 

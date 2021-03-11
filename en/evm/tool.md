@@ -46,7 +46,7 @@ Example: Install in Chrome browser
 
 > Network name: GateChain （customized）
 > 
-> RPC URL: http://mainnet.gatenode.cc:6060
+> RPC URL: http://api.gatenode.cc:6060
 > 
 > Chain ID: 66
 > 
