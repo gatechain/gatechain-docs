@@ -1,9 +1,9 @@
 ## Block Explorer
-Mainnet：http://explorer.gatechain.io/mainnet
+Mainnet：https://gatescan.org/
 
-Testnet：http://explorer.gatechain.io/testnet
+Testnet：https://gatescan.org/testnet/
 
-Meteora：http://explorer.gatechain.io/meteora
+Meteora：https://gatescan.org/meteora/
 
 ## Wallets Download
 Download：https://www.gatechain.io/wallets
@@ -52,7 +52,7 @@ Example: Install in Chrome browser
 > 
 > Symbol: GT
 > 
-> Block explorer: https://explorer.gatechain.io/mainnet/
+> Block explorer: https://gatescan.org/
 
 ### Transfer balance from your “gt” account to your MetaMask account.
 
@@ -73,7 +73,7 @@ Example: Install in Chrome browser
 ![](../images/metamask12.png)
 4. When the transaction is successful, view transaction details from a gatechain block explorer.
 	
-* BLock explorer：http://explorer.gatechain.io/mainnet/transactions
+* BLock explorer：https://gatescan.org/txs
 
 >Read below for how to deploy contract and interact with contract.
 
@@ -103,7 +103,7 @@ Solidity is the programming language designed for developing smart contracts on 
 	![](../images/remix5.png)
 4. Query details about contract interaction on the gatechain block explorer.
 
-	* Block explorer：http://explorer.gatechain.io/mainnet/transactions
+	* Block explorer：https://gatescan.org/txs
 
 ## Connect to Truffle
 

@@ -1,7 +1,9 @@
 ## 区块链浏览器
-主网：http://explorer.gatechain.io/mainnet/index
+主网：https://gatescan.org/
 
-测试网：http://explorer.gatechain.io/testnet/
+测试网：https://gatescan.org/testnet/
+
+Meteora：https://gatescan.org/meteora/
 
 ## 官方钱包下载
 下载地址：https://www.gatechain.io/wallets
@@ -50,7 +52,7 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 > 
 > 符号: GT
 > 
-> 区块浏览器: https://explorer.gatechain.io/mainnet/
+> 区块浏览器: https://gatescan.org/
 
 ### 将您的“gt”账户余额转入到MetaMask账户余额中
 
@@ -71,7 +73,7 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 ![](../images/metamask12.png)
 4. 交易成功后可以去gatechain浏览器查看交易详细信息。
 	
-* 浏览器地址：http://explorer.gatechain.io/mainnet/transactions
+* 浏览器地址：https://gatescan.org/txs
 
 >合约部署及合约交互等介绍请继续往下看吧！
 
@@ -101,7 +103,7 @@ Remix是一个开源的用于Solidity智能合约开发的Web端IDE，提供基�
 	![](../images/remix5.png)
 4. 查询合约交互的交易详细信息，可以去gatechain浏览器查看。
 
-	* 区块浏览器地址：http://explorer.gatechain.io/mainnet/transactions
+	* 区块浏览器地址：https://gatescan.org/txs
 
 ## <span id="Truffle接入指南">Truffle接入指南</span>
 
