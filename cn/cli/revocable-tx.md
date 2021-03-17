@@ -1,13 +1,13 @@
 
 ### 发送可撤回交易 [API](../API/revocable-tx.md#发送可撤回交易-命令行)
 ```bash
-gatecli revocable-tx send [接收者账户] [转移代币数量] --from [发送者账户] --chain-id [链ID]
+gatecli revocable-tx send [接收者账户] [转移代币数量] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 
 请求示例：
 
 ```bash
-gatecli revocable-tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 10NANOGT --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --chain-id testnet
+gatecli revocable-tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 10NANOGT --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -82,13 +82,13 @@ gatecli revocable-tx list vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpk
 ### 撤回可撤回交易 [API](../API/revocable-tx.md#撤回可撤回交易-命令行)
 
 ```bash
-gatecli revocable-tx revoke [交易Hash] --from [发送者账户] --chain-id [链ID]
+gatecli revocable-tx revoke [交易Hash] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 
 请求示例：
 
 ```bash
-gatecli revocable-tx revoke 0E3B67C685C271632CE6F4DAA2AB06AF7E8077509E1CB5310F63F6C147786E12 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --chain-id testnet
+gatecli revocable-tx revoke 0E3B67C685C271632CE6F4DAA2AB06AF7E8077509E1CB5310F63F6C147786E12 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

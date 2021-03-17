@@ -1,12 +1,12 @@
 
 ### 设置提取委托收益的账户 [API](../API/distribution.md#设置提取委托收益的账户-命令行)
 ```bash
-gatecli distribution set-withdraw-addr [提取收益账户] --from [发送者账户] --chain-id [链ID]
+gatecli distribution set-withdraw-addr [提取收益账户] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -25,12 +25,12 @@ gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44
 
 ### 委托账户从单个共识账户提取部分收益 [API](../API/distribution.md#委托账户从单个共识账户提取部分收益-命令行)
 ```bash
-gatecli distribution withdraw-rewards [共识账户地址] --from [发送者账户] --chain-id [链ID]
+gatecli distribution withdraw-rewards [共识账户地址] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli distribution withdraw-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli distribution withdraw-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -45,12 +45,12 @@ gatecli distribution withdraw-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h
 
 ### 委托账户从共识账户提取全部收益 [API](../API/distribution.md#委托账户从共识账户提取全部收益-命令行)
 ```bash
-gatecli distribution withdraw-all-rewards --from [发送者账户] --chain-id [链ID]
+gatecli distribution withdraw-all-rewards --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli distribution withdraw-all-rewards --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli distribution withdraw-all-rewards --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

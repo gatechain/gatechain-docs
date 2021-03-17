@@ -33,6 +33,7 @@ gatecli con-account online
 --from [发送者账户] 
 --pubkey [发送者账户公钥] 
 --moniker [名称] 
+--fees [交易手续费]
 --commission-max-change-rate [每天最大手续费率变化]
 --commission-max-rate [最大手续费率]
 --commission-rate [手续费率]
@@ -42,7 +43,7 @@ gatecli con-account online
 
 ```bash
 gatecli con-account online --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 
---pubkey gt1pub1u8s6p73qp3ac00a628mk7g4utllp6cvrl54vqgdazg3q6d8e3lzxxycrgw3qk3q7wn --moniker newcon-account --commission-max-change-rate "0.01" --commission-max-rate "0.01" --commission-rate "0.01" --chain-id testnet
+--pubkey gt1pub1u8s6p73qp3ac00a628mk7g4utllp6cvrl54vqgdazg3q6d8e3lzxxycrgw3qk3q7wn --moniker newcon-account --fees 10000000NANOGT --commission-max-change-rate "0.01" --commission-max-rate "0.01" --commission-rate "0.01" --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -56,12 +57,12 @@ gatecli con-account online --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv
 
 ### 下线共识账户
 ```bash
-gatecli con-account offline --from [发送者账户] --chain-id [链ID]
+gatecli con-account offline --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli con-account offline --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli con-account offline --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -76,12 +77,12 @@ gatecli con-account offline --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72q
 
 ### 编辑共识账户
 ```bash
-gatecli con-account edit --moniker [共识账户名称] --commission-rate [手续费率] --from [发送者账户] --chain-id [链ID]
+gatecli con-account edit --moniker [共识账户名称] --commission-rate [手续费率] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli con-account edit --moniker con1 --commission-rate 0.03 --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli con-account edit --moniker con1 --commission-rate 0.03 --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

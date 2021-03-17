@@ -1,13 +1,13 @@
 
 ### Issue tokens [API](../API/token.md#Issue token-command line)
 ```bash
-gatecli token issue [token name] [token symbol] [total supply] --from [sender  account] --chain-id [chain ID]
+gatecli token issue [token name] [token symbol] [total supply] --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 
 Example:
 
 ```bash
-gatecli token issue TestToken AAA 100000000000000000000000  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli token issue TestToken AAA 100000000000000000000000  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -30,12 +30,12 @@ Description:
 
 ### Issue Additional Token [API](../API/token.md#Issue Additional Token-command line)
 ```bash
-gatecli token mint [token amount] --from [sender  account] --chain-id [chain ID]
+gatecli token mint [token amount] --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 Example:
 
 ```bash
-gatecli token mint 100000000000AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli token mint 100000000000AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -55,13 +55,13 @@ Description:
 
 ### Freeze Token [API](../API/token.md#Freeze Token-command line)
 ```bash
-gatecli token freeze [onchain token symbol] --from [sender  account] --chain-id [chain ID] 
+gatecli token freeze [onchain token symbol] --from [sender account] --fees [tx fees] --chain-id [chain ID] 
 ```
 
 Example:
 
 ```bash
-gatecli token freeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli token freeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -79,13 +79,13 @@ Description:
 
 ### Unfreeze Token [API](../API/token.md#Unfreeze Token-command line)
 ```bash
-gatecli token unfreeze [onchain token symbol] --from [sender  account] --chain-id [chain ID] 
+gatecli token unfreeze [onchain token symbol] --from [sender account] --fees [tx fees] --chain-id [chain ID] 
 ```
 
 Example:
 
 ```bash
-gatecli token unfreeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli token unfreeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -105,12 +105,12 @@ Description:
 
 ### Burn Token [API](../API/token.md#Burn Token-command line)
 ```bash
-gatecli token burn [token amount] --from [sender  account] --chain-id [chain ID] 
+gatecli token burn [token amount] --from [sender account] --fees [tx fees] --chain-id [chain ID] 
 ```
 Example:
 
 ```bash
-gatecli token burn 100000000000AAA-94f  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli token burn 100000000000AAA-94f  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 %accordion%Return example:%accordion%
 

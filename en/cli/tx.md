@@ -1,13 +1,13 @@
 
 ### Send Transactions [API](../API/tx.md#Send Transactions-command line)
 ```bash
-gatecli tx send [recipient account] [transfer token amount ]  --from [sender account ]  --chain-id [chain ID]
+gatecli tx send [recipient account] [transfer token amount] --from [sender account] --fees [tx fees]  --chain-id [chain ID]
 ```
 
 Example:
 
 ```bash
-gatecli tx send gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli tx send gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%

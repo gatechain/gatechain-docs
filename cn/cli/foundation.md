@@ -78,12 +78,12 @@ Member:
 
 
 ```bash
-gatecli foundation withdraw [提取代币数] --from [基金会成员地址] --chain-id [链ID]
+gatecli foundation withdraw [提取代币数] --from [基金会成员地址] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli foundation withdraw 10NANOGT --from gt11xf8qc9fz3ysjjal5jkq2gcnpky4swutdwjlzc9uz4qud2w2x0duxs9cgs00ayf2v4kx0s4 --chain-id testnet
+gatecli foundation withdraw 10NANOGT --from gt11xf8qc9fz3ysjjal5jkq2gcnpky4swutdwjlzc9uz4qud2w2x0duxs9cgs00ayf2v4kx0s4 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

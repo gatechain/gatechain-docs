@@ -1,12 +1,12 @@
 
 ### 委托代币到共识账户 [API](../API/staking.md#委托代币到共识账户-命令行)
 ```bash
-gatecli staking delegate [共识账户地址] [委托代币数量]  --from [委托账户地址] --chain-id [链ID]
+gatecli staking delegate [共识账户地址] [委托代币数量]  --from [委托账户地址] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli staking delegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --chain-id testnet
+gatecli staking delegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -68,12 +68,12 @@ Delegation: ...
 ### 转移委托 [API](../API/staking.md#转移委托-命令行)
 
 ```bash
-gatecli staking redelegate [原共识账户地址] [目标共识账户地址] [委托代币数量] --from [委托账户地址] --chain-id [链ID]
+gatecli staking redelegate [原共识账户地址] [目标共识账户地址] [委托代币数量] --from [委托账户地址] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli staking redelegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla54 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --chain-id testnet
+gatecli staking redelegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla54 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -148,12 +148,12 @@ Redelegations between:
 ### 从共识账户解绑 [API](../API/staking.md#从共识账户解绑-命令行)
 
 ```bash
-gatecli staking undelegate [共识账户地址] [解绑代币数量] --from [发送者账户] --chain-id [链ID]
+gatecli staking undelegate [共识账户地址] [解绑代币数量] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 请求示例：
 
 ```bash
-gatecli staking undelegate gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 100000000NANOGT --from gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --chain-id testnet
+gatecli staking undelegate gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 100000000NANOGT --from gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -169,13 +169,13 @@ gatecli staking undelegate gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr
 ### 代理解除委托 [API](../API/staking.md#代理解除委托-命令行)
 
 ```bash
-gatecli staking undelegate-by-retrieval-account [保险账户1 保险账户2...] --from [保险账户的找回账户] --chain-id [链ID]
+gatecli staking undelegate-by-retrieval-account [保险账户1 保险账户2...] --from [保险账户的找回账户]  --fees [交易手续费] --chain-id [链ID]
 ```
 
 请求示例：
 
 ```bash
-gatecli staking undelegate-by-retrieval-account vault11d9t6... vault11w8c3v... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli staking undelegate-by-retrieval-account vault11d9t6... vault11w8c3v... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

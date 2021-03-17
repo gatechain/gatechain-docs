@@ -1,13 +1,13 @@
 
 ### 发送交易 [API](../API/tx.md#发送交易-命令行)
 ```bash
-gatecli tx send [接收者账户] [转移代币数量] --from [发送者账户] --chain-id [链ID]
+gatecli tx send [接收者账户] [转移代币数量] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 
 请求示例：
 
 ```bash
-gatecli tx send gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli tx send gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

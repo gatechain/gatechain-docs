@@ -2,13 +2,13 @@
 ### 创建保险账户 [API](../API/vault-account.md#创建保险账户-命令行)
 
 ```bash
-gatecli vault-account create [基础账户] [找回账户] [延迟生效高度] [清算高度] [转移代币数量] --from [发送者账户] --chain-id [链ID]
+gatecli vault-account create [基础账户] [找回账户] [延迟生效高度] [清算高度] [转移代币数量] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 
 请求示例：
 
 ```bash
-gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --chain-id testnet
+gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -30,13 +30,13 @@ gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z
 ### 修改清算高度 [API](../API/vault-account.md#修改清算高度-命令行)
 
 ```bash
-gatecli vault-account update-clearing-height [新的清算高度] --from [发送者账户] --chain-id [链ID]
+gatecli vault-account update-clearing-height [新的清算高度] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 
 请求示例：
 
 ```bash
-gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --chain-id testnet
+gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -55,13 +55,13 @@ gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k
 
 ### 账户清算交易 [API](../API/vault-account.md#账户清算交易-命令行)
 ```bash
-gatecli vault-account clear [保险账户1]([保险账户2] [保险账户3]...) --from [发送者账户] --chain-id [链ID]
+gatecli vault-account clear [保险账户1]([保险账户2] [保险账户3]...) --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 ```
 
 请求示例：
 
 ```bash
-gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

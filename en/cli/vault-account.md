@@ -2,13 +2,13 @@
 ### Create a Vault Account [API](../API/vault-account.md#Create a Vault Account-command line)
 
 ```bash
-gatecli vault-account create [base account] [Retrieval Account] [delay height] [Clearing Height] [transfer token  amount] --from [sender account] --chain-id [chain ID]
+gatecli vault-account create [base account] [Retrieval Account] [delay height] [Clearing Height] [transfer token  amount] --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 
 Example:
 
 ```bash
-gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --chain-id testnet
+gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -30,13 +30,13 @@ Description：
 ### Change Clearing Height [API](../API/vault-account.md#Change Clearing Height-command line)
 
 ```bash
-gatecli vault-account update-clearing-height [new Clearing Height] --from [sender account] --chain-id [chain ID]
+gatecli vault-account update-clearing-height [new Clearing Height] --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 
 Example:
 
 ```bash
-gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --chain-id testnet
+gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -55,13 +55,13 @@ Description：
 
 ### Account Clearing Transaction [API](../API/vault-account.md#Account Clearing Transaction-command line)
 ```bash
-gatecli vault-account clear [Vault Account1]([Vault Account2] [Vault Account3]...) --from [sender account] --chain-id [chain ID]
+gatecli vault-account clear [Vault Account1]([Vault Account2] [Vault Account3]...) --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 
 Example:
 
 ```bash
-gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --chain-id testnet
+gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%

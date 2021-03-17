@@ -1,12 +1,12 @@
 
 ### Setup Account to Fetch Income [API](../API/distribution.md#Setup Account to Fetch Income-command line)
 ```bash
-gatecli distribution set-withdraw-addr [account to fetch income] --from [sender account] --chain-id [chain ID]
+gatecli distribution set-withdraw-addr [account to fetch income] --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 Example: 
 
 ```bash
-gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli distribution set-withdraw-addr gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
@@ -25,12 +25,12 @@ Description：
 
 ### Delegator Account Fetch Partial Income From A Consensus Account [API](../API/distribution.md#Delegator Account Fetch Partial Income From A Consensus Account-command line)
 ```bash
-gatecli distribution withdraw-rewards [consensus account address] --from [sender account] --chain-id [chain ID]
+gatecli distribution withdraw-rewards [consensus account address] --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 Example: 
 
 ```bash
-gatecli distribution withdraw-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli distribution withdraw-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
@@ -45,12 +45,12 @@ gatecli distribution withdraw-rewards gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h
 
 ### Delegator Account Fetch All Income From A Consensus Account [API](../API/distribution.md# Delegator Account Fetch All Income From A Consensus Account-command line)
 ```bash
-gatecli distribution withdraw-all-rewards --from [sender account] --chain-id [chain ID]
+gatecli distribution withdraw-all-rewards --from [sender account] --fees [tx fees] --chain-id [chain ID]
 ```
 Example: 
 
 ```bash
-gatecli distribution withdraw-all-rewards --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --chain-id testnet
+gatecli distribution withdraw-all-rewards --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
