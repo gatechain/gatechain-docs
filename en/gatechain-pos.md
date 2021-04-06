@@ -62,7 +62,7 @@ If you do not want to build a node and POS mine as a consensus account, you can 
 
  	a.You can check the commission, holdings, rate of returns etc of a consensus accounts and decide which one to choose.
  	
- 	b.You can view using a blockchain explorer：https://explorer.gatechain.io/mainnet/consensus
+ 	b.You can view using a blockchain explorer：https://gatescan.org/consensus
  	 	
 2. Initiate a  "delegate" transaction to delegate all or a portion of your GT to one or more consensus accounts. 
 

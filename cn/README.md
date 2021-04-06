@@ -148,7 +148,7 @@ GateChain具有多种转账交易类型。为便于用户有效识别不同的�
 ## 快速入门
 
 1. [GateChain桌面钱包使用说明](./gatechain-wallet.md)
-1. 欢迎访问 [GateChain区块链浏览器](https://explorer.gatechain.io/mainnet/index)
+1. 欢迎访问 [GateChain区块链浏览器](https://gatescan.org/)
 
 ## 进阶使用
 

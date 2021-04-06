@@ -95,7 +95,7 @@ Besides creating an account, you can also use “Import account” function to i
 	- At wallet overview interface, you can see a “Give me GT” icon. Click it and a testnet GT application is sent. Testnet GT will display at your wallet balance a few minutes later.<br/>![](./images/5.png)</br>
 
 - **Get Testnet GT From Website：** 
-	- Visit website： https://explorer.gatechain.io/mainnet/faucet
+	- Visit website： https://gatescan.org/faucet
 	- Enter the account address to receive testnet GT and click to add application. Testnet GT will display at your wallet balance a few minutes later.<br/>![](./images/6.png)</br>
 
 > Each account can apply once per 24 hours. Each time applying for testnet GT from wallet will have the following prompt.
@@ -149,7 +149,7 @@ GateChain provides  two notification channels, via email and via short message.
 
 - 1 ）Access to blockchain explorer monitor page.
 	- Click the icon right to  Vault Account address to access to account monitor settings.<br/>![](./images/monitor1.png)</br>
-	- Or visit [mainnet explorer](https://explorer.gatechain.io/mainnet/monitor) and Click"Monitor"	to access to account monitor Settings page. <br/>![](./images/monitor0.png)</br>
+	- Or visit [mainnet explorer](https://gatescan.org/monitor) and Click"Monitor"	to access to account monitor Settings page. <br/>![](./images/monitor0.png)</br>
 - 2 ) Fill the account address to monitor and the mobile phones and email address to receive alert notifications. 
  <br/>![](./images/
 .png)</br>
@@ -343,7 +343,7 @@ The wallet supports  account export, account delete, view private keys  and othe
 
 ---
 ## 5. Blockchain Explorer
--  To View account, transaction id, block, validator and more, visit block explorer for testnet at [https://explorer.gatechain.io/mainnet/index](https://explorer.gatechain.io/mainnet/index)。
+-  To View account, transaction id, block, validator and more, visit block explorer for testnet at [https://gatescan.org/index](https://gatescan.org/index)。
 
 ![](./images/17.png)
 
