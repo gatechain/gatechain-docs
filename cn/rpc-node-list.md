@@ -4,14 +4,14 @@
 
 #### API
 
-* https://api-cn1.gatenode.cc:1318
-* http://api.gatenode.cc:1317
+* https://api.gatenode.cc（推荐）
+* https://api-cn1.gatenode.cc:1318（中国大陆节点）
 
 
 #### EVM（链ID：66）
 
-* https://evm.gatenode.cc
-* https://evm-cn1.gatenode.cc:6061
+* https://evm.gatenode.cc（推荐）
+* https://evm-cn1.gatenode.cc:6061（中国大陆节点）
 
 
 ### Meteora

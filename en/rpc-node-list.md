@@ -4,14 +4,15 @@
 
 #### API
 
-* https://api-cn1.gatenode.cc:1318
-* http://api.gatenode.cc:1317
+* https://api.gatenode.cc (Recommend)
+* https://api-cn1.gatenode.cc:1318 (Chinese mainland)
+
 
 
 #### EVM（Chain ID：66）
 
-* https://evm.gatenode.cc
-* https://evm-cn1.gatenode.cc:6061
+* https://evm.gatenode.cc (Recommend)
+* https://evm-cn1.gatenode.cc:6061 (Chinese mainland)
 
 
 ### Meteora
