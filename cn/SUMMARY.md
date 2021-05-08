@@ -37,7 +37,7 @@
     	* [MetaMask接入指南](evm/tool.md#MetaMask接入指南)
     	* [Remix接入指南](evm/tool.md#Remix接入指南)
     	* [Truffle接入指南](evm/tool.md#Truffle接入指南)
-    * [交易平台集成文档](evm/gatechain-dex.md)
+    * [交易平台集成文档](evm/gatechain-platform.md)
 * [API](API/README.md)
     * [普通账户 account](API/account.md)
     * [共识账户 con-account](API/con-account.md)
