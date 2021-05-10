@@ -55,7 +55,7 @@ If you do not want to build a node and POS mine as a consensus account, you can 
 * All account types can delegate to consensus accounts，**It is recommended to use a vault account, guaranteeing the safety of the funds.**
 * Delegations initiated by vault accounts work exactly the same way as from normal accounts. The delegattion takes effect immediately; rewards are calculated from the very next block. There is still a 21 day freeze period required if you wish to redelegate/undelegate your funds. Reward withdrawals will be credited to the account immediately.**When a vault account initiates a clearing transaction, there mustn't be any ongoing delegations or frozen funds, otherwise the clearing transaction will fail.**Delegation does not affect the security of the accounts' funds, therefore, after the clearing height is reached, four kinds of delegation transactions can still be initiated.
 
-**How-To Delegate:
+**How-To Delegate:**
 
 
 1. First, choose a consensus account to delegate your GT to.
