@@ -1,12 +1,3 @@
-## 区块链浏览器
-主网：https://gatescan.org/
-
-测试网：https://gatescan.org/testnet/
-
-Meteora：https://gatescan.org/meteora/
-
-## 官方钱包下载
-下载地址：https://www.gatechain.io/wallets
 
 ## <span id="MetaMask接入指南">MetaMask接入指南</span>
 
