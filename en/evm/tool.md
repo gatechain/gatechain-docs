@@ -22,27 +22,35 @@ Example: Install in Chrome browser
 
 1. In Chrome browser, seach：https://chrome.google.com/webstore/search/MetaMask
 	* note：make sure it is provided by metamask.io
-![](../images/metamask1.png)
+
+<img src="../images/metamask1.png"  height=50% width=50%>
 
 2. CLick “Add to Chrome”. It is installed now and you can create your account. 
-![](../images/metamask2.png)
+
+<img src="../images/metamask2.png"  height=50% width=50%>
 
 
 ### Create Account
 
-1. You can choose to import a wallet or create a wallet. Click “Create a wallet”
-![](../images/metamask3.png)
-2. Enter password and backup account mnemonic
-![](../images/metamask4.png)
-![](../images/metamask5.png)
-3. When the mnemonic is verified, the account is successfully created. You can connect to gatechain now!
-![](../images/metamask6.png)
+1.You can choose to import a wallet or create a wallet. Click “Create a wallet”
+
+<img src="../images/metamask3.png"  height=50% width=50%>
+
+2.Enter password and backup account mnemonic
+
+<img src="../images/metamask4.png"  height=50% width=50%>
+<img src="../images/metamask5.png"  height=50% width=50%>
+
+3.When the mnemonic is verified, the account is successfully created. You can connect to gatechain now!
+
+<img src="../images/metamask6.png"  height=50% width=50%>
 
 
 ### Connect MetaMask to GateChain
 
 1. Click MetaMask-Setup-Network-Add Network, and configure GateChain network service
-![](../images/metamask7.png)
+
+<img src="../images/metamask7.png"  height=50% width=50%>
 
 > Network name: GateChain （customized）
 > 
@@ -67,13 +75,19 @@ Example: Install in Chrome browser
 
 ### Transfer GT to another MetaMask account
 
-1. Chose the account to send asset to, then got to Homepage and click"Send"button
-![](../images/metamask10.png)
-2. Enter the amount and To address, click "NEXT".
-![](../images/metamask11.png)
-3. Double check transaction and click "Confirm". The transaction will be waiting for being included in blockchain.
-![](../images/metamask12.png)
-4. When the transaction is successful, view transaction details from a gatechain block explorer.
+1.Chose the account to send asset to, then got to Homepage and click"Send"button
+
+<img src="../images/metamask10.png"  height=50% width=50%>
+
+2.Enter the amount and To address, click "NEXT".
+
+<img src="../images/metamask11.png"  height=50% width=50%>
+
+3.Double check transaction and click "Confirm". The transaction will be waiting for being included in blockchain.
+
+<img src="../images/metamask12.png"  height=50% width=50%>
+
+4.When the transaction is successful, view transaction details from a gatechain block explorer.
 	
 * BLock explorer：https://gatescan.org/txs
 
@@ -87,25 +101,35 @@ Solidity is the programming language designed for developing smart contracts on 
 
 ### Create Contract
 
-1. Open remix website(http://remix.ethereum.org), click “New File” to create a XXX.sol file
-![](../images/remix1.png)
-2. Click the file you created, and start to write your own smart contract code. 
-3. Once the development is completed, start compiling smart contract. 
-![](../images/remix2.png)
+1.Open remix website(http://remix.ethereum.org), click “New File” to create a XXX.sol file
+
+<img src="../images/remix1.png"  height=50% width=50%>
+
+2.Click the file you created, and start to write your own smart contract code. 
+
+3.Once the development is completed, start compiling smart contract.
+ 
+<img src="../images/remix2.png"  height=30% width=30%>
 
 ### Deploy and Interact with Smart Contract
 
-1. Once compilation is completed, start deploying the smart contract.
-	![](../images/remix3.png)
-2. Click“Deploy” to start to deploy the smart contract. Jump to MetaMask to connect to your account
+1.Once compilation is completed, start deploying the smart contract.
 
-	>（Make sure MetaMask network is on GateChain）
-	![](../images/remix4.png)
-3. Open the deployed contract and you can choose a functionality to interact with MetaMask!
-	![](../images/remix5.png)
-4. Query details about contract interaction on the gatechain block explorer.
+<img src="../images/remix3.png"  height=30% width=30%>
+	
+2.Click“Deploy” to start to deploy the smart contract. Jump to MetaMask to connect to your account
 
-	* Block explorer：https://gatescan.org/txs
+>（Make sure MetaMask network is on GateChain）
+	
+<img src="../images/remix4.png"  height=30% width=30%>
+	
+3.Open the deployed contract and you can choose a functionality to interact with MetaMask!
+
+<img src="../images/remix5.png"  height=30% width=30%>
+	
+4.Query details about contract interaction on the gatechain block explorer.
+
+* Block explorer：https://gatescan.org/txs
 
 ## Connect to Truffle
 

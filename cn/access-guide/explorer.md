@@ -11,7 +11,7 @@ Meteora：https://gatescan.org/meteora/
 
 ### HipoDeFi
 
-主网：https://hipo.com/
+主网：https://www.hipo.com/Ether/zh/
 
 
 

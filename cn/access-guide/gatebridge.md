@@ -6,7 +6,7 @@
   3. ETH上的erc20token和GateChain、BSC、HECO上的erc20token必须是一一对应的，所以需要用户提交注册跨链代币申请[申请入口](https://gatescan.org/bridge),申请提交后，由合约管理员进行绑定。
   
 ### 使用
-  1. 打开[Hipo](https://dev.hipo.com/Ether/zh/)网站，切换所需网络，点击GateChain跨链；
+  1. 打开[Hipo](https://www.hipo.com/Ether/zh/)网站，切换所需网络，点击GateChain跨链；
 	<img src="../images/crosschain1.png"  height=50% width=50%>
 
   2. 点击链接钱包，将Hipo与您的钱包链接；

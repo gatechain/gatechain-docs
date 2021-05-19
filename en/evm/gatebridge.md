@@ -6,7 +6,7 @@
   3. ERC20 tokens on Ethereum and their corresponding tokens on GateChain, BSC and HECO are matched. Users should make a token cross-chain registration request [here](https://gatescan.org/bridge).
 
 ### How to use
-  1. Open [Hipo](https://dev.hipo.com/Ether/en/) website and switch to the correct network, click GateChain Bridge.
+  1. Open [Hipo](https://www.hipo.com/Ether/en/) website and switch to the correct network, click GateChain Bridge.
 	<img src="../images/crosschain1.png"  height="355" width="786">
 
   2. Click Connect Wallet to connect your wallet to Hipo.

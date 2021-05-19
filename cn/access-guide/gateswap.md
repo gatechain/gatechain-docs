@@ -8,7 +8,7 @@ GateSwap是一种自动流动性协议，每个GateSwap智能合约（或成对�
 
 ### 添加流动性
 
-1. 打开[Hipo官网](https://dev.hipo.com/GateChain/zh/)，切换到GateChain网络，点击右上角“连接钱包”，将Hipo与您的钱包连接；
+1. 打开[Hipo官网](https://www.hipo.com/GateChain/zh/)，切换到GateChain网络，点击右上角“连接钱包”，将Hipo与您的钱包连接；
 
 2. 钱包链接成功后，点击“流动池”模块，进入流动池页面；
 
@@ -37,7 +37,7 @@ GateSwap是一种自动流动性协议，每个GateSwap智能合约（或成对�
 
 ### 快速兑换
 
-1. 打开[Hipo官网](https://dev.hipo.com/GateChain/zh/)，切换到GateChain网络，点击右上角“连接钱包”，将Hipo与您的钱包连接；
+1. 打开[Hipo官网](https://www.hipo.com/GateChain/zh/)，切换到GateChain网络，点击右上角“连接钱包”，将Hipo与您的钱包连接；
 
 2. 钱包连接成功后，在“快速兑换”模块选择要兑换的token，首次兑换的token，需要钱包账户“授权”以后才可进行兑换操作，先点击“授权”按钮，跳转到钱包确认授权；
 
