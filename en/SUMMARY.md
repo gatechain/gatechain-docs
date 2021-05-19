@@ -18,7 +18,7 @@
 * [Introduction](README.md)
     * [0verview](README.md#overview)
     * [Ecosystem](README.md#ecosystem)
-    * [Typical Application](README.md#typical-application)
+    * [Typical Application](README.md#application)
     * [Academic research](README.md#academic-research)
     * [Terms](README.md#terms)
     * [Quick Start](README.md#quick-start)
