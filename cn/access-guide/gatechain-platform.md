@@ -90,7 +90,7 @@ gated start
 	```
 	命令：gatecli vault-account create [基础账户] [找回账户] [延迟生效高度] [清算高度] [转移代币数量] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
 	
-	示例：gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
+	示例：gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 100000NANOGT --chain-id testnet
 	
 	```
 	说明：
@@ -134,7 +134,7 @@ gated start
 ```
 命令：gatecli tx send [接收人账户] [转账金额] --from [发送人账户] --fees [交易手续费] --chain-id [链ID]
 
-示例：gatecli tx send 0x37866a250B4B182DB235A88Cdc94004eF08c12C4 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
+示例：gatecli tx send 0x37866a250B4B182DB235A88Cdc94004eF08c12C4 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 100000NANOGT --chain-id testnet
 
 ```
 

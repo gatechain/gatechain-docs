@@ -6,7 +6,7 @@ gatecli staking delegate [consensus account address] [delegation token amount ] 
 Example:
 
 ```bash
-gatecli staking delegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --fees 10000000NANOGT --chain-id testnet
+gatecli staking delegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
@@ -74,7 +74,7 @@ gatecli staking redelegate [source consensus account address] [target consensus 
 Example:
 
 ```bash
-gatecli staking redelegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla54 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --fees 10000000NANOGT --chain-id testnet
+gatecli staking redelegate gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla54 100000000NANOGT --from gt11m5acrv46s5xzr8r3h8f3z9hz8wdl3ucfcmw6ssac2kfvad649u6nfzhx2rpk4ucvrxla6s --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
@@ -155,7 +155,7 @@ gatecli staking undelegate [consensus account address] [amount to undelegate] --
 Example:
 
 ```bash
-gatecli staking undelegate gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 100000000NANOGT --from gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --fees 10000000NANOGT --chain-id testnet
+gatecli staking undelegate gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 100000000NANOGT --from gt11ewdeyjdlxs2x4yglnhtulp0tclgdp7c2t8d5c6495r83qvrfr7p0qt40uddu3k44s7rxg6 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
@@ -178,7 +178,7 @@ gatecli staking undelegate-by-retrieval-account [vault account1 vault account2..
 Example：
 
 ```bash
-gatecli staking undelegate-by-retrieval-account vault11d9t6... vault11w8c3v... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli staking undelegate-by-retrieval-account vault11d9t6... vault11w8c3v... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example：%accordion%

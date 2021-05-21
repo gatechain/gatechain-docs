@@ -3,8 +3,6 @@ Mainnet：https://gatescan.org/
 
 Testnet：https://gatescan.org/testnet/
 
-Meteora：https://gatescan.org/meteora/
-
 ## Wallets Download
 Download：https://www.gatechain.io/wallets
 
@@ -58,7 +56,7 @@ Example: Install in Chrome browser
 > 
 > RPC URL2: https://evm-cn1.gatenode.cc:6061
 > 
-> Chain ID: 66
+> Chain ID: 86
 > 
 > Symbol: GT
 > 
@@ -174,7 +172,7 @@ const mnemonic = fs.readFileSync(".secret").toString().trim();
 	  networks: {
 	    GateChain: {
 	      provider: () => new HDWalletProvider(mnemonic, `https://evm.gatenode.cc`),
-	      network_id: 66,
+	      network_id: 86,
 	      confirmations: 10,
 	      timeoutBlocks: 200,
 	      skipDryRun: true
@@ -207,7 +205,7 @@ truffle migrate --network GateChain
 	Starting migrations...
 	======================
 	> Network name:    'GateChain'
-	> Network id:      66
+	> Network id:      86
 	> Block gas limit: 4294967295 (0xffffffff)
 		
 		

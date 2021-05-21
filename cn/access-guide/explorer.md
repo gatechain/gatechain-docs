@@ -6,8 +6,6 @@
 
 测试网：https://gatescan.org/testnet/
 
-Meteora：https://gatescan.org/meteora/
-
 
 ### HipoDeFi
 

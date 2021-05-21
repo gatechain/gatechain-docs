@@ -8,7 +8,7 @@ gatecli vault-account create [base account] [Retrieval Account] [delay height] [
 Example:
 
 ```bash
-gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
+gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -36,7 +36,7 @@ gatecli vault-account update-clearing-height [new Clearing Height] --from [sende
 Example:
 
 ```bash
-gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
+gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -61,7 +61,7 @@ gatecli vault-account clear [Vault Account1]([Vault Account2] [Vault Account3]..
 Example:
 
 ```bash
-gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%

@@ -6,7 +6,6 @@ Mainnet：https://gatescan.org/
 
 Testnet：https://gatescan.org/testnet/
 
-Meteora：https://gatescan.org/meteora/
 
 
 ### HipoDeFi

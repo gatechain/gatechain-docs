@@ -7,7 +7,7 @@ gatecli token issue [token name] [token symbol] [total supply] --from [sender ac
 Example:
 
 ```bash
-gatecli token issue TestToken AAA 100000000000000000000000  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token issue TestToken AAA 100000000000000000000000  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -35,7 +35,7 @@ gatecli token mint [token amount] --from [sender account] --fees [tx fees] --cha
 Example:
 
 ```bash
-gatecli token mint 100000000000AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token mint 100000000000AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -61,7 +61,7 @@ gatecli token freeze [onchain token symbol] --from [sender account] --fees [tx f
 Example:
 
 ```bash
-gatecli token freeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token freeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -85,7 +85,7 @@ gatecli token unfreeze [onchain token symbol] --from [sender account] --fees [tx
 Example:
 
 ```bash
-gatecli token unfreeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token unfreeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example:%accordion%
@@ -110,7 +110,7 @@ gatecli token burn [token amount] --from [sender account] --fees [tx fees] --cha
 Example:
 
 ```bash
-gatecli token burn 100000000000AAA-94f  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token burn 100000000000AAA-94f  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 %accordion%Return example:%accordion%
 

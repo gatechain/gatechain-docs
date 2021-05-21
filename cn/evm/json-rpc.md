@@ -109,8 +109,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 ```
 String - 当前连接网络的ID
 
-"1337": Meteora
-"66":   Mainnet
+"86":   Mainnet
 ```
 
 #### 示例
@@ -123,7 +122,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 {
   "id":67,
   "jsonrpc": "2.0",
-  "result": "1337"
+  "result": "86"
 }
 ```
 

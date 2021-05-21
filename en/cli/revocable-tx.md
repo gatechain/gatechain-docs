@@ -7,7 +7,7 @@ gatecli revocable-tx send [recipient account] [transfer token amount] --from [se
 Example：
 
 ```bash
-gatecli revocable-tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 10NANOGT --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
+gatecli revocable-tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 10NANOGT --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example：%accordion%
@@ -88,7 +88,7 @@ gatecli revocable-tx revoke [transaction Hash] --from [sender account] --fees [t
 Example：
 
 ```bash
-gatecli revocable-tx revoke 0E3B67C685C271632CE6F4DAA2AB06AF7E8077509E1CB5310F63F6C147786E12 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
+gatecli revocable-tx revoke 0E3B67C685C271632CE6F4DAA2AB06AF7E8077509E1CB5310F63F6C147786E12 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example：%accordion%

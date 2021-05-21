@@ -83,7 +83,7 @@ gatecli foundation withdraw [提取代币数] --from [基金会成员地址] --f
 请求示例：
 
 ```bash
-gatecli foundation withdraw 10NANOGT --from gt11xf8qc9fz3ysjjal5jkq2gcnpky4swutdwjlzc9uz4qud2w2x0duxs9cgs00ayf2v4kx0s4 --fees 10000000NANOGT --chain-id testnet
+gatecli foundation withdraw 10NANOGT --from gt11xf8qc9fz3ysjjal5jkq2gcnpky4swutdwjlzc9uz4qud2w2x0duxs9cgs00ayf2v4kx0s4 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%

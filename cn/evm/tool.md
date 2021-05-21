@@ -3,8 +3,6 @@
 
 测试网：https://gatescan.org/testnet/
 
-Meteora：https://gatescan.org/meteora/
-
 ## 官方钱包下载
 下载地址：https://www.gatechain.io/wallets
 
@@ -57,7 +55,7 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 > 
 > RPC URL2: https://evm-cn1.gatenode.cc:6061
 > 
-> 链 ID: 66
+> 链 ID: 86
 > 
 > 符号: GT
 > 
@@ -176,7 +174,7 @@ Remix是一个开源的用于Solidity智能合约开发的Web端IDE，提供基�
 	  networks: {
 	    GateChain: {
 	      provider: () => new HDWalletProvider(mnemonic, `https://evm.gatenode.cc`),
-	      network_id: 66,
+	      network_id: 86,
 	      confirmations: 10,
 	      timeoutBlocks: 200,
 	      skipDryRun: true
@@ -211,7 +209,7 @@ Remix是一个开源的用于Solidity智能合约开发的Web端IDE，提供基�
 	Starting migrations...
 	======================
 	> Network name:    'GateChain'
-	> Network id:      66
+	> Network id:      86
 	> Block gas limit: 4294967295 (0xffffffff)
 		
 		

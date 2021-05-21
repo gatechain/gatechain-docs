@@ -7,7 +7,7 @@ gatecli token issue [代币名称] [代币符号] [发行总量] --from [发送�
 请求示例：
 
 ```bash
-gatecli token issue TestToken AAA 100000000000000000000000  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token issue TestToken AAA 100000000000000000000000  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -35,7 +35,7 @@ gatecli token mint [代币数量] --from [发送者账户] --fees [交易手续�
 请求示例：
 
 ```bash
-gatecli token mint 100000000000AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token mint 100000000000AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -61,7 +61,7 @@ gatecli token freeze [链上代币符号] --from [发送者账户] --fees [交�
 请求示例：
 
 ```bash
-gatecli token freeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token freeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -85,7 +85,7 @@ gatecli token unfreeze [链上代币符号] --from [发送者账户] --fees [交
 请求示例：
 
 ```bash
-gatecli token unfreeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token unfreeze AAA-94f --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%返回示例：%accordion%
@@ -110,7 +110,7 @@ gatecli token burn [代币数量] --from [发送者账户] --fees [交易手续�
 请求示例：
 
 ```bash
-gatecli token burn 100000000000AAA-94f  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+gatecli token burn 100000000000AAA-94f  --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 100000NANOGT --chain-id testnet
 ```
 %accordion%返回示例：%accordion%
 

@@ -18,29 +18,6 @@ GateBridge是基于ChainSafe + 硬件多签方式的跨链方案。此方案的�
 
 GateBridge适用于所有以EVM为智能合约引擎的公链，由Relayer群体保证去中心化和安全性。
 
-附上GateBridge在GateChain测试链（GateChain-Meteora）和Eth测试链(Eth-Goerli)的合约地址：
-> ```
-> ## eth和gatechain的发送交易url
-> SRC_GATEWAY=https://goerli-light.eth.linkpool.io/
-> DST_GATEWAY=http://meteora.gatenode.cc:6060/
-> 
-> ## eth和gatechain的chainId
-> SRC_CHAINID=5
-> DST_CHAINID=66
-> 
-> ## 已经绑定好的token对
-> RESOURCE_ID="0x000000000000000000000000000000c76ebe4a02bbc34786d860b355f5a5ce00"
-> SRC_TOKEN="0xaFF4481D10270F50f203E0763e2597776068CBc5"
-> DST_TOKEN="0xaDFaA2f1641e80882e513Db91DC6B930E0810418"
-> 
-> SRC_BRIDGE 和 DST_BRIDGE 分别是在eth上和gatechain上调用转账方法的合约地址
-> SRC_BRIDGE="0x76e8927aE94E383946CD2d13B93579C6F276E126"
-> DST_BRIDGE="0x6084344cadA6C109d4aC0F7205589F1314D0AF85"
-> 
-> ## SRC_HANDLER 和 DST_HANDLER
-> SRC_HANDLER="0x05Ad72ee3F659F9D529104F7072EcF29Ebe37D7e"
-> DST_HANDLER="0x7Ab932e0376c5c04aA298cAADc92A47a9097B858"
-> ```
 
 
 ##GateHub升级计划

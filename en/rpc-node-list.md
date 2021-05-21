@@ -12,7 +12,7 @@
 
 
 
-#### EVM（Chain ID：66）
+#### EVM（Chain ID：86）
 
 * https://evm.gatenode.cc  (Recommend)
 * https://evm-1.gatenode.cc 
@@ -21,16 +21,6 @@
 * https://evm-cn1.gatenode.cc:6061  (Chinese mainland)
 
 
-### Meteora
-
-#### API
-
-* http://meteora.gatenode.cc:1317
-
-
-#### EVM（Chain ID：1337）
-
-* http://meteora.gatenode.cc:6060
 
 
 

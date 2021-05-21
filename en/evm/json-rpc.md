@@ -107,8 +107,7 @@ none
 ```
 String - The current network id.
 
-"1337": Meteora
-"66":   Mainnet
+"86":   Mainnet
 ```
 
 #### Example
@@ -120,7 +119,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 {
   "id":67,
   "jsonrpc": "2.0",
-  "result": "1337"
+  "result": "86"
 }
 ```
 

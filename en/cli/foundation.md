@@ -82,7 +82,7 @@ gatecli foundation withdraw [amount] --from [foundation members] --fees [tx fees
 Example：
 
 ```bash
-gatecli foundation withdraw 10NANOGT --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
+gatecli foundation withdraw 10NANOGT --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return Example：%accordion%

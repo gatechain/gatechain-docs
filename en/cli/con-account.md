@@ -43,7 +43,7 @@ Example:
 
 ```bash
 gatecli con-account online --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 
---pubkey gt1pub1u8s6p73qp3ac00a628mk7g4utllp6cvrl54vqgdazg3q6d8e3lzxxycrgw3qk3q7wn --moniker newcon-account --fees 10000000NANOGT --commission-max-change-rate "0.01" --commission-max-rate "0.01" --commission-rate "0.01" --chain-id testnet
+--pubkey gt1pub1u8s6p73qp3ac00a628mk7g4utllp6cvrl54vqgdazg3q6d8e3lzxxycrgw3qk3q7wn --moniker newcon-account --fees 100000NANOGT --commission-max-change-rate "0.01" --commission-max-rate "0.01" --commission-rate "0.01" --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
@@ -62,7 +62,7 @@ gatecli con-account offline --from [sender account] --fees [tx fees] --chain-id 
 Example: 
 
 ```bash
-gatecli con-account offline --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
+gatecli con-account offline --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example: %accordion%
@@ -84,7 +84,7 @@ gatecli con-account edit --moniker [con-account name] --commission-rate [commiss
 Example：
 
 ```bash
-gatecli con-account edit --moniker con1 --commission-rate 0.03 --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 10000000NANOGT --chain-id testnet
+gatecli con-account edit --moniker con1 --commission-rate 0.03 --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 100000NANOGT --chain-id testnet
 ```
 
 %accordion%Return example：%accordion%

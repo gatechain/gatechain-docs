@@ -90,7 +90,7 @@ gated start
 	```
 	Command：gatecli vault-account create [Base Account] [retrieval  account] [Delay Height] [Clearing Height] [Transfer amount] --from [Sender Account] --fees [Transaction Fees ] --chain-id [Chain ID]
 	
-	Example：gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
+	Example：gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 100000NANOGT --chain-id testnet
 	
 	```
 	Note：
@@ -134,7 +134,7 @@ Example：gatecli account show gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t3
 ```
 Command：gatecli tx send [Recipient Account] [Transaction Amount ] --from [Sender Account] --fees [Transaction Fees ] --chain-id [Chain ID]
 
-Example：gatecli tx send 0x37866a250B4B182DB235A88Cdc94004eF08c12C4 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
+Example：gatecli tx send 0x37866a250B4B182DB235A88Cdc94004eF08c12C4 10NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 100000NANOGT --chain-id testnet
 
 ```
 
