@@ -14,7 +14,8 @@ To run a full node, the hardware must meet certain requirements.
  
 ## GateChain Full Node Installation Instructions 
 #### Method 1: Run A Script To Automatically Install
-  > Note:  make sure "wget” has been installed in your environment.
+
+> Note:  make sure "wget” has been installed in your environment.
   
 The installation script ("install.sh" ) is located on Github. "install.sh" is responsible for the configuration of the chain's executable file. Value below is used by default:
 
@@ -66,6 +67,27 @@ From "node-binary/node/{network}/{version}/config/", copy "config.json"  and "ge
 ```bash
 gated start
 ```
+
+### Start gc 
+
+- To start GC, you need to modify the startup mode and add parameters
+
+```
+gated start modify to  gated start  --pruning nothing
+```
+
+### Start evm rpc
+
+```
+gatecli evm rest-server --gm-websocket-port http://127.0.0.1:8085 --chain-id mainnet --laddr tcp://0.0.0.0:6060 --rpc-api web3,eth,personal,net,debug
+
+```
+
+* If you need support evm rpc，needs to modify config.json The following attributes:
+	* "WsPort": "tcp://0.0.0.0:8085"
+	* "IsWebSocketServerActive":true  
+	* Save and restart gated
+
 
 ### PoS Mining
 By building a full node to participate in the consensus, 

@@ -63,6 +63,26 @@ Copy "config.json" and "genesis.json" from "node-binary/node/{network}/{version}
 gated start
 ```
 
+### 5.Start gc 
+
+- To start GC, you need to modify the startup mode and add parameters
+
+```
+gated start modify to  gated start  --pruning nothing
+```
+
+### 6.Start evm rpc
+
+```
+gatecli evm rest-server --gm-websocket-port http://127.0.0.1:8085 --chain-id mainnet --laddr tcp://0.0.0.0:6060 --rpc-api web3,eth,personal,net,debug
+
+```
+
+* If you need support evm rpc，needs to modify config.json The following attributes:
+	* "WsPort": "tcp://0.0.0.0:8085"
+	* "IsWebSocketServerActive":true  
+	* Save and restart gated
+	
 
 ## Create Account
 

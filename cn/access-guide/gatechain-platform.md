@@ -122,12 +122,18 @@ gated start
 即gated start 修改为 gated start  --pruning nothing
 ```
 
-- 启动evm rpc方式
+### 启动evm rpc
 
 ```
 gatecli evm rest-server --gm-websocket-port http://127.0.0.1:8085 --chain-id mainnet --laddr tcp://0.0.0.0:6060 --rpc-api web3,eth,personal,net,debug
 
 ```
+
+* 如需支持evm rpc，需修改config.json 中如下属性：
+	* "WsPort": "tcp://0.0.0.0:8085"
+	* "IsWebSocketServerActive":true  
+	* 保存修改后重启gated
+
 
 ## 创建账户
 

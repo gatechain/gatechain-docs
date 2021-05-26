@@ -126,20 +126,26 @@ mkdir ~/.gated
 gated start
 ```
 
-### 开启gc模式
+### 启动gc模式
 
-- 开启gc模式需修改启动方式增加参数
+- 启动gc模式需修改启动方式增加参数
 
 ```
 即gated start 修改为 gated start  --pruning nothing
 ```
 
-- 启动evm rpc方式
+### 启动evm rpc
 
 ```
 gatecli evm rest-server --gm-websocket-port http://127.0.0.1:8085 --chain-id mainnet --laddr tcp://0.0.0.0:6060 --rpc-api web3,eth,personal,net,debug
 
 ```
+
+* 如需支持evm rpc，需修改config.json 中如下属性：
+	* "WsPort": "tcp://0.0.0.0:8085"
+	* "IsWebSocketServerActive":true  
+	* 保存修改后重启gated
+
 
 ### 参与主网POS挖矿
 如果要将此节点升级为共识节点，参与POS挖矿分得奖励，首先需要在本节点创建一个普通账户
