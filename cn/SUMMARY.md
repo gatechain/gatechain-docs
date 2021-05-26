@@ -79,7 +79,7 @@
     * [支持平台 environment](gatechain-build.md#支持平台)
     * [配置需求 requirements](gatechain-build.md#配置需求)
     * [安装步骤 step](gatechain-build.md#gatechain全节点安装步骤)
-    * [开启gc模式](gatechain-build.md#启动gc模式)
+    * [启动gc模式](gatechain-build.md#启动gc模式)
     * [启动evm rpc](gatechain-build.md#启动evm-rpc)
     * [参与主网pos挖矿 PoS mining](gatechain-build.md#参与主网pos挖矿)
     * [创建本地私有链 create local private chain](gatechain-build.md#创建本地私有链)
