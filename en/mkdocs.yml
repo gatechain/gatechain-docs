@@ -1,13 +1,13 @@
 site_name: GateChain Doc
 site_description: GateChain Documents
 site_author: GateChain Team
-site_url: "" #设置网站的URL地址
-# 静态资源输出文件夹
+site_url: "" 
 site_dir: ../dist/app
 
-# 左侧导航
+
 nav:
   - Home: 
+    - Overview: index.md
     - Ecosystem: home/ecosystem.md
     - Application: home/application.md
     - EVM: home/evm.md
@@ -76,13 +76,9 @@ nav:
 
 
 
-# 本地调试端口
+
 dev_addr: 127.0.0.1:4051
-#repo_name: 'mkdocs-material'
-#repo_url: https://github.com/
-#edit_uri: ""
-# Copyright
-copyright: 版权所有Copyright 2019-2020, All Rights Reserved
+copyright: Copyright 2019-2020, All Rights Reserved
 
 theme:
   language: en
@@ -123,11 +119,11 @@ theme:
     #- navigation.top
     #- toc.integrate
 
-# 自定义css
+
 extra_css:
 - 'stylesheets/extra.css'
 # - 'config/css/custom.css'
-# 自定义js
+
 extra_javascript:
   - 'javascripts/extra.js'
   - https://polyfill.io/v3/polyfill.min.js?features=es6

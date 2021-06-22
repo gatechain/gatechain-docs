@@ -8,7 +8,7 @@ site_dir: ../dist/app
 # 左侧导航
 nav:
   - Home: 
-    #- 概述: home/index.md
+    - 概述: index.md
     - 生态: home/ecosystem.md
     - 典型应用: home/application.md
     - EVM介绍: home/evm.md
