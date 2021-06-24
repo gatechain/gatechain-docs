@@ -2,7 +2,7 @@ site_name: GateChain Doc
 site_description: GateChain Documents
 site_author: GateChain Team
 site_url: "" 
-site_dir: ../dist/app
+site_dir: ../dist/app/en       
 
 
 nav:
@@ -134,11 +134,11 @@ extra:
     language: 'jp, en'
   alternate:
     - name: English
-      link: en/
+      link: ./
       lang: en
 
     - name: 中文简体
-      link: zh/
+      link: ../
       lang: zh
 
 markdown_extensions:

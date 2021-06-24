@@ -127,7 +127,7 @@ extra:
       link: en/
       lang: en
     - name: 中文简体
-      link: zh/
+      link: ./
       lang: zh
 
 markdown_extensions:
