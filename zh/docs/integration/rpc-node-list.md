@@ -26,11 +26,9 @@
 
 #### API
 
-* http://meteora.gatenode.cc:1317
 * https://meteora.gatenode.cc:1318
 
 
 #### EVM RPC（链ID：85）
 
-* http://meteora.gatenode.cc:6060
 * https://meteora.gatenode.cc:6061
