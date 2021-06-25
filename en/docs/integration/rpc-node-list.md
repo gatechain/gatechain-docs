@@ -1,9 +1,10 @@
 
-## Mainnet
+### Mainnet
 
 ### API
 
 * https://api.gatenode.cc  (Recommend)
+* https://api.gatenode.net
 * https://api-1.gatenode.cc
 * https://api-2.gatenode.cc
 * https://api-3.gatenode.cc
@@ -11,16 +12,28 @@
 
 
 
-### EVM（Chain ID：86）
+### EVM RPC（Chain ID：86）
 
 * https://evm.gatenode.cc  (Recommend)
+* https://evm.gatenode.net
 * https://evm-1.gatenode.cc 
 * https://evm-2.gatenode.cc
 * https://evm-3.gatenode.cc
 * https://evm-cn1.gatenode.cc:6061  (Chinese mainland)
 
 
+### Meteora
 
+#### API
+
+* http://meteora.gatenode.cc:1317
+* https://meteora.gatenode.cc:1318
+
+
+#### EVM RPC（Chain ID：85）
+
+* http://meteora.gatenode.cc:6060
+* https://meteora.gatenode.cc:6061
 
 
 
