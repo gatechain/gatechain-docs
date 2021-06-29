@@ -1,2 +1,7 @@
+**If you need more help，Initiate technical support through the following two channels, and we will reply to you as soon as we receive it.**
 
-If you need technical support,Please send an email to: dev@gatechain.org,We will reply you as soon as possible.
+
+**GitHub:**https://github.com/gatechain/gatechain-docs/issues
+
+**Email:**dev@gatechain.org
+
