@@ -52,7 +52,7 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 > 
 > 符号: GT
 > 
-> 区块浏览器: <a href="https://gatescan.org/" target="_blank">点击进入</a>
+> 区块浏览器: https://gatescan.org/
 
 
 ### 将您的“gt”账户余额转入到MetaMask账户余额中

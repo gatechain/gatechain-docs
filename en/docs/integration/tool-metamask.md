@@ -52,7 +52,7 @@ Example: Install in Chrome browser
 > 
 > Symbol: GT
 > 
-> Block explorer: <a href="https://gatescan.org/" target="_blank">Click to enter</a>
+> Block explorer: https://gatescan.org
 
 ### Transfer balance from your “gt” account to your MetaMask account.
 
