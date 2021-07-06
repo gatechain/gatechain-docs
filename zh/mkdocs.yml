@@ -63,6 +63,7 @@ nav:
     - 交易平台集成文档: integration/gatechain-platform.md
     - GateSwap: integration/gateswap.md
     - GateBridge: integration/gatebridge.md
+    - Issue Token: integration/issuetoken.md
     - Tools:
       - MetaMask: integration/tool-metamask.md
       - Remix: integration/tool-remix.md
