@@ -62,6 +62,7 @@ nav:
     - RPC节点: integration/rpc-node-list.md
     - 交易平台集成文档: integration/gatechain-platform.md
     - GateSwap: integration/gateswap.md
+    ##- GateBridge: integration/gatebridge.md
     - GateBridge: integration/gatebridge.md
     - Issue Token: integration/issuetoken.md
     - Tools:
