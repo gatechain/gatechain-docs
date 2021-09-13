@@ -61,9 +61,12 @@ nav:
     - RPC node: integration/rpc-node-list.md
     - Exchange: integration/gatechain-platform.md
     - GateSwap: integration/gateswap.md
-    - GateBridge: integration/gatebridge.md
+    - GateBridge: 
+      - Core principles: integration/gatebridge-principles.md
+      - How to use: integration/gatebridge-use.md
     - Issue Token: integration/issuetoken.md
     - Tools:
+      - Introduction: integration/tool.md
       - MetaMask: integration/tool-metamask.md
       - Remix: integration/tool-remix.md
       - Truffle: integration/tool-truffle.md
