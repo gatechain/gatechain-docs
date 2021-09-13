@@ -2,7 +2,7 @@ site_name: GateChain Doc
 site_description: GateChain Documents
 site_author: GateChain Team
 site_url: "" 
-site_dir: ../dist/app/en       
+site_dir: /home/docs/en       
 
 
 nav:

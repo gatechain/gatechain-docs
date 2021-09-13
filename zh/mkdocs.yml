@@ -3,7 +3,7 @@ site_description: GateChain Documents
 site_author: GateChain Team
 site_url: "" #设置网站的URL地址
 # 静态资源输出文件夹
-site_dir: ../dist/app
+site_dir: /home/docs/
 
 # 左侧导航
 nav:
