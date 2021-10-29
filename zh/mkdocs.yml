@@ -12,6 +12,7 @@ nav:
     - 生态: home/ecosystem.md
     - 典型应用: home/application.md
     - EVM介绍: home/evm.md
+    - MetaMask配置: home/tool-metamask.md 
     - 学术研究: home/academic-research.md
     - 规范说明: home/terms.md
     - 快速入门: home/quick-start.md

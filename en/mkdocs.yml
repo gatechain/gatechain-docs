@@ -11,6 +11,7 @@ nav:
     - Ecosystem: home/ecosystem.md
     - Application: home/application.md
     - EVM: home/evm.md
+    - MetaMask: home/tool-metamask.md 
     - Academic Research: home/academic-research.md
     - Terms: home/terms.md
     - Quick Start: home/quick-start.md
