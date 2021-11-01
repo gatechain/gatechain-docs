@@ -2,6 +2,20 @@
 <span id="MetaMask接入指南"></span>
 
 GateChain-Evm是基于Gatemint共识的原生模块，支持运行以太坊智能合约及提供rpc服务来兼容MetaMask接入，用户只需切换网络即可在GateChain部署及调用合约等。
+### 将您的MetaMask与GateChain网络连接
+
+1. 点击MetaMask-设置-网络-添加网络，配置GateChain网络服务
+
+<img src="../../images/metamask7.png"  height=50% width=50%>
+
+* 网络名称: GateChain （可自定义）
+ 
+* RPC URL1: https://evm.gatenode.cc
+
+* RPC URL2: https://evm-cn1.gatenode.cc:6061
+* 链 ID: 86
+* 符号: GT
+* 区块浏览器: https://gatescan.org/
 
 ### MetaMask简介
 
@@ -35,24 +49,6 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 
 <img src="../../images/metamask6.png"  height=50% width=50%>
 
-
-### 将您的MetaMask与GateChain网络连接
-
-1. 点击MetaMask-设置-网络-添加网络，配置GateChain网络服务
-
-<img src="../../images/metamask7.png"  height=50% width=50%>
-
-> 网络名称: GateChain （可自定义）
-> 
-> RPC URL1: https://evm.gatenode.cc
-> 
-> RPC URL2: https://evm-cn1.gatenode.cc:6061
-> 
-> 链 ID: 86
-> 
-> 符号: GT
-> 
-> 区块浏览器: https://gatescan.org/
 
 
 ### 将您的“gt”账户余额转入到MetaMask账户余额中

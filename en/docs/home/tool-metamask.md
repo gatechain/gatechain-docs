@@ -1,5 +1,17 @@
 
 "GateChain-Evm" is the native module based on "Gatemint" consensus, which supports "Ethereum" smart contracts and provides rpc services to connect to "MetaMask". Users can deploy and call contracts on "GateChain" by simply switching to "GateChain" network. 
+### Connect MetaMask to GateChain
+
+1. Click MetaMask-Setup-Network-Add Network, and configure GateChain network service
+
+<img src="../../images/metamask7.png"  height=50% width=50%>
+
+* Network name: GateChain （customized） 
+* RPC URL1: https://evm.gatenode.cc  
+* RPC URL2: https://evm-cn1.gatenode.cc:6061
+* Chain ID: 86
+* Symbol: GT
+* Block explorer: https://gatescan.org
 
 ### MetaMask Introduction
 
@@ -36,23 +48,7 @@ Example: Install in Chrome browser
 <img src="../../images/metamask6.png"  height=50% width=50%>
 
 
-### Connect MetaMask to GateChain
 
-1. Click MetaMask-Setup-Network-Add Network, and configure GateChain network service
-
-<img src="../../images/metamask7.png"  height=50% width=50%>
-
-> Network name: GateChain （customized）
-> 
-> RPC URL1: https://evm.gatenode.cc 
-> 
-> RPC URL2: https://evm-cn1.gatenode.cc:6061
-> 
-> Chain ID: 86
-> 
-> Symbol: GT
-> 
-> Block explorer: https://gatescan.org
 
 ### Transfer balance from your “gt” account to your MetaMask account.
 
