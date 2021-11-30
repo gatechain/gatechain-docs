@@ -1,6 +1,6 @@
 
 ## 	使用说明
-
+###委托
 1. 打开<a href="https://www.hipo.com/ethereum/zh/" target="_blank">Hipo</a>网站，切换所需网络并连接钱包；
 
 	<img src="../../images/gatebridgev3-1.png"  height=70% width=70%>
@@ -21,7 +21,7 @@
 
 	<img src="../../images/gatebridgev3-5.png"  height=70% width=70%>
   
- ## 转移委托
+### 转移委托
 
 1. 点击转移委托
 
@@ -42,8 +42,8 @@
 5. 转移委托完成后，可在左侧“我的委托”模块，查看目前委托信息；
 
 	<img src="../../images/gatebridgev3-10.png"  height=70% width=70%>
-   
- ## 解除委托
+
+### 解除委托
 
 1. 点击解除委托
 
@@ -61,7 +61,7 @@
 
 	<img src="../../images/gatebridgev3-14.png"  height=70% width=70%>  
 
- ## 提取收益
+### 提取收益
 
 1. 点击提取收益按钮，在MetaMask确认签名；
 
