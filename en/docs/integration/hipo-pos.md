@@ -62,7 +62,7 @@
 
 1. Click "WithdrawReward" and sign tx in your wallet;	
    
-   <img src="../../images/gatebridgev3-15.png"  height=70% width=70%>
+    <img src="../../images/gatebridgev3-15.png"  height=70% width=70%>
 
 2. After signing tx，you can click "Refresh" in "History" module below to check the tx status;
 
