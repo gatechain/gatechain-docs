@@ -17,7 +17,7 @@
 
 	<img src="../../images/gatebridgev3-4.png"  height=70% width=70%>
 
-5. 委托完成后，可在左侧“我的委托”模块，查看目前委托信息；
+5. 委托完成后，可在右侧“我的委托”模块，查看目前委托信息；
 
 	<img src="../../images/gatebridgev3-5.png"  height=70% width=70%>
   
@@ -39,7 +39,7 @@
 
 	<img src="../../images/gatebridgev3-9.png"  height=70% width=70%>
 
-5. 转移委托完成后，可在左侧“我的委托”模块，查看目前委托信息；
+5. 转移委托完成后，可在右侧“我的委托”模块，查看目前委托信息；
 
 	<img src="../../images/gatebridgev3-10.png"  height=70% width=70%>
 
@@ -57,7 +57,7 @@
 
 	<img src="../../images/gatebridgev3-13.png"  height=70% width=70%>
 
-4. 转移委托完成后，可在左侧“我的委托”模块，查看目前委托信息；
+4. 解除委托完成后，可在右侧“我的委托”模块，查看目前委托信息；
 
 	<img src="../../images/gatebridgev3-14.png"  height=70% width=70%>  
 
@@ -71,7 +71,7 @@
 
 	<img src="../../images/gatebridgev3-16.png"  height=70% width=70%>
 
-3. 提取收益完成后，可在左侧“我的委托”模块，查看目前委托信息；
+3. 提取收益完成后，可在右侧“我的委托”模块，查看目前委托信息；
 
 	<img src="../../images/gatebridgev3-17.png"  height=70% width=70%>  
 
