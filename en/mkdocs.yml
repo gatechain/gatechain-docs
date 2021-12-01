@@ -60,8 +60,8 @@ nav:
     - Web3JS: https://web3js.readthedocs.io/en/v1.2.11/
   - Integration:
     - RPC node: integration/rpc-node-list.md
-    - Hipo Pos: integration/hipo-pos.md
     - Exchange: integration/gatechain-platform.md
+    - Hipo Pos: integration/hipo-pos.md
     - GateSwap: integration/gateswap.md
     - GateBridge: 
       - Core principles: integration/gatebridge-principles.md
