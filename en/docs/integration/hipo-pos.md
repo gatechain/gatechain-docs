@@ -15,6 +15,7 @@
 	<img src="../../images/gatebridgev3-4.png"  height=70% width=70%>
 
 5. After the tx confirmed,you can check the delegagte info in the "My Delegate" module on the right;
+   
 	<img src="../../images/gatebridgev3-5.png"  height=70% width=70%>
   
 ### Redelegate
@@ -59,7 +60,9 @@
 
 ### WithdrawReward
 
-1. Click "WithdrawReward" and sign tx in your wallet;	<img src="../../images/gatebridgev3-15.png"  height=70% width=70%>
+1. Click "WithdrawReward" and sign tx in your wallet;	
+   
+   <img src="../../images/gatebridgev3-15.png"  height=70% width=70%>
 
 2. After signing tx，you can click "Refresh" in "History" module below to check the tx status;
 
