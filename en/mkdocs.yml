@@ -61,6 +61,7 @@ nav:
   - Integration:
     - RPC node: integration/rpc-node-list.md
     - Exchange: integration/gatechain-platform.md
+    - GateChain Endpoints: integration/endpoints.md
     - Hipo Pos: integration/hipo-pos.md
     - GateSwap: integration/gateswap.md
     - GateBridge: 
