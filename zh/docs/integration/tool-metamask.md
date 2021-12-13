@@ -45,9 +45,7 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 > 网络名称: GateChain （可自定义）
 > 
 > RPC URL1: https://evm.gatenode.cc
-> 
-> RPC URL2: https://evm-cn1.gatenode.cc:6061
-> 
+>
 > 链 ID: 86
 > 
 > 符号: GT

@@ -5,7 +5,6 @@
   	3. https://evm-1.gatenode.cc
   	4. https://evm-2.gatenode.cc
   	5. https://evm-3.gatenode.cc
-  	6. https://evm-cn1.gatenode.cc:6061 （中国大陆节点）
 2. 测试链Meteora
   	1. https://meteora.gatenode.cc:6061
 ### MetaMask配置GateChain网络

@@ -19,7 +19,6 @@
 * https://evm-1.gatenode.cc 
 * https://evm-2.gatenode.cc
 * https://evm-3.gatenode.cc
-* https://evm-cn1.gatenode.cc:6061  (Chinese mainland)
 
 
 ### Meteora
