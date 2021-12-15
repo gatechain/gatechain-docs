@@ -63,12 +63,13 @@ nav:
     - RPC节点: integration/rpc-node-list.md
     - 交易平台集成文档: integration/gatechain-platform.md
     - GateChain Endpoints说明: integration/endpoints.md
-    - Hipo Pos挖矿: integration/hipo-pos.md
+    - Hipo PoS挖矿: integration/hipo-pos.md
     - GateSwap: integration/gateswap.md
     - GateBridge:
       - 核心原理: integration/gatebridge-principles.md
       - 使用说明: integration/gatebridge-use.md
     - Issue Token: integration/issuetoken.md
+    - 发行NFT合约: integration/nft.md
     - Tools:
       - 介绍: integration/tool.md
       - MetaMask: integration/tool-metamask.md
