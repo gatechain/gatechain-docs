@@ -8,7 +8,7 @@
 
 * Network name: GateChain （customized） 
 * RPC URL1: https://evm.gatenode.cc  
-
+* RPC URL2: https://evm-hk.gatenode.cc
 * Chain ID: 86
 * Symbol: GT
 * Block explorer: https://gatescan.org

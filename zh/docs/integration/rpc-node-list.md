@@ -19,7 +19,7 @@
 * https://evm-1.gatenode.cc
 * https://evm-2.gatenode.cc
 * https://evm-3.gatenode.cc 
-
+* https://evm-hk.gatenode.cc （中国大陆节点）
 
 ### Meteora 测试网
 

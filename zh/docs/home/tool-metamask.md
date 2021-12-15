@@ -11,7 +11,8 @@ GateChain-Evm是基于Gatemint共识的原生模块，支持运行以太坊智�
 * 网络名称: GateChain （可自定义）
  
 * RPC URL1: https://evm.gatenode.cc
-
+* RPC URL2: https://evm-hk.gatenode.cc
+  
 * 链 ID: 86
 * 符号: GT
 * 区块浏览器: https://gatescan.org/

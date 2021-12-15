@@ -46,6 +46,8 @@ MetaMask是为了创建更安全和可用的以太坊网站而创建的。特别
 > 
 > RPC URL1: https://evm.gatenode.cc
 >
+> RPC URL2: https://evm-hk.gatenode.cc
+>
 > 链 ID: 86
 > 
 > 符号: GT
