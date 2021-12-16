@@ -9,7 +9,7 @@
 * https://api-1.gatenode.cc
 * https://api-2.gatenode.cc
 * https://api-3.gatenode.cc
-* https://api-cn1.gatenode.cc:1318 （中国大陆节点）
+* https://api-hk.gatenode.cc （中国香港节点）
 
 
 #### EVM RPC（链ID：86）
@@ -19,7 +19,7 @@
 * https://evm-1.gatenode.cc
 * https://evm-2.gatenode.cc
 * https://evm-3.gatenode.cc 
-* https://evm-hk.gatenode.cc （中国大陆节点）
+* https://evm-hk.gatenode.cc （中国香港节点）
 
 ### Meteora 测试网
 

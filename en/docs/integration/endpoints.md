@@ -5,7 +5,7 @@
   	3. https://evm-1.gatenode.cc
   	4. https://evm-2.gatenode.cc
   	5. https://evm-3.gatenode.cc
-	6. https://evm-hk.gatenode.cc (Chinese mainland)
+	6. https://evm-hk.gatenode.cc (Chinese HongKong)
 2. Testnet(Meteora)
   	1. https://meteora.gatenode.cc:6061
 ### Connect MetaMask to GateChain

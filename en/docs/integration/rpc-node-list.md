@@ -8,7 +8,7 @@
 * https://api-1.gatenode.cc
 * https://api-2.gatenode.cc
 * https://api-3.gatenode.cc
-* https://api-cn1.gatenode.cc:1318  (Chinese mainland)
+* https://api-hk.gatenode.cc  (Chinese HongKong)
 
 
 
@@ -19,7 +19,7 @@
 * https://evm-1.gatenode.cc 
 * https://evm-2.gatenode.cc
 * https://evm-3.gatenode.cc
-* https://evm-hk.gatenode.cc  (Chinese mainland)
+* https://evm-hk.gatenode.cc  (Chinese HongKong)
 
 ### Meteora
 
