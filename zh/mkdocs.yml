@@ -64,6 +64,7 @@ nav:
     - 交易平台集成文档: integration/gatechain-platform.md
     - GateChain Endpoints说明: integration/endpoints.md
     - Hipo PoS挖矿: integration/hipo-pos.md
+    - 在GateChain部署智能合约: integration/smart-contract.md
     - GateSwap: integration/gateswap.md
     - GateBridge:
       - 核心原理: integration/gatebridge-principles.md
