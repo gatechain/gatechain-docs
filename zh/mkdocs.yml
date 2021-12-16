@@ -69,7 +69,10 @@ nav:
       - 核心原理: integration/gatebridge-principles.md
       - 使用说明: integration/gatebridge-use.md
     - Issue Token: integration/issuetoken.md
-    - 发行NFT合约: integration/nft.md
+    - NFT: 
+      - 发行NFT合约: integration/nft.md
+      - 在MetaMask手机端查看自己的NFT: integration/metamask-mobile.md
+      - 在GateScan查询NFT信息: integration/gatescan.md
     - Tools:
       - 介绍: integration/tool.md
       - MetaMask: integration/tool-metamask.md

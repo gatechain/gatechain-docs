@@ -89,56 +89,32 @@ contract MyCollectible is ERC1155 {
 
 1. 编译成功后，开始部署合约。
 
-<img src="../../images/remix3.png"  height=30% width=30%>
+	<img src="../../images/remix3.png"  height=30% width=30%>
 
 2. 点击“Deploy”开始部署合约，跳转到MetaMask与您的账户连接。
 
 	>（请确保MetaMask网络已切换到GateChain）
 
-<img src="../../images/remix4.png"  height=30% width=30%>
+	<img src="../../images/remix4.png"  height=30% width=30%>
 	
 3. 打开部署好的合约，就可以选择某项功能与MetaMask进行交互啦!
 
-<img src="../../images/remix5.png"  height=30% width=30%>
+	<img src="../../images/remix5.png"  height=30% width=30%>
 	
 4. 查询合约交互的交易详细信息，可以去gatechain浏览器查看。
 
 	>区块浏览器地址：<a href="https://gatescan.org/txs" target="_blank">点击进入</a>
-
-### 在MetaMask手机端查看自己的NFT
-
-1. 在iOS和Android端免费获得该应用，并确保钱包账户里面已经存在您的NFT的接收账户及已经添加GateChain网络。
-
-2. 以下详细说明如何在钱包中添加NFT及转账：
-
-	a. 在账户页，选择收藏品模块，点击“添加收藏品”；
-	
-	<img src="../../images/nft1.png"  height=30% width=30%>
-	
-	b. 输入要添加的收藏品地址及ID，点击添加即可添加成功；
-	
-	<img src="../../images/nft2.png"  height=30% width=30%>
-
-	c. 添加成功后的收藏品在列表中显示，点击对应的收藏品，可发送给其他账户；
-	
-	<img src="../../images/nft3.png"  height=30% width=30%>
-	
-	<img src="../../images/nft4.png"  height=30% width=30%>
-
-	d. 输入要发送的账户地址，并确认发送信息；
-	
-	<img src="../../images/nft5.png"  height=30% width=30%>
-	
-	e. 接收账户需要在收藏品模块，点击“添加收藏品”后，就可以看到已经接收到的收藏品信息。
-	
-	<img src="../../images/nft6.png"  height=30% width=30%>
+	>
+	>ERC-721的Mint交易记录示例：<a href="https://gatescan.org/tx/0xcb26d417b550e11d86a0042873383bf5eae69209c4f8a5823071d0edd0501626" target="_blank">点击进入</a>
 	
 	
 ### 其他
 
-1. 如果您是智能合约开发的新手，请参考此文档来学习如何开发和编译合约
+1. 如果您想在MetaMask手机端查看自己的NFT，请跳转至 [MetaMask手机端NFT操作教程](./metamask-mobile.md)
+
+2. 如果您是智能合约开发的新手，请参考此文档来学习如何开发和编译合约
 	- https://docs.openzeppelin.com/learn/developing-smart-contracts
 
-2. 当前NFT合约一般基于以太坊官方的两种规范进行开发：ERC721和ERC1155。这两种协议的区别请参考以太坊官方文档：
+3. 当前NFT合约一般基于以太坊官方的两种规范进行开发：ERC721和ERC1155。这两种协议的区别请参考以太坊官方文档：
 	- https://eips.ethereum.org/EIPS/eip-721  
 	- https://eips.ethereum.org/EIPS/eip-1155
