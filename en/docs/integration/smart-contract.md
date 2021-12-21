@@ -1,4 +1,4 @@
-## How to Connect Remix
+
 
 ### About Remix 
 Remix is an open sourced Solidity IDE that's used to write, compile and debug contracts. 
@@ -48,6 +48,7 @@ Please select "GateChain/GRC20" instead of "ETH/ERC20".
 > Block explorer：<a href="https://gatescan.org/txs" target="_blank">Click to enter</a>
 > 
 >Example of mint transactions for ERC-721: <a href="https://gatescan.org/tx/0xcb26d417b550e11d86a0042873383bf5eae69209c4f8a5823071d0edd0501626?lang=en_US" target="_blank">Click to enter</a>
+
 
 
 
