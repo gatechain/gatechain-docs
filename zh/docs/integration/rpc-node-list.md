@@ -12,8 +12,9 @@
 * https://api-hk.gatenode.cc （中国香港节点）
 
 
-#### EVM RPC（链ID：86）
+#### EVM RPC
 
+* 链ID：86
 * https://evm.gatenode.cc （推荐）
 * https://evm.gatenode.net
 * https://evm-1.gatenode.cc
@@ -26,7 +27,6 @@
 * wss://evm-ws.gatenode.cc
 
 
-
 ### Meteora 测试网
 
 #### API
@@ -34,8 +34,9 @@
 * https://meteora-api.gatenode.cc
 
 
-#### EVM RPC（链ID：85）
+#### EVM RPC
 
+* 链ID：85
 * https://meteora-evm.gatenode.cc
 
 #### WebSocket

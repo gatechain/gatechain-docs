@@ -11,8 +11,9 @@
 * https://api-hk.gatenode.cc  (Chinese HongKong)
 
 
-#### EVM RPC（Chain ID：86）
+#### EVM RPC
 
+* Chain ID:86
 * https://evm.gatenode.cc  (Recommend)
 * https://evm.gatenode.net
 * https://evm-1.gatenode.cc 
@@ -32,8 +33,9 @@
 * https://meteora-api.gatenode.cc
 
 
-#### EVM RPC（Chain ID：85）
+#### EVM RPC
 
+* Chain ID:85
 * https://meteora-evm.gatenode.cc
 
 
