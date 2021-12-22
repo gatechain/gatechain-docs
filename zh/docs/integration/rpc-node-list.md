@@ -21,6 +21,12 @@
 * https://evm-3.gatenode.cc 
 * https://evm-hk.gatenode.cc （中国香港节点）
 
+#### WebSocket
+
+* wss://evm-ws.gatenode.cc
+
+
+
 ### Meteora 测试网
 
 #### API
@@ -31,3 +37,9 @@
 #### EVM RPC（链ID：85）
 
 * https://meteora-evm.gatenode.cc
+
+#### WebSocket
+
+* wss://meteora-ws.gatenode.cc
+
+
