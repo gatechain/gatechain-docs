@@ -7,7 +7,7 @@
   	5. https://evm-3.gatenode.cc
 	6. https://evm-hk.gatenode.cc （中国香港节点）
 2. 测试链Meteora
-  	1. https://meteora.gatenode.cc:6061
+  	1. https://meteora-evm.gatenode.cc
 ### MetaMask配置GateChain网络
 1. 点击MetaMask-设置-网络-添加网络，配置GateChain网络服务
 2. Mainnet配置
@@ -18,7 +18,7 @@
   	5. 区块浏览器: https://gatescan.org/
 3. 测试链Meteora配置
   	1. 网络名称: Meteora
-  	2. RPC URL: https://meteora.gatenode.cc:6061
+  	2. RPC URL: https://meteora-evm.gatenode.cc
   	3. 链 ID: 85
   	4. 符号: GT
   	5. 区块浏览器: https://gatescan.org/testnet/

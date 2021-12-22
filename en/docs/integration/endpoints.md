@@ -7,7 +7,7 @@
   	5. https://evm-3.gatenode.cc
 	6. https://evm-hk.gatenode.cc (Chinese HongKong)
 2. Testnet(Meteora)
-  	1. https://meteora.gatenode.cc:6061
+  	1. https://meteora-evm.gatenode.cc
 ### Connect MetaMask to GateChain
 1. Click MetaMask-Setup-Network-Add Network, and configure GateChain network service.
 2. Mainnet
@@ -18,7 +18,7 @@
   	5. Block explorer: https://gatescan.org/
 3. Testnet(Meteora)
   	1. Network name: Meteora
-  	2. RPC URL: https://meteora.gatenode.cc:6061
+  	2. RPC URL: https://meteora-evm.gatenode.cc
   	3. Chain ID: 85
   	4. Symbol: GT
   	5. Block explorer: https://gatescan.org/testnet/

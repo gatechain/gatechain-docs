@@ -25,12 +25,12 @@
 
 #### API
 
-* https://meteora.gatenode.cc:1318
+* https://meteora-api.gatenode.cc
 
 
 #### EVM RPC（Chain ID：85）
 
-* https://meteora.gatenode.cc:6061
+* https://meteora-evm.gatenode.cc
 
 
 
