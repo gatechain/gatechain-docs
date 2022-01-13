@@ -7,24 +7,23 @@ ERC20 token contract standard: This standard specifies the functions and event r
 
 ### Issue Token
 
-1. Go to <a href="https://www.hipo.com/gatechain/zh/" target="_blank">Hipo website</a>，switch to GateChain network and  then click “Connect Wallet” on the upper right corner to connect your wallet to Hipo. 
+1. Go to <a href="https://www.hipo.com/en/" target="_blank">Hipo website</a>，Click "More--Issue Token" module. 
 
+	<img src="../../images/issuetoken1.png"  height=70% width=70%>
 
-	<br/><img src="../../images/issuetoken1.png"  height=50% width=50%></br>
+2. Enter the "Issue Token" page and select GateChain network to connect Hipo to your wallet.
 
-2. When wallet is connected successfully, click"Tool——Issue Token",Go to Issue Token page.
-
-	<br/><img src="../../images/issuetoken2.png"  height=50% width=50%></br>
+	<img src="../../images/issuetoken2.png"  height=70% width=70%>
 
 3. Enter the token name, token symbol and other information on the issue token page.
 
-	<br/><img src="../../images/issuetoken3.png"  height=50% width=50%></br>
+	<img src="../../images/issuetoken3.png"  height=70% width=70%>
 
 4. click "Issue Token"，and you will be directed to wallet to confirm.
 
 5. After the issue is successful, the metamask wallet will pop up with a page prompt: Add Suggested Token.
 
-	<br/><img src="../../images/issuetoken4.png"  height=50% width=50%></br>
+	<img src="../../images/issuetoken4.png"  height=50% width=50%>
 
 6. click "Add Token"，You can see your own erc20 token in your wallet~
 

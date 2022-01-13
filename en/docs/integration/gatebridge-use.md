@@ -1,11 +1,11 @@
 
 ## Add Liquidity
 
-  1. Goto <a href="https://www.hipo.com/ethereum/en/" target="_blank">Hipo.com</a>，switch the network and connet your wallet;
+  1. Goto <a href="https://www.hipo.com/en/" target="_blank">Hipo.com</a>，Click "GateBridge" module;
   
 	<img src="../../images/gatebridgev2.png"  height=70% width=70%>
 
-  2. Click "GateBridge", chose "Liquidity" tab, pick the right token you want to add liquidity;
+  2. Enter the GateBridge module, click the "Cross-Chain Swap" module on the left, click "Liquidity" and select the token to add liquidity;
 
   	<img src="../../images/gatebridgev2-1.png"  height=70% width=70%>
 
@@ -42,29 +42,23 @@
 	
 4. After signing tx, you can switch "History" tab to check the tx status.
 
-	<img src="../../images/gatebridgev2-7-2.png"  height=70% width=70%>
-
 ## Cross Chain
 
-1. Goto <a href="https://www.hipo.com/ethereum/en/" target="_blank">Hipo.com</a>，switch the network and connet your wallet;
+1. Goto <a href="https://www.hipo.com/en/" target="_blank">Hipo.com</a>，switch the network and connet your wallet;
 
 	<img src="../../images/gatebridgev2.png"  height=70% width=70%>
 
-2. Click "GateBridge", and chose the "Cross Chain" tab；
+2. Enter the GateBridge module and click the "Cross-chain Swap" module on the left；
  
 	<img src="../../images/gatebridgev2-8.png"  height=70% width=70%>
 
 3. Chose the right token, network and amount. Maybe need to approve token contract in your first time;
-
-	<img src="../../images/gatebridgev2-9.png"  height=70% width=70%>
 
 4. After the approve tx confirmed, click "Confirm" and sign this tx；
 
 	<img src="../../images/gatebridgev2-10.png"  height=70% width=70%>
 
 5. After signing tx, you can switch "History" tab to check the tx status.
-
-	<img src="../../images/gatebridgev2-11.png"  height=70% width=70%>
 
 	 
 

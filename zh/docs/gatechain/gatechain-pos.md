@@ -1,6 +1,6 @@
 ## PoS挖矿
 
-GateChain的用户有两种方式参与POS挖矿:
+GateChain的用户有两种方式参与PoS挖矿:
 
 1. 搭建GateChain全节点，成为共识账户。
 2. 委托GT给其他共识账户。

@@ -1,7 +1,7 @@
 
 ## PoS Mining
 
-There are two ways to take part in Gatechain's POS mining:
+There are two ways to take part in Gatechain's PoS mining:
 
 1. Build a GateChain full node and work as a consensus account. 
 2. Delegate your GT to a consensus account.

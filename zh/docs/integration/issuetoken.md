@@ -7,23 +7,23 @@ ERC20代币合约标准：此标准规定了以太坊代币合约需要实现的
 
 ### 发行ERC20代币
 
-1. 进入<a href="https://www.hipo.com/gatechain/zh/" target="_blank">Hipo官网</a>，切换到GateChain网络，点击右上角“连接钱包”，将Hipo与您的钱包连接；
+1. 进入<a href="https://www.hipo.com/zh/" target="_blank">Hipo官网</a>，点击更多——发行代币模块；
 
-	<br/><img src="../../images/issuetoken1.png"  height=50% width=50%></br>
+	<img src="../../images/issuetoken1.png"  height=70% width=70%>
 
-2. 钱包链接成功后，点击“工具——发行代币”模块，进入发行代币页；
+2. 进入发行代币页面，选择GateChain网络，将Hipo与您的钱包连接；
 
-	<br/><img src="../../images/issuetoken2.png"  height=50% width=50%></br>
+	<img src="../../images/issuetoken2.png"  height=70% width=70%>
 
 3. 在发行代币页输入代币名称、代币符号等信息；
 
-	<br/><img src="../../images/issuetoken3.png"  height=50% width=50%></br>
+	<img src="../../images/issuetoken3.png"  height=70% width=70%>
 
 4. 点击“发行代币”，跳转到钱包签名确认；
 
 5. 发行成功后，MetaMask钱包会弹出页面提示：是否添加推荐代币；
 
-	<br/><img src="../../images/issuetoken4.png"  height=50% width=50%></br>
+	<img src="../../images/issuetoken4.png"  height=50% width=50%>
 
 6. 点击“添加代币”，就可以在钱包中看到自己发行的ERC20代币啦~
 

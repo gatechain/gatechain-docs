@@ -1,10 +1,12 @@
 
-## 	How to use
-###Delegate
-1. Goto <a href="https://www.hipo.com/ethereum/zh/" target="_blank">Hipo</a>,switch the network and connect your wallet;
+## How to use
+### Delegate
+
+1. Goto <a href="https://www.hipo.com/ethereum/zh/" target="_blank">Hipo website</a>, Click Farming--Delegate GT;
+
 	<img src="../../images/gatebridgev3-1.png"  height=70% width=70%>
 
-2. Click "Pos Stake",select Consensus Account;
+2. select Consensus Account;
  
 	<img src="../../images/gatebridgev3-2.png"  height=70% width=70%>
 

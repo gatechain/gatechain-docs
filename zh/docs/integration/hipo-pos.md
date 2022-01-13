@@ -1,11 +1,11 @@
 
 ## 	使用说明
 ###委托
-1. 打开<a href="https://www.hipo.com/ethereum/zh/" target="_blank">Hipo</a>网站，切换所需网络并连接钱包；
+1. 打开<a href="https://www.hipo.com/zh/" target="_blank">Hipo</a>网站，点击挖矿——GT委托挖矿模块；
 
 	<img src="../../images/gatebridgev3-1.png"  height=70% width=70%>
 
-2. 进入pos挖矿模块，点击选择共识账户；
+2. 进入GT委托挖矿模块，点击选择共识账户；
  
 	<img src="../../images/gatebridgev3-2.png"  height=70% width=70%>
 
