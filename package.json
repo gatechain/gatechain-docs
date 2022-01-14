@@ -1,0 +1,20 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "fs-extra": "^10.0.0",
+    "vuepress": "^1.8.2"
+  },
+  "scripts": {
+    "dev": "npm run move && vuepress dev docs",
+    "build:docs": "vuepress build docs",
+    "build": "./scripts/build.sh",
+    "setHome": "node ./scripts/customHome.js",
+    "move": "node ./scripts/filesMove.js"
+  },
+  "dependencies": {
+    "vuepress-plugin-mathjax": "^1.2.8"
+  }
+}
