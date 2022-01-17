@@ -4,15 +4,19 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "fs-extra": "^10.0.0",
     "vuepress": "^1.8.2"
   },
   "scripts": {
     "dev": "npm run move && vuepress dev docs",
-    "build:docs": "vuepress build docs",
-    "build": "./scripts/build.sh",
+    "build:shell": "./scripts/build.sh",
+    "build:base": "vuepress build docs && npm run copy",
+    "build:docs": "export VUE_PRESS_BASE=deploy_docs &&  npm run build:shell",
+    "build": "npm run build:shell && npm run build:docs",
     "setHome": "node ./scripts/customHome.js",
-    "move": "node ./scripts/filesMove.js"
+    "move": "node ./scripts/filesMove.js",
+    "copy": "node ./scripts/copy.js"
   },
   "dependencies": {
     "vuepress-plugin-mathjax": "^1.2.8"

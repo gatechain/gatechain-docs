@@ -1,8 +1,8 @@
 const path = require('path')
-const isProdEnv = process.env.NODE_ENV === 'production'
 const {routes} = require('./routes')
-
-const base = isProdEnv ? '/docs/' : '/'
+console.log(process.env.VUE_PRESS_BASE)
+const VUE_PRESS_BASE = process.env.VUE_PRESS_BASE
+const base = VUE_PRESS_BASE ? `/${VUE_PRESS_BASE?.split('_')[1]}` :  '/'
 
 module.exports = {
 	base,
@@ -18,7 +18,6 @@ module.exports = {
 			title: 'GateChain Doc',
 			description: 'GateChain Doc'
 		}
-		
 	},
 	themeConfig: {  //主题配置
 		logo: '/assets/img/logo.svg',
@@ -43,7 +42,9 @@ module.exports = {
 			alias: {
 				'@assets': path.join(__dirname, 'public/assets/')
 			}
-		}
+		},
+		plugins: [
+		]
 	},
 	plugins: [
 		'vuepress-plugin-mathjax',

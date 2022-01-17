@@ -35,7 +35,7 @@ echo '
                                              
 '
 
-npm run build:docs
+npm run build:base
 
 echo '
  _______  _        ______  
