@@ -39,6 +39,7 @@ export default {
     text-align: center
 @media (max-width: $MQMobile)
   .page
+    padding-top: 3rem
     .theme-default-content
       padding-top: 0
       background: none
