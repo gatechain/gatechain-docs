@@ -2,7 +2,7 @@ const path = require('path')
 const {routes} = require('./routes')
 console.log(process.env.VUE_PRESS_BASE)
 const VUE_PRESS_BASE = process.env.VUE_PRESS_BASE
-const base = VUE_PRESS_BASE ? `/${VUE_PRESS_BASE?.split('_')[1]}` :  '/'
+const base = VUE_PRESS_BASE ? `/${VUE_PRESS_BASE?.split('_')[1]}/` :  '/'
 
 module.exports = {
 	base,
