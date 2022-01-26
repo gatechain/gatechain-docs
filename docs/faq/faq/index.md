@@ -39,6 +39,8 @@
 
 ::: details 答:
 
+<a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">https://eips.ethereum.org/EIPS/eip-721</a>
+
 	ERC721是2018年1月份提出的，也就是去年NFT热潮的底层标准。它和ERC20的主要区别就是，每一个token都是带编号的。一旦有了编号做区分，不同token id所代表的价值就可以不同，类似艺术品。
 	
 	举个例子：如果ERC20是普通的人民币，每一张的价值和购买力是相同的；那ERC721就是银行每年发行的纪念币，每一张都带编号，也只能属于一个账户，价格也会有很大差异。
@@ -49,7 +51,9 @@
 
 ::: details 答:
 
-	ERC1155是2018年6月提出的，叫做Multi Token Standard。意思是发行一个ERC1155的token，里面可以包含多种类型的ERC Token，包括ERC20、ERC721。所以这是一个token集合的概念，在实际应用中与用户关系不大，暂时不用花时间了解。
+<a href="https://eips.ethereum.org/EIPS/eip-1155" target="_blank">https://eips.ethereum.org/EIPS/eip-1155</a>
+
+	ERC1155是2018年6月提出的，叫做Multi Token Standard。意思是发行一个ERC1155的token，里面可以包含多种类型的ERC Token，包括ERC20、ERC721。所以这是一个token集合的概念。
 
 :::
 
