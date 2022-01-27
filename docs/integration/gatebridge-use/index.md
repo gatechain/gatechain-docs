@@ -5,7 +5,7 @@
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev2.png"><img src="@assets/img/zh/gatebridgev2.png"  height=70% width=70%></a>
 
-2. 进入GateBridge模块，点击左侧“跨链兑换”模块后，点击“流动性”，选择要添加流动性的币种；
+2. 进入GateBridge模块，点击“流动性”，选择要添加流动性的币种；
 
   	<a data-fancybox title="" href="@assets/img/zh/gatebridgev2-1.png"><img src="@assets/img/zh/gatebridgev2-1.png"  height=70% width=70%></a>
 
@@ -48,13 +48,15 @@
 
    <a data-fancybox title="" href="@assets/img/zh/gatebridgev2.png"><img src="@assets/img/zh/gatebridgev2.png"  height=70% width=70%></a>
 
-2.进入GateBridge模块，点击左侧“跨链兑换”模块；
+2. 进入GateBridge--跨链模块；
 
    <a data-fancybox title="" href="@assets/img/zh/gatebridgev2-8.png"><img src="@assets/img/zh/gatebridgev2-8.png"  height=70% width=70%></a>
 
-3. 选择要跨链的币种、网络和数量，首次跨链需要先授权，点击授权；
+3. 选择要跨链的币种、网络和数量，确认币种跨链的详细信息；
+   
+   <a data-fancybox title="" href="@assets/img/zh/gatebridgev2-11.png"><img src="@assets/img/zh/gatebridgev2-11.png"  height=70% width=70%></a>
 
-4. 授权完成后，点击“确定”，在MetaMask确认签名；
+4. 首次跨链需要先授权，点击授权，授权完成后，点击“确定”，在MetaMask确认签名；
 
    <a data-fancybox title="" href="@assets/img/zh/gatebridgev2-10.png"><img src="@assets/img/zh/gatebridgev2-10.png"  height=70% width=70%></a>
 

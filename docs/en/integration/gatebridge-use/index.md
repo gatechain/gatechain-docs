@@ -5,7 +5,7 @@
   
   <a data-fancybox title="" href="@assets/img/en/gatebridgev2.png"><img src="@assets/img/en/gatebridgev2.png"  height=70% width=70%></a>
 
-  2. Enter the GateBridge module, click the "Cross-Chain Swap" module on the left, click "Liquidity" and select the token to add liquidity;
+  2. Enter the GateBridge module, click "Liquidity" and select the token to add liquidity;
 
   <a data-fancybox title="" href="@assets/img/en/gatebridgev2-1.png"><img src="@assets/img/en/gatebridgev2-1.png"  height=70% width=70%></a>
 
@@ -48,13 +48,16 @@
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev2.png"><img src="@assets/img/en/gatebridgev2.png"  height=70% width=70%></a>
 
-2. Enter the GateBridge module and click the "Cross-chain Swap" module on the left;
+2. Enter the GateBridge--Cross-chain module;
  
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev2-8.png"><img src="@assets/img/en/gatebridgev2-8.png"  height=70% width=70%></a>
 
-3. Chose the right token, network and amount. Maybe need to approve token contract in your first time;
+3. Chose the right token, network and amount;
+   
+   <a data-fancybox title="" href="@assets/img/zh/gatebridgev2-11.png"><img src="@assets/img/zh/gatebridgev2-11.png"  height=70% width=70%></a>
 
-4. After the approve tx confirmed, click "Confirm" and sign this tx；
+
+4. Maybe need to approve token contract in your first time;After the approve tx confirmed, click "Confirm" and sign this tx;
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev2-10.png"><img src="@assets/img/en/gatebridgev2-10.png"  height=70% width=70%></a>
 
