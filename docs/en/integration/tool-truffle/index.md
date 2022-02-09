@@ -41,7 +41,7 @@ const mnemonic = fs.readFileSync(".secret").toString().trim();
 	    GateChain: {
 	      provider: () => new HDWalletProvider(mnemonic, `https://evm.gatenode.cc`),
 	      network_id: 86,
-	      confirmations: 10,
+	      gas: 6000000,
 	      timeoutBlocks: 200,
 	      skipDryRun: true
 	    },
