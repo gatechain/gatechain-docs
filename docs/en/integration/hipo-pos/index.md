@@ -16,7 +16,8 @@
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-4.png"><img src="@assets/img/en/gatebridgev3-4.png"  height=70% width=70%></a>
 
-5. After the tx confirmed,you can check the delegagte info in the "My Delegate" module on the right;
+5. After the transaction is sent successfully, you can view the entrustment information in the "My Delegates" module below;
+
    
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-5.png"><img src="@assets/img/en/gatebridgev3-5.png"  height=70% width=70%></a>
   
@@ -38,9 +39,9 @@
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-9.png"><img src="@assets/img/en/gatebridgev3-9.png"  height=70% width=70%></a>
 
-5. After the redelegate tx confirmed,you can check the delegagte info in the "My Delegate" module on the right;
+5. After the transaction is sent successfully, you can view the entrustment information in the "My Delegates" module below;
 
-	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-10.png"><img src="@assets/img/en/gatebridgev3-10.png"  height=70% width=70%></a>
+	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-5.png"><img src="@assets/img/en/gatebridgev3-5.png"  height=70% width=70%></a>
 
 ### Undelegate
 
@@ -56,7 +57,7 @@
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-13.png"><img src="@assets/img/en/gatebridgev3-13.png"  height=70% width=70%></a>
 
-4. After the undelegate tx confirmed ,you can check the delegagte info in the "My Delegate" module on the right;
+4. After the transaction is sent successfully, you can view the entrustment information in the "My Delegates" module below;
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-14.png"><img src="@assets/img/en/gatebridgev3-14.png"  height=70% width=70%></a>
 
@@ -70,7 +71,7 @@
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-16.png"><img src="@assets/img/en/gatebridgev3-16.png"  height=70% width=70%></a>
 
-3. After the withdrawreward tx confirmed,you can check the delegagte info in the "My Delegate" module on the right.
+3. After the transaction is sent successfully, you can view the entrustment information in the "My Delegates" module below;
 
 	<a data-fancybox title="" href="@assets/img/en/gatebridgev3-17.png"><img src="@assets/img/en/gatebridgev3-17.png"  height=70% width=70%></a>
 

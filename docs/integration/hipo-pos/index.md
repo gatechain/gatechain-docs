@@ -17,7 +17,7 @@
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-4.png"><img src="@assets/img/zh/gatebridgev3-4.png"  height=70% width=70%></a>
 
-5. 委托完成后，可在右侧“我的委托”模块，查看目前委托信息；
+5. 委托完成后，可下滑至“我的委托”模块，查看目前委托信息；
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-5.png"><img src="@assets/img/zh/gatebridgev3-5.png"  height=70% width=70%></a>
   
@@ -39,9 +39,9 @@
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-9.png"><img src="@assets/img/zh/gatebridgev3-9.png"  height=70% width=70%></a>
 
-5. 转移委托完成后，可在右侧“我的委托”模块，查看目前委托信息；
+5. 转移委托完成后，可下滑至“我的委托”模块，查看目前委托信息；
 
-	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-10.png"><img src="@assets/img/zh/gatebridgev3-10.png"  height=70% width=70%></a>
+	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-5.png"><img src="@assets/img/zh/gatebridgev3-5.png"  height=70% width=70%></a>
 
 ### 解除委托
 
@@ -57,7 +57,7 @@
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-13.png"><img src="@assets/img/zh/gatebridgev3-13.png"  height=70% width=70%></a>
 
-4. 解除委托完成后，可在右侧“我的委托”模块，查看目前委托信息；
+4. 解除委托完成后，可下滑至“我的委托”模块，查看目前委托信息；
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-14.png"><img src="@assets/img/zh/gatebridgev3-14.png"  height=70% width=70%></a>  
 
@@ -71,7 +71,7 @@
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-16.png"><img src="@assets/img/zh/gatebridgev3-16.png"  height=70% width=70%></a>
 
-3. 提取收益完成后，可在右侧“我的委托”模块，查看目前委托信息；
+3. 提取收益完成后，可下滑至“我的委托”模块，查看目前委托信息；
 
 	<a data-fancybox title="" href="@assets/img/zh/gatebridgev3-17.png"><img src="@assets/img/zh/gatebridgev3-17.png"  height=70% width=70%></a>
 
