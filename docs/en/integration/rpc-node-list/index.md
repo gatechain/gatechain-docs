@@ -1,14 +1,5 @@
 ## Mainnet
 
-### API
-
-* https://api.gatenode.cc  (Recommend)
-* https://api.gatenode.net
-* https://api-1.gatenode.cc
-* https://api-2.gatenode.cc
-* https://api-3.gatenode.cc
-* https://api-hk.gatenode.cc  (Chinese HongKong)
-
 
 ### EVM RPC
 
@@ -24,12 +15,16 @@
 
 * wss://evm-ws.gatenode.cc
 
-
-## Meteora
-
 ### API
 
-* https://meteora-api.gatenode.cc
+* https://api.gatenode.cc  (Recommend)
+* https://api.gatenode.net
+* https://api-1.gatenode.cc
+* https://api-2.gatenode.cc
+* https://api-3.gatenode.cc
+* https://api-hk.gatenode.cc  (Chinese HongKong)
+
+## Meteora
 
 
 ### EVM RPC
@@ -41,5 +36,9 @@
 ### WebSocket
 
 * wss://meteora-ws.gatenode.cc
+
+### API
+
+* https://meteora-api.gatenode.cc
 
 
