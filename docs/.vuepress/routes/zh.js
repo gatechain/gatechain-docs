@@ -171,6 +171,10 @@ const zhRouter = {
 					path: '/integration/smart-contract/',
 				},
 				{
+					title: 'GateOracle',
+					path: '/integration/gateoracle/',
+				},
+				{
 					title: 'GateSwap',
 					path: '/integration/gateswap/',
 				},

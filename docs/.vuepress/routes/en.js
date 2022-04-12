@@ -171,6 +171,10 @@ const enRouter = {
 					path: '/en/integration/smart-contract/',
 				},
 				{
+					title: 'GateOracle',
+					path: '/en/integration/gateoracle/',
+				},
+				{
 					title: 'GateSwap',
 					path: '/en/integration/gateswap/',
 				},
