@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <defs>
+        <polygon id="path-1" points="0 0 40 0 40 40 0 40"></polygon>
+        <polygon id="path-3" points="0 40 40 40 40 0 0 0"></polygon>
+    </defs>
+    <g id="Hipo-DeFi首页改版2.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-21备份-3" transform="translate(-20.000000, -15.000000)">
+            <g id="编组" transform="translate(20.000000, 15.000000)">
+                <g>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M20.0003397,30.9999414 C13.9249924,30.9999414 9.00040765,26.0754387 9.00040765,19.999983 C9.00040765,13.9245273 13.9249924,9.00002463 20.0003397,9.00002463 L20.0003397,-3.39714589e-05 C8.95437714,-3.39714589e-05 0,8.95382345 0,19.999983 C0,31.0454632 8.95437714,40 20.0003397,40 C31.0456229,40 40,31.0454632 40,19.999983 L30.9994225,19.999983 C30.9994225,26.0754387 26.0750076,30.9999414 20.0003397,30.9999414" id="Fill-1" fill="#2354E6" mask="url(#mask-2)"></path>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <polygon id="Fill-3" fill="#17E6A1" mask="url(#mask-4)" points="20 20 31.2 20 31.2 8.8 20 8.8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
