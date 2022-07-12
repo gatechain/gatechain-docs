@@ -2,3 +2,4 @@ node_modules/**/*
 /**/dist/*
 .config.pre.js
 *_dist/*
+.history

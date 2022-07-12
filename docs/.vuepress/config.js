@@ -20,7 +20,7 @@ module.exports = {
 		}
 	},
 	themeConfig: {  //主题配置
-		logo: '/assets/img/logo.svg',
+		logo: '/assets/img/logonew.svg',
 		lastUpdated: 'Last Updated', // string | boolean
 		smoothScroll: true,
 		nextLinks: true,  //是否展示上/下一篇链接
