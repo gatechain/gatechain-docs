@@ -31,6 +31,7 @@ module.exports = {
 	head: [
 		['script', { src: '/assets/js/jquery.min.js' }],
 		['script', { src: '/assets/js/jquery.fancybox.min.js' }],
+		['link', { rel: 'icon', href: 'https://www.gatechain.io/favicon.svg' }],
 		['link', { rel: 'stylesheet', href: '/assets/css/jquery.fancybox.min.css' }]
 	],
 	markdown: {
