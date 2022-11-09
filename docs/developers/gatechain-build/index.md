@@ -26,10 +26,10 @@ GateChain全节点目前支持包括Unix环境（mac OS、ubuntu、centos）。
 
 	```
 	# 一键安装（需要代理）
-	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
+	bash <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
 	
 	# 国内用户一键安装（无需代理）
-	sh <(wget -qO- https://gatechainbucket.oss-cn-beijing.aliyuncs.com/auto-install.sh) 
+	bash <(wget -qO- https://gatechainbucket.oss-cn-beijing.aliyuncs.com/auto-install.sh) 
 	
 	* 说明：如果您第二次及以上操作一键安装，需要您先手动删除本地的gated/gatecli文件	
 	```

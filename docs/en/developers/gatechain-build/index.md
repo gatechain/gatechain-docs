@@ -27,7 +27,7 @@ The installation script ("install.sh" ) is located on Github. "install.sh" is re
 
 	```
 	# One-Click Install 
-	sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
+	bash <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
 	```
 	
 #### Method 2: Customize Configuration And Installation
