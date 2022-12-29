@@ -54,6 +54,22 @@ gatecli distribution withdraw-all-rewards --from [sender account] --fees [tx fee
 	  Raw Log: sync broadcast tx success transaction is sent successfully
 :::
 
+### <span id="Reinvestment-the-rewards-of-the-delegator-account-into-the-consensus-account">Reinvestment the rewards of the delegator account into the consensus account [API](../../api/distribution/index.md#reinvestment-the-rewards-of-the-delegator-account-into-the-consensus-account-command-line)</span>
+
+```bash
+gatecli distribution reward-reinvestment [consensus account address] --from [sender account] --fees [tx fees] --chain-id [chain ID]
+```
+::: details Example: 
+	gatecli distribution reward-reinvestment gt11rjq598t8vte64ff2tnesdvsfazv38atpenufj4zl0ljhw2q28jnlxnh6mqgmn6elje6fzc --from gt11mtehamaw8wktwpppx9klrhhfu5upmutzthl0kkpwsa0slw8h4xd3p2ane2zt262dlsyy3m --fees 100000NANOGT --chain-id testnet
+:::
+
+::: details Return example:
+	  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376
+	  //transaction hash, using gatecli tx show {hash}to query details of this transaction
+	  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+	  Raw Log: sync broadcast tx success transaction is sent successfully
+:::
+
 
 ### <span id="Query-Delegation-Income-of-A-Delegator-Account-At-A-Consensus-Account">Query Delegation Income of A Delegator Account At A Consensus Account [API](../../api/distribution/index.md#query-delegation-income-of-a-delegator-account-at-a-consensus-account-command-line)</span>
 ```bash

@@ -223,6 +223,80 @@ Parameters:
 :::
 
 
+### <span id="Reinvestment-the-rewards-of-the-delegator-account-into-the-consensus-account">Reinvestment the rewards of the delegator account into the consensus account [command line](../../cli/distribution/index.md#reinvestment-the-rewards-of-the-delegator-account-into-the-consensus-account-account-api)</span>
+
+###### The interface generates transaction body for “Reinvestment the rewards of the delegator account into the consensus account ”. After locally signing  it, you can invoke “Send Transaction” interface to finish broadcasting
+
+```
+POST /v1/distribution/delegator/{delegatorAddr}/{con-account}/rewards_reinvestment
+```
+Parameters:
+
+| Parameter| Description |
+| :----| :--- |
+| delegatorAddr |delegator's account|
+| con-account |consensus account|
+
+
+::: details Request BODY example:
+	{
+	    "base_req":{
+	        "from":"gt11qfee0959earfv7euauzw8l0fljymwjx34m6s2ccvjhupc59dg93enajhuft3eq50tvz39x", //sender account
+	        "memo":"", ////transaction remarks,The length of the remarks is limited to 85 characters in Chinese and 256 characters in English.
+	        "chain_id":"testnet", //chain ID
+	        "gas":"200000", //Gas consumed by this  transaction
+	        "fees":[
+	            {
+	                "denom":"NANOGT", //unit
+	                "amount":"100000" //fee
+	            }
+	        ],
+	        "simulate":false, //If calculate simulated Gas
+	        "valid_height":[ //height at which the transaction takes effect
+	            "600",
+	            "900"
+	    	]
+	    }
+	}
+:::
+
+
+::: details Return example:
+	{
+	    "type": "StdTx",
+	    "value": {
+	        "msg": [
+	            {
+	                "type": "MsgRewardReinvestment",
+	                "value": {
+	                    "delegator_address": "gt11mtehamaw8wktwpppx9klrhhfu5upmutzthl0kkpwsa0slw8h4xd3p2ane2zt262dlsyy3m",  //sender account
+	                    "con-account_address": "gt11rjq598t8vte64ff2tnesdvsfazv38atpenufj4zl0ljhw2q28jnlxnh6mqgmn6elje6fzc"  //consensus account
+	                }
+	            }
+	        ],
+	        "fee": {
+	            "amount": [
+	                {
+	                    "denom": "NANOGT", //unit
+	                    "amount": "10000000"  //fee
+	                }
+	            ],
+	            "gas": "10000000" //Gas consumed by this  transaction
+	        },
+	        "nonces": [
+	            null
+	        ],
+	        "signatures": null,  //If calculate simulated Gas
+	        "memo": "",
+	        "valid_height": [  //height at which the transaction takes effect
+	            "600",
+	            "900"
+	        ]
+	    }
+	}
+:::
+
+
 ### <span id="Query-Delegation-Income-of-A-Delegator-Account-At-A-Consensus-Account">Query Delegation Income of A Delegator Account At A Consensus Account [command line](../../cli/distribution/index.md#query-delegation-income-of-a-delegator-account-at-a-consensus-account-api)</span>
 ```
 GET  /v1/distribution/delegator/{delegatorAddr}/{con-account}/rewards

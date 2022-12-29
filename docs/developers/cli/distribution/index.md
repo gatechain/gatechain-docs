@@ -53,6 +53,22 @@ gatecli distribution withdraw-all-rewards --from [发送者账户] --fees [交�
 	  Raw Log: sync broadcast tx success //交易发送成功
 :::
 
+### <span id="委托账户复投收益到共识账户">委托账户复投收益到共识账户 [API](../../api/distribution/index.md#委托账户复投收益到共识账户-命令行)</span>
+
+```bash
+gatecli distribution reward-reinvestment [共识账户地址] --from [发送者账户] --fees [交易手续费] --chain-id [链ID]
+```
+::: details 请求示例:
+	gatecli distribution reward-reinvestment gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 100000NANOGT --chain-id testnet
+:::
+
+::: details 返回示例:
+	  TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 
+	  //交易hash，使用gatecli tx show {hash}查询此交易详细信息
+	  Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+	  Raw Log: sync broadcast tx success //交易发送成功
+:::
+
 
 
 ### <span id="查询委托账户在单个共识账户的委托收益">查询委托账户在单个共识账户的委托收益 [API](../../api/distribution/index.md#查询委托账户在单个共识账户的委托收益-命令行)</span>

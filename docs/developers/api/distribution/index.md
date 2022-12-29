@@ -220,6 +220,79 @@ POST /v1/distribution/delegator/{delegatorAddr}/rewards
 :::
 
 
+### <span id="委托账户复投收益到共识账户">委托账户复投收益到共识账户 [命令行](../../cli/distribution/index.md#委托账户复投收益到共识账户-api)</span>
+
+###### 此接口用于生成“委托账户复投收益到共识账户”的交易体，将此交易体进行本地签名后，调用“发送交易”接口完成交易广播。
+
+```
+POST /v1/distribution/delegator/{delegatorAddr}/{con-account}/rewards_reinvestment
+```
+参数:
+
+| 参数名 | 说明 |
+| :----| :--- |
+| delegatorAddr |委托账户|
+| con-account |共识账户|
+
+
+::: details 请求BODY示例:
+    {
+    "base_req":{
+        "from":"gt11a0a2pcna4jmkuz4z8af7tejpyh0u8yh2wtktq8xpjt3qaualzdtwxw7r9cwh88pnkfk4xn", //发送者账户
+        "memo":"", //交易留言，留言长度限制为中文最多85个字符/英文最多256个字符
+        "chain_id":"testnet", //链ID
+        "gas":"200000", //交易消耗的gas数量
+        "fees":[
+            {
+                "denom":"NANOGT", //单位
+                "amount":"100000" //手续费
+            }
+        ],
+        "simulate":false, //是否模拟计算gas
+        "valid_height":[ //交易有效高度
+            "600",
+            "900"
+        ]
+    }
+	}
+:::
+
+::: details 返回示例:
+	{
+	    "type": "StdTx",
+	    "value": {
+	        "msg": [
+	            {
+	                "type": "MsgRewardReinvestment",  //交易类型
+	                "value": {
+	                    "delegator_address": "gt11a0a2pcna4jmkuz4z8af7tejpyh0u8yh2wtktq8xpjt3qaualzdtwxw7r9cwh88pnkfk4xn",  //委托账户
+	                    "con-account_address": "gt11rjq598t8vte64ff2tnesdvsfazv38atpenufj4zl0ljhw2q28jnlxnh6mqgmn6elje6fzc"  //共识账户
+	                }
+	            }
+	        ],
+	        "fee": {
+	            "amount": [
+	                {
+	                    "denom": "NANOGT",  //单位
+	                    "amount": "10000000"  //手续费
+	                }
+	            ],
+	            "gas": "10000000"  //交易消耗的gas
+	        },
+	        "nonces": [
+	            null
+	        ],
+	        "signatures": null, //签名
+	        "memo": "",
+	        "valid_height": [  //交易有效高度
+	            "600",
+	            "900"
+	        ]
+	    }
+	}
+:::
+
+
 ### <span id="查询委托账户在单个共识账户的委托收益">查询委托账户在单个共识账户的委托收益 [命令行](../../cli/distribution/index.md#查询委托账户在单个共识账户的委托收益-api)</span>
 ```
 GET  /v1/distribution/delegator/{delegatorAddr}/{con-account}/rewards
