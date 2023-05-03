@@ -3,3 +3,5 @@ node_modules/**/*
 .config.pre.js
 *_dist/*
 .history
+**/**/.DS_Store
+
