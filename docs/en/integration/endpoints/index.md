@@ -1,12 +1,10 @@
 ## GateChain EVM RPC
 
 1. Mainnet
-	1. https://evm.gatenode.cc (Recommend)
-  	2. https://evm.gatenode.net
-  	3. https://evm-1.gatenode.cc
-  	4. https://evm-2.gatenode.cc
-  	5. https://evm-3.gatenode.cc
-	6. https://evm-hk.gatenode.cc (Chinese HongKong)
+	1. https://evm.nodeinfo.cc  (Recommend)
+	2. https://evm-1.nodeinfo.cc
+	3. https://evm.gatenode.cc
+	4. https://evm-hk.gatenode.cc  (Chinese HongKong)
 
 2. Testnet(Meteora)
   	1. https://meteora-evm.gatenode.cc
@@ -16,7 +14,7 @@
 
 2. Mainnet
   	1. Network name: GateChain
-  	2. RPC URL: https://evm.gatenode.cc
+  	2. RPC URL: https://evm.nodeinfo.cc
   	3. Chain ID: 86
   	4. Symbol: GT
   	5. Block explorer: https://gatescan.org/

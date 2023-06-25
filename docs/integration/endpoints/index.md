@@ -1,12 +1,11 @@
 ## GateChain EVM节点列表
 1. Mainnet
 
-	* https://evm.gatenode.cc （推荐）
-	* https://evm.gatenode.net
-	* https://evm-1.gatenode.cc
-	* https://evm-2.gatenode.cc
-	* https://evm-3.gatenode.cc
+	* https://evm.nodeinfo.cc （推荐）
+	* https://evm-1.nodeinfo.cc
+	* https://evm.gatenode.cc
 	* https://evm-hk.gatenode.cc （中国香港节点）
+
 
 2. 测试链Meteora
 
@@ -18,7 +17,7 @@
 2. Mainnet配置
 
   	* 网络名称: GateChain
-  	* RPC URL: https://evm.gatenode.cc（可填写以上任意节点地址）
+  	* RPC URL: https://evm.nodeinfo.cc（可填写以上任意节点地址）
   	* 链 ID: 86
   	* 符号: GT
   	* 区块浏览器: https://gatescan.org/

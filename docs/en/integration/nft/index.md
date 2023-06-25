@@ -9,7 +9,7 @@
 
 	> Network name: GateChain
 	> 
-	> RPC URL: https://evm.gatenode.cc
+	> RPC URL: https://evm.nodeinfo.cc
 	>
 	> Chain ID: 86
 	> 
