@@ -144,6 +144,10 @@ const enRouter = {
 					path: '/en/developers/json-rpc/',
 				},
 				{
+					title: 'GateNode_API',
+					path: '/en/developers/gatenode-rpc/',
+				},
+				{
 					title: 'Web3JS',
 					path: 'https://web3js.readthedocs.io/en/v1.2.11/',
 					target: '_blank'

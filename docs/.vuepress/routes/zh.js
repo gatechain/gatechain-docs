@@ -144,6 +144,10 @@ const zhRouter = {
 					path: '/developers/json-rpc/',
 				},
 				{
+					title: 'GateNode_API',
+					path: '/developers/gatenode-rpc/',
+				},
+				{
 					title: 'Web3JS',
 					path: 'https://web3js.readthedocs.io/en/v1.2.11/',
 					target: '_blank'
