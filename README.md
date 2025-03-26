@@ -1,3 +1,5 @@
+# Gatechain 旧文档，暂停维护！！！
+
 # GateChain Documents
 
 > Welcome to GateChain's Documents! Please choose your language.
